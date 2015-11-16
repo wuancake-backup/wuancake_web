@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="music.css">
+    </head>
+    <body>
+    <div id="music_player">   
+        <div id="channel">
+            <i id="listening"></i>
+            <span id="channel_name">华语</span>
+        </div>                
+        <div id="part1">
+            <div id="album_img" class="center">
+                <img src="image/princess.jpg" alt="the image of music" width="250px" height="350px">
+            </div>
+           
+               <!-- <h2>慢慢来比较快</h2>
+                <h3 id="song">《情歌没有告诉你》</h3> 
+                <h3 id="singer">梁静茹</h3>  -->
+            <div id="song_info">
+                <a href="#" target="_blank" title="慢慢来比较快" id="album_name" class="songinfo">慢慢来比较快</a>
+                <a href="#" target="_blank" title="《情歌没有告诉你》" id="song_name" class="songinfo">《情歌没有告诉你》</a>
+                <a href="#" target="_blank" title="梁静茹" id="singer_name" class="songinfo">梁静茹</a>
+            </div>
+			<div id="control1">
+				<!-- <input type="image" src="image/41.png" alt="play">
+				<input type="image" src="image/41.png" alt="next">
+				<input type="image" src="image/41.png" alt="pause">
+				<input type="image" src="image/41.png" alt="pause"> -->
+                <a href="#" class="play_btn pause" id="play_pause" title="暂停/播放"></a>
+                <a href="#" class="play_btn" id="next"></a>
+                <a href="#" class="play_btn" id="like"></a>
+                <a href="#" class="play_btn" id="remove"></a>
+			</div>
+            <!-- <progress value="79" max="100" id="seekbar" class="progressbar"></progress> -->
+            <div id="progress">
+                <a href="#" id="progress_playing"></a>
+            </div>
+			<div id="control2" >
+                <p id="play_time">
+                    <span id="star_time">00:00</span><span>/</span><span id="end_time">00:00</span> 
+                </p>
+                <div id="control_sound">
+
+                    <a href="#" id="mute" title="静音"></a>
+                    <div id="about_sound">
+                        <p></p>
+                        <div id="volbar"></div>
+                        <a href="#" id="volbtn"></a>
+                    </div>
+                </div>
+                <a href="#" id="download" title="下载" ></a>
+                <a href="#" id="share" title="分享"></a>
+           <!--  <input type="image" src="image/00.png" alt="pause" id="ce">
+            <progress value="79" max="100" id="volume" ></progress>
+            <input type="image" src="image/00.png" alt="pause">
+            <input type="image" src="image/00.png" alt="pause"> -->
+			</div>
+            
+        </div>
+        <div id="part2">
+            
+        </div>
+    </div>
+
+
+    </body>
+</html>
