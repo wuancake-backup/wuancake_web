@@ -1,0 +1,90 @@
+﻿@{
+    
+    var sqlNumber = DBHelper.execScalar("select count(*) from [Employee] a,[Department] b where a.DeNumber=b.DeNumber ");
+    //var sqlDe = DBHelper.execReader("select DeName from [Department]");
+    var employee = Request.Params["employee"];
+    var name = Request.Params["name"];
+    var select = Request.Params["select"];
+    var telephone = Request.Params["telephone"];
+    var sex = Request.Params["sex"];
+    var adress = Request.Params["adress"];
+    var wage = Request.Params["wage"];
+    var trNode = Request.Params["trNode"];
+    var empty = Request.Params["empty"];
+    var wagecard = Request.Params["wagecard"];
+    if (employee != "" || name != "" || select != "" || telephone != "" || sex != "" || adress != "")
+    {
+        if (empty != "1")
+        {
+            var sqlDeNumber = DBHelper.execReader("select DeNumber from [Department] where DeName='" + select + "'");
+            if (sqlDeNumber.Read())
+            {
+                var sqlEm = "insert into [Employee] (EmNumber,EmName,DeNumber,Telephone,Sex,Adress,Wage) values ('" + employee + "','" + name + "','" + sqlDeNumber["DeNumber"] + "','" + telephone + "','" + sex + "','" + adress + "','" + wage + "')";
+                //var wage1 = Convert.ToDouble(wage);
+                DBHelper.execSql(sqlEm);
+                var medialin = Convert.ToDouble(wage) * 0.09;
+                var empin = Convert.ToDouble(wage) * 0.005;
+                var maternityin = Convert.ToDouble(wage) * 0.008;
+                var unemploymentin = Convert.ToDouble(wage) * 0.02;
+                var oldagein = Convert.ToDouble(wage) * 0.21;
+                var housingpro = Convert.ToDouble(wage) * 0.08;
+                var travesu = 200;
+                var sqlWa = "insert into [WageMonth] (EmNumber,WageCard,MedicalIn,EmpIn,MaternityIn,UnemploymentIN,OldAgeIn,HousingPro,TraveSu) values ('" + employee + "','" + wagecard + "','" + medialin + "','" + empin + "','" + maternityin + "','" + unemploymentin + "','" + oldagein + "','" + housingpro + "','" + travesu + "')";
+                DBHelper.execSql(sqlWa);
+            }
+        }
+        else
+        {
+            var sqlup = "UPDATE [Employee] SET Adress = '" + adress + "', Telephone = '" + telephone + "' WHERE EmNumber = '" + employee + "'";
+            DBHelper.execSql(sqlup);
+        }
+    }
+    if (trNode != "")
+    {
+        var sqlde = "DELETE FROM [Employee] WHERE EmNumber = '" + trNode + "'";
+        var sqlWa = "DELETE FROM [Wagemonth] WHERE EmNumber = '" + trNode + "'";
+        DBHelper.execSql(sqlde);
+        DBHelper.execSql(sqlWa);
+    }
+}
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../js/jquery-ui-1.11.4.custom/jquery-ui.css" />
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="../js/Employee.js"></script>
+<div id="divtable1">
+<div id="table1">
+    <table id="table" class="bordered" style="width:100%">
+                    <tr>
+                        <th>员工编号</th>
+                        <th>员工姓名</th>
+                        <th>部门名称</th>
+                        <th>电话</th>
+                        <th>性别</th>
+                        <th>家庭住址</th>
+                    </tr>
+                    @{
+                        var sql = DBHelper.execReader("select a.EmNumber,a.EmName,b.DeName,a.Telephone,a.Sex,a.Adress from [Employee] a,[Department] b where a.DeNumber=b.DeNumber ");
+                        while(sql.Read())
+                      {
+                    <tr>
+                        <td>@sql["EmNumber"]</td>
+                        <td>@sql["EmName"]</td>
+                        <td>@sql["DeName"]</td>
+                        <td>@sql["Telephone"]</td>
+                        <td>@sql["Sex"]</td>
+                        <td>@sql["Adress"]</td>
+                        <th class="td" style="cursor:pointer;">修改</th>
+                        <th class="th" style="cursor:pointer;">删除</th>
+                    </tr>
+                    }
+                    }
+                </table>
+</div>
+<div class="divEM" style="width:100%;height:40px;text-align:center;">
+                <input type="button" id="btn1" style="width:70px;height:30px;" value="首页" />&nbsp&nbsp
+                <input type="button" id="btn2" style="width:70px;height:30px;" value="上一页"/>&nbsp&nbsp
+                <input type="button" id="btn3" style="width:70px;height:30px;" value="下一页" />&nbsp&nbsp
+                <input type="button" id="btn4" style="width:70px;height:30px;" value="尾页" />
+            </div>
+    </div>

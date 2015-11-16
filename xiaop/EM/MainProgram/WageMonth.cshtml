@@ -1,0 +1,249 @@
+﻿@{
+
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../js/jquery-ui-1.11.4.custom/jquery-ui.css" />
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script type="text/javascript" >
+        var pageSize = 14;//每页显示的记录条数
+        var curPage = 0;
+        var lastPage;
+        var direct = 0;
+        var len;
+        var page;
+        $(document).ready(function () {
+            $("#popupcontent").hide();
+            $(".th").hide();
+            $(".td").hide();
+
+            len = $("#table tr").length;
+            page = len % pageSize == 0 ? len / pageSize : Math.floor(len / pageSize) + 1;//根据记录条数，计算页数
+            //  alert("page==="+page);
+            curPage = 1;
+            displayPage(1);//显示第一页
+            $("#btn1").click(function () {
+                curPage = 1;
+                displayPage();
+            });
+            $("#btn2").click(function () {
+                direct = -1;
+                displayPage();
+            });
+            $("#btn3").click(function () {
+                direct = 1;
+                displayPage();
+            });
+            $("#btn4").click(function () {
+                curPage = page;
+                displayPage();
+            });
+
+        });
+
+        function displayPage() {
+            if ((curPage <= 1 && direct == -1) || (curPage >= page && direct == 1)) {
+                direct = 0;
+                alert("已经是第一页或者最后一页了");
+                return;
+            }
+            lastPage = curPage;
+            curPage = (curPage + direct + len) % len;
+            var begin = (curPage - 1) * pageSize;//起始记录号
+            var end = begin + pageSize;
+            if (end > len) end = len;
+            $("#table tr").hide();
+            $("#table tr").each(function (i) {
+                if (i >= begin && i < end)//显示第page页的记录
+                    $(this).show();
+            });
+
+        }
+            </script>
+        <style type="text/css">
+        * { margin:0; padding:0;}
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    background-color:#dce9f9;
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.popupcontent{
+position: absolute;
+/*visibility:hidden;
+overflow: hidden;*/
+border:1px solid #CCC;
+background-color:#dce9f9;
+border:1px solid #333;
+padding:5px;
+}
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+        .divwage {
+        background-color:#8DEEEE;
+        }
+    </style>
+        </head>
+    <body>
+        <div >
+            <div>
+                <table id="table" class="bordered" style="width:100%">
+                    <tr>
+                        <th>员工编号</th>
+                        <th>员工姓名</th>
+                        <th>部门</th>
+                        <th>月份</th>
+                        <th>应发工资</th>
+                    </tr>
+                        @{
+                            var sqlEmNumber = DBHelper.execReader("select EmNumber from [Employee]");
+                            while(sqlEmNumber.Read())
+                            {
+                                var sqlEame = DBHelper.execReader("select EmName,Wage from [Employee] where EmNumber ='" + sqlEmNumber["EmNumber"] + "'");
+                                sqlEame.Read();
+                                var wage1 = Convert.ToDouble(sqlEame["wage"]);
+                                //var sqlname = sqlEame["EmName"].ToString();
+                                var DeName = DBHelper.execReader("select a.DeName from [Department] a,[Employee] b where a.DeNumber=b.DeNumber and b.EmNumber='" + sqlEmNumber["EmNumber"] + "'");
+                                DeName.Read();
+                                var dename = DeName["DeName"];
+                                var month = DateTime.Now.Month.ToString();
+                                //请假次数
+                                var Leave = DBHelper.execReader("select count(Time) from [Leave] where EmNumber ='" + sqlEmNumber["EmNumber"] + "' and State='通过' and Month='" + month + "'");
+                                Leave.Read();
+                                var leave = Leave[0];
+                                //加班次数
+                                var worktime = DBHelper.execReader("select count(State) from [WorkTime] where EmNumber ='" + sqlEmNumber["EmNumber"] + "' and State='通过' and Month='" + month + "' ");
+                                worktime.Read();
+                                var wor = worktime[0];
+                                //各种计算
+                                var wage = DBHelper.execReader("select EmNumber,MedicalIn,EmpIn,MaternityIn,UnemploymentIN,OldAgeIn,HousingPro,TraveSu from [WageMonth] where EmNumber='" + sqlEmNumber["EmNumber"] + "'");
+                                wage.Read();
+                                var check = DBHelper.execReader("select count(EmNumber) from [Check] where EmNumber='" + sqlEmNumber["EmNumber"] + "'");
+                                check.Read();
+                                var ch = check[0];
+                                var MedicalIn = Convert.ToDouble(wage["MedicalIn"]);
+                                var EmpIn = Convert.ToDouble(wage["EmpIn"]);
+                                var MaternityIn = Convert.ToDouble(wage["MaternityIn"]);
+                                var UnemploymentIN = Convert.ToDouble(wage["UnemploymentIN"]);
+                                var OldAgeIn = Convert.ToDouble(wage["OldAgeIn"]);
+                                var HousingPro = Convert.ToDouble(wage["HousingPro"]);
+                                var TraveSu = Convert.ToDouble(wage["TraveSu"]);
+                                var wagemonth = wage1 - MedicalIn - EmpIn - MaternityIn - UnemploymentIN - OldAgeIn + HousingPro + TraveSu - Convert.ToDouble(leave) * 100 + Convert.ToDouble(wor)*20;
+                            <tr>
+                               <td>@sqlEmNumber["EmNumber"]</td>
+                                <td>@sqlEame["EmName"]</td>
+                                <td>@dename</td>
+                                <td>@month</td>
+                                <td>@wagemonth</td>
+                            </tr>
+                            }
+                            }
+
+                </table>
+               
+            </div>
+            <div class="divwage" style="width:100%;height:40px;text-align:center;">
+                <input type="button" id="btn1" style="width:70px;height:30px;" value="首页" />&nbsp&nbsp
+                <input type="button" id="btn2" style="width:70px;height:30px;" value="上一页"/>&nbsp&nbsp
+                <input type="button" id="btn3" style="width:70px;height:30px;" value="下一页" />&nbsp&nbsp
+                <input type="button" id="btn4" style="width:70px;height:30px;" value="尾页" />
+            </div>
+        </div>
+    </body>
+    </html>

@@ -1,0 +1,11 @@
+body{background: url("../image/login_bg.jpg") no-repeat ;background-attachment:fixed ;
+}
+.area{
+    margin-top: 90px;
+}
+.area form>div{
+   padding: 0 15px;
+}
+.text-center{
+    margin-top: 20px;
+}
