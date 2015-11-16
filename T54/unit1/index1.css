@@ -1,0 +1,9 @@
+#change_me {
+    position: absolute;
+    top:100px;
+    left:400px;
+    font:24px arial;
+}
+#move_up #move_down #color #disappear {
+    padding:5px;
+}
