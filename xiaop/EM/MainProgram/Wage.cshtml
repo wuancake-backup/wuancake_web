@@ -1,0 +1,187 @@
+﻿@{
+    
+    var wage = Request.QueryString["wage"] == null ? "" : Request.QueryString["wage"];
+    var travesu = Request.QueryString["travesu"] == null ? "" : Request.QueryString["travesu"];
+    var employee = Request.QueryString["employee"] == null ? "" : Request.QueryString["employee"];
+}
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <script type="text/javascript" src="../js/jquery-1.11.3.min.js"></script>
+    <link rel="stylesheet" href="../js/jquery-ui-1.11.4.custom/jquery-ui.css" />
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+        <script src="../js/Wagejs.js"></script>
+        <style type="text/css">
+        * { margin:0; padding:0;}
+.button {
+	display: inline-block;
+	outline: none;
+	cursor: pointer;
+	text-align: center;
+	text-decoration: none;
+	font: 14px/100% Arial, Helvetica, sans-serif;
+	padding: .5em 2em .55em;
+	text-shadow: 0 1px 1px rgba(0,0,0,.3);
+	-webkit-border-radius: .5em; 
+	-moz-border-radius: .5em;
+	border-radius: .5em;
+	-webkit-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	-moz-box-shadow: 0 1px 2px rgba(0,0,0,.2);
+	box-shadow: 0 1px 2px rgba(0,0,0,.2);
+    background-color:#dce9f9;
+}
+.button:hover {
+	text-decoration: none;
+}
+.button:active {
+	position: relative;
+	top: 1px;
+}
+.popupcontent{
+position: absolute;
+/*visibility:hidden;
+overflow: hidden;*/
+border:1px solid #CCC;
+background-color:#dce9f9;
+border:1px solid #333;
+padding:5px;
+}
+.bordered {
+    border: solid #ccc 1px;
+    -moz-border-radius: 6px;
+    -webkit-border-radius: 6px;
+    border-radius: 6px;
+    -webkit-box-shadow: 0 1px 1px #ccc; 
+    -moz-box-shadow: 0 1px 1px #ccc; 
+    box-shadow: 0 1px 1px #ccc;         
+}
+
+.bordered tr:hover {
+    background: #fbf8e9;
+    -o-transition: all 0.1s ease-in-out;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;     
+}    
+    
+.bordered td, .bordered th {
+    border-left: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;    
+}
+
+.bordered th {
+    background-color: #dce9f9;
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ebf3fc), to(#dce9f9));
+    background-image: -webkit-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:    -moz-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:     -ms-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:      -o-linear-gradient(top, #ebf3fc, #dce9f9);
+    background-image:         linear-gradient(top, #ebf3fc, #dce9f9);
+    -webkit-box-shadow: 0 1px 0 rgba(255,255,255,.8) inset; 
+    -moz-box-shadow:0 1px 0 rgba(255,255,255,.8) inset;  
+    box-shadow: 0 1px 0 rgba(255,255,255,.8) inset;        
+    border-top: none;
+    text-shadow: 0 1px 0 rgba(255,255,255,.5); 
+}
+
+.bordered td:first-child, .bordered th:first-child {
+    border-left: none;
+}
+
+.bordered th:first-child {
+    -moz-border-radius: 6px 0 0 0;
+    -webkit-border-radius: 6px 0 0 0;
+    border-radius: 6px 0 0 0;
+}
+
+.bordered th:last-child {
+    -moz-border-radius: 0 6px 0 0;
+    -webkit-border-radius: 0 6px 0 0;
+    border-radius: 0 6px 0 0;
+}
+
+.bordered th:only-child{
+    -moz-border-radius: 6px 6px 0 0;
+    -webkit-border-radius: 6px 6px 0 0;
+    border-radius: 6px 6px 0 0;
+}
+
+.bordered tr:last-child td:first-child {
+    -moz-border-radius: 0 0 0 6px;
+    -webkit-border-radius: 0 0 0 6px;
+    border-radius: 0 0 0 6px;
+}
+
+.bordered tr:last-child td:last-child {
+    -moz-border-radius: 0 0 6px 0;
+    -webkit-border-radius: 0 0 6px 0;
+    border-radius: 0 0 6px 0;
+}
+        .divWA {
+        background-color:#8DEEEE;
+        }
+    </style>
+        </head>
+    <body>
+        <div class="div3">
+            <div class="divWA">
+                <input id="xiugai" type="button" value="修改" class="button"  />
+                </div>
+                        <div id="divtable">
+            <div>
+                <table id="table" class="bordered" style="width:100%">
+                    <tr>
+                        <th>序号</th>
+                        <th>员工编号</th>
+                        <th>员工姓名</th>
+                        <th>基本工资</th>
+                        <th>工资卡号</th>
+                        <th>医疗保险</th>
+                        <th>工伤保险</th>
+                        <th>生育保险</th>
+                        <th>失业保险</th>
+                        <th>养老保险</th>
+                        <th>住房公积金</th>
+                        <th>路费补贴</th>
+                    </tr>
+                    @{
+                        var sql = DBHelper.execReader("select a.WageNumber ,a.EmNumber,a.WageCard,a.MedicalIn,a.EmpIn,a.MaternityIn,a.UnemploymentIN,a.OldAgeIn,a.HousingPro,a.TraveSu,b.EmName,b.wage from [Employee] b,[WageMonth] a where a.EmNumber=b.EmNumber");
+                        while(sql.Read())
+                      {
+                    <tr>
+                        <td>@sql["WageNumber"]</td>
+                        <td>@sql["EmNumber"]</td>
+                        <td>@sql["EmName"]</td>
+                        <td>@sql["wage"]</td>
+                        <td>@sql["WageCard"]</td>
+                        <td>@sql["MedicalIn"]</td>
+                        <td>@sql["EmpIn"]</td>
+                        <td>@sql["MaternityIn"]</td>
+                        <td>@sql["UnemploymentIN"]</td>
+                        <td>@sql["OldAgeIn"]</td>
+                        <td>@sql["HousingPro"]</td>
+                        <td>@sql["TraveSu"]</td>
+                        <th class="td">修改</th>
+                        <th class="th">删除</th>
+                    </tr>
+                    }
+                    }
+                </table>
+            </div>
+            <div class="divWA" style="width:100%;height:40px;text-align:center;">
+                <input type="button" id="btn1" style="width:70px;height:30px;" value="首页" />&nbsp&nbsp
+                <input type="button" id="btn2" style="width:70px;height:30px;" value="上一页"/>&nbsp&nbsp
+                <input type="button" id="btn3" style="width:70px;height:30px;" value="下一页" />&nbsp&nbsp
+                <input type="button" id="btn4" style="width:70px;height:30px;" value="尾页" />
+            </div>
+        </div>
+            </div>
+    </body>
+    </html>
