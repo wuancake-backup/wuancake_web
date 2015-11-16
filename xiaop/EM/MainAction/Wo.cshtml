@@ -1,0 +1,69 @@
+﻿@{
+    var startdate = Request.Params["startdate"];
+    var startime = Request.Params["startime"];
+    var starfen = Request.Params["starfen"];
+    var state = Request.Params["state"];
+    var endtime = Request.Params["endtime"];
+    var endfen = Request.Params["endfen"];
+    var trNode = Request.Params["trNode"];
+    var time = Convert.ToInt32(endtime) - Convert.ToInt32(startime);
+    var fen = Convert.ToInt32(endfen) - Convert.ToInt32(starfen);
+    var wordtime = time + fen / 60;
+    var month = DateTime.Now.Month.ToString();
+    //var time = enddate - startdate;
+    if (state == "0")
+    {
+        var sqladd = DBHelper.execSql("insert into [WorkTime] (EmNumber,Wotime,Wodate,State,Month) values('" + AdNumber.adnumber + "','" + wordtime + "','" + startdate + "','未审批','" + month + "')");
+    }
+    else if (state == "1")
+    {
+        var sqltong = DBHelper.execSql("UPDATE [WorkTime] SET State = '通过' WHERE WoNumber = '" + trNode + "'");
+        var sqltong1 = DBHelper.execSql("UPDATE [Leave] SET State = '通过' WHERE LeaveNumber = '" + trNode + "'");
+    }
+    else if (state == "2")
+    {
+        var sqltong1 = DBHelper.execSql("UPDATE [WorkTime] SET State = '不予通过' WHERE WoNumber = '" + trNode + "'");
+        var sqltong = DBHelper.execSql("UPDATE [Leave] SET State = '不予通过' WHERE LeaveNumber = '" + trNode + "'");
+    }
+}
+<link rel="stylesheet" href="../js/jquery-ui-1.11.4.custom/jquery-ui.css" />
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.js"></script>
+    <script src="../js/jquery-ui-1.11.4.custom/jquery-ui.min.js"></script>
+    <script src="../js/Workovertime.js"></script>
+<div id="divtable1">
+<div id="table1">
+    <table class="bordered" style="width:100%">
+                    <tr>
+                        <th>序号</th>
+                        <th>员工姓名</th>
+                        <th>部门名称</th>
+                        <th>加班日期</th>
+                        <th>加班时间（小时）</th>
+                        <th>结果</th>
+                        @*<th>不批准</th>*@
+                    </tr>
+                    @{
+                        var sql = DBHelper.execReader("select a.WoNumber, a.Wotime, a.Wodate,a.State,b.Emname,c.DeName from [WorkTime] a,[Employee] b,[Department] c where a.EmNumber=b.EmNumber and c.DeNumber=b.DeNumber and a.EmNumber='" + AdNumber.adnumber + "'");
+                        while (sql.Read())
+                      {
+                    <tr>
+                        <td>@sql["WoNumber"]</td>
+                        <td>@sql["EmName"]</td>
+                        <td>@sql["DeName"]</td>
+                        <td>@sql["Wodate"]</td>
+                        <td>@sql["Wotime"]</td>
+                        <td>@sql["State"]</td>
+                        <th class="td" style="cursor:pointer;">同意</th>
+                        <th class="th" style="cursor:pointer;">取消</th>
+                    </tr>
+                      }
+                    }
+                </table>
+</div>
+<div class="divWo" style="width:100%;height:40px;text-align:center;">
+                <input type="button" id="btn1" style="width:70px;height:30px;" value="首页" />&nbsp&nbsp
+                <input type="button" id="btn2" style="width:70px;height:30px;" value="上一页"/>&nbsp&nbsp
+                <input type="button" id="btn3" style="width:70px;height:30px;" value="下一页" />&nbsp&nbsp
+                <input type="button" id="btn4" style="width:70px;height:30px;" value="尾页" />
+            </div>
+    </div>
