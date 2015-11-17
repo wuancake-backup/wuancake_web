@@ -20,7 +20,7 @@ body{
 }
 #music_player{
     position:absolute;
-    top:6%;
+    top:5%;
     left:10%;
     /*border:solid 1px;*/
     width:800px;
