@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2015-11-12 14:28:23
 * @Last Modified by:   anchen
-* @Last Modified time: 2015-11-17 13:06:15
+* @Last Modified time: 2015-11-17 13:22:59
 */
 *{
     margin:0px;
@@ -20,7 +20,7 @@ body{
 }
 #music_player{
     position:absolute;
-    top:5%;
+    top:6%;
     left:10%;
     /*border:solid 1px;*/
     width:800px;
