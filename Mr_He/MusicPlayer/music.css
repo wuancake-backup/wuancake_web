@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2015-11-12 14:28:23
 * @Last Modified by:   anchen
-* @Last Modified time: 2015-11-16 11:11:57
+* @Last Modified time: 2015-11-17 13:06:15
 */
 *{
     margin:0px;
@@ -20,8 +20,8 @@ body{
 }
 #music_player{
     position:absolute;
-    top:15%;
-    left:20%;
+    top:5%;
+    left:10%;
     /*border:solid 1px;*/
     width:800px;
 }
@@ -50,7 +50,7 @@ body{
     background-size: 100% 100%;
     width:350px;
 	margin-top:0px;
-    height:600px;
+    height:550px;
     position: relative;
     float:left;
     opacity: 0.8;
@@ -58,7 +58,7 @@ body{
 #part2{
     width:450px;
     margin-top:0px;
-    height:600px;
+    height:550px;
     background:white ;
     opacity: 0.5;
     float:left;
