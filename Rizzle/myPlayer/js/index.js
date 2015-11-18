@@ -137,12 +137,23 @@ var rollLrc = function (lrc,player) {
 	for (t in lrc){
 		var p = document.createElement("p");
 		p.innerHTML = lrc[t];
+		p.setAttribute('class','a'+t);
 		lrcdiv.appendChild(p);
 	}
 	player.ontimeupdate = function () {
-			var time = Math.round(player.currentTime);
-			var text = lrc[time];
-			console.log(text)
+		var time = Math.round(player.currentTime);
+		var text = lrc[time];
+		
+		var now = lrcdiv.getElementsByClassName('active')[0];
+		if (now) {
+			var reg = new RegExp('(\\s|^)' + 'active' + '(\\s|$)');
+    		now.className = now.className.replace(reg,'');
+		};
+		var newtext = lrcdiv.getElementsByClassName('a'+time)[0];
+		if (newtext) {
+			newtext.className += ' active';
+			console.log(newtext)
+		};
+		
 	}
-	
 }
