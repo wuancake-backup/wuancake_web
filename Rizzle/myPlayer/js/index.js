@@ -9,7 +9,7 @@ var control = function (player) {
 	var control = document.getElementById('control');
 	var button = control.getElementsByTagName('span');
 
-	button[0].onclick = function () {
+	button[0].addEventListener("click",function () {
 		if (player.paused) {
 			player.play();
 			this.innerHTML = "&#xe750;"
@@ -17,7 +17,10 @@ var control = function (player) {
 			player.pause();
 			this.innerHTML = "&#xe74f;"
 		};
-	}
+	})
+	// button[0].onclick = function () {
+
+	// }
 }
 var timeControl = function (player,event) {
 	var nowtime = document.getElementById('now');
@@ -33,11 +36,21 @@ var timeControl = function (player,event) {
 		timediv.style.width = player.currentTime/player.duration*100+"%";
 	},300)	
 
-	timeline.onclick = function (event) {
-		time = player.duration * ((event.clientX-this.offsetLeft)/parseInt(this.style.width));
-		player.currentTime = time;
 
-	}
+	timeline.addEventListener("mousedown",function (event) {
+		var dot = this.getElementsByTagName('span')[0];
+
+		document.onmousemove = function (event) {
+			time = player.duration * ((event.clientX-timeline.offsetLeft)/parseInt(timeline.style.width));
+			player.currentTime = time;		
+		}
+		document.onmouseup=function (){
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+	})
+	// timeline.onmousedown = function (event) {
+	// }
 }
 var voiceControl = function (player,event) {
 	var voice = document.getElementById('voice');
@@ -55,9 +68,27 @@ var voiceControl = function (player,event) {
 		};
 	}
 
-	sounddiv.onclick = function (event) {
-		sound = (event.clientX-this.offsetLeft)/parseInt(this.style.width);
-		player.volume = sound;
-		insidediv.style.width = sound * parseInt(this.style.width) + "px";
-	}
+	sounddiv.addEventListener("mousedown",function (event) {
+		document.onmousemove = function (event) {
+
+			if (event.clientX>sounddiv.offsetLeft && event.clientX<sounddiv.offsetLeft+parseInt(sounddiv.style.width)) {
+				sound = (event.clientX-sounddiv.offsetLeft)/parseInt(sounddiv.style.width);
+				player.volume = sound;
+				insidediv.style.width = sound * parseInt(sounddiv.style.width) + "px";			
+			};
+
+		}
+		document.onmouseup=function (){
+			document.onmousemove=null;
+			document.onmouseup=null;
+		};
+	})
+	// sounddiv.onclick = function (event) {
+
+		
+	// }
+}
+
+var drag = function (obj) {
+	
 }
