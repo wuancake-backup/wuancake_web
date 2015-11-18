@@ -4,6 +4,8 @@ window.onload = function () {
 
 	control(player)
 	timeControl(player)
+
+	getLrc("AllofMe.lrc",player)
 }
 var control = function (player) {
 	var control = document.getElementById('control');
@@ -46,7 +48,7 @@ var timeControl = function (player,event) {
 		}
 		document.onmouseup=function (){
 			document.onmousemove=null;
-			document.onmouseup=null;
+			//document.onmouseup=null;
 		};
 	})
 	// timeline.onmousedown = function (event) {
@@ -89,6 +91,58 @@ var voiceControl = function (player,event) {
 	// }
 }
 
-var drag = function (obj) {
+var getLrc = function (url,player) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+    	if (xhr.readyState == 4 && xhr.status == 200) {
+    		var lyric = lrcobj(xhr.responseText);
+    		rollLrc(lyric,player);
+    		//console.log(lyric)
+    	}else{
+    		console.log(xhr.status);
+    	};
+    };
+}
+
+var lrcobj = function (lrc) {
+	var lrcs = lrc.split("/n");
+	var obj = {};
+	var value = [];
+	for (var i = 0; i < lrcs.length; i++) {
+		var reg = /\[[0-9][0-9]:[0-9][0-9].[0-9][0-9]\].*/g;
+		//var valuereg = 
+		value = lrcs[i].match(reg);
+		//console.log(value)
+	};
+	for (var i = 0; i < value.length; i++) {
+		var timereg = /\[[0-9][0-9]\:[0-9][0-9]\.[0-9][0-9]\]/g;
+		var time = value[i].match(timereg);
+		var words = value[i].replace(timereg,"");
+		var timew = time.toString()
+		var min = parseInt(timew.match(/[0-9][0-9]/)[0]);
+		var sec = parseFloat(timew.match(/[0-9][0-9]\.[0-9][0-9]/i)[0])
+		var trueTime = Math.round(min*60+sec);
+		//console.log(words);
+		obj[trueTime] = words;
+	};
+	//console.log(obj);
+	return obj;
+
+}
+var rollLrc = function (lrc,player) {
+	var lrcdiv = document.getElementById('lrc');
+	//console.log(lrc);
+	for (t in lrc){
+		var p = document.createElement("p");
+		p.innerHTML = lrc[t];
+		lrcdiv.appendChild(p);
+	}
+	player.ontimeupdate = function () {
+			var time = Math.round(player.currentTime);
+			var text = lrc[time];
+			console.log(text)
+	}
 	
 }
