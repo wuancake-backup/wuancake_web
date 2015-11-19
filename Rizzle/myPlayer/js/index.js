@@ -133,26 +133,32 @@ var lrcobj = function (lrc) {
 }
 var rollLrc = function (lrc,player) {
 	var lrcdiv = document.getElementById('lrc');
+	var lrcul = lrcdiv.getElementsByTagName('ul')[0];
+	var top = 0;	
 	//console.log(lrc);
 	for (t in lrc){
-		var p = document.createElement("p");
-		p.innerHTML = lrc[t];
-		p.setAttribute('class','a'+t);
-		lrcdiv.appendChild(p);
+		var li = document.createElement("li");
+		li.innerHTML = lrc[t];
+		li.setAttribute('class','a'+t);
+		lrcul.appendChild(li);
 	}
 	player.ontimeupdate = function () {
 		var time = Math.round(player.currentTime);
 		var text = lrc[time];
-		
+
 		var now = lrcdiv.getElementsByClassName('active')[0];
-		if (now) {
-			var reg = new RegExp('(\\s|^)' + 'active' + '(\\s|$)');
-    		now.className = now.className.replace(reg,'');
-		};
 		var newtext = lrcdiv.getElementsByClassName('a'+time)[0];
-		if (newtext) {
+		//console.log (now)
+		if (newtext && newtext != now) {
+			var reg = /active/;			
 			newtext.className += ' active';
-			console.log(newtext)
+			//console.log(newtext)
+			if (now) {
+	    		now.className = now.className.replace(reg,'');
+	    		console.log(now.clientHeight)
+	    		top -= now.clientHeight;
+	    		lrcul.style.top = 200+top+"px";
+			};
 		};
 		
 	}
