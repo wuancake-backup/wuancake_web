@@ -1,0 +1,143 @@
+ @font-face {font-family: 'iconfont';
+    src: url('../icon/iconfont.eot'); /* IE9*/
+    src: url('../icon/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('../icon/iconfont.woff') format('woff'), /* chrome、firefox */
+    url('../icon/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../icon/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
+
+}
+.icon{
+	font-family:"iconfont" !important;
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+	cursor: pointer;   
+	padding: 0 5px; 
+}
+body{
+	background-image: url(../img/back.jpg);
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+}
+.pl10{
+	padding-left: 10px;
+}
+.fl{
+	float: left;
+}
+.fr{
+	float: right;
+}
+.container{
+	padding-top: 70px;
+	padding-left: 100px;
+	width: 700px;
+	height: 400px;
+}
+.container h1{
+	font-size: 2.5em;
+	color: #fff;
+}
+.player{
+	width: 100%;
+	height: 400px;
+	margin-top: 10px;
+}
+.music{
+	width: 300px;
+	height: 400px;
+	color: #666;
+	background: #fff;
+}
+.music img{
+	margin: 15px 65px 0 65px;
+	width: 170px;
+	height: 240px;
+}
+.music h2{
+	color: #111;
+	font-size: 1.5em;
+	line-height: 1em;
+}
+.music h3{
+	line-height: 0.8em;
+	font-size: 0.9em
+}
+.music p{
+	line-height: 1.5em;
+	font-size: 0.89em
+}
+
+.control{
+	user-select: none;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+}
+.control span{
+	padding: 0 22px;
+	font-size: 1.7em;
+}
+.timeline{
+	height: 2px;
+	margin-top: 3px;
+	background: #C3C3C3;
+	cursor: pointer;
+}
+.inside span{
+	display: inline-block;
+	float: right;
+	margin-right: -6px;
+	margin-top: -2px;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #2985f2;
+	background: #fefefe;
+}
+.music .now{
+	font-size: 1.5em;
+	font-weight: lighter;
+}
+.showtime{
+	width: 100px;
+}
+.souconcrol{
+	width: 200px;
+	margin-top: 5px;
+}
+.sound{
+	display: inline-block;
+	height: 3px;
+	margin-bottom: 3px;
+	margin-right: 5px;
+	background: #C3C3C3;
+}
+.inside{
+	height: 100%;
+	background-color: #2985f2;
+}
+.lrc{
+	width: 360px;
+	height: 360px;
+	padding: 20px;
+	background: rgba(0,0,0,0.4);
+	font-size: 0.9em;
+	color: #fff;
+	text-align: center;
+	overflow: hidden;
+	position: relative;
+}
+.lrc ul{
+	top: 200px;
+	transition: 0.7s;
+	position: relative;
+}
+.lrc li{
+	transition: 0.5s;
+}
+.lrc .active{
+	color: rgba(172,83,232,1);
+	font-size: 1.1em;
+	text-shadow: 0 0 1px #9E8BA7;
+}

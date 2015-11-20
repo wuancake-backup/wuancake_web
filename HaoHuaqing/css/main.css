@@ -1,0 +1,55 @@
+body {
+	background-image: 
+	url(../img/background.jpg);
+	background-repeat: 
+	no-repeat;
+	background-size: 100%,100%;
+	}
+#header{
+	background:
+	url(../img/earphone.png);
+	background-repeat: 
+	no-repeat;
+	height:50px;
+	position:relative;
+	top:35px;
+	left:200px;
+	}
+#content{
+	position:relative;
+	left:260px;
+	top:0px;
+	font-size:25px;
+	color:white;
+}
+#main{
+	height:643px;
+	width:500px;
+	position:relative;
+	left:200px;
+	top:10px;
+	background-color:white;
+}
+.cover{
+	height:400px;
+	width:300px;
+	position:relative;
+	left:100px;
+	top:30px;
+	background-image: 
+	url(../img/chenyixun.jpg);
+}
+.lyrics{
+	height:643px;
+	width:500px;
+	position:absolute;
+	left:709px;
+	top:96px;
+	background-color:transparent;
+	color: white;
+	text-indent: 2em;
+	overflow: auto;
+}
+h2.small {line-height: 40%;}
+p.small {line-height: 40%}
+p {font-size:16px;font-family: "微软雅黑";}
