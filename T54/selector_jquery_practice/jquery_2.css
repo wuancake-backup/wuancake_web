@@ -1,0 +1,16 @@
+.SubCategoryBox{
+    width:50%;
+    height: 30%;
+    border:3px black solid;
+    margin: 10px 23% 0 23%;
+    /*color:red;*/
+}
+.SubCategoryBox li{
+    display: inline;
+}
+.showmore {
+    padding: 0 40% 0 40%;
+}
+.promoted {
+    color:red;
+}
