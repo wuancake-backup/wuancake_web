@@ -3,15 +3,18 @@
 <head>
 	<meta charset="UTF-8">
 	<title>music interface</title>
-	<link rel="stylesheet" href="./images/type.css">
+	<link rel="stylesheet" href="images/type.css">
+	<script type="text/javascript" src="js/jquery-1.11.2.min.js"></script>
+	<script type="text/javascript" src="js/on.js"></script>
 </head>
 <body>
+  <audio id="actor" src="music/actor.mp3" preload></audio>
 	<div class="container" border="1px">
 		<div class="content"><!--内容部分-->
 		<h1>华语</h1>
 			<div class="left"><img class="music" src="images/people.jpg"/><h2>绅士</h2><h4>《演员》</h4><br/><h4>薛之谦</h4><br/>
 			<ul class="top">
-			  <li></li>
+			  <li id="play" onclick="playli()" cc="1"></li>
 			  <li></li>
 			  <li></li>
 			  <li></li>
