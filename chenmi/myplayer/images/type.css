@@ -1,0 +1,67 @@
+*{margin:0;padding:0}
+
+html,body{height:100%;}
+
+body{background:url("background.jpg") no-repeat;background-size:100% 100%;}
+
+.content{width:740px;height:510px;margin:70px auto;position: relative;}
+
+h1{position: absolute;top:-35px;}
+
+.left{width:40%;height:100%;background-color:white;float:left;}
+
+.left h2,h4{text-indent:2em;}
+
+.top li{list-style-type: none;float:left;width:20px;height:22px;margin-left:40px;background: url(playlist.png) no-repeat;cursor: pointer;}
+
+.top li:nth-child(1){background-position: -323px 1px;}
+
+.top li:nth-child(1):hover{background-position: -347px 1px;} 
+
+.top li:nth-child(2){background-position: -275px 1px;}
+
+.top li:nth-child(2):hover{background-position:-179px 1px; }
+
+.top li:nth-child(3){background-position: -396px 1px;}
+
+.top li:nth-child(3):hover{background-position: -300px 1px;}
+
+.top li:nth-child(4){background-position: -60px 1px;}
+
+.top li:nth-child(4):hover{background-position: -612px 1px;}
+
+.cb{clear:both;height:0;overflow: hidden;visibility: hidden;}
+
+.plan{height:2px;width:100%;background-color: #ccc;margin-top:12px;}
+
+.plan span{display: block;width:0px;background-color: blue;height: 2px;}
+
+.buttom{height:20px;margin-top:15px;}
+
+.buttom li{list-style-type: none;float: left;background: url(playlist.png) no-repeat;}
+
+.voice span{display: block;width: 50px;height:6px;background-color:white;margin-top:7px;margin-left: 4px;}
+
+.voice span:hover{background-color: #ccc;}
+
+.buttom li:nth-child(1){background: none;margin-left: 15px;}
+
+.buttom li:nth-child(2){background-position:-696px 3px;width:13px;height:22px;margin-left: 5px;}
+
+.buttom li:nth-child(2):hover{background-position: -684px 3px;}
+
+.buttom li:nth-child(3){background: none;}
+
+.buttom li:nth-child(4){background-position:-202px 2px;width:20px;height:22px;margin-left: 20px;}
+
+.buttom li:nth-child(4):hover{background-position: -514px 2px;}
+
+.buttom li:nth-child(5){background-position: -418px 2px;width:20px;height:22px;margin-left: 10px;}
+
+.buttom li:nth-child(5):hover{background-position: -658px 2px;}
+
+.music{width:180px;height:250px;margin:20px 20%;}
+
+.right{width:60%;height:100%;float:left;background-color: rgba(204,153,255,0.6);overflow: hidden;}
+
+.right p{padding-left:2em;font-size: 18px;}

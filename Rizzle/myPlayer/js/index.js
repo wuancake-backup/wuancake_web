@@ -4,6 +4,8 @@ window.onload = function () {
 
 	control(player)
 	timeControl(player)
+
+	getLrc("AllofMe.lrc",player)
 }
 var control = function (player) {
 	var control = document.getElementById('control');
@@ -46,7 +48,7 @@ var timeControl = function (player,event) {
 		}
 		document.onmouseup=function (){
 			document.onmousemove=null;
-			document.onmouseup=null;
+			//document.onmouseup=null;
 		};
 	})
 	// timeline.onmousedown = function (event) {
@@ -89,6 +91,93 @@ var voiceControl = function (player,event) {
 	// }
 }
 
-var drag = function (obj) {
-	
+var getLrc = function (url,player) {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', url, true);
+    xhr.send();
+    xhr.onreadystatechange = function () {
+    	if (xhr.readyState == 4 && xhr.status == 200) {
+    		var lyric = lrcobj(xhr.responseText);
+    		rollLrc(lyric,player);
+    		//console.log(lyric)
+    	};
+    };
+}
+
+var lrcobj = function (lrc) {
+	var lrcs = lrc.split("/n");
+	var obj = [];
+	var value = [];
+	for (var i = 0; i < lrcs.length; i++) {
+		var reg = /\[[0-9][0-9]:[0-9][0-9].[0-9][0-9]\].*/g;
+		//var valuereg = 
+		value = lrcs[i].match(reg);
+		//console.log(value)
+	};
+	for (var i = 0; i < value.length; i++) {
+		var timereg = /\[[0-9][0-9]\:[0-9][0-9]\.[0-9][0-9]\]/g;
+		var time = value[i].match(timereg);
+		var words = value[i].replace(timereg,"");
+
+		var timew = time.toString()
+		var min = parseInt(timew.match(/[0-9][0-9]/)[0]);
+		var sec = parseFloat(timew.match(/[0-9][0-9]\.[0-9][0-9]/i)[0])
+		var trueTime = Math.round(min*60+sec);
+		//console.log(words);
+		if (words) {
+			obj.push([trueTime,words])
+		};
+		
+	};
+	//console.log(obj);
+	return obj;
+
+}
+var rollLrc = function (lrc,player) {
+	var lrcdiv = document.getElementById('lrc');
+	var lrcul = lrcdiv.getElementsByTagName('ul')[0];
+	//console.log(lrc);
+	for (i = 0;i < lrc.length;i++){
+		var li = document.createElement("li");
+		li.innerHTML = lrc[i][1];
+		li.setAttribute('class','a'+lrc[i][0]);
+		lrcul.appendChild(li);
+	}
+	var top = lrctop(lrc);
+	console.log(top)
+	player.ontimeupdate = function () {
+		var time = Math.round(player.currentTime);
+		var newtext = lrcdiv.getElementsByClassName('a'+time)[0];
+		var now = lrcdiv.getElementsByClassName('active')[0];		
+
+		for (var i = 0; i < lrc.length; i++) {
+			if (lrc[i][0] == time) {
+				//console.log (now)
+				if (newtext && newtext != now) {
+					var reg = /active/;			
+					newtext.className += ' active';
+					//console.log(newtext)
+					if (now) {
+			    		now.className = now.className.replace(reg,'');
+			    		lrcul.style.top = 200-top[time]+"px";
+					};
+				};
+			}; 
+		};
+	}
+}
+
+var lrctop = function (lrc) {
+	var top = {};
+	var height = 0;
+	var lrcdiv = document.getElementById('lrc');
+	var lrcul = lrcdiv.getElementsByTagName('ul')[0];
+	var li = lrcul.getElementsByTagName("li");
+	for (var i = 0; i < li.length; i++) {
+		height += li[i].clientHeight;
+		console.log(li[i].clientHeight)
+		top[lrc[i][0]] = height;
+	};
+	console.log(top);
+	return top
 }
