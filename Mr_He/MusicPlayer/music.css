@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2015-11-12 14:28:23
 * @Last Modified by:   anchen
-* @Last Modified time: 2015-11-17 13:22:59
+* @Last Modified time: 2015-11-19 15:52:35
 */
 *{
     margin:0px;
@@ -16,7 +16,8 @@ body{
     background-image: url(image/2013090610542871870.jpg);
     background-repeat: no-repeat;
     background-size: 100% 100%;
-    overflow: hidden;
+    background-attachment: fixed;
+    /*overflow: hidden;*/
 }
 #music_player{
     position:absolute;

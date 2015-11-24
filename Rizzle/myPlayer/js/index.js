@@ -100,15 +100,13 @@ var getLrc = function (url,player) {
     		var lyric = lrcobj(xhr.responseText);
     		rollLrc(lyric,player);
     		//console.log(lyric)
-    	}else{
-    		console.log(xhr.status);
     	};
     };
 }
 
 var lrcobj = function (lrc) {
 	var lrcs = lrc.split("/n");
-	var obj = {};
+	var obj = [];
 	var value = [];
 	for (var i = 0; i < lrcs.length; i++) {
 		var reg = /\[[0-9][0-9]:[0-9][0-9].[0-9][0-9]\].*/g;
@@ -120,12 +118,16 @@ var lrcobj = function (lrc) {
 		var timereg = /\[[0-9][0-9]\:[0-9][0-9]\.[0-9][0-9]\]/g;
 		var time = value[i].match(timereg);
 		var words = value[i].replace(timereg,"");
+
 		var timew = time.toString()
 		var min = parseInt(timew.match(/[0-9][0-9]/)[0]);
 		var sec = parseFloat(timew.match(/[0-9][0-9]\.[0-9][0-9]/i)[0])
 		var trueTime = Math.round(min*60+sec);
 		//console.log(words);
-		obj[trueTime] = words;
+		if (words) {
+			obj.push([trueTime,words])
+		};
+		
 	};
 	//console.log(obj);
 	return obj;
@@ -134,32 +136,48 @@ var lrcobj = function (lrc) {
 var rollLrc = function (lrc,player) {
 	var lrcdiv = document.getElementById('lrc');
 	var lrcul = lrcdiv.getElementsByTagName('ul')[0];
-	var top = 0;	
 	//console.log(lrc);
-	for (t in lrc){
+	for (i = 0;i < lrc.length;i++){
 		var li = document.createElement("li");
-		li.innerHTML = lrc[t];
-		li.setAttribute('class','a'+t);
+		li.innerHTML = lrc[i][1];
+		li.setAttribute('class','a'+lrc[i][0]);
 		lrcul.appendChild(li);
 	}
+	var top = lrctop(lrc);
+	console.log(top)
 	player.ontimeupdate = function () {
 		var time = Math.round(player.currentTime);
-		var text = lrc[time];
-
-		var now = lrcdiv.getElementsByClassName('active')[0];
 		var newtext = lrcdiv.getElementsByClassName('a'+time)[0];
-		//console.log (now)
-		if (newtext && newtext != now) {
-			var reg = /active/;			
-			newtext.className += ' active';
-			//console.log(newtext)
-			if (now) {
-	    		now.className = now.className.replace(reg,'');
-	    		console.log(now.clientHeight)
-	    		top -= now.clientHeight;
-	    		lrcul.style.top = 200+top+"px";
-			};
+		var now = lrcdiv.getElementsByClassName('active')[0];		
+
+		for (var i = 0; i < lrc.length; i++) {
+			if (lrc[i][0] == time) {
+				//console.log (now)
+				if (newtext && newtext != now) {
+					var reg = /active/;			
+					newtext.className += ' active';
+					//console.log(newtext)
+					if (now) {
+			    		now.className = now.className.replace(reg,'');
+			    		lrcul.style.top = 200-top[time]+"px";
+					};
+				};
+			}; 
 		};
-		
 	}
+}
+
+var lrctop = function (lrc) {
+	var top = {};
+	var height = 0;
+	var lrcdiv = document.getElementById('lrc');
+	var lrcul = lrcdiv.getElementsByTagName('ul')[0];
+	var li = lrcul.getElementsByTagName("li");
+	for (var i = 0; i < li.length; i++) {
+		height += li[i].clientHeight;
+		console.log(li[i].clientHeight)
+		top[lrc[i][0]] = height;
+	};
+	console.log(top);
+	return top
 }
