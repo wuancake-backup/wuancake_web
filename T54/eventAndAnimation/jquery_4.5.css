@@ -1,0 +1,33 @@
+body {
+    color:green;
+    background-color:gray;
+}
+#simulation {
+    background-color: black;
+    color:green;
+}
+#context {
+    background-color: green;
+    color:white;
+}
+#tip {
+    background-color: blue;
+    color:green;
+    display: none;
+}
+#head {
+    background-color: black;
+    color:green;
+}
+.content {
+    background-color: black;
+    color:green;
+    display:none;   
+}
+.imgfloat {
+    position:relative;  /*important!!!*/
+    display:none;
+}
+#img_float {
+    
+}
