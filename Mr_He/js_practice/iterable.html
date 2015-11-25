@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            //遍历Array可以采用下标循环，遍历Map和Set就无法使用下标。为了统一集合类型，ES6标准引入了新的iterable类型，Array、Map和Set都属于iterable类型。
+            
+            //具有iterable类型的集合可以通过新的for ... of循环来遍历。
+            
+            var a = ["a","b","c"];
+            var s = new Set(["e","f","g"]);
+            var m = new Map([[1,"x"],[2,"y"],[3,"z"]]);
+            for(var x of a){
+                alert(x);
+            }
+            for(var x of s){
+                alert(x);
+            }
+            for(var x of m){
+                // alert(x);
+                alert(x[0]+"="+x[1]);
+            }
+
+            // for ... in循环由于历史遗留问题，它遍历的实际上是对象的属性名称。一个Array数组实际上也是一个对象，它的每个元素的索引被视为一个属性。当我们手动给Array对象添加了额外的属性后，for ... in循环将带来意想不到的意外效果：
+
+            var a2 = ['A', 'B', 'C'];
+            a2.name = 'Hello';
+            for (var x in a2) {
+                alert(x); // '0', '1', '2', 'name'
+            }
+            alert(a2.length);//3
+            alert(a2);//A,B,C
+            alert(a2.name);
+
+
+            //for ... in循环将把name包括在内，但Array的length属性却不包括在内。for ... of循环则完全修复了这些问题，它只循环集合本身的元素：
+            
+            var a3 = ['A', 'B', 'C'];
+            a3.name = 'Hello';
+            for (var x of a3) {
+                alert(x); //'A', 'B', 'C'
+            }
+            
+            //更好的方式是直接使用iterable内置的forEach方法，它接收一个函数，每次迭代就自动回调该函数
+            var a = ['A', 'B', 'C'];
+            a.forEach(function (element, index, array) {
+            // element: 指向当前元素的值
+            // index: 指向当前索引
+            // array: 指向Array对象本身
+            alert(array);
+            });
+
+            //Set与Array类似，但Set没有索引，因此回调函数的前两个参数都是元素本身：
+            var s = new Set(["a","b","c"]);
+            s.forEach(function(element,sameElement,set){
+                //alert(element);
+                alert(set);
+            });
+            
+            var m = new Map([[1,"x"],[2,"y"],[3,"z"]]);
+            m.forEach(function(element,key,map){
+                alert(key);
+            });
+
+         
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

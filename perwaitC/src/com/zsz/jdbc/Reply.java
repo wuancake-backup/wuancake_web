@@ -2,7 +2,19 @@ package com.zsz.jdbc;
 
 public class Reply {
 	private int rid=0,pid=0;
-	private String tname=null,rarticle=null,rauthor=null,rdate=null;
+	private String tname=null,rarticle=null,rauthor=null,rdate=null,rshow=null,rshowdate=null;
+	public String getRshow() {
+		return rshow;
+	}
+	public void setRshow(String rshow) {
+		this.rshow = rshow;
+	}
+	public String getRshowdate() {
+		return rshowdate;
+	}
+	public void setRshowdate(String rshowdate) {
+		this.rshowdate = rshowdate;
+	}
 	public int getRid() {
 		return rid;
 	}
