@@ -1,8 +1,6 @@
 *{margin:0;padding:0}
 
-html,body{height:100%;}
-
-body{background:url("background.jpg") no-repeat;background-size:100% 100%;}
+body{background:url("background.jpg") no-repeat;background-size:cover;}
 
 .content{width:740px;height:510px;margin:70px auto;position: relative;}
 
@@ -62,6 +60,6 @@ h1{position: absolute;top:-35px;}
 
 .music{width:180px;height:250px;margin:20px 20%;}
 
-.right{width:60%;height:100%;float:left;background-color: rgba(204,153,255,0.6);overflow: hidden;}
+.right{width:60%;height:100%;float:left;background-color: rgba(0,0,0,0.1);overflow: hidden;}
 
-.right p{padding-left:2em;font-size: 18px;}
+.right p{padding-left:2em;font-size: 18px;color:white;}
