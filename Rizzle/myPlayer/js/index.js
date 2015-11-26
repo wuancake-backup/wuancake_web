@@ -17,16 +17,16 @@ var controller = (function () {
 		
 		var playButton = document.getElementById(playbut);
 		
-		playButton.addEventListener("click",function () {
+		playButton.onclick = function () {
 			if (player.paused) {
-				
+
 				player.play();
 				this.innerHTML = "&#xe750;"
 			}else{
 				player.pause();
 				this.innerHTML = "&#xe74f;"
 			};
-		})
+		}
 	}
 
 	control.timeControl = function (player,event) {
