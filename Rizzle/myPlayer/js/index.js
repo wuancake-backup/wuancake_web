@@ -1,95 +1,105 @@
-window.onload = function () {
-	var player = document.getElementById('player');
-	voiceControl(player)
+document.onreadystatechange = function () {
+	var player = document.getElementById('player');	
 
-	control(player)
-	timeControl(player)
+	controller.controlBut('playbut',player);
+	controller.timeControl(player);
+	controller.voiceControl(player);
 
-	getLrc("AllofMe.lrc",player)
+
+	//getLrc("AllofMe.lrc",player)
 }
-var control = function (player) {
-	var control = document.getElementById('control');
-	var button = control.getElementsByTagName('span');
+var controller = (function () {
 
-	button[0].addEventListener("click",function () {
-		if (player.paused) {
-			player.play();
-			this.innerHTML = "&#xe750;"
-		}else{
-			player.pause();
-			this.innerHTML = "&#xe74f;"
-		};
-	})
-	// button[0].onclick = function () {
+	var control = {};
 
-	// }
-}
-var timeControl = function (player,event) {
-	var nowtime = document.getElementById('now');
-	var fulltime = document.getElementById('full');
-	var timeline = document.getElementById('timeline');
-	var timediv = timeline.getElementsByTagName('div')[0];
-	var dot = timediv.getElementsByTagName('span')[0];
-	var time = player.currentTime;
-
-	fulltime.innerHTML = Math.ceil(player.duration);
-	setInterval(function () {
-		nowtime.innerHTML = Math.ceil(player.currentTime);
-		timediv.style.width = player.currentTime/player.duration*100+"%";
-	},300)	
-
-
-	timeline.addEventListener("mousedown",function (event) {
-		var dot = this.getElementsByTagName('span')[0];
-
-		document.onmousemove = function (event) {
-			time = player.duration * ((event.clientX-timeline.offsetLeft)/parseInt(timeline.style.width));
-			player.currentTime = time;		
-		}
-		document.onmouseup=function (){
-			document.onmousemove=null;
-			//document.onmouseup=null;
-		};
-	})
-	// timeline.onmousedown = function (event) {
-	// }
-}
-var voiceControl = function (player,event) {
-	var voice = document.getElementById('voice');
-	var sounddiv = document.getElementById('sound');
-	var insidediv = sounddiv.getElementsByTagName('div')[0];
-	var dot = insidediv.getElementsByTagName('span')[0];
-	insidediv.style.width = sounddiv.style.width;
-	var sound = parseInt(insidediv.style.width)/parseInt(sounddiv.style.width);
-
-	voice.onclick = function () {
-		if (player.volume) {
-			player.volume = 0;
-		}else{
-			player.volume = sound;
-		};
+	//控制播放的按钮
+	control.controlBut = function (playbut,player) {
+		
+		var playButton = document.getElementById(playbut);
+		
+		playButton.addEventListener("click",function () {
+			if (player.paused) {
+				
+				player.play();
+				this.innerHTML = "&#xe750;"
+			}else{
+				player.pause();
+				this.innerHTML = "&#xe74f;"
+			};
+		})
 	}
 
-	sounddiv.addEventListener("mousedown",function (event) {
-		document.onmousemove = function (event) {
+	control.timeControl = function (player,event) {
+		var nowtime = document.getElementById('now');
+		var fulltime = document.getElementById('full');
+		var timeline = document.getElementById('timeline');
+		var timediv = timeline.getElementsByTagName('div')[0];
+		var dot = timediv.getElementsByTagName('span')[0];
+		var time = player.currentTime;
 
-			if (event.clientX>sounddiv.offsetLeft && event.clientX<sounddiv.offsetLeft+parseInt(sounddiv.style.width)) {
-				sound = (event.clientX-sounddiv.offsetLeft)/parseInt(sounddiv.style.width);
-				player.volume = sound;
-				insidediv.style.width = sound * parseInt(sounddiv.style.width) + "px";			
+		fulltime.innerHTML = Math.ceil(player.duration);
+		setInterval(function () {
+			nowtime.innerHTML = Math.ceil(player.currentTime);
+			timediv.style.width = player.currentTime/player.duration*100+"%";
+		},300)	
+
+
+		timeline.addEventListener("mousedown",function (event) {
+			var dot = this.getElementsByTagName('span')[0];
+
+			document.onmousemove = function (event) {
+				time = player.duration * ((event.clientX-timeline.offsetLeft)/parseInt(timeline.style.width));
+				player.currentTime = time;		
+			}
+			document.onmouseup=function (){
+				document.onmousemove=null;
+				//document.onmouseup=null;
 			};
+		})
+		// timeline.onmousedown = function (event) {
+		// }
+	}
+	control.voiceControl = function (player,event) {
+		var voice = document.getElementById('voice');
+		var sounddiv = document.getElementById('sound');
+		var insidediv = sounddiv.getElementsByTagName('div')[0];
+		var dot = insidediv.getElementsByTagName('span')[0];
+		insidediv.style.width = sounddiv.style.width;
+		var sound = parseInt(insidediv.style.width)/parseInt(sounddiv.style.width);
 
+		voice.onclick = function () {
+			if (player.volume) {
+				player.volume = 0;
+			}else{
+				player.volume = sound;
+			};
 		}
-		document.onmouseup=function (){
-			document.onmousemove=null;
-			document.onmouseup=null;
-		};
-	})
-	// sounddiv.onclick = function (event) {
 
-		
-	// }
-}
+		sounddiv.addEventListener("mousedown",function (event) {
+			document.onmousemove = function (event) {
+
+				if (event.clientX>sounddiv.offsetLeft && event.clientX<sounddiv.offsetLeft+parseInt(sounddiv.style.width)) {
+					sound = (event.clientX-sounddiv.offsetLeft)/parseInt(sounddiv.style.width);
+					player.volume = sound;
+					insidediv.style.width = sound * parseInt(sounddiv.style.width) + "px";			
+				};
+
+			}
+			document.onmouseup=function (){
+				document.onmousemove=null;
+				document.onmouseup=null;
+			};
+		})
+		// sounddiv.onclick = function (event) {
+
+			
+		// }
+	}	
+
+	return control;
+})()
+
+
 
 var getLrc = function (url,player) {
     var xhr = new XMLHttpRequest();
@@ -105,6 +115,7 @@ var getLrc = function (url,player) {
 }
 
 var lrcobj = function (lrc) {
+	//这里的正则都是自己写的
 	var lrcs = lrc.split("/n");
 	var obj = [];
 	var value = [];
@@ -133,6 +144,7 @@ var lrcobj = function (lrc) {
 	return obj;
 
 }
+
 var rollLrc = function (lrc,player) {
 	var lrcdiv = document.getElementById('lrc');
 	var lrcul = lrcdiv.getElementsByTagName('ul')[0];
@@ -154,6 +166,7 @@ var rollLrc = function (lrc,player) {
 			if (lrc[i][0] == time) {
 				//console.log (now)
 				if (newtext && newtext != now) {
+					//这里参考了网上的removeClass
 					var reg = /active/;			
 					newtext.className += ' active';
 					//console.log(newtext)
