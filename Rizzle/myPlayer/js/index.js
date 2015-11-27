@@ -1,25 +1,28 @@
-document.onreadystatechange = function () {
+var controls = {
+	playbut : "playbut",
+}
+
+var myPlayer = (function (window,controls) {
+
 	var player = document.getElementById('player');	
 
-	controller.controlBut('playbut',player);
-	controller.timeControl(player);
-	controller.voiceControl(player);
+	var myPlayer = {};
 
+	console.log(controls.playbut)
+	myPlayer.init = function() {
+		controlBut(controls.playbut,player);
+		timeControl(player);
+		voiceControl(player)
 
-	//getLrc("AllofMe.lrc",player)
-}
-var controller = (function () {
-
-	var control = {};
+	}; 
 
 	//控制播放的按钮
-	control.controlBut = function (playbut,player) {
-		
+	var controlBut = function (playbut,player) {
 		var playButton = document.getElementById(playbut);
-		
+		console.log(document.getElementById(playbut))		
 		playButton.onclick = function () {
 			if (player.paused) {
-
+				console.log(playButton);
 				player.play();
 				this.innerHTML = "&#xe750;"
 			}else{
@@ -29,9 +32,9 @@ var controller = (function () {
 		}
 	}
 
-	control.timeControl = function (player,event) {
-		var nowtime = document.getElementById('now');
-		var fulltime = document.getElementById('full');
+	var timeControl = function (player,event) {
+		var nowtime = document.createElement('span');
+		var fulltime = document.createElement('span');
 		var timeline = document.getElementById('timeline');
 		var timediv = timeline.getElementsByTagName('div')[0];
 		var dot = timediv.getElementsByTagName('span')[0];
@@ -59,7 +62,7 @@ var controller = (function () {
 		// timeline.onmousedown = function (event) {
 		// }
 	}
-	control.voiceControl = function (player,event) {
+	var voiceControl = function (player,event) {
 		var voice = document.getElementById('voice');
 		var sounddiv = document.getElementById('sound');
 		var insidediv = sounddiv.getElementsByTagName('div')[0];
@@ -96,9 +99,15 @@ var controller = (function () {
 		// }
 	}	
 
-	return control;
-})()
+	return myPlayer;
+})(window,controls)
 
+document.onreadystatechange = function () {
+
+	console.log(myPlayer)
+	
+	myPlayer.init()
+}
 
 
 var getLrc = function (url,player) {
