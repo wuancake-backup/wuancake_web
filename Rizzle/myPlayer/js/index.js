@@ -1,49 +1,86 @@
 var controls = {
+	player : "player",
+
 	playbut : "playbut",
 }
 
 var myPlayer = (function (window,controls) {
-
 	var player = document.getElementById('player');	
-
 	var myPlayer = {};
-
-	console.log(controls.playbut)
 	myPlayer.init = function() {
-		controlBut(controls.playbut,player);
-		timeControl(player);
-		voiceControl(player)
-
+		timeInit();
 	}; 
-
+	myPlayer.render = function () {
+		myPlayer.init()
+		controlBut(controls.playbut,player);
+		//timeControl(player);
+		voiceControl(player);
+	}
 	//控制播放的按钮
 	var controlBut = function (playbut,player) {
-		var playButton = document.getElementById(playbut);
-		console.log(document.getElementById(playbut))		
-		playButton.onclick = function () {
+		var playButton = document.getElementById(playbut);	
+		playButton.addEventListener("click",function () {
 			if (player.paused) {
-				console.log(playButton);
 				player.play();
 				this.innerHTML = "&#xe750;"
 			}else{
 				player.pause();
 				this.innerHTML = "&#xe74f;"
 			};
-		}
+		},false) 
 	}
-
-	var timeControl = function (player,event) {
+	//转换时间格式的函数
+	var secToMin = function (sec) {
+		if (typeof sec === "number" && sec === sec) {
+			var min = Math.floor(sec/60);
+			console.log()
+			var newsec = sec%60;
+			if (min<10) {
+				var realmin = "0" + min.toString();
+			}else{
+				var realmin = min.toString();
+			};
+			if (newsec<10) {
+				var realsec = "0" + newsec.toString();
+			}else{
+				var realsec = newsec.toString();
+			};
+			var time = realmin+":"+realsec;
+			console.log(time)
+			return time
+		}else{return "00:00"};	
+	}
+	//时间显示的函数
+	var timeInit = function () {
 		var nowtime = document.createElement('span');
 		var fulltime = document.createElement('span');
-		var timeline = document.getElementById('timeline');
-		var timediv = timeline.getElementsByTagName('div')[0];
-		var dot = timediv.getElementsByTagName('span')[0];
-		var time = player.currentTime;
+		nowtime.className = "now pl10";
 
-		fulltime.innerHTML = Math.ceil(player.duration);
+		var showtime = document.getElementById('showtime');
+		fulltime.innerHTML = secToMin(Math.ceil(player.duration));
+		console.log(secToMin(270))
+		nowtime.innerHTML = secToMin(Math.ceil(player.currentTime));		
+		//console.log(secToMin(80))
+		var span = document.createElement('span');
+		span.innerHTML = "/";
+		showtime.appendChild(nowtime);
+		showtime.appendChild(span);
+		showtime.appendChild(fulltime);
+
+		var timeline = document.getElementById('timeline');
+		var timediv = document.createElement('div');
+		var dot = document.createElement('span');
+		dot.className = "dot"
+		timediv.className = "inside";
+		timediv.style.width = "0px"
+		timeline.appendChild(timediv);
+		timeline.appendChild(dot);
+		
+		var time = player.currentTime;
 		setInterval(function () {
-			nowtime.innerHTML = Math.ceil(player.currentTime);
+			nowtime.innerHTML = secToMin(Math.ceil(player.currentTime)) ;
 			timediv.style.width = player.currentTime/player.duration*100+"%";
+			dot.style.left = player.currentTime/player.duration*parseInt(timeline.clientWidth)+"px";
 		},300)	
 
 
@@ -59,9 +96,14 @@ var myPlayer = (function (window,controls) {
 				//document.onmouseup=null;
 			};
 		})
-		// timeline.onmousedown = function (event) {
-		// }
 	}
+
+	// var timeControl = function (player,event) {
+
+
+	// 	// timeline.onmousedown = function (event) {
+	// 	// }
+	// }
 	var voiceControl = function (player,event) {
 		var voice = document.getElementById('voice');
 		var sounddiv = document.getElementById('sound');
@@ -92,7 +134,7 @@ var myPlayer = (function (window,controls) {
 				document.onmousemove=null;
 				document.onmouseup=null;
 			};
-		})
+		},false)
 		// sounddiv.onclick = function (event) {
 
 			
@@ -102,12 +144,9 @@ var myPlayer = (function (window,controls) {
 	return myPlayer;
 })(window,controls)
 
-document.onreadystatechange = function () {
+document.addEventListener("DOMContentLoaded",myPlayer.render,false )  
 
-	console.log(myPlayer)
 	
-	myPlayer.init()
-}
 
 
 var getLrc = function (url,player) {
