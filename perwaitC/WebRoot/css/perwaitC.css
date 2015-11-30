@@ -4,7 +4,10 @@ body{font-family: "Microsoft YaHei";background-color: #f7f7f7;min-width: 350px;t
 a:focus,a:hover {
     text-decoration: none;
 }
-
+.modal-content {margin-top:50%}
+textarea{
+	resize:none;
+}
 .bg-499ef3{
     background-color: #499ef3;
 }
