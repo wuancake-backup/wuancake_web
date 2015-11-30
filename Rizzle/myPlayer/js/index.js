@@ -233,6 +233,7 @@ var myPlayer = (function (window,controls) {
 	var rollLrc = function (lrc,player) {
 		var lrcdiv = document.getElementById('lrc');
 		var lrcul = lrcdiv.getElementsByTagName('ul')[0];
+		lrcul.innerHTML = "";
 		//console.log(lrc);
 		for (i = 0;i < lrc.length;i++){
 			var li = document.createElement("li");
@@ -241,6 +242,7 @@ var myPlayer = (function (window,controls) {
 			lrcul.appendChild(li);
 		}
 		var top = lrctop(lrc);
+		lrcul.style.top = "200px"
 		player.ontimeupdate = function () {
 			var time = Math.round(player.currentTime);
 			var newtext = lrcdiv.getElementsByClassName('a'+time)[0];
