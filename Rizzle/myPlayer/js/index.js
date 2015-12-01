@@ -1,27 +1,21 @@
-var controls = {
-	player : "player",
-	playbut : "playbut",
-	soundbut : "voice",
-	sounddiv : "sound",
-	changeBut : "changebut",
-	song : ["AllofMe","AllAboutThatBass"]
-}
 
-var myPlayer = (function (window,controls) {
 
+var myPlayer = (function (window) {
+	var controls = {};
 	var myPlayer = {};
-	myPlayer.init = function() {
-		timeInit();
-	}; 
-	myPlayer.render = function () {
-		var player = document.getElementById(controls.player);		
-		myPlayer.init()
-		controlBut(player);
 
+	myPlayer.render = function () {
+		var player = document.getElementById(controls.player);
+		timeInit();		
+		controlBut(player);
 		change(player)
 		//timeControl(player);
 		voiceControl(player);
 	}
+	myPlayer.init = function(argument) {
+		controls = argument;
+		myPlayer.render()
+	}; 	
 	//控制播放的按钮
 	var controlBut = function (player) {
 		var playButton = document.getElementById(controls.playbut);	
@@ -279,7 +273,14 @@ var myPlayer = (function (window,controls) {
 		return top
 	}
 	return myPlayer;
-})(window,controls)
+})(window)
 
-document.addEventListener("DOMContentLoaded",myPlayer.render,false )  
+document.addEventListener("DOMContentLoaded",myPlayer.init({
+	player : "player",
+	playbut : "playbut",
+	soundbut : "voice",
+	sounddiv : "sound",
+	changeBut : "changebut",
+	song : ["AllofMe","AllAboutThatBass"]
+}),false )  
 
