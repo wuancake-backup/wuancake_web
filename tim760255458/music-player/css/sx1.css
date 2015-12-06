@@ -1,5 +1,5 @@
 body {
-	background-image: url(http://www.edualpha.net/img/aHR0cDovL3BpYzMuYmJ6aGkuY29tL3hpdG9uZ2JpemhpL2ppbmdtZWlodWFuY2Fpa3VhbnBpbmdzZWNhaWJlaWppbmcvY29tcHV0ZXJfa3Vhbl8zMzY3NjlfMTEuanBn.jpg);
+	background-image: url(http://bbs.uc.cn/data/attachment/forum/201302/17/1635562ziq1cpfba0smqqq.jpg);
 }
 
 .location {
@@ -8,14 +8,19 @@ body {
 	top: 110px;
 	left: 280px;
 	height: 400px;
-	border-style: solid;
+	
 	padding: 10px;
-	border-color: #808080;
+	
 }
 
-#width1 {width: 250px;background-color: ghostwhite;}
+#width1 {
+	width: 250px;
+	background-color: ghostwhite;}
 
-#width2{width: 320px;}
+#width2{
+	width: 320px;
+	background-color: #000000;
+	opacity: 0.3;}
 
 #height1{
 	height: 240px;
@@ -28,6 +33,22 @@ a:link {text-decoration: none;}
 a:visited {text-decoration: none;}
 a:hover {text-decoration: underline;}
 a:active {text-decoration: underline;}
-a {color: #000000;}
+a{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #666;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#size{
+	font-size: 18px;
+	color: #333;
+}
 
-
+pre{
+	line-height: 24px;
+	color: #fff;
+	opacity: 1;
+	font-family: "微软雅黑";
+	font-size: 90%;
+}
