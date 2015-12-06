@@ -1,0 +1,73 @@
+<html>
+<meta http-equiv="Content-Type" content="text/html charset=utf-8"/>
+<head>
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="work1.css"/>
+    <script src="jquery-2.1.4.min.js"></script>
+    <script src="work1.js"></script>
+</head>
+<body>
+    <audio src="Steppe Cavalry.mp3" autoplay="autoplay" class="music"></audio>
+    <!--<audio src="GALA.mp3" class="music"></audio>
+    <audio controls="controls">
+    <source src="Steppe Cavalry.mp3" type="audio/ogg" />
+    <br/>
+    <source src="Steppe Cavalry.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+    </audio>-->
+    <div id="total">
+    <div id="part1">
+        <div id="photoOfSinger">
+        <img src="musicSteppe.jpg"/><br/>
+        </div>
+        <div id="message">
+        <p id="song"><strong>草原骑兵</strong></p>
+        <p id="albums">Steppe Cavalry</p>
+        <p id="singer">亚历山德罗夫合唱团</p>
+        </div>
+        <div id="player">&nbsp;
+        <img src="stop.PNG" id="change">&nbsp;
+        <img src="next.PNG" id="next">&nbsp;
+        <img src="mark.PNG" id="mark">&nbsp;
+        <img src="delete.PNG" id="delete"><br/>
+        </div>
+        当前进度<progress value="0" max="100" id="progressNow"></progress><br/>
+        <div id="others">
+        <span id="current">00</span>&nbsp;:&nbsp;<span id="duration">00</span>
+        <!--<span id="timeOfNow">0:58</span>/<span id="timeOfTotal">3:00</span>-->
+        <img src="sound_open.jpg" height="32" id="sound"><span id="valueOfSound">音量</span>
+        <img src="download.jpg" id="download">&nbsp;&nbsp;<img src="share.jpg" id="share">
+        </div>
+        <div id="hidden"><span id="nowHidden"></span><span id="totalHidden"></span></div>
+    </div>
+    <div id="part2">
+        <span id="lyrics">
+           Полюшко-поле,
+Полюшко, широко поле!
+Едут по полю герои,
+Эх, да Красной Армии герои
+Девушки, гляньте,
+Гляньте на дорогу нашу
+Вьется дальняя дорога,
+Эх, да развеселая дорога
+Девушки, гляньте,
+Мы врага принять готовы,
+Наши кони быстроноги,
+Эх, да наши танки быстроходны
+В небе за тучей
+Грозные следят пилоты.
+Быстро плавают подлодки,
+Эх, да зорко смотрит Ворошилов
+Пусть же в колхозе
+Дружная кипит работа,
+Мы - дозорные сегодня,
+Эх, да мы сегодня часовые
+Полюшко-поле,
+Полюшко, зелено поле!
+Едут по полю герои,
+Эх, да Красной Армии герои!
+        </span>
+    </div>
+    </div>
+</body>
+</html>
