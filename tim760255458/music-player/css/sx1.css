@@ -1,0 +1,54 @@
+body {
+	background-image: url(http://bbs.uc.cn/data/attachment/forum/201302/17/1635562ziq1cpfba0smqqq.jpg);
+}
+
+.location {
+	float: left;
+	position: relative;
+	top: 110px;
+	left: 280px;
+	height: 400px;
+	
+	padding: 10px;
+	
+}
+
+#width1 {
+	width: 250px;
+	background-color: ghostwhite;}
+
+#width2{
+	width: 320px;
+	background-color: #000000;
+	opacity: 0.3;}
+
+#height1{
+	height: 240px;
+	text-align: center;
+}
+
+img {width: 250px;height: 230px;}
+
+a:link {text-decoration: none;}
+a:visited {text-decoration: none;}
+a:hover {text-decoration: underline;}
+a:active {text-decoration: underline;}
+a{
+	font-family: "微软雅黑";
+	font-size: 14px;
+	color: #666;
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+#size{
+	font-size: 18px;
+	color: #333;
+}
+
+pre{
+	line-height: 24px;
+	color: #fff;
+	opacity: 1;
+	font-family: "微软雅黑";
+	font-size: 90%;
+}
