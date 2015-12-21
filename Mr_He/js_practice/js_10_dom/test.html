@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 4</title>
+</head>
+<body>
+  <div id="myDiv" my_attribute="hello" class="">
+  jjjjj <em>hkafhalsfhl</em>weewrwq
+  </div>
+  <ul id="mylist">
+  wwww
+      <li>www</li>
+      <li>wwww</li>
+      <li>w23</li>
+  </ul>
+  <script>
+      var div = document.getElementById("myDiv");
+      var id = div.attributes.getNamedItem("id");
+     var textnode = document.createTextNode("hello");
+     div.appendChild(textnode);
+     var antextnode = document.createTextNode("world");
+     div.appendChild(antextnode);
+     var mylist = document.getElementById("mylist");
+     var num = mylist.childNodes.length;
+     div.normalize();
+
+
+  </script>
+</body>
+</html>
