@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <input type="button"  value="click me" id="btn">
+    <a href="http://www.baidu.com" id="baidu" target="_black">Baidu</a>
+    <script>
+        var btn =document.getElementById("btn");
+        document.body.onclick = function(){
+            alert(event.currentTarget === document.body);
+            alert(this === document.body);//this和currentTarget是事件处理程序的实际拥有者
+            alert(event.target === document.getElementById("btn"));//事件的真正目标，触发该事件发生的元素：点击btn，target就是btn，btn被点击，从而引发了父元素的点击事件被激活；点击空白处（body），target就是body
+        };
+
+        //一个函数处理多个事件时，可以使用type属性
+        var handler = function(){
+            switch(event.type){
+                case "click":
+                    alert("Clicked");
+                    event.stopPropagation();//取消进一步的事件捕获或冒泡
+                    break;
+                case "mouseover":
+                    event.target.style.backgroundColor = "red";
+                    break;
+                case "mouseout":
+                    event.target.style.backgroundColor = "green";
+                    break;
+            }
+        };
+        btn.onclick = handler;
+        btn.onmouseover = handler;
+        btn.onmouseout = handler;
+
+        var link = document.getElementById("baidu");
+        link.onclick = function(){
+            event.preventDefault();//阻止特定事件默认行为，此情况是阻止a标签的跳转行为
+        }
+
+    </script>
+    </body>
+</html>
