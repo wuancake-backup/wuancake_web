@@ -5,7 +5,13 @@
     </head>
     <body>
     <input type="button"  value="click me" id="btn">
+    <p id="myP">
+        我是父容器
+        <input type="button"  value="click me~" id="btn2" >
+    </p>
+    
     <a href="http://www.baidu.com" id="baidu" target="_black">Baidu</a>
+    <input type="button" value="btn3" id="btn3">
     <script>
         var btn =document.getElementById("btn");
         document.body.onclick = function(){
@@ -38,6 +44,53 @@
             event.preventDefault();//阻止特定事件默认行为，此情况是阻止a标签的跳转行为
         }
 
+
+        var myP = document.getElementById("myP");
+        myP.addEventListener("click", function(){
+            alert(event.eventPhase);
+            //event.stopPropagation();//注意捕获的顺序，点击btn2只会执行到这步，不会执行btn2的事件处理
+        }, true);
+        myP.addEventListener("click",function(){
+            alert(event.eventPhase);
+            //event.stopPropagation();//停止body事件传播
+        },false);
+
+    
+
+        var btn2 = document.getElementById("btn2");
+        btn2.onclick = function(){
+            alert(event.eventPhase);
+        };
+     
+
+        window.onclick = function(){
+            alert("window");
+        }//事件一直冒泡到window
+
+        window.addEventListener("click",function(){
+            alert("Client coordinates:"+ event.clientX + "," + event.clientY);//鼠标事件对象的clientX和clientY属性保存着客户端位置信息
+            alert("Screen cordinates:" + event.screenX +"," + event.screenY);//屏幕坐标信息
+        },false);
+
+        var btn3 = document.getElementById("btn3");
+        btn3.onclick = function(){
+            var keys = new Array();
+            if(event.shiftKey){
+                keys.push("shift");
+            }
+            if(event.ctrlKey){
+                keys.push("ctrl");
+            }
+            if(event.altKey){
+                keys.push("alt");
+            }
+            if(event.metaKey){
+                keys.push("meta");
+            }
+            alert("Keys:" + keys.join(","));
+        };//鼠标事件发生时同时按下修改键判断
+
+      
     </script>
     </body>
 </html>
