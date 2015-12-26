@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <p id="p1"><b>Hello</b> world!</p>
+        <script>
+            var p1 = document.getElementById("p1");
+            var helloNode = p1.firstChild.firstChild;
+            var worldNode = p1.lastChild;
+            var range = document.createRange();
+            range.setStart(helloNode,2);
+            range.setEnd(worldNode,3);
+            //range.deleteContents();//删除范围内容
+            // var fragment = range.extractContents();//移除范围选区并返回
+            // p1.parentNode.appendChild(fragment);//将范围内容插入文档中
+            
+            // var span = document.createElement("span");
+            // span.style.color = "red";
+            // span.appendChild(document.createTextNode("Inserted text"));
+            // range.insertNode(span);//在范围选区开始处插入节点
+
+
+            var range2 = document.createRange();
+            range2.selectNode(helloNode);
+
+            var span2 = document.createElement("span");
+            span2.style.backgroundColor = "yellow";
+            range2.surroundContents(span2);//环绕范围插入内容，此时范围内容格式必须正确
+
+            // var range1 = document.createRange()；
+            // range1.setStart(p1.parentNode,1);
+            // range1.setEnd(p1.parentNode,2);
+            // range1.deleteContents();
+            
+            range2.detach();//从文档中分离范围，一旦分离就不能恢复使用
+            range2 = null;//解除引用 
+            
+        </script>
+    </body>
+</html>
