@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form  method="post" accept-charset="utf-8" id="myForm">
+          <ul>
+              <li><input type="radio" name="color" value="red" placeholder="">red</li>
+              <li><input type="radio" name="color" value="blue" placeholder="">blue</li>
+              <li><input type="radio" name="color" value="green" placeholder="">green</li>
+          </ul>
+        </form>
+
+    <div id="myDiv4" style="height:50px; width:50px;background-color:blue;" name="div4">
+        
+    </div>
+    <div id="myDiv5" style="height:50px; width:50px;background-color:blue;" name="div4">
+        
+    </div>
+        <script>
+            var form = document.getElementById("myForm");
+            var colorFields = form.elements["color"];//返回的是一个NodeList
+
+            var firstColor = colorFields[0];
+            var firstForm = form.elements[0];
+            alert(firstColor == firstForm);//ture
+
+            var div = document.getElementsByTagName("div");
+            var div4 = div["div4"];//返回的是一个元素，如果有同名，就返回第一个
+            var div4_2 = document.getElementById("myDiv4");
+            alert(div4 == div4_2);//true
+            
+            var green = colorFields[2];
+            green.type = "button";
+        </script>
+    </body>
+</html>
