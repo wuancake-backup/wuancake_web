@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>虐心小游戏 见缝插针</title>
+    <base target="_blank" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+<canvas style="display:none;" id="stage"></canvas>
+<div class="hvtholder">
+    <br /> <a href="http://hovertree.com">首页</a>
+    <a href="http://hovertree.com/texiao/">特效</a>
+    <a href="http://hovertree.com/hvtart/bjae/gbsam8un.htm">原文</a>
+</div>
+<div id="begin">
+    <section class="center-box">
+        <span class="title">见缝插针</span>
+
+        <div class="button">
+            <div id="txtAr"></div>
+            <div class="text"></div>
+        </div>
+
+        <span name="btnFW" class="lee_button1" id="btnFW">炫耀一下</span>
+
+        <a id="rehovertree" class="lee_button2">重头再来</a>
+
+        <span class="lee_button3" id="btnGuanzhu" onclick="pay()" ontouchstart="pay()">跳过本关</span>
+
+        <div id="lvnew" style="font-size:14px;color:#555;margin-top: 10px;display:none;">
+            <span id="btnReset" ontouchstart="document.getElementById('lvnew').style.display='none';return false;">确定</span>
+            <a ontouchstart="document.getElementById('lvnew').style.display='none';return false;" id="cancelhovertree" style="display:inline-block;margin-left:30px;color:#666;cursor:pointer" class="btn_lee">取消</a>
+            <div id="tip" style="font-size:14px;color:#555;margin-top: 15px;display:none;"></div>
+        </div>
+
+    </section>
+
+    <section id="wxArrow" style="display: none;">
+        <div style="position:absolute;width:100%;height:100%;opacity: 0.7;background-color:#000">
+        </div>
+    </section>
+</div>
+<script src="http://libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="./jfczhovertree.js"></script>
+<script>
+    $("#cancelh"+"overtree").on("click", function () { document.getElementById('lvnew').style.display = 'none'; return false; })
+    $("#rehovertr" + "ee").on("click", function () { document.getElementById('lvnew').style.display = 'block'; return false; })
+    $("#btnReset").on("click", function () { document.getElementById('lvnew').style.display = 'none'; return false; })
+</script>
+
+</body>
+</html>
