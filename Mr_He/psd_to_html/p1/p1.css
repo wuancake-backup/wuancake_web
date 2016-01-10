@@ -1,0 +1,442 @@
+/* 
+* @Author: xin
+* @Date:   2016-01-05 11:32:14
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-01-10 18:14:22
+*/
+/**{
+    margin: 0px;
+    padding: 0px;
+}*/
+body{
+    position: relative;
+    /*border:2px orange solid;*/
+}
+ul,li{
+     list-style-type: none;
+     padding:0px;
+     margin:0px;
+
+}
+p{
+    margin:0;
+    padding:0;
+}
+h2{
+    font:bold 20px/21px "Myriad Pro";
+    margin:0px;
+    /*margin-bottom: 10px;*/
+   /* border:1px red solid;*/
+}
+h3{
+    margin:0px;
+    font:16px/1em "Myriad Pro";
+}
+a{
+    text-decoration: none;
+    font-family:"Myriad Pro" ;
+    color:#5a5757;
+}
+input{
+    padding:0px;
+    margin:0px;
+    font:13px "Myriad Pro";
+    vertical-align: middle;
+    outline-width: 0;
+}
+img{
+    vertical-align: middle;
+}
+.clearfix:after {
+    content:"";
+    display:table;
+    clear:both;
+    }
+.top img ,.main_body_left_boxes img{
+    width: 100%;
+    /*border: 10px red;*/
+}
+.main{
+   width:1000px;
+   margin-right: auto;
+   margin-left: auto;
+   /*border:1px black solid;*/
+   position: relative; 
+   border-bottom: 1px;
+   /*overflow: hidden;*/
+
+}
+.main_header{
+    height: 78px;
+    position:relative;
+    /*border:1px blue solid;*/
+    margin-bottom: 35px;
+}
+.main_header_logo{
+    position:relative;
+    margin-left: 4px;
+    /*border:1px red solid;*/
+    height:100%;
+}
+.main_header_logo img:nth-of-type(1){
+    position:absolute;
+    top:-8px;
+    left:0px;
+}
+.main_header_logo img:nth-of-type(2){
+    position:absolute;
+    left:11px;
+    top:27px;
+}
+.main_header_logo img:nth-of-type(3){
+    position:absolute;
+    left:67px;
+    bottom: 0px;
+}
+.main_header_menu ul{
+    position:absolute;
+    right:0px;
+    bottom:0px;
+    /*padding-left: 18px;
+    padding-right: 13px;*/
+    /*border:3px red solid;*/
+    padding:20px 18px 18px 13px;
+    margin:0px;
+
+}
+.main_header_menu ul li{
+    font-family: "Myriad Pro",sans-serif;
+    font-size: 14px;
+    float: left;
+    margin-right: 22px;
+    line-height: 21px;
+
+}
+.main_body{
+    /*overflow:hidden;*/
+    /*border-bottom:1px blue solid;*/
+}
+.main_body_left{
+    /*margin-right: 264px;*/
+    width:748px;
+    float:left;
+    margin-right: 20px;
+    margin-bottom: 33px;
+
+}
+.main_body_left_banner{
+    height:346px;
+    position:relative;
+    /*border:1px green solid;*/
+    margin-bottom: 35px;
+}
+
+.main_body_left_banner>a{
+    display: block;
+    padding:10px;
+    font-size: 0;
+}
+.main_body_left_banner>a img{
+    width:100%;
+}
+.main_body_left_banner ul{
+    position:absolute;
+    bottom:0;
+    right:26px;
+    /*border:1px red solid;*/
+}
+.main_body_left_banner ul li{
+    
+    border: 1px solid;
+    border-color: #c0b9b9 #e1dede #e6d3e3 #c0b9b9;
+    float:left;
+    margin-right: 7px;
+}
+.main_body_left_banner ul li a{
+    display:block;
+    height:10px;
+    width:10px;
+}
+.main_body_left_banner ul li a:hover{
+    background-color:#09749c;
+}
+.main_body_left_boxes{
+    padding-top:32px;
+    text-align:center;
+    /*border:1px red solid;*/
+    /*font-size: 0;*/
+    
+}
+.main_body_left_boxes ul{
+    /*height:300px;*/
+    /*width:673px;*/
+    /*margin-right: auto;
+    margin-left: auto;*/
+
+    display:inline-block;
+    vertical-align: top;
+    
+    /*border: 1px red solid;*/
+    /*float:left;*/
+}
+.main_body_left_boxes ul:nth-of-type(1){
+    margin-bottom: 30px;
+}
+/*.main_body_left_boxes ul:nth-of-type(2){
+    height:270px;
+    border: 1px red solid;
+}*/
+.main_body_left_boxes li{
+    float:left;
+    width:300px;
+    /*margin-bottom: 30px;*/
+    text-align: left;
+    /*border:1px red solid;*/
+}
+.main_body_left_boxes ul li:nth-of-type(1){
+    margin-right: 73px;
+}
+.main_body_left_boxes ul li a:nth-of-type(1){
+    display:block;
+    /*width:100%;*/
+    margin-bottom: 13px;
+}
+.main_body_left_boxes ul li a:nth-of-type(2){
+    font:13px/21px "Myriad Pro";
+    float:right;
+    margin-right: 0.5px;
+    margin-bottom: 38px;
+}
+.main_body_left_boxes h2{
+    font:bold 20px/21px "Myriad Pro";
+}
+.main_body_left_boxes p{
+    font: 13px/21px "Myriad Pro";
+    margin:0px;
+    padding:0px;
+    margin-bottom: 16px;
+}
+.main_body_right{
+    width:230px;
+    float:left;
+    /*border:1px red solid;*/
+}
+.main_body_right_search{
+    /*float:left;*/
+    margin-bottom: 36px;
+    
+}
+.main_body_right_search div{
+    border:1px #c5c5c5 solid;
+    /*overflow:hidden;*/
+    /*float:left;*/
+    padding:4px 10px 4px 24px;
+
+}
+.main_body_right_search input[type="text"]{
+    border:0px;
+    display:block;
+    width:166px;
+    height:22px;
+    padding:0px;
+    float:left;
+    font:13px "Myriad Pro";
+}
+.main_body_right_search input[type="submit"]{
+    border:0px;
+    display:block;
+    width:21px;
+    height:21px;
+    background-image: url(image/images/perennial_04.png) ;
+    padding:0px;
+    float:right;
+}
+.main_body_right_recentPosts{
+    margin-bottom: 35px;
+}
+.main_body_right_recentPosts h2,.main_body_right_categories h2,.main_body_right_newsletter h2{
+    font-size: 22px;
+    color:#ffffff;
+    background-color: #f53f1a;
+    /*border:3px red solid;*/
+    height:40px;
+    line-height: 40px;
+    padding-left: 15px;
+    margin-bottom: 11px;
+    box-shadow:2px 0px 2px  #cccccc,
+                -2px 0px 2px #cccccc,
+                0px 2px 2px #cccccc,
+                0px -2px 2px #cccccc;
+    
+}
+.main_body_right_recentPosts ul{
+    /*border:3px red solid;*/
+    padding:0px 8px;
+}
+.main_body_right_recentPosts li{
+    /*height:80px;*/
+    /*margin:17px 0px;*/
+    padding:15px 0px 16px;
+    border-bottom: 1px #838181 dashed;
+    font: 13px "Myriad Pro";
+    color:#5a5757;
+
+}
+.main_body_right_recentPosts li:nth-of-type(3){
+    border:none;
+    margin-bottom: 5px;
+}
+.main_body_right_recentPosts img{
+    float: left;
+    border:1px #d5d3d3 solid;
+    margin-right: 9px;
+
+}
+.main_body_right_recentPosts a{
+    font-size: 14px;
+    font-weight: bold;
+    /*font:bold 14px "Myriad Pro"; */
+    /*line-height: 15px;*/
+    /*color:#5a5757;*/
+    display:block;
+    /*border:1px red solid;*/
+   /* margin-bottom: 5px;*/
+}
+/*.main_body_right_recentPosts p{
+    
+
+}*/
+.main_body_right_categories{
+    margin-bottom: 30px;
+}
+.main_body_right_categories ul{
+    padding:11px 8px 4px;
+    border:3px red solid;
+}
+.main_body_right_categories li{
+     font:bold 14px/37px "Myriad Pro";
+     color:#5a5757;
+     height:37px;
+     border-top:1px red dashed;
+}
+.main_body_right_categories li:nth-of-type(1){
+    border:none;
+    height:35px;
+    line-height: 35px;
+}
+.main_body_right_categories li:nth-of-type(3){
+    height:42px;
+    line-height: 42px;
+}
+.main_body_right_categories li:nth-of-type(5){
+    height:40px;
+    line-height: 40px;
+}
+.main_body_right_newsletter>div{
+    /*border:3px red solid;*/
+    padding:25px 15px 14px 13px;
+}
+.main_body_right_newsletter input:nth-of-type(1){
+    display:block;
+    height:31px;
+    width:181px;
+    margin-bottom: 12px;
+    padding-left: 15px;
+    border:1px #c5c5c5 solid;
+   
+
+}
+.main_body_right_newsletter input:nth-of-type(2){
+    float:right; 
+    display:block;
+    margin-right: 1px;
+    color:#aa3838;
+    background:linear-gradient(#ededed, #cecece);
+    border:1px #aeaeae solid;
+}
+.main_body_bottom{
+    clear:both;
+    /*border:3px red solid;*/
+    font-size: 0;
+    text-align: center;
+    padding-top:17px;
+    padding-bottom: 19px;
+    position: relative;
+    margin-bottom: 34px;
+    background-color: #f5f5f5;
+
+}
+/*.main_body_bottom>img{
+    padding:4px;
+    border:1px red solid;
+    width:139px;
+    height:104px;
+    margin-right: 25px;
+}*/
+.main_body_bottom div a{
+    display:inline-block;
+    padding:4px;
+    border:1px #999999 solid;
+    width:139px;
+    height:104px;
+    margin-right: 25px;
+}
+.main_body_bottom div a:nth-of-type(5){
+    margin:0;
+}
+.main_body_bottom>a:nth-of-type(1){
+    position: absolute;
+    top:56px;
+    left:16px;
+}
+.main_body_bottom>a:nth-of-type(2){
+    position: absolute;
+    top:56px;
+    right:20px;
+}
+.main_footer{
+    /*height:50px;*/
+    /*border: red solid;*/
+    border-width:3px 3px 37px 3px;
+    border-image: url(image/images/perennial03_03.png) 3 3 37 3;
+    padding:18px 0px 20px;
+    margin-bottom: 35px;
+    text-align: center;
+    display:inline-block;
+    /*overflow:hidden;*/
+}
+.main_footer>ul{
+    display:inline-block;
+    text-align: left;
+}
+.main_footer a{
+    font-size: 14px;
+}
+.main_footer>ul>li{
+    float:left;
+    /*border:1px red solid;*/
+    margin-right: 70px;
+}
+.main_footer>ul>li:nth-of-type(5){
+    margin:0px;
+}
+.main_footer h3{
+    font:16px/1em "Myriad Pro";
+    margin-bottom: 5px;
+}
+.bottom{
+    position: absolute;
+    bottom:0;
+    left:0;
+    font-size: 0;
+}
+.bottom img{
+    width:100%;
+    height:90px;
+}
+.main_header_menu ul,.main_body_left_banner>a,.main_body_left_boxes,.main_body_right_recentPosts ul,.main_body_right_categories ul,.main_body_right_newsletter>div,.main_body_bottom{
+        box-shadow:2px 0px 2px  #cccccc,
+                -2px 0px 2px #cccccc,
+                0px 2px 2px #cccccc,
+                0px -2px 2px #cccccc;
+}
