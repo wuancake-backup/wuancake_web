@@ -1,0 +1,24 @@
+﻿<html>
+<head>
+<meta charset="utf-8">
+<title>js动态添加css</title>
+</head>
+<body>
+<input  id="btn1" style="width: 100px"  type="button" value="修改颜色" onclick="changeStyle(this)"/><br />
+<input  id="btn2" style="width: 100px;height:100px;"  type="button" value="点击修改颜色"/><br />
+<script>
+	function changeStyle(obj){
+		var temp=obj.style.cssText;
+	   obj.style.cssText = temp+"color:#990000;border:1px solid #cccccc";
+	}
+	function changeStyle_(obj,strCss){
+		var temp=obj.style.cssText;
+	    obj.style.cssText = temp+strCss;
+	}
+	var btn2=document.getElementById('btn2');
+	btn2.addEventListener('click', function(){
+		changeStyle_(this,"color:#990000;border:1px solid #cccccc");
+	},false);
+</script>
+</body>
+</html>
