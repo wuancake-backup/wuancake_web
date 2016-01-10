@@ -6,10 +6,13 @@
     <body>
         <form  method="post" accept-charset="utf-8" id="myForm">
           <ul>
-              <li><input type="radio" name="color" value="red" placeholder="">red</li>
+              <li><input type="radio" name="color" value="red" placeholder="" autofocus>red</li>
               <li><input type="radio" name="color" value="blue" placeholder="">blue</li>
               <li><input type="radio" name="color" value="green" placeholder="">green</li>
+              <li><input type="text" name="textin" value="initial value" placeholder="" size="25" maxlength="50"></li>
           </ul>
+          <textarea name="textbox" rows="20" cols="50">请输入数字</textarea>
+
         </form>
 
     <div id="myDiv4" style="height:50px; width:50px;background-color:blue;" name="div4">
@@ -31,8 +34,39 @@
             var div4_2 = document.getElementById("myDiv4");
             alert(div4 == div4_2);//true
             
-            var green = colorFields[2];
-            green.type = "button";
+            // var green = colorFields[2];
+            // green.type = "button";
+            
+            var textbox = document.forms[0].elements["textbox"];
+            textbox.onfocus = function(event){
+                event.target.select();
+                event.target.style.backgroundColor = "red";
+            };
+            textbox.onblur = function(event){
+                if(/[^\d]/.test(event.target.value)){
+                    event.target.style.backgroundColor = "blue";
+                }else{
+                    event.target.style.backgroundColor = "";
+                }
+            };
+            textbox.onchange = function(event){
+                if(/[^\d]/.test(event.target.value)){
+                    event.target.style.backgroundColor = "blue";
+                }else{
+                    event.target.style.backgroundColor = "";
+                }
+            };
+
+            window.onload = function(event){
+                var element = document.forms[0].elements[0];
+                if(element.autofocus !== true){
+                    element.focus();
+                    console.log("JS focus");
+                }
+                else console.log("Not JS focus");
+
+            };
+
         </script>
     </body>
 </html>
