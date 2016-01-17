@@ -1,0 +1,13 @@
+ul li{
+    display:inline;
+}
+.tooltip {
+	
+}
+#tooltip{
+	position:absolute;
+	border:1px solid #ccc;
+	background:#333;
+	padding:2px;
+	display:none;
+}

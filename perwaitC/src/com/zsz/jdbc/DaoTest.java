@@ -2,9 +2,12 @@ package com.zsz.jdbc;
 
 import java.util.List;
 
+
+
 public class DaoTest {
 
 	public static void main(String[] args) {
+		
 	//insertTest();
 	//deleteTest();
 //		queryTest();
@@ -16,9 +19,37 @@ public class DaoTest {
 	//querySQL();	
 		//queryaforb();
 		//getxy();
-		//getlist();
-		gettable();
+		getlist();
+		//gettable();
+		//inposts();
+	//getDate();
+		//inreply();
 	}	
+	public static void getDate(){
+		 new getDate().time();
+	}
+	public static void inreply(){
+		Reply reply=new Reply();
+		Dao dao=new Dao();
+		reply.setRid(2);
+		reply.setPid(1);
+		reply.setTname("one test");
+		reply.setRarticle("22222");
+		reply.setRauthor("admin");
+		reply.setRdate(new getDate().time());
+		dao.insert(reply);
+	}
+	public static void inposts(){
+		Posts posts=new Posts();
+		Dao dao=new Dao();
+		posts.setPid(0);
+		posts.setTid(2);
+		posts.setPname("admin test in");
+		posts.setParticle("admin");
+		posts.setPauthor("admin");
+		posts.setPdate(new getDate().time());
+		dao.insert(posts);
+	}
 	public static void gettable3(){
 		Dao dao=new Dao();
 		int a=dao.getReplyNum("one test", "19");
@@ -37,7 +68,7 @@ public class DaoTest {
 	
 	public static void gettable(){
 		Dao dao=new Dao();
-		List<Theme> th=dao.getThemeList("theme");
+		List<Theme> th=dao.getThemeList("theme","tlv","G");
 		for(Theme k:th){
 			System.out.println(k.getTauthor());
 		}
@@ -55,14 +86,15 @@ public class DaoTest {
 		public static  void getxy(){
 			Dao dao=new Dao();
 			String a="admin1";
-			String test= dao.getXXval("usr", "uname", "admin", "uid");
+			String test= dao.getXXval("theme", "tname", "one test", "tid");
 			System.out.println(test+" ok");
 		}
 		
 		public static void queryaforb(){
 			Dao dao=new Dao();
 		//	int iex=dao.getSqlAForB("uname", "admin", "ulv", "a");
-			int iex=dao.getSqlAForB("posts", "pauthor", "admin");
+			//int iex=dao.getSqlAForB("posts", "tid","1", "pid","2");
+			int iex=dao.getSqlAForB("reply", "tname","one test", "pid","1","rid","21");
 			System.out.println(iex);
 		}
 			
