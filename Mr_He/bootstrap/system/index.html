@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <title>管理系统</title>
+        <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body>
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+            <!-- 导航标题及导航折叠按钮 -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#navbar_content"><!-- 默认不展开 -->
+                    <!-- .sr-only是 除了屏幕阅读器外，其他设备上隐藏该元素，这个是用于屏幕阅读器的，帮助残障人士更好的访问网站。 -->
+                    <span class="sr-only">Toggle navigation</span>
+                    <!-- 按钮上三条横线，一个span一条 -->
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand">管理系统</a>
+            </div>
+            <!-- 导航条的导航链接、表单等其他内容，在响应式屏幕变窄时被折叠到折叠按钮中 -->
+            <div class="collapse navbar-collapse" id="navbar_content">
+                <ul class="nav navbar-nav">
+                    <!-- 当前状态 -->
+                    <li class="active"><a href="#">首页</a></li>
+                    <!-- 下拉二级菜单 -->
+                    <li class="dropdown">
+                        <!-- 下拉按钮 -->
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">功能
+                            <!-- 按钮右侧图标 -->
+                            <span class="caret"></span>
+                        </a>
+                        <ul class="dropdown-menu" role="menu">
+                            <!-- 禁用状态 -->
+                            <li class="disabled"><a href="#">业务功能</a></li>
+                            <li><a href="#">信息建立</a></li>
+                            <li><a href="#">信息查询</a></li>
+                            <li><a href="#">信息管理</a></li>
+                            <!-- 分割线 -->
+                            <li class="divider"></li>
+                            <li class="disabled"><a href="#">系统功能</a></li>
+                            <li><a href="#">设置</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+                <!-- 导航条中的表单 -->
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <!-- 使用.sr-only类隐藏label，如果没有为每个输入控件设置 label 标签，屏幕阅读器将无法正确识别 -->
+                        <label for="userName" class="sr-only">userName</label>
+                        <input type="text" class="form-control" placeholder="用户名" id="userName">
+                    </div>
+                    <div class="form-group">
+                        <label for="passWord" class="sr-only">passWord</label>
+                        <input type="password" class="form-control" placeholder="密码" id="passWord">
+                    </div>
+                    <button type="submit" class="btn btn-default">登录</button>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+
+
+        <!-- jQuery (neces
+    sary for Bootstrap's JavaScript plugins) -->
+    <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
