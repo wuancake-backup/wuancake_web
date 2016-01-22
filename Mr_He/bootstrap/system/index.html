@@ -6,6 +6,21 @@
         <meta name="viewport" content="width=device-width,initial-scale=1">
         <title>管理系统</title>
         <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
+        <style type="text/css">
+            @media (max-width: 768px){
+                .sidebar-left{
+                    display:none;
+                }
+            }
+            @media (min-width: 768px){
+                .control-sidebar{
+                    display:none;
+                }
+                .sidebar-left{
+                    display:block;
+                }
+            }
+        </style>
     </head>
     <body>
     <nav class="navbar navbar-inverse">
@@ -64,6 +79,171 @@
             </div>
         </div>
     </nav>
+
+    <!-- 主要内容 -->
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 control-sidebar">
+                <button class="btn btn-primary" data-toggle="collapse" data-target="#sidebar">Menu</button>
+            </div>
+        </div>
+        <div class="row">
+            <!-- 左侧边栏 -->
+            <div class="col-sm-3 col-md-2 sidebar-left" id="sidebar">
+                <ul class="nav nav-pills nav-stacked">
+                    <li class="active"><a href="">首页</a></li>
+                </ul>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#">信息建立</a></li>
+                    <li><a href="#">信息查询</a></li>
+                    <li><a href="#">信息管理</a></li>
+                </ul>
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#">设置</a></li>
+                    <li><a href="#">帮助</a></li>
+                </ul>
+            </div>
+            <!-- 右侧管理控制台 -->
+            <div class="col-sm-9 col-md-10">
+                <h1>管理控制台</h1>
+                <hr>
+                <!-- 一组按钮 -->
+                <p>
+                    <button type="button" class="btn btn-lg btn-default">操作1</button>
+                    <button type="button" class="btn btn-lg btn-primary">操作2</button>
+                    <button type="button" class="btn btn-lg btn-success">操作3</button>
+                    <button type="button" class="btn btn-lg btn-info">操作4</button>
+                    <button type="button" class="btn btn-lg btn-warning">操作5</button>
+                    <button type="button" class="btn btn-lg btn-danger">操作6</button>
+                </p>
+                <div class="row">
+                    <!-- 提醒面板 -->
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                           <div class="panel-heading">
+                                最新提醒
+                            </div>
+                            <div class="panel-body">
+                                <div class="alert alert-success" role="alert">
+                                    <strong>提示</strong>您的订单（2015001）已结审批通过！
+                                </div>
+                                <div class="alert alert-danger" role="alert">
+                                    <strong>提示</strong>您的订单（2015002）被打回
+                                </div>
+                                <div class="alert alert-warning" role="alert">
+                                    <strong>提示</strong>您的订单（2015003）客户付款延长！
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 我的任务面板 -->
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                我的任务
+                            </div>
+                            <div class="panel-body">
+                                <ul class="nav nav-pills nav-stacked">
+                                    <li><a href="#" class="alert alert-info">
+                                        <span class="badge pull-right">20</span>
+                                        订单审批
+                                    </a></li>
+                                    <li><a href="#" class="alert alert-info">
+                                        <span class="badge pull-right">20</span>
+                                        收款确认
+                                    </a></li>
+                                    <li><a href="#" class="alert alert-info">
+                                        <span class="badge pull-right">20</span>
+                                        付款确认
+                                    </a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <!-- 订单面板 -->
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                最新订单
+                            </div>
+                            <div class="panel-body">
+                                <div class="table-responsive">
+                                   <table class="table">
+                                       <thead>
+                                           <tr>
+                                               <th>#</th>
+                                               <th>产品</th>
+                                               <th>数量</th>
+                                               <th>总金额</th>
+                                               <th>业务员</th>
+                                           </tr>
+                                       </thead>
+                                       <tbody>
+                                           <tr>
+                                               <td>1</td>
+                                               <td>Apple Macbook air</td>
+                                               <td>10</td>
+                                               <td>80000</td>
+                                               <td>王小贱</td>
+                                           </tr>
+                                           <tr>
+                                               <td>2</td>
+                                                <td>Apple iPad air</td>
+                                                <td>20</td>
+                                                <td>65000</td>
+                                                <td>尹开花</td>
+                                           </tr>
+                                           <tr>
+                                               <td>3</td>
+                                                <td>Apple Macbook pro</td>
+                                                <td>5</td>
+                                                <td>50000</td>
+                                                <td>刘老根</td>
+                                           </tr>
+                                       </tbody>
+                                   </table>
+                                </div>
+                               <p>
+                                   <button class="btn btn-primary">
+                                       查看详情
+                                       <span class="caret"></span>
+                                   </button>
+                               </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 工程进度面板 -->
+                    <div class="col-md-6">
+                        <div class="panel panel-primary">
+                            <div class="panel-heading">
+                                工程进度
+                            </div>
+                            <div class="panel-body">
+                                <h3>
+                                <span class="label label-primary">水井挖掘工程</span>
+                                </h3>
+                                <div class="progress">
+                                    <div class="progress-bar" role="progressbar" style="width:70%">
+                                        <span class="sr-only">70%</span>
+                                    </div>
+                                </div>
+
+                                <h3><span class="label label-danger">基建工程</span></h3>
+                                <div class="progress">
+                                    <div class="progress-bar progress-bar-danger" role="progressbar" style="width:30%;">
+                                        <span class="sr-only">30%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
 
 
