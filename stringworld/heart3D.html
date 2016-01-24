@@ -1,0 +1,436 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <style type="text/css">
+			html,
+			body {
+			  height: 100%;
+			  color:#fff;
+			  font-size:100px;
+			}
+
+			body {
+			  background-color: black;
+			}
+
+			* {
+			  box-sizing: border-box;
+			}
+
+			.heart3d {
+			  position: absolute;
+			  top: 0;
+			  right: 0;
+			  bottom: 0;
+			  left: 0;
+			  margin: auto;
+			  width: 200px;
+			  height: 325px;
+			  -webkit-transform-style: preserve-3d;
+			          transform-style: preserve-3d;
+			  -webkit-animation: spin 15s infinite linear;
+			          animation: spin 15s infinite linear;
+			}
+			.heart3d [class^="rib"] {
+			  position: absolute;
+			  opacity: 0;
+			  width: 200px;
+			  height: 325px;
+			  border-width: 1px 1px 0 0;
+			  border-radius: 50% 50% 0 / 40% 50% 0;
+			}
+			.heart3d [class$="1"] {
+			  -webkit-animation: appear 1s 0.1s infinite alternate linear;
+			          animation: appear 1s 0.1s infinite alternate linear;
+			  -webkit-transform: rotateY(10deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(10deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="2"] {
+			  -webkit-animation: appear 1s 0.2s infinite alternate linear;
+			          animation: appear 1s 0.2s infinite alternate linear;
+			  -webkit-transform: rotateY(20deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(20deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="3"] {
+			  -webkit-animation: appear 1s 0.3s infinite alternate linear;
+			          animation: appear 1s 0.3s infinite alternate linear;
+			  -webkit-transform: rotateY(30deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(30deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="4"] {
+			  -webkit-animation: appear 1s 0.4s infinite alternate linear;
+			          animation: appear 1s 0.4s infinite alternate linear;
+			  -webkit-transform: rotateY(40deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(40deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="5"] {
+			  -webkit-animation: appear 1s 0.5s infinite alternate linear;
+			          animation: appear 1s 0.5s infinite alternate linear;
+			  -webkit-transform: rotateY(50deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(50deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="6"] {
+			  -webkit-animation: appear 1s 0.6s infinite alternate linear;
+			          animation: appear 1s 0.6s infinite alternate linear;
+			  -webkit-transform: rotateY(60deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(60deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="7"] {
+			  -webkit-animation: appear 1s 0.7s infinite alternate linear;
+			          animation: appear 1s 0.7s infinite alternate linear;
+			  -webkit-transform: rotateY(70deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(70deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="8"] {
+			  -webkit-animation: appear 1s 0.8s infinite alternate linear;
+			          animation: appear 1s 0.8s infinite alternate linear;
+			  -webkit-transform: rotateY(80deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(80deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="9"] {
+			  -webkit-animation: appear 1s 0.9s infinite alternate linear;
+			          animation: appear 1s 0.9s infinite alternate linear;
+			  -webkit-transform: rotateY(90deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(90deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="10"] {
+			  -webkit-animation: appear 1s 1s infinite alternate linear;
+			          animation: appear 1s 1s infinite alternate linear;
+			  -webkit-transform: rotateY(100deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(100deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="11"] {
+			  -webkit-animation: appear 1s 1.1s infinite alternate linear;
+			          animation: appear 1s 1.1s infinite alternate linear;
+			  -webkit-transform: rotateY(110deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(110deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="12"] {
+			  -webkit-animation: appear 1s 1.2s infinite alternate linear;
+			          animation: appear 1s 1.2s infinite alternate linear;
+			  -webkit-transform: rotateY(120deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(120deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="13"] {
+			  -webkit-animation: appear 1s 1.3s infinite alternate linear;
+			          animation: appear 1s 1.3s infinite alternate linear;
+			  -webkit-transform: rotateY(130deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(130deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="14"] {
+			  -webkit-animation: appear 1s 1.4s infinite alternate linear;
+			          animation: appear 1s 1.4s infinite alternate linear;
+			  -webkit-transform: rotateY(140deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(140deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="15"] {
+			  -webkit-animation: appear 1s 1.5s infinite alternate linear;
+			          animation: appear 1s 1.5s infinite alternate linear;
+			  -webkit-transform: rotateY(150deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(150deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="16"] {
+			  -webkit-animation: appear 1s 1.6s infinite alternate linear;
+			          animation: appear 1s 1.6s infinite alternate linear;
+			  -webkit-transform: rotateY(160deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(160deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="17"] {
+			  -webkit-animation: appear 1s 1.7s infinite alternate linear;
+			          animation: appear 1s 1.7s infinite alternate linear;
+			  -webkit-transform: rotateY(170deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(170deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="18"] {
+			  -webkit-animation: appear 1s 1.8s infinite alternate linear;
+			          animation: appear 1s 1.8s infinite alternate linear;
+			  -webkit-transform: rotateY(180deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(180deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="19"] {
+			  -webkit-animation: appear 1s 1.9s infinite alternate linear;
+			          animation: appear 1s 1.9s infinite alternate linear;
+			  -webkit-transform: rotateY(190deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(190deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="20"] {
+			  -webkit-animation: appear 1s 2s infinite alternate linear;
+			          animation: appear 1s 2s infinite alternate linear;
+			  -webkit-transform: rotateY(200deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(200deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="21"] {
+			  -webkit-animation: appear 1s 2.1s infinite alternate linear;
+			          animation: appear 1s 2.1s infinite alternate linear;
+			  -webkit-transform: rotateY(210deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(210deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="22"] {
+			  -webkit-animation: appear 1s 2.2s infinite alternate linear;
+			          animation: appear 1s 2.2s infinite alternate linear;
+			  -webkit-transform: rotateY(220deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(220deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="23"] {
+			  -webkit-animation: appear 1s 2.3s infinite alternate linear;
+			          animation: appear 1s 2.3s infinite alternate linear;
+			  -webkit-transform: rotateY(230deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(230deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="24"] {
+			  -webkit-animation: appear 1s 2.4s infinite alternate linear;
+			          animation: appear 1s 2.4s infinite alternate linear;
+			  -webkit-transform: rotateY(240deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(240deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="25"] {
+			  -webkit-animation: appear 1s 2.5s infinite alternate linear;
+			          animation: appear 1s 2.5s infinite alternate linear;
+			  -webkit-transform: rotateY(250deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(250deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="26"] {
+			  -webkit-animation: appear 1s 2.6s infinite alternate linear;
+			          animation: appear 1s 2.6s infinite alternate linear;
+			  -webkit-transform: rotateY(260deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(260deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="27"] {
+			  -webkit-animation: appear 1s 2.7s infinite alternate linear;
+			          animation: appear 1s 2.7s infinite alternate linear;
+			  -webkit-transform: rotateY(270deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(270deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="28"] {
+			  -webkit-animation: appear 1s 2.8s infinite alternate linear;
+			          animation: appear 1s 2.8s infinite alternate linear;
+			  -webkit-transform: rotateY(280deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(280deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="29"] {
+			  -webkit-animation: appear 1s 2.9s infinite alternate linear;
+			          animation: appear 1s 2.9s infinite alternate linear;
+			  -webkit-transform: rotateY(290deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(290deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="30"] {
+			  -webkit-animation: appear 1s 3s infinite alternate linear;
+			          animation: appear 1s 3s infinite alternate linear;
+			  -webkit-transform: rotateY(300deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(300deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="31"] {
+			  -webkit-animation: appear 1s 3.1s infinite alternate linear;
+			          animation: appear 1s 3.1s infinite alternate linear;
+			  -webkit-transform: rotateY(310deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(310deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="32"] {
+			  -webkit-animation: appear 1s 3.2s infinite alternate linear;
+			          animation: appear 1s 3.2s infinite alternate linear;
+			  -webkit-transform: rotateY(320deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(320deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="33"] {
+			  -webkit-animation: appear 1s 3.3s infinite alternate linear;
+			          animation: appear 1s 3.3s infinite alternate linear;
+			  -webkit-transform: rotateY(330deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(330deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="34"] {
+			  -webkit-animation: appear 1s 3.4s infinite alternate linear;
+			          animation: appear 1s 3.4s infinite alternate linear;
+			  -webkit-transform: rotateY(340deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(340deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="35"] {
+			  -webkit-animation: appear 1s 3.5s infinite alternate linear;
+			          animation: appear 1s 3.5s infinite alternate linear;
+			  -webkit-transform: rotateY(350deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(350deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+			.heart3d [class$="36"] {
+			  -webkit-animation: appear 1s 3.6s infinite alternate linear;
+			          animation: appear 1s 3.6s infinite alternate linear;
+			  -webkit-transform: rotateY(360deg) rotateZ(45deg) translateX(62px);
+			          transform: rotateY(360deg) rotateZ(45deg) translateX(62px);
+			  border: solid #f22613;
+			  box-shadow: 1px 0 0 rgba(255, 255, 255, 0.25);
+			  border-width: 1px 1px 0 0;
+			}
+
+			@-webkit-keyframes spin {
+			  to {
+			    -webkit-transform: rotateY(360deg) rotateX(360deg);
+			            transform: rotateY(360deg) rotateX(360deg);
+			  }
+			}
+
+			@keyframes spin {
+			  to {
+			    -webkit-transform: rotateY(360deg) rotateX(360deg);
+			            transform: rotateY(360deg) rotateX(360deg);
+			  }
+			}
+			@-webkit-keyframes appear {
+			  to {
+			    opacity: 1;
+			  }
+			}
+			@keyframes appear {
+			  to {
+			    opacity: 1;
+			  }
+			}
+
+        </style>
+    </head>
+    <body>
+    	<div class='heart3d'>
+		  <div class='rib1'></div>
+		  <div class='rib2'></div>
+		  <div class='rib3'></div>
+		  <div class='rib4'></div>
+		  <div class='rib5'></div>
+		  <div class='rib6'></div>
+		  <div class='rib7'></div>
+		  <div class='rib8'></div>
+		  <div class='rib9'></div>
+		  <div class='rib10'></div>
+		  <div class='rib11'></div>
+		  <div class='rib12'></div>
+		  <div class='rib13'></div>
+		  <div class='rib14'></div>
+		  <div class='rib15'></div>
+		  <div class='rib16'></div>
+		  <div class='rib17'></div>
+		  <div class='rib18'></div>
+		  <div class='rib19'></div>
+		  <div class='rib20'></div>
+		  <div class='rib21'></div>
+		  <div class='rib22'></div>
+		  <div class='rib23'></div>
+		  <div class='rib24'></div>
+		  <div class='rib25'></div>
+		  <div class='rib26'></div>
+		  <div class='rib27'></div>
+		  <div class='rib28'></div>
+		  <div class='rib29'></div>
+		  <div class='rib30'></div>
+		  <div class='rib31'></div>
+		  <div class='rib32'></div>
+		  <div class='rib33'></div>
+		  <div class='rib34'></div>
+		  <div class='rib35'></div>
+		  <div class='rib36'></div>
+		</div>
+    </body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Example 4</title>
+    <style type="text/css">
+      #mylist{
+        color: blue;
+      }
+    </style>
+    <link rel="stylesheet" type="text/css" href="">
+</head>
+<body>
+  <div id="myDiv" my_attribute="hello" class="">
+  jjjjj <em>hkafhalsfhl</em>weewrwq
+  </div>
+  <ul id="mylist">
+  wwww
+      <li>www</li>
+      <li>wwww</li>
+      <li>w23</li>
+  </ul>
+  <script>
+     var div = document.getElementById("myDiv");
+     var id = div.attributes.getNamedItem("id");
+     var textnode = document.createTextNode("hello");
+     div.appendChild(textnode);
+     var antextnode = document.createTextNode("world");
+     div.appendChild(antextnode);
+     var mylist = document.getElementById("mylist");
+     var num = mylist.childNodes.length;
+     div.normalize();//相邻文本节点合并
+
+     var element = document.createElement("div");
+     element.className = "message";
+
+     var textNode = document.createTextNode("Hello World");
+     element.appendChild(textNode);
+
+     document.body.appendChild(element);
+
+     var newNode = element.firstChild.splitText(5);//分割文本节点
+     // alert(element.firstChild.nodeValue);
+     // alert(newNode.nodeValue);
+     // alert(element.childNodes.length);
+
+    var fragment = document.createDocumentFragment();
+    var li = null;
+    for (var i = 0; i < 3; i++) {
+        li = document.createElement("li");
+        li.appendChild(document.createTextNode("Item"+(i+1)));
+        fragment.appendChild(li);
+    }
+    mylist.appendChild(fragment);//文档片段所有子节点被删除并转移到ul元素中
+    
+
+
+    var mylist2 = document.querySelector("#mylist");
+    var lis = mylist2.querySelectorAll("li");
+    alert(lis.length);//6
+    mylist2.appendChild(document.createElement("li"));
+    alert(lis.length);//6
+
+    mylist2.style.border = "1px solid red";//为元素设置style特性（内嵌html元素中的style）
+    mylist2.style.cssText//可读写，在写模式下重写覆盖全部style特性
+    var computerStyle = document.defaultView.getComputedStyle(mylist2,null);//包含当前元素所有计算的样式
+    alert(computerStyle.color);
+
+    var sheet =document.styleSheets[0];//获取文档的第一个样式表（<link>和<style>中定义的样式表）
+    var rules = sheet.cssRules||sheet.rules;//获取规则列表
+    var rule = rules[0];
+    rule.selectorText//#mylist  当前规则的选择符文本
+    rule.cssText //只读，包含选择符文本和样式信息
+    rule.style.cssText//完整css代码，可以被重写，如重写则覆盖原来全部
+
+    
+
+  </script>
+</body>
+</html>
