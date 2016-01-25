@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="vue.js"></script>
+
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="dosth">text</button>
+      {{ full }}
+    </div>
+</body>
+<script type="text/javascript">
+new Vue({
+  el: '#app',
+  data: {
+    one: '1',
+    two: '2'
+    },
+  computed: {
+      full: function () {
+          return this.one + this.two
+      }
+  },
+  methods: {
+      dosth: function () {
+          console.log(this)
+      }      
+  }
+
+
+})
+</script>
+</html>
