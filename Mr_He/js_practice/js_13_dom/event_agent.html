@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div id="myDiv1" style="height:100px; width:100px;background-color:red;">
+        <div id="myDiv2" style="height:50px; width:50px;background-color:blue;">
+            
+        </div>
+    </div>
+    <div id="myDiv3" style="height:50px; width:50px;background-color:blue;">
+        <input type="button" value="btn" id="btn">
+    </div>
+    <div id="myDiv4" style="height:50px; width:50px;background-color:blue;" name="div4">
+        
+    </div>
+    <div id="myDiv5" style="height:50px; width:50px;background-color:blue;" name="div5">
+        
+    </div>
+    <script>
+        var myDiv1 = document.getElementById("myDiv1");
+        var myDiv2 = document.getElementById("myDiv2");
+        myDiv1.addEventListener("click", function(event){
+            switch(event.target.id){
+                case "myDiv1":
+                    alert("我是div1");
+                    break;
+                case "myDiv2":
+                    alert("我是div2");
+                    break;
+            }
+
+        }, false);//事件委托
+       
+        var btn = document.getElementById("btn");
+
+        var myDiv3 = document.getElementById("myDiv3");
+
+        myDiv3.onclick = function(event){
+            alert("div3");
+            alert(event.target.id);
+        };
+
+        btn.onclick = function(event){
+            alert("btn");
+            btn.onclick = null;           
+            myDiv3.removeChild(btn);   
+        };
+       // document.body.removeChild(btn);
+       // 
+   
+       var myDiv4 = document.getElementById("myDiv4");
+       var event = document.createEvent("CustomEvent");//创建一个自定义DOM事件
+       event.initCustomEvent("myevent",true,false,"hello world");//设置事件参数
+       myDiv4.addEventListener("myevent",function(event){
+            alert("event:"+ event.detail);
+       },false);//事件处理程序
+       myDiv4.dispatchEvent(event);//事件触发
+
+       var myDiv5 = document.getElementById("myDiv5");
+       var eventkey = document.createEvent("MouseEvents");//模拟鼠标事件
+       eventkey.initMouseEvent("click",true,true,document.defaultView,0,0,0,0,0,false,false,false,false,0,null);
+       myDiv5.addEventListener("click",function(){
+            alert("div5");
+       },false);
+       myDiv5.dispatchEvent(eventkey);
+      
+     
+
+
+
+    </script>
+    </body>
+</html>

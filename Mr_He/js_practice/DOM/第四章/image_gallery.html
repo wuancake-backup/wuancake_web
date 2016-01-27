@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" type="text/css" href="styles/layout.css">
+</head>
+<body>
+    <h1>Snapshots</h1>
+    <ul>
+        <li>
+            <a href="images/Chrysanthemum.jpg" title="Chrysanthemum" onclick="showPic(this);return false;">Chrysanthemum</a>
+        </li>
+        <li>
+            <a href="images/Desert.jpg" title="Desert" onclick="showPic(this);return false;">Desert</a>
+        </li>
+        <li>
+            <a href="images/Hydrangeas.jpg" onclick="showPic(this);return false;" title = "Hydrangeas">Hydrangeas</a>
+        </li>
+        <li>
+            <a href="images/Jellyfish.jpg" onclick="showPic(this);return false;" title="Jellyfish">Jellyfish</a>
+        </li>
+    </ul>
+    <img src="images/Koala.jpg" alt="my image gallery" id="placeholder" >
+    <p id="description">choose an image</p>
+    
+    <!-- <a href="http://www.baidu.com" onclick="return false;">click me</a> -->
+    <script src="scripts/showPoc.js"></script>
+</body>
+</html>

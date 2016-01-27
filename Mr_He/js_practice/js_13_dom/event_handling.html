@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <div id="myDiv">
+    div
+        <p id="myP">p</p>
+    </div>
+    
+    <script>
+        var myP = document.getElementById("myP");
+      
+        myP.addEventListener("click",function(){
+            alert("hellop");
+        }, false);
+        myP.addEventListener("click",function(){
+            alert("worldp");
+        }, true);
+        var div = document.getElementById("myDiv");
+        div.addEventListener("click",function(){
+            alert("hellodiv");
+            //alert(event.type);
+        }, false);
+        div.addEventListener("click",function(){
+            alert("worlddiv");
+        }, true);
+
+    </script>
+    </body>
+</html>

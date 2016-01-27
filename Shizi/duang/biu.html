@@ -12,6 +12,7 @@
   padding:0;}
 ui,li{
 list-style:none;
+color:white;
 }
   body{
   background:url(bg.jpg);
@@ -120,7 +121,7 @@ margin:0 auto;
  </ul>
  </div>
  </div>
-<div class="bigbox"><audio id="audio"src="bj.mp3" style="width:630px;" controls="controls"></audio></div>
+<div class="bigbox"><audio id="audio"src="bj.mp3" style="width:630px;" autoplay="autoplay" controls="controls"></audio></div>
   <script type="text/javascript">
   function $(id){
 	  return document.getElementById(id);
@@ -179,7 +180,7 @@ lrc.jump(t);
 		  arr[i].className="";
 		  }
   dom.className="hover";
- var index= this.indexof(dom)-3;
+ var index= this.indexof(dom)+1;
   lrcbox.style.marginTop=(index<0?0:index)*-40+"px";
   }
   },

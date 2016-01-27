@@ -1,0 +1,109 @@
+body {
+    background-color: #c8c8c8;
+    overflow:scroll;
+    padding: 0;
+    margin: 0;
+    font-family:Helvetica;
+    font-family: Lato;
+}
+.center-box {
+    text-align: center;
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    margin: -200px 0 0 -150px;
+    left: 50%;
+    top: 400px;
+}
+.title {
+    font-size: 50px;
+}
+.button {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    left: 50%;
+    top: 50%;
+    margin: -100px 0 0 -50px;
+    border: 2px solid #666;
+    color: #fff;
+    -moz-border-radius: 15px;
+    -webkit-border-radius: 15px;
+    border-radius: 15px;
+    font-size: 50px;
+    background: orange;
+    cursor:pointer
+}
+.button .text {
+    font-size: 15px;
+    padding: 15px 10px;
+    width: 80px
+}
+.tips {
+    position: absolute;
+    width: 300px;
+    height: 63px;
+    left: 100px;
+    top: 27%;
+    margin: -50px 0 0 -100px;
+}
+.lee_button1
+{
+    z-index: 999;
+    border: 1px solid #0e0e0e;
+    border-radius: 10px;
+    color: #242424;
+    display: block;
+    font-size: 18px;
+    height: 37px;
+    left: 48%;
+    line-height: 37px;
+    margin: -100px 0 0 -75px;
+    position: absolute;
+    top: 93%;
+    width: 160px;
+    cursor:pointer;
+    display:none
+}
+.lee_button2
+{
+    border: 1px solid #0e0e0e;
+    border-radius: 10px;
+    color: #242424;
+    display: block;
+    font-size: 18px;
+    height: 37px;
+    left: 48%;
+    line-height: 37px;
+    margin: -100px 0 0 -75px;
+    position: absolute;
+    top: 106%;
+    width: 160px;
+    cursor:pointer;
+}
+.lee_button3
+{
+    border: 1px solid #fd3207;
+    border-radius: 10px;
+    color: #fd3207;
+    display: block;
+    font-size: 18px;
+    height: 37px;
+    left: 48%;
+    line-height: 37px;
+    margin: -100px 0 0 -75px;
+    position: absolute;
+    top: 80%;
+    width: 160px;
+    z-index: 999;
+    display:none
+}
+#lvnew
+{
+    position:absolute;
+    top: 93%;
+    left:48%;
+    margin: -100px 0 0 -40px;
+}
+#btnReset{cursor:pointer}
+.hvtholder{width:789px;margin:2px auto;}a{color:blue}

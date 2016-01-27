@@ -1,0 +1,152 @@
+﻿@{
+    //var prize = Request.QueryString["prize"] == null ? "" : Request.QueryString["prize"];
+    //var result = Request.QueryString["result"] == null ? "" : Request.QueryString["result"];
+}
+<!DOCTYPE html>
+<!-- saved from url=(0074)http://www.apiwx.com/index.php?ac=alw&c=o7MB9ji5fQRsE0ZoVAMU7SlnRyMI&tid=5 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+
+<title>幸运大转盘抽奖</title>
+<link href="activity-style.css" rel="stylesheet" type="text/css"/>
+</head>
+
+<body class="activity-lottery-winning">
+<div class="main">
+ <div id="outercont">
+<div id="outer-cont">
+<div id="outer"><img src="activity-lottery-1.png" width="310px"/></div>
+</div>
+<div id="inner-cont">
+<div id="inner"><img src="activity-lottery-2.png"/></div>
+</div>
+</div>
+<div class="content">
+<div class="boxcontent boxyellow" id="result" style="display:none">
+<div class="box">
+<div class="title-orange"><span>恭喜你中奖了</span></div>
+<div class="Detail">
+            <a class="ui-link" href="http://www.weixinjia.net/mobile/showresult.html" id="opendialog" style="display: none;" data-rel="dialog"></a>
+<p>你中了：<span class="red" id="prizetype">一等奖</span></p>
+<p>你的兑奖SN码：<span class="red" id="sncode"></span></p>
+<p class="red">本次兑奖码已经关联你的微信号，你可向公众号发送 兑奖 进行查询!</p>
+               
+<p>
+<input name="" class="px" id="tel" type="text" placeholder="输入您的手机号码"/>
+</p>
+<p>
+<input class="pxbtn" id="save-btn" name="提 交" type="button" value="提 交"/>
+</p>
+</div>
+</div>
+</div>
+<div class="boxcontent boxyellow">
+<div class="box">
+<div class="title-green"><span>奖项设置：</span></div>
+<div class="Detail">
+<p>一等奖奖品数量：3 </p>
+<p>二等奖奖品数量：5 </p>
+<p>三等奖奖品数量：10 </p>
+</div>
+</div>
+</div>
+<div class="boxcontent boxyellow">
+<div class="box">
+<div class="title-green">活动说明：</div>
+<div class="Detail">
+<p>本次活动每人可以转 3 次 </p>
+               
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<script src="jquery-1.11.3.min.js" type="text/javascript"></script> 
+<script type="text/javascript">
+    function setDegree($obj,deg){
+        $obj.css({
+            'transform': 'rotate('+deg+'deg)',
+            '-moz-transform':'rotate('+deg+'deg)',
+            '-o-transform': 'rotate(' + deg + 'deg)',
+            'transform-origin':'50% 85px'
+            
+    });
+    }
+
+    function rotate(result, prize) {
+
+        var $tar = $("#inner"),
+        i,
+        cnt = 100,                          //用做ratio的索引(10-29)
+        total = 0,                          //记录上一次的变化结果
+        ratio = [],                         //存放角度的变化比例，制造快慢过渡效果
+        offset = result,     //0-7,代表需要停到的奖项,由后端传入
+        amount = 18 - (0.15 * offset);     //每次每多出45/200=0.225度,200次就多偏转45度
+        result = prize; //奖项名称用于显示,由后端传入
+
+        ratio[1] = [0.2, 0.4, 0.6, 0.8, 1, 1, 1.2, 1.4, 1.6, 1.8];
+        ratio[2] = [1.8, 1.6, 1.4, 1.2, 1, 1, 0.8, 0.6, 0.4, 0.2];
+
+        for(i=0;i<200;i++){
+            //设计为200次50ms的间隔，10s出结果感觉比较好
+            setTimeout(function(){
+                //计算每次偏转增量，对应阶段的增减比例最终造成快慢变化
+                var deg = amount*( ratio[ String(cnt).substr(0,1) ][ String(cnt).substr(1,1) ] );
+                setDegree($tar,deg+total);//改变偏转
+                total += deg;//记录
+                cnt++;//依据次数用作ratio的索引，这里用到了闭包不能使用i
+            },i*50);
+        }
+        setTimeout(function(){
+            alert( result );//完成
+        },200*50+500);
+    }
+    var count = 0;
+    //绑定事件，点击指针开始
+    var Flag = false;
+    $(function(){
+        $("#inner").click(function () {
+            count++;
+            if (count <= 3) {
+                if (!Flag) {
+                    Flag = true;
+                    $.ajax({
+                        type: 'post',
+                        url: 'act.cshtml',
+                        datatype: 'json',
+                        cache: false,
+                        error: function (json) {
+                            alert("出错");
+                        },
+                        success: function (stu) {
+                            var result = stu;
+                            var prize = "";
+                            if (result == 0) {
+                                prize = "一等奖";
+                            }
+                            else if (result == 4) {
+                                prize = "二等奖";
+                            }
+                            else if (result == 8) {
+                                prize = "三等奖";
+                            }
+                            else { prize = "谢谢参与"; }
+
+                            //var result = JSON.stu;
+                            //var re = /[a-zA-Z]/g;
+                            //var result = result.replace(re, '');
+                            rotate(result, prize);
+                        }
+                    })
+                }
+            }
+            else {
+                alert("您已经抽了 3 次奖。");
+            }
+        });
+    });
+
+</script>
+
+
+</body></html>
