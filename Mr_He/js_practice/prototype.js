@@ -48,7 +48,7 @@ alert(keys2);//["constructor", "name", "age", "sayName"] 所有实例属性，�
 
 function Dog(){}
 Dog.prototype = {
-    name: "jjj",
+    name: "p1",
     age: 5,
     like: "eating",
     sayName:function(){
@@ -62,7 +62,7 @@ alert(dog1.constructor == Object);//true
 alert(dog1.constructor == Dog);//false
 Dog.prototype = {
     constructor:Dog,
-    name: "jjj",
+    name: "p2",
     age: 5,
     like: "eating",
     sayName:function(){
@@ -74,3 +74,7 @@ var dog2 = new Dog();
 alert(dog2.constructor == Dog);//ture
 var dogKeys = Object.keys(Dog.prototype);
 alert(dogKeys);//["constructor", "name", "age", "like", "sayName"] constructor变成可枚举
+Object.getPrototypeOf(dog1);//Object {name: "p1", age: 5, like: "eating"} 与第一次重写的原型相连
+Object.getPrototypeOf(dog2);//Dog {name: "p2", age: 5, like: "eating"}与第二次重写的原型相连
+
+
