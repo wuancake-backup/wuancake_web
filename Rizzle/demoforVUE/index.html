@@ -39,7 +39,7 @@
         <label for="mike">Mike</label>
         <span>Checked names: {{ checkedNames}}</span>
     </div>
-    <div v-if="show" transition="expand"></div>
+    <div v-if="show" transition="expand">{{ text }}</div>
     <button v-on:click="showdiv">show div</button>
     </div>
 
@@ -59,7 +59,7 @@ var app = new Vue({
           {msg: 4}
       ],
       checkedNames :[],
-      show: false
+      show: false,
   },
   computed: {
       full: function () {
@@ -79,8 +79,14 @@ var app = new Vue({
 
       }
   }
-
-
+})
+Vue.transition('expand',{
+    enter: function (el) {
+        el.textContent = 'enter'
+    },
+    afterEnter: function (el) {
+        el.textContent = 'after'
+    }
 })
 </script>
 </html>
