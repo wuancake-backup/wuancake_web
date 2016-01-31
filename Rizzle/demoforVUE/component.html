@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>component</title>
+    </head>
+    <body>
+        <div id="app">
+            <mytab msg="hello"></mytab>
+        </div>
+        <div id="parent">
+            <child></child>
+            <p>message:{{messages}}</p>
+        </div>
+        <template id="child">
+            <input v-model="word">
+            <button v-on:click="notify"> add </button>
+        </template>
+    </body>
+    <script type="text/javascript" src="vue.js">    </script>
+    <script type="text/javascript">
+
+Vue.component('mytab',{
+    props: ['msg'],
+    template: '<div>my component</div>{{ msg }}<p></p>',
+})
+new Vue({
+    el: '#app'
+})
+Vue.component('child',{
+    template: '#child',
+    data:function () {
+        return { word : 'myword' }
+    },
+    methods: {
+        notify: function () {
+            if (this.word.trim()) {
+                this.$dispatch('child-word',this.word)
+                this.word = ''
+            }
+        }
+    }
+})
+var parent = new Vue({
+    el: '#parent',
+    data: {
+        messages: []
+    },
+    events: {
+        'child-word': function (msg) {
+            this.messages.push(msg)
+        }
+    }
+})
+    </script>
+</html>
