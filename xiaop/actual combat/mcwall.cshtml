@@ -21,9 +21,10 @@
 <head>
     <title></title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script type="text/javascript" src="~/js/jquery/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript"  src="~/js/common.min.js"></script>
-
+    <script type="text/javascript" src="jquery-1.11.1.min.js"></script>
+    <script type="text/javascript"  src="common.min.js"></script>
+    <script type="text/javascript"  src="kxbdSuperMarquee.js"></script>
+    <script src="kxbdSuperMarquee.js"></script>
     <style type="text/css">
         *{margin:0;padding:0px;}
         .body {
@@ -44,6 +45,7 @@
                 width:900px;
                 margin: 0 auto;
                 height:100px;
+                background:rgba(96,96,96,0.1);
             }
         .top-title div {
             float:left;
@@ -58,15 +60,10 @@
             margin: 0 auto;
             /*background-color:#fff;
             opacity:0.1;*/
+            overflow: hidden;
             background:rgba(96,96,96,0.1);
         }
-        .bottom {
-            width:900px;
-            margin:0 auto;
-            height:50px;
-            background-color:#ffd800;
-        }
-        .middle > div {
+        .middle ul > li {
             width:900px;
             height:150px;
             background:rgba(96,96,96,0.1);
@@ -74,8 +71,9 @@
             /*opacity:0.8;*/
             margin-top:10px;
             padding-top:15px;
+            list-style-type:none;
         }
-        .middle > div div:first-of-type {
+        .middle ul > li div:first-of-type {
             width:120px;
             height:120px;
             border-radius:50%;
@@ -84,7 +82,7 @@
             margin-left:50px;
             float:left;
         }
-        .middle > div div:first-of-type img{
+        .middle ul > li div:first-of-type img{
             width:126px;
             height:126px;
             border-radius:50%;
@@ -100,41 +98,190 @@
             color:#f00;
             font-weight:bolder;
         }
-
+        #middletext {
+            height:320px;
+            margin:0 auto;
+            border-top:2px solid rgb(255,255,255) ;
+            font-size:42px;
+            font-weight:bolder;
+        }
+        .bottom {
+            width:900px;
+            margin:0 auto;
+            height:50px;
+            margin-top:5px;
+            padding-top:10px;
+            background:rgba(255,255,255,0.1);
+            /*background-color:#ffd800;*/
+        }
+        .buttomdiv1{
+            float:left; 
+            display:inline;
+            height:50px;
+        }
+            .buttomdiv1 img {
+                height:50px;
+            }
+        .buttomdiv2 {
+            float:right; 
+            display:inline
+        }
+            .buttomdiv2 img {
+                width:42px;
+                height:42px;
+            }
+        #start {
+            width:50px;
+            height:50px;
+            top:15px;
+        }
+        .sign {
+            width:900px;
+            height:510px;
+            margin: 0 auto;
+            /*background-color:#fff;
+            opacity:0.1;*/
+            background:rgba(96,96,96,0.1);
+        }
+        .sian div {
+            width:900px;
+        }
+            .sign div div {
+                width:100px;
+                height:100px;
+                display:inline;
+                padding-left:18px;
+                margin-top:10px;
+                /*border:solid rgb(255,255,255) 1px;*/
+            }
+                .sign div div img {
+                    width:100px;
+                    height:100px;
+                }
     </style>
-   
+   <script type="text/javascript">
+       $(document).ready(function () {
+           $("#signtext").hide();
+           $("#specific").hide();
+       })
+       $(function () {
+           $("#toupiao").click(function () {
+               //$("#showtext").html("#signtext");
+               $("#showtext").hide();
+               $("#signtext").show();
+           })
+       })
+       $(function(){
+           $("#showtext").kxbdSuperMarquee({
+               //isMarquee:true,
+               isEqual: false,
+               time: 3,
+               distance: 180,
+               duration:30,
+               //scrollDelay:20,
+               controlBtn:{up:"#goUM",down:"#goDM"},
+               direction:"up"
+           });
+       });
+</script>
+
 </head>
 <body>
     <div class="body">
         <div class="top">
             <div class=" top-title">
-                <div ><img class="img" src="../Themes/Default/Page/act/lefttitle.png" /></div>
-                <div ><img class="img" src="../Themes/Default/Page/act/topcenter.png" /></div>
+                <div ><img class="img" src="lefttitle.png" /></div>
+                <div ><img class="img" src="topcenter.png" /></div>
                 <div >123123123</div>
-                <div ><img class="img" src="../Themes/Default/Page/act/topright.png" /></div>
+                <div ><img class="img" src="topright.png" /></div>
             </div>
-            <div class="middle">
-                <div>
+            <div id="showtext" class="middle">
+                <ul>
+                <li>
                     <div>
-                        <img src="../Themes/Default/Page/act/activity-lottery-1.png" /></div>
+                        <img src="activity-lottery-1.png" /></div>
                     <span class="middlep">mingcjijasjda</span>
                     <span class="middlep" >sadsadasda</span>
+                </li>
+                <li><div>123123123123</div></li>
+                <li><div>123123123123</div></li>
+                    <li><div>123123123123</div></li>
+                <li><div>123123123123</div></li>
+                    <li><div>123123123123</div></li>
+                <li><div>123123123123</div></li>
+                </ul>
                 </div>
-                <div><div></div></div>
-                <div><div></div></div>
-                @*<div>
+            <div id="specific">
+                <div >
                 <div>
                         <img src="../Themes/Default/Page/act/activity-lottery-1.png" />
                 </div>
                     <span class="middlep">mingcjijasjda</span>
                     <span class="middlep" >sadsadasda</span>
                 </div>
-                <div><div></div></div>*@
+                <div id="middletext">123123123123123123</div>
+            </div>
+            <div id="signtext" class="sign">
+                <div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                </div>
+                <div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                </div>
+                <div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                </div>
+                <div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                </div>
+                <div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                    <div><img src="../Themes/Default/Page/act/start.png" /></div>
+                </div>
             </div>
             <div class="bottom">
-
+                <div class="buttomdiv1 ">
+                    <img src="../Themes/Default/Page/act/logo_v6.png" /></div>
+                <div class="buttomdiv2 ">
+                    <img id="toupiao" src="../Themes/Default/Page/act/topright.png" />
+                    <img src="../Themes/Default/Page/act/topright.png" />
+                    <img src="../Themes/Default/Page/act/start.png" />
+                    <img src="../Themes/Default/Page/act/next.png" />
+                    <img id="start" src="../Themes/Default/Page/act/next.png" />
+                    <img src="../Themes/Default/Page/act/next.png" />
+                    <img src="../Themes/Default/Page/act/next.png" />
+                </div>
             </div>
-        </div>
+            </div>
     </div>
 </body>
 </html>
