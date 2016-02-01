@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<neta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name=http-epuiv="X-UA-Compatible" content="IE=Edge,chrome">
+	<meta name="renderer" content="Webkit">
+	<meta name="author" content="chenmi">
+	<meta name="keywords" content="bootstrap,html5,css3">
+	<meta name="description" content="bootstrap基本模板">
+	<title>Document</title>
+	<link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="styles/site.css">
+</head>
+<body class="container">
+    <nav class="navbar navbar-inverse">
+    	<div class="container-fluid">
+    	  <div class="navbar-header">
+    	      <div class="navbar-brand">
+    	          Day01
+    	      </div>
+    	      <buttom data-target="#divNav" data-toggle="collapse" class="navbar-toggle">
+    	         <span class="icon-bar"></span>
+    	         <span class="icon-bar"></span>
+    	         <span class="icon-bar"></span>
+    	         <span class="icon-bar"></span>
+    	      </buttom>
+    	  </div>
+    	  <div id="divNav" class="collapse navbar-collapse">
+    	     <ul class="nav navbar-nav">
+    	        <li><a href="#">home</a></li>
+    	        <li><a href="#">about</a></li>
+    	     </ul>
+    	   </div>
+    	</div>
+    </nav>
+    <header>
+	<h1>Bootstrap<small>Day01</small></h1>
+	</header>
+	<div class="row">
+	  <div class="col-sm-3">
+	     <label class="glyphicon glyphicon-home">左侧边栏
+	     <div>
+	       <ul class="list-group">
+	         <li class="list-group-item"><a href="#">link</a></li>
+	         <li class="list-group-item"><a href="#">link</a></li>
+	         <li class="list-group-item"><a href="#">link</a></li>
+	         <li class="list-group-item"><a href="#">link</a></li>
+	         <li class="list-group-item"><a href="#">link</a></li>
+	       </ul>
+	      </div>
+	   </label>
+	   </div>
+	   <div class="col-sm-7">
+	     <blockquote>
+	       <h3>正文区域</h3>
+	       <footer>来自<code>bootstrap</code>样式</footer>
+	     </blockquote>
+	     <div class="jumbotron">
+	     	<h2>网站来自Bootstrap</h2>
+	     	<a class="btn btn-primary pull-right" href="#"><span class="glyphicon glyphicon-music"></span> 了解更多</a>
+	      </div>
+          <table class="table table-hover table-striped table-condensed">
+          	<tr>
+          	  <td>ID</td>
+          	  <td>TITLE</td>
+          	  <td>AUTHOR</td>
+          	  <td>PRICE</td>
+          	  <td>PUBDATE</td>
+          	</tr>
+          	<tr>
+          	  <td>1</td>
+          	  <td>西游记</td>
+          	  <td>吴承恩</td>
+          	  <td>20.99/td>
+          	  <td>2010-02-01</td>
+          	</tr>
+          	<tr>
+          	  <td>2</td>
+          	  <td>三国演义</td>
+          	  <td>罗贯中</td>
+          	  <td>39.00</td>
+          	  <td>2010-03-01</td>
+          	</tr>
+          	<tr>
+          	  <td>3</td>
+          	  <td>水浒传</td>
+          	  <td>施耐庵</td>
+          	  <td>30.00</td>
+          	  <td>2010-01-01</td>
+          	</tr>
+
+          </table>
+	  </div>
+	  
+	   <div class="col-sm-2">
+	     <label>右侧边栏</label>
+	  </div>
+	  
+	<footer class="navbar-fixed-bottom label-info text-center">
+		all images and contents &copy;<abbr title="Hyper Tet Makup Language">HTML</abbr>&trade;2015
+	</footer>
+	<script src="scripts/jquery.min.js"></script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -95,6 +95,17 @@ body{
 	box-shadow: 0 0 5px #2985f2;
 	background: #fefefe;
 }
+.sounddot{
+	display: inline-block;
+	position: relative;
+	top: -16px;
+	left: 50px;
+	width: 6px;
+	height: 6px;
+	border-radius: 3px;
+	box-shadow: 0 0 5px #2985f2;
+	background: #fefefe;
+}
 .music .now{
 	font-size: 1.5em;
 	font-weight: lighter;
@@ -105,13 +116,17 @@ body{
 .souconcrol{
 	width: 157px;
 	margin-top: 7px;
+
 }
 .sound{
+	position: relative;
+	top: 14px;
 	display: inline-block;
 	height: 3px;
 	margin-bottom: 3px;
 	margin-right: 5px;
 	background: #C3C3C3;
+	cursor: pointer;
 }
 .inside{
 	height: 100%;

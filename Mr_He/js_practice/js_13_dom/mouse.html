@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <div id="myDiv" style="background-color:red;height:100px;width:100px;">
+            
+        </div>
+        <script>
+            var myDiv = document.getElementById("myDiv");
+            myDiv.onmouseout = function(event){
+                alert("Mouse out of" + event.target.tagName + "to" + event.relatedTarget.tagName);
+            };
+            //光标从div移出到body，div失去光标，是主元素，body得到光标，是相关元素
+            window.onmousewheel = function(){
+                alert(event.wheelDelta);
+                var myP = document.createElement("p");
+                var text = document.createTextNode(event.wheelDelta);
+                myP.appendChild(text);
+                document.body.appendChild(myP);
+            };//鼠标滚轮事件
+            // window.onDOMMouseScroll = function(){
+            //     alert(event.detail);
+            // };
+            window.addEventListener("DOMMouseScroll", function(event){
+                
+                alert(event.detail);
+            }, false);
+            
+        </script>
+    </body>
+</html>
