@@ -1,0 +1,79 @@
+﻿
+
+
+
+/*整体*/
+*{margin:0px;padding:0px;}
+body {font:100 0.9em 微软雅黑;width:1920px;}
+#all {background-color:#f4f4f4;}
+#top {height:56px;background-color:#1f2229;}
+#banner {height:550px;}
+#aboutUs {height:534px;width:1000px;margin:auto;background-color:#f4f4f4;}
+#successCase {height:616px;background:url('images/background.png') no-repeat;}
+#newsCenter {height:540px;width:1000px;margin:auto;background-color:#f4f4f4;}
+#bottom {height:215px;background-color:#30333a;color:#fff;padding-top:40px;}
+
+
+/*common*/
+.x01 {border:1px solid red;}
+.x02 {width:90px;height:1px;background-color:#b4b4b6;}
+.x03 {width:5px;height:5px;border-radius:4px 4px;background-color:#b4b4b6;float:right;margin-bottom:2px;}
+a {text-decoration:none;}
+ul li {float:left;list-style:none;}
+
+
+/*头部*/
+#top>.nav {width:974px;margin:auto;}
+#top>.nav>ul {float:right;}
+#top>.nav>ul li {width:110px;border-right:1px dashed #2f3238;text-align:center;}
+#top>.nav>ul li.noneDashed{border-right:none}
+#top>.nav > ul li a {line-height:56px;color:#c6cad2;}
+
+
+/*关于我们*/
+dl.title{width:800px;margin:auto;padding-top:40px;}
+dl.pro{width:150px;margin:auto;float:left;margin:0px 50px 0px 50px;}
+dl.title > dt,dl.title > dd,dl.pro >dt,dl.pro> dd {text-align:center;}
+dl.title>dt{font:100 3em Impact;color:#43b6ff;}
+dl.title>.title_02 {height:30px;width:330px;background:url('images/line_01.png') no-repeat;margin:auto;}
+dl.title>.title_03 {font:100 1.6em 时尚中黑简体;height:36px;}
+dl.title>.title_04 {font-size:0.9em;margin-bottom:60px;}
+dl.title > dt span {color:#7c7c7c;margin-left:10px;}
+dl.pro>dt{width:150px;height:110px;background-color:#6d7075;border-radius:150px 150px;text-align:center;padding-top:40px;}
+dl.pro>dt.proWX{background-color:#3ab4ff;}
+dl.pro>.title_02 {font-size:1.6em;padding:6px 0px 6px 0px;}
+dl.pro>.title_03 {font-size:0.9em;}
+
+
+
+/*成功案例*/
+#successCase>dl.title>dt{font:100 3em Impact;color:#ffffff;}
+#successCase>dl.title>.title_02 {color:#ffffff;height:36px;width:380px;background:url('images/line_02.png') no-repeat;margin:auto;}
+#successCase>dl.title>.title_03 {font:100 1.2em 时尚中黑简体;color:#ffffff;}
+#successCase>dl.title> dt span {color:#fab23b;margin-left:10px;}
+.case {margin-top:8px;text-align:center;}
+.case>a{margin-left:6px;}
+.more {width:88px;height:24px;background-color:#ffffff;border-radius:24px 24px;font:100 0.6em Arial;color:#535353;text-align:center;line-height:24px;margin:auto;margin-top:50px;}
+
+
+/*新闻中心*/
+.new {width:391px;height:72px;}
+.new dt{float:left;}
+.left {float:left;}
+.right {float:right;}
+#newsCenter>div{padding-bottom:200px;}
+#newsCenter > div dl dd {height}
+#newsCenter > div .title_03 {font-size:0.6em;color:#969696;}
+
+
+/*底部*/
+#bottom > table {width:1000px;margin:auto;height:144px;}
+#bottom > table tr td span {display:block;width:24px;height:20px;background:url('images/bottom_icon.png') no-repeat;float:left;}
+#bottom > table tr td span.icon_02 {background-position-y:-23px;}
+#bottom > table tr td span.icon_03 {background-position-y:-44px;}
+#bottom > table tr td{padding-bottom:10px;}
+#bottom .txt, #bottom textarea {background-color:#1d2026;border:1px solid #3b3b43;}
+#bottom .txt {width:146px;height:33px;margin-left:3px;padding:0px 10px 0px 10px;color:#3b3b43;}
+#bottom textarea {width:290px;height:82px;color:#3b3b43;padding:10px 4px 10px 4px}
+#bottom .btnPut {background-color:#3baff7;padding:32px 12px 32px 12px;color:#fff;}
+#bottom p {font-size:0.6em;line-height:20px;}
