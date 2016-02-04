@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Games</title>
+        <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <style type="text/css">
+            @font-face {
+                font-family: 'NotoSerif-Italic';
+                src: url(fonts/NotoSerif-Italic.ttf)format('truetype');
+            }
+            @font-face {
+                font-family: 'NotoSans-Bold';
+                src: url(fonts/NotoSans-Bold.ttf)format('truetype');
+            }
+            h1,h2,h3,h4,h5,h6{
+                margin:0px;
+            }
+            .navbar-logo{
+                float: left;
+                width:55%;
+                text-align: center;
+                display:block;
+            }
+            .navbar-logo img{
+                width:100%;
+            }
+
+            .content-left{
+                float:left;
+                width:68%;
+                margin-right: 2%;
+            }
+            .content-right{
+                float:right;
+                width:28%;
+                margin-left: 2%;
+            }
+            @media (min-width:768px){
+                .mg-right{
+                    margin-right: 1%;
+                }
+                .mg-left{
+                    margin-left: 1%;
+                }
+                .post4{
+                    float:left;
+                    width: 32%;   
+                }
+                .post8{
+                    float:left;
+                    width: 66%;
+                }
+            }
+            a.tags{
+                display: inline-block;/*上下外边距不会合并*/
+                background: url(images/tag2.png) no-repeat 7px 2px;
+                padding: 8px 25px 10px 15px;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.1;
+                margin-bottom: 0.5em;
+                text-align:center;
+                color:#fff;
+            }
+            hr.divider{
+                margin-top: 1em;
+                margin-bottom: 0.7em;
+                border-top: 1px solid rgba(238, 238, 238, 0.21);
+            }
+            .info .list-inline a{
+                font-size: 0.8em;
+                color: #a0a0a0;;
+            } 
+            .pic{
+                float:left;
+                width:50%;
+                padding-right: 13px;
+            }
+            .row1-col1 .info{
+                background-color:#141314 ;
+                padding: 0px 27px 21px;
+            }
+            .row1-col1 .info p{
+                color: #fff;
+                font-family: 'NotoSerif-Italic';
+                font-size: 1.1em;
+                line-height: 1.3;
+            }   
+            .row1-col1 .info p span{
+                color:#ffc600;
+                font-family: 'NotoSans-Bold';
+            }
+            .row1-col2{
+                background-color: #9196c8;
+                padding:28px;
+                position: relative;
+                border-radius: 5px;
+            }
+            .row1-col2 .info{
+                float:left;
+                width:50%;
+                margin-top: 42px;
+            }
+            .row1-col2 .info h3 a{
+                color: #fff;
+                font-size: 0.9em;
+                font-family: 'NotoSans-Bold';
+                line-height: 1.4;
+                font-weight: 500;
+            }
+            .row1-col2 .info p{
+                color: #e9eaf4;
+                font-size: 0.9em;
+                line-height: 1.4;
+                margin-top: 9px;
+            }
+            .row1-col2 .info .list-inline a{
+                color:#e9eaf4;
+            }
+            .sale-box{
+                height:100px;
+                width:100px;
+                position:absolute;
+                top:0;
+                right:0;
+                overflow:hidden;
+                text-align: center;
+            }
+            .sale-box p{
+                background-color: #ffc600;
+                color:#252525;
+                font-size: 0.9em;
+                font-family: 'NotoSans-Bold';
+                text-align: center;
+                line-height: 28px;
+                transform: rotate(45deg);
+                position:relative;
+                top:20px;
+                left:5px;
+                width:130px;
+                margin-bottom: 0;
+            }
+        </style>
+    </head>
+    <body>
+        <!-- 导航条 -->
+        <div>
+            <div class="container">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                         <!-- Brand and toggle get grouped for better mobile display -->
+                         <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-logo" href="#">
+                                <img src="images/logo.png" alt="">
+                            </a>
+                         </div>
+                         <div class="collapse navbar-collapse" id="navbar_collapse">
+                             <ul class="nav navbar-nav">
+                                 <li>
+                                     <a href="#">Articles</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Films</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Music</a>
+                                 </li>
+                             </ul>
+                             <form class="navbar-form navbar-left">
+                                <div class="form-group">
+                                    <input type="search" name="" value="" placeholder="search" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                             </form>
+                             <ul class="nav navbar-nav navbar-right">
+                                 <li class="dropdown">
+                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                         <img src="images/h1.png" alt="">
+                                         Batman
+                                     </a>
+                                     <ul class="dropdown-menu">
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Profile</a></li>
+                                     </ul>
+                                 </li>
+                             </ul>
+                         </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- 轮播 -->
+        <div class="banner">
+            <div class="container">
+                <!-- 轮播图片的容器 -->
+                <div class="carousel slide" id="slidershow" data-ride="carousel">
+                    <!-- 轮播图片计数器 --> 
+                       <ol class="carousel-indicators">
+                           <li class="active" data-target="#slidershow" data-slide-to="0"></li>
+                           <li data-target="#slidershow" data-slide-to="1"></li>
+                           <li data-target="#slidershow" data-slide-to="2"></li>
+                       </ol>
+                       <!-- 设置轮播图片 -->
+                       <div class="carousel-inner">
+                           <div class="item active">
+                               <a href="#">
+                                   <img src="images/slid1.jpg" alt="">
+                                   <!-- 图片标题及描述内容 -->
+                                   <div class="carousel-caption">
+                                       <h3>Flash Gordon is the hero of a science fiction Test</h3>
+                                       <p>First published January 7, 1934, the strip was inspired by and created to compete with the already established Buck Rogers adventure strip. Also inspired by these series were comics...</p>
+                                   </div>
+                               </a>
+                           </div>
+                           <div class="item">
+                               <a href="#">
+                                  <img src="images/slid2.jpg" alt="">
+                                  <div class="carousel-caption">
+                                      <h3>Green Lantern</h3>
+                                      <p>Harley Quinn is a fictional character, a super villain in the DC Universe. The character was introduced on September 11, 1992</p>
+                                  </div>
+                               </a>
+                           </div>
+                           <div class="item">
+                               <a href="#">
+                                    <img src="images/slid1.jpg" alt="">
+                                   <!-- 图片标题及描述内容 -->
+                                   <div class="carousel-caption">
+                                       <h3>Flash Gordon is the hero of a science fiction Test</h3>
+                                       <p>First published January 7, 1934, the strip was inspired by and created to compete with the already established Buck Rogers adventure strip. Also inspired by these series were comics...</p>
+                                   </div>
+                               </a>
+                           </div>
+                       </div>
+                       <!-- 轮播控制器 -->
+                       <a href="#slidershow" class="left carousel-control" data-slide="prev" role="button">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                       </a>
+                       <a class="right carousel-control" href="#slidershow" data-slide="next" role="button">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                       </a>
+                </div>    
+            </div>
+        </div>
+        <!-- 主内容 -->
+        <div class="content">
+            <div class="container">
+                <!-- 左侧部分 -->
+                <div class="content-left">
+                    <!-- 第一行 -->
+                   <div>
+                        <!-- 第一列 -->
+                        <div class="mg-right post4 row1-col1">
+                            <img src="images/13.png" alt="" class="img-responsive">
+                            <div class="text-center info">
+                                <a href="#" class="tags">GAMES</a>
+                                <p><span>Batman</span> has been licensed and adapted into a variety of media</p>
+                                <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            24 March
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                           <!-- 第二列 -->
+                        <div class="mg-left post8 row1-col2">
+                            <div class="pic">
+                                <img src="images/post2.png" alt="" class="img-responsive">
+                            </div>
+                            <div class="info">
+                              <div class="text-center"> 
+                                    <a href="#" class="tags">HEROES</a> 
+                              </div>
+                               <h3>
+                                   <a href="#">Zod manipulated Phantom Zone</a>
+                               </h3>
+                               <p>
+                                   As his son was the only Phantom Zoner capable of maintaining a physical form, Zod sent the rocket ship out of the...
+                               </p>
+                               <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            24 March
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 右上角斜标签 -->
+                            <div class="sale-box">
+                                <p>NEW POST</p> 
+                            </div>
+                        </div>
+                    </div> 
+                </div>
+                <!-- 右侧部分 -->
+                <div class=" content-right">
+                    
+                </div>
+            </div>
+        </div>
+
+
+    <!-- jQuery (neces
+    sary for Bootstrap's JavaScript plugins) -->
+    <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
