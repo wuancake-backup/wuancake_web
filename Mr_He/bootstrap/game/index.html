@@ -25,28 +25,33 @@
             body{
                 background-color: #2e2e2e;
             }
+
             .navbar-logo{
-                float: left;
-                width:55%;
+                width:85px;
+                margin-right: 85px;
+                margin-top:5px;
                 text-align: center;
                 display:block;
             }
-            .navbar-logo img{
-                width:100%;
-            }
 
-            .content-left{
-                float:left;
-                width:68%;
-                margin-right: 2%;
-            }
-            .content-right{
-                float:right;
-                width:28%;
-                margin-left: 2%;
-            }
             .banner{
                 margin-bottom: 30px;
+            }
+            .post4,.post8{
+                margin-bottom: 28px;   
+            }
+            @media (min-width:992px){
+
+                .content-left{
+                    float:left;
+                    width:68%;
+                    margin-right: 2%;
+                }
+                .content-right{
+                    float:right;
+                    width:28%;
+                    margin-left: 2%;
+                }
             }
             @media (min-width:768px){
                 .mg-right{
@@ -62,6 +67,14 @@
                 .post8{
                     float:left;
                     width: 66%;
+                }
+                .left-row{
+                    margin-bottom: 28px;
+                    float:left;
+                    width:100%;
+                }
+                .post4,.post8{
+                    margin-bottom: 0;   
                 }
             }
             a.tags{
@@ -93,11 +106,7 @@
                 width:50%;
                 margin-bottom: 18px;
             }
-            .left-row{
-                margin-bottom: 28px;
-                float:left;
-                width:100%;
-            }
+
             .left-row>div{
                 border-radius: 5px;
             }
@@ -356,6 +365,18 @@
                 vertical-align: middle;
                /* padding-top: 15px;*/
             }
+             @media (min-width:768px) and (max-width:992px){
+                .post5-right{
+                    width:49%;
+                    float:left;
+                }
+                .mg-r-right{
+                    margin-right: 1%;
+                }
+                .mg-r-left{
+                    margin-left: 1%;
+                }
+             }
         </style>
     </head>
     <body>
@@ -372,7 +393,7 @@
                                 <span class="icon-bar"></span>
                             </button>
                             <a class="navbar-logo" href="#">
-                                <img src="images/logo.png" alt="">
+                                <img src="images/logo.png" alt="" class="img-responsive">
                             </a>
                          </div>
                          <div class="collapse navbar-collapse" id="navbar_collapse">
@@ -476,7 +497,7 @@
                    <div class="left-row">
                         <!-- 第一列 -->
                         <div class="mg-right post4 row1-col1">
-                            <img src="images/13.png" alt="" class="img-responsive">
+                            <img src="images/13.png" alt="" class="img-responsive center-block">
                             <div class="text-center info">
                                 <a href="#" class="tags">GAMES</a>
                                 <p><span>Batman</span> has been licensed and adapted into a variety of media</p>
@@ -505,7 +526,7 @@
                             </div>
                         </div>
                            <!-- 第二列 -->
-                        <div class="mg-left post8 row1-col2">
+                        <div class="mg-left post8 row1-col2 clearfix">
                             <img src="images/post2.png" alt="" class="img-responsive pic-left">
                             <div class="info">
                               <div class="text-center"> 
@@ -549,7 +570,7 @@
                     <!-- 第二行 -->
                     <div class="left-row">
                         <!-- 第一列 -->
-                        <div class="post4 mg-right row2-col1">
+                        <div class="post4 mg-right row2-col1 ">
                             <div class="info">
                                 <h3>Green Lantern</h3>
                                 <h4>Chief redactor</h4>
@@ -652,7 +673,7 @@
                     <!-- 第三行 -->
                     <div class="left-row">
                         <!-- 第一列 -->
-                        <div class="post8 mg-right row3-col1">
+                        <div class="post8 mg-right row3-col1 clearfix">
                             <img src="images/16.png" alt="" class="img-responsive pic-left">
                             <div class="info">
                                 <a href="#" class="tags">TEXTS</a>
@@ -727,7 +748,7 @@
                 <!-- 右侧部分 -->
                 <div class=" content-right">
                     <!-- 第一栏：HEROES NEWS -->
-                    <div class="heros-news">
+                    <div class="heros-news post5-right mg-r-right">
                         <h3>HEROES NEWS</h3>
                         <div class="heros-news-grids clearfix">
                             <div class="heros-pic">
@@ -801,7 +822,7 @@
                         </div>
                     </div>
                     <!-- 第二栏：FOLLOW HEROES -->
-                    <div class="follow-heroes">
+                    <div class="follow-heroes post5-right mg-r-left">
                         <h4>FOLLOW HEROES</h4>
                         <div class="fh-girds-container">
                             <div class="fh-girds">
