@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Games</title>
+        <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <style type="text/css">
+            @font-face {
+                font-family: 'NotoSerif-Italic';
+                src: url(fonts/NotoSerif-Italic.ttf)format('truetype');
+            }
+            @font-face {
+                font-family: 'NotoSans-Bold';
+                src: url(fonts/NotoSans-Bold.ttf)format('truetype');
+            }
+            @font-face {
+                font-family: 'NotoSerif-Bold';
+                src: url(fonts/NotoSerif-Bold.ttf)format('truetype');
+            }
+            h1,h2,h3,h4,h5,h6{
+                margin:0px;
+            }
+            body{
+                background-color: #2e2e2e;
+            }
+
+            .navbar-logo{
+                width:85px;
+                margin-right: 85px;
+                margin-top:5px;
+                text-align: center;
+                display:block;
+            }
+
+            .banner{
+                margin-bottom: 30px;
+            }
+            .post4,.post8{
+                margin-bottom: 28px;   
+            }
+            @media (min-width:992px){
+
+                .content-left{
+                    float:left;
+                    width:68%;
+                    margin-right: 2%;
+                }
+                .content-right{
+                    float:right;
+                    width:28%;
+                    margin-left: 2%;
+                }
+            }
+            @media (min-width:768px){
+                .mg-right{
+                    margin-right: 1%;
+                }
+                .mg-left{
+                    margin-left: 1%;
+                }
+                .post4{
+                    float:left;
+                    width: 32%;   
+                }
+                .post8{
+                    float:left;
+                    width: 66%;
+                }
+                .left-row{
+                    margin-bottom: 28px;
+                    float:left;
+                    width:100%;
+                }
+                .post4,.post8{
+                    margin-bottom: 0;   
+                }
+            }
+            a.tags{
+                display: inline-block;/*上下外边距不会合并*/
+                background: url(images/tag2.png) no-repeat 7px 2px;
+                padding: 8px 25px 10px 15px;
+                font-size: 12px;
+                font-weight: 500;
+                line-height: 1.1;
+                margin-bottom: 0.5em;
+                text-align:center;
+                color:#fff;
+            }
+            hr.divider{
+                margin-top: 1em;
+                margin-bottom: 0.7em;
+                border-top: 1px solid rgba(238, 238, 238, 0.21);
+            }
+            .info .list-inline a{
+                font-size: 0.8em;
+                color: #a0a0a0;;
+            } 
+            .img-responsive.pic-left{
+                float:left;
+                width:50%;
+                padding-right: 13px;
+            }
+            .pic-icon{
+                width:50%;
+                margin-bottom: 18px;
+            }
+
+            .left-row>div{
+                border-radius: 5px;
+            }
+            .row1-col1{
+                background-color:#141314 ;
+            }
+            .row1-col1 .info{
+                
+                padding: 0px 27px 21px;
+            }
+            .row1-col1 .info p{
+                color: #fff;
+                font-family: 'NotoSerif-Italic';
+                font-size: 1.1em;
+                line-height: 1.3;
+            }   
+            .row1-col1 .info p span{
+                color:#ffc600;
+                font-family: 'NotoSans-Bold';
+            }
+            .row1-col2{
+                background-color: #9196c8;
+                padding:28px;
+                position: relative;
+                border-radius: 5px;
+            }
+            .row1-col2 .info{
+                float:left;
+                width:50%;
+                margin-top: 42px;
+            }
+            .row1-col2 .info h3 a{
+                color: #fff;
+                font-size: 0.9em;
+                font-family: 'NotoSans-Bold';
+                line-height: 1.4;
+                font-weight: 500;
+            }
+            .row1-col2 .info p{
+                color: #e9eaf4;
+                font-size: 0.9em;
+                line-height: 1.4;
+                margin-top: 9px;
+            }
+            .row1-col2 .info .list-inline a{
+                color:#e9eaf4;
+            }
+            .sale-box{
+                height:100px;
+                width:100px;
+                position:absolute;
+                top:0;
+                right:0;
+                overflow:hidden;
+                text-align: center;
+            }
+            .sale-box p{
+                background-color: #ffc600;
+                color:#252525;
+                font-size: 0.9em;
+                font-family: 'NotoSans-Bold';
+                text-align: center;
+                line-height: 28px;
+                transform: rotate(45deg);
+                position:relative;
+                top:20px;
+                left:5px;
+                width:130px;
+                margin-bottom: 0;
+            }
+            .row2-col1{
+                background-color: #0e8ad9;
+                border-radius: 5px;
+                text-align: center;
+                padding:28px 28px 14px;
+            }
+            .row2-col1 h3{
+                color: #fff;
+                font-size: 1.2em;
+                font-family: 'NotoSans-Bold';
+                margin-bottom: 5px;
+            }
+            .row2-col1 h4{
+                color: #9fd0f0;
+                font-size: 0.9em;
+                font-family: 'NotoSerif-Italic';
+                margin-bottom: 30.5px;
+            }
+            .row2-col1 p{
+                color: #fff;
+                font-size: 1.45em;
+                font-family: 'NotoSerif';
+                margin-bottom: 28px;
+            }
+            .row2-col2 {
+                 background-color: #fff;
+            }
+            .row2-col2 .info{
+                text-align: center;
+                padding:14px 28px;
+                /*background-color: #fff;*/
+            }
+            .row2-col2 .info h5 a{
+                color:#222222;
+                font-family: 'NotoSans-Bold';
+                margin-bottom: 7px;
+                display:inline-block;
+            } 
+            .row2-col2 .info p{
+                color: #9C9C9C;
+                font-size: 0.9em;
+                line-height: 1.32em;
+                font-family: 'NotoSerif';
+            }
+            .row2-col3 {
+                text-align: center;
+                padding:42px 28px 14px;
+                background-image: linear-gradient(45deg, rgb(111, 135, 141) 0%, rgb(225, 234, 237) 100%);
+            }
+            .row2-col3 .info h3{
+                color:#fff;
+                font-size: 1.35em;
+                line-height: 1.3em;
+                font-family: 'NotoSans-Bold';
+                margin-bottom: 19px;
+            }
+            .row2-col3 .info p{
+                color: #fff;
+                font-size: 1em;
+                line-height: 1.32em;
+                font-family: 'NotoSerif';
+            }
+            .row2-col3 .info .list-inline a{
+                color:#e9eaf4;
+            }
+            .row3-col1{
+                background-color: #111111;
+            }
+            .row3-col1 .info{
+                float:left;
+                width:50%;
+                padding:42px 28px 0 0;    
+            }
+            .row3-col1 .info h3 a{
+                color: #fff;
+                font-size: 1em;
+                line-height: 1.3em;
+                display: inline-block;
+                
+                margin: 0.7em 0;
+                font-family: 'NotoSans-Bold';
+            }
+            .row3-col1 .info p{
+                color: #fff;
+                font-size: 1.1em;
+                line-height: 1.32em;
+                font-family: 'NotoSerif';
+            }
+            .row3-col1 .pic-left{
+                padding-right: 0;
+            }
+            .row3-col2{
+                background-color: #00a74e;
+                text-align: center;
+                padding:28px 14px 14px;
+            }
+            .row3-col2>img{
+                margin:14px auto 7px;
+            }
+            .row3-col2 .info h3 a{
+                color: #fff;
+                font-size: 0.85em;
+                line-height: 1.3em;
+                font-family: 'NotoSans-Bold';
+                display:inline-block;
+                margin-bottom: 8px;
+            }
+            .row3-col2 .info p{
+                color: #88d6ac;
+                font-size: 0.9em;
+                line-height: 1.4em;
+            }
+            .heros-news{
+                background: #111111;
+                padding: 28px 14px 14px;
+                border-radius: 6px;
+                margin-bottom: 14px;
+            }
+            .heros-news>h3{
+                color: #fff;
+                font-size: 15.4px;
+                font-family: 'NotoSerif-Bold';
+                margin-bottom: 15px;
+                text-align: center;
+            }
+            .heros-news-grids{
+                padding:21px 0px;
+                border-top: 1px solid rgba(255, 255, 255, 0.26);
+            }
+            .heros-pic{
+                width:20%;
+                float:left;
+            }
+            .heros-info{
+                width:70%;
+                float:left;
+                margin-left: 10%;
+            }
+            .heros-info h5 a{
+                color: #fff;
+                font-family: 'NotoSans-Bold';
+                font-size: 15.4px;
+                margin-bottom: 7px;
+                display: inline-block;
+            }
+            .heros-info p{
+                color: #cfcfcf;
+                font-size: 12.6px;
+                line-height: 16.4px;
+            }
+            .follow-heroes>h4{
+                text-align: center;
+                color: #333;
+                font-size: 16.8px;
+                background-color: #ffc700;
+                font-family: 'NotoSans-Bold';
+                padding: 12px 0px;
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+            .fh-girds-container{
+                position:relative;
+                height:340px;
+                overflow:hidden;
+            }
+            .fh-girds{
+                background: #111;
+                width:100%;
+                padding:7px 7px 0px 14px;
+            }
+            .fh-gird{
+                padding:10px 14px 10px 0px;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+            }
+            .fh-pic{
+                max-width: 15%;
+                height:auto;
+                margin-right: 4%;
+            }
+            .fh-gird span{
+                /*float: left;*/
+                color: #fff;
+                font-family: 'NotoSans-Bold';
+                font-size: 16.8px;
+                width: 64%;
+                vertical-align: middle;
+               /* padding-top: 15px;*/
+            }
+             @media (min-width:768px) and (max-width:992px){
+                .post5-right{
+                    width:49%;
+                    float:left;
+                }
+                .mg-r-right{
+                    margin-right: 1%;
+                }
+                .mg-r-left{
+                    margin-left: 1%;
+                }
+             }
+        </style>
+    </head>
+    <body>
+        <!-- 导航条 -->
+        <div>
+            <div class="container">
+                <nav class="navbar navbar-inverse">
+                    <div class="container-fluid">
+                         <!-- Brand and toggle get grouped for better mobile display -->
+                         <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar_collapse">
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-logo" href="#">
+                                <img src="images/logo.png" alt="" class="img-responsive">
+                            </a>
+                         </div>
+                         <div class="collapse navbar-collapse" id="navbar_collapse">
+                             <ul class="nav navbar-nav">
+                                 <li>
+                                     <a href="#">Articles</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Films</a>
+                                 </li>
+                                 <li>
+                                     <a href="#">Music</a>
+                                 </li>
+                             </ul>
+                             <form class="navbar-form navbar-left">
+                                <div class="form-group">
+                                    <input type="search" name="" value="" placeholder="search" class="form-control">
+                                </div>
+                                <button type="submit" class="btn btn-default">
+                                    <span class="glyphicon glyphicon-search"></span>
+                                </button>
+                             </form>
+                             <ul class="nav navbar-nav navbar-right">
+                                 <li class="dropdown">
+                                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                                         <img src="images/h1.png" alt="">
+                                         Batman
+                                     </a>
+                                     <ul class="dropdown-menu">
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Profile</a></li>
+                                        <li><a href="#">Profile</a></li>
+                                     </ul>
+                                 </li>
+                             </ul>
+                         </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+        <!-- 轮播 -->
+        <div class="banner">
+            <div class="container">
+                <!-- 轮播图片的容器 -->
+                <div class="carousel slide" id="slidershow" data-ride="carousel">
+                    <!-- 轮播图片计数器 --> 
+                       <ol class="carousel-indicators">
+                           <li class="active" data-target="#slidershow" data-slide-to="0"></li>
+                           <li data-target="#slidershow" data-slide-to="1"></li>
+                           <li data-target="#slidershow" data-slide-to="2"></li>
+                       </ol>
+                       <!-- 设置轮播图片 -->
+                       <div class="carousel-inner">
+                           <div class="item active">
+                               <a href="#">
+                                   <img src="images/slid1.jpg" alt="">
+                                   <!-- 图片标题及描述内容 -->
+                                   <div class="carousel-caption">
+                                       <h3>Flash Gordon is the hero of a science fiction Test</h3>
+                                       <p>First published January 7, 1934, the strip was inspired by and created to compete with the already established Buck Rogers adventure strip. Also inspired by these series were comics...</p>
+                                   </div>
+                               </a>
+                           </div>
+                           <div class="item">
+                               <a href="#">
+                                  <img src="images/slid2.jpg" alt="">
+                                  <div class="carousel-caption">
+                                      <h3>Green Lantern</h3>
+                                      <p>Harley Quinn is a fictional character, a super villain in the DC Universe. The character was introduced on September 11, 1992</p>
+                                  </div>
+                               </a>
+                           </div>
+                           <div class="item">
+                               <a href="#">
+                                    <img src="images/slid1.jpg" alt="">
+                                   <!-- 图片标题及描述内容 -->
+                                   <div class="carousel-caption">
+                                       <h3>Flash Gordon is the hero of a science fiction Test</h3>
+                                       <p>First published January 7, 1934, the strip was inspired by and created to compete with the already established Buck Rogers adventure strip. Also inspired by these series were comics...</p>
+                                   </div>
+                               </a>
+                           </div>
+                       </div>
+                       <!-- 轮播控制器 -->
+                       <a href="#slidershow" class="left carousel-control" data-slide="prev" role="button">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                       </a>
+                       <a class="right carousel-control" href="#slidershow" data-slide="next" role="button">
+                          <span class="glyphicon glyphicon-chevron-right"></span>
+                       </a>
+                </div>    
+            </div>
+        </div>
+        <!-- 主内容 -->
+        <div class="content">
+            <div class="container">
+                <!-- 左侧部分 -->
+                <div class="content-left">
+                    <!-- 第一行 -->
+                   <div class="left-row">
+                        <!-- 第一列 -->
+                        <div class="mg-right post4 row1-col1">
+                            <img src="images/13.png" alt="" class="img-responsive center-block">
+                            <div class="text-center info">
+                                <a href="#" class="tags">GAMES</a>
+                                <p><span>Batman</span> has been licensed and adapted into a variety of media</p>
+                                <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            24 March
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                           <!-- 第二列 -->
+                        <div class="mg-left post8 row1-col2 clearfix">
+                            <img src="images/post2.png" alt="" class="img-responsive pic-left">
+                            <div class="info">
+                              <div class="text-center"> 
+                                    <a href="#" class="tags">HEROES</a> 
+                              </div>
+                               <h3>
+                                   <a href="#">Zod manipulated Phantom Zone</a>
+                               </h3>
+                               <p>
+                                   As his son was the only Phantom Zoner capable of maintaining a physical form, Zod sent the rocket ship out of the...
+                               </p>
+                               <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            24 March
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!-- 右上角斜标签 -->
+                            <div class="sale-box">
+                                <p>NEW POST</p> 
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- 第二行 -->
+                    <div class="left-row">
+                        <!-- 第一列 -->
+                        <div class="post4 mg-right row2-col1 ">
+                            <div class="info">
+                                <h3>Green Lantern</h3>
+                                <h4>Chief redactor</h4>
+                                <p>Aquaman is a superhero appearing in comic book titles by DC Comics. Created by Paul Norris and Mort Weisinger</p>
+                                <img src="images/dot.png" alt="" class=".img-responsive center-block">
+                                <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            Yesterday
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 第二列 -->
+                        <div class="post4 mg-right mg-left row2-col2">
+                            <img src="images/12.png" alt="" class="img-responsive center-block">
+                            <div class="info">
+                                <h5>
+                                    <a href="#">Story about Gordon Flash</a>
+                                </h5>
+                                <p>
+                                    Rookie cop James W. Gordon was transferred City to Chicago as part of a plan by Gillian Loeb, then...
+                                </p>
+                                <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            Yesterday
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 第三列 -->
+                        <div class="post4 mg-left row2-col3">
+                            <img src="images/11.png" alt="" class="img-responsive center-block pic-icon">
+                            <div class="info">
+                                <h3>
+                                    The character will appear in the 2016 film Batman vs Superman
+                                </h3>
+                                <p>
+                                    Shazam informs Billy that he is an ancient Egyptian wizard who has been using his powers for...
+                                </p>
+                                <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            Yesterday
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+                    </div>
+                    <!-- 第三行 -->
+                    <div class="left-row">
+                        <!-- 第一列 -->
+                        <div class="post8 mg-right row3-col1 clearfix">
+                            <img src="images/16.png" alt="" class="img-responsive pic-left">
+                            <div class="info">
+                                <a href="#" class="tags">TEXTS</a>
+                                <h3>
+                                    <a href="#">Hawkgirl is a legacy character</a>
+                                </h3>
+                                <p>
+                                    She wields a mace and uses Nth Metal technology to fly. Carter Hall's wife Shiera Sanders was the first to use the name during...
+                                </p>
+                                <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            Yesterday
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- 第二列 -->
+                        <div class="post4 mg-left row3-col2">
+                            <a href="#" class="tags">STORISE</a>
+                            <img src="images/14.png" alt="" class="img-responsive">
+                            <div class="info">
+                                <h3>
+                                    <a href="#">Green Lantern is a superhero</a>
+                                </h3>
+                                <p>
+                                    He is a member of the Green Lantern Corps, an organization created by the Guardians of the...
+                                </p>
+                                <hr class="divider">
+                                <ul class="list-inline">
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-comment"></span>
+                                            32
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span>
+                                            12345
+                                        </a>
+                                        
+                                    </li>
+                                    <li>
+                                        <a href="#">
+                                            <span class="glyphicon glyphicon-time" aria-hidden="true"></span>
+                                            Yesterday
+                                        </a>
+                                    </li>
+                                </ul> 
+                            </div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- 右侧部分 -->
+                <div class=" content-right">
+                    <!-- 第一栏：HEROES NEWS -->
+                    <div class="heros-news post5-right mg-r-right">
+                        <h3>HEROES NEWS</h3>
+                        <div class="heros-news-grids clearfix">
+                            <div class="heros-pic">
+                                <img src="images/6.png" alt="" class="img-responsive">
+                            </div>
+                            
+                            <div class="heros-info">
+                                <h5>
+                                    <a href="#">Gordon Flash</a>
+                                </h5>
+                                <p>
+                                    Intoxicated by him, she adopted the Harley Quinn persona and helps in his criminal pursuits
+                                </p>
+                            </div>
+                        </div>
+                        <div class="heros-news-grids clearfix">
+                            <div class="heros-pic">
+                                <img src="images/7.png" alt="" class="img-responsive">
+                            </div>
+                            
+                            <div class="heros-info">
+                                <h5>
+                                    <a href="#">Harleen Quinzel was a criminal psychiatrist</a>
+                                </h5>
+                                <p>
+                                    She abandoned her career and became Harley Quinn
+                                </p>
+                            </div>
+                        </div>
+                        <div class="heros-news-grids clearfix">
+                            <div class="heros-pic">
+                                <img src="images/10.png" alt="" class="img-responsive">
+                            </div>
+                            
+                            <div class="heros-info">
+                                <h5>
+                                    <a href="#">DC Comics, Inc</a>
+                                </h5>
+                                <p>
+                                    In the Ame-Comi Universe, Harley is very much
+                                </p>
+                            </div>
+                        </div>
+                        <div class="heros-news-grids clearfix">
+                            <div class="heros-pic">
+                                <img src="images/9.png" alt="" class="img-responsive">
+                            </div>
+                            
+                            <div class="heros-info">
+                                <h5>
+                                    <a href="#">Arkham City</a>
+                                </h5>
+                                <p>
+                                    Batman is a fictional superhero who appears in American comic books published by DC Comics
+                                </p>
+                            </div>
+                        </div>
+                        <div class="heros-news-grids clearfix">
+                            <div class="heros-pic">
+                                <img src="images/8.png" alt="" class="img-responsive">
+                            </div>
+                            
+                            <div class="heros-info">
+                                <h5>
+                                    <a href="#">Batman has been licensed</a>
+                                </h5>
+                                <p>
+                                    Five years before the main events of the comic series
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 第二栏：FOLLOW HEROES -->
+                    <div class="follow-heroes post5-right mg-r-left">
+                        <h4>FOLLOW HEROES</h4>
+                        <div class="fh-girds-container">
+                            <div class="fh-girds">
+                                <div class="fh-gird">
+                                    <img src="images/23.png" alt="" class="fh-pic">
+
+                                    <span>
+                                        Gordon flash
+                                    </span>
+                                </div>
+                                <div class="fh-gird">
+                                    <img src="images/17.png" alt="" class="fh-pic">
+
+                                    <span>
+                                        Harley Quinn
+                                    </span>
+                                </div>
+                                <div class="fh-gird">
+                                    <img src="images/18.png" alt="" class="fh-pic">
+
+                                    <span>
+                                        The Green Lantern
+                                    </span>
+                                </div>  
+                                <div class="fh-gird">
+                                    <img src="images/19.png" alt="" class="fh-pic">
+
+                                    <span>
+                                        Superman
+                                    </span>
+                                </div> 
+                                <div class="fh-gird">
+                                    <img src="images/20.png" alt="" class="fh-pic">
+
+                                    <span>
+                                        Joker
+                                    </span>
+                                </div> 
+                                <div class="fh-gird">
+                                    <img src="images/21.png" alt="" class="fh-pic">
+
+                                    <span>
+                                        Hawkgirl
+                                    </span>
+                                </div>  
+                            </div>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    <!-- jQuery (neces
+    sary for Bootstrap's JavaScript plugins) -->
+    <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>

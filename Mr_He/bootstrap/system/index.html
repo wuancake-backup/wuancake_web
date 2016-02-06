@@ -25,10 +25,6 @@
             }
             .main-header>.logo,.sidebar{
                 width: 230px;
-                transition: width .25s linear;
-                -moz-transition: width .25s linear; /* Firefox 4 */
-                -webkit-transition: width .25s linear; /* Safari 和 Chrome */
-                -o-transition: width .25s linear; /* Opera */
             }
             .sidebar{   
                 font-size: 18px;
@@ -43,9 +39,10 @@
                 background-color: transparent;
                 color:#fff;
             }
-
             .main,.main-header>.navbar{
                 margin-left: 230px;
+            }
+            .main,.main-header>.navbar,.main-header>.logo,.sidebar{
                 transition: all .25s linear;
                 -moz-transition: all .25s linear; /* Firefox 4 */
                 -webkit-transition: all .25s linear; /* Safari 和 Chrome */
