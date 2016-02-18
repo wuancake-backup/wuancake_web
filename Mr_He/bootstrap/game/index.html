@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Games</title>
         <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="css/jquery.mCustomScrollbar.min.css">
         <style type="text/css">
             @font-face {
                 font-family: 'NotoSerif-Italic';
@@ -340,7 +341,7 @@
             .fh-girds-container{
                 position:relative;
                 height:340px;
-                overflow:hidden;
+                overflow:auto;
             }
             .fh-girds{
                 background: #111;
@@ -377,6 +378,9 @@
                     margin-left: 1%;
                 }
              }
+            .mCSB_inside>.mCSB_container {
+                margin-right: 0px;
+            }
         </style>
     </head>
     <body>
@@ -824,7 +828,7 @@
                     <!-- 第二栏：FOLLOW HEROES -->
                     <div class="follow-heroes post5-right mg-r-left">
                         <h4>FOLLOW HEROES</h4>
-                        <div class="fh-girds-container">
+                        <div class="fh-girds-container content">
                             <div class="fh-girds">
                                 <div class="fh-gird">
                                     <img src="images/23.png" alt="" class="fh-pic">
@@ -881,5 +885,18 @@
     <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script src="js/jquery-ui-1.10.4.min.js"></script>
+    <script src="js/jquery.mousewheel.min.js"></script>
+    <script src="js/jquery.mCustomScrollbar.min.js"></script>
+    <script>
+        (function($){
+            $(document).ready(function(){
+                $(".content").mCustomScrollbar();
+            });
+        })(jQuery);
+        $(".content").mCustomScrollbar({
+            scrollInertia:10,
+        });
+    </script>
     </body>
 </html>
