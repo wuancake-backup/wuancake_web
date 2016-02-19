@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <style type="text/css" media="screen">
+            @font-face {
+                font-family: 'Lato-Bold';
+                src: url(fonts/Lato-Bold.ttf);
+            }
+            *{
+                box-sizing: border-box;
+            }
+            .clearfix:before,.container:before,.nav:before,.navbar:before,.navbar-header:before{
+                display: table;
+                content: " ";
+            }
+            .clearfix:after,.container:after,.nav:after,.navbar:after,.navbar-header:after{
+                display: table;
+                content: " ";
+                clear:both;
+            }
+            :after, :before {
+                -webkit-box-sizing: border-box;
+                -moz-box-sizing: border-box;
+                box-sizing: border-box;
+            }
+            a{
+                text-decoration: none;
+                outline: none;
+            }
+            img {
+                vertical-align: middle;
+            }
+            button{
+                cursor:pointer;
+            }
+            .img-responsive{
+                max-width: 100%;
+                height:auto;
+                display:block;
+            }
+            .center-block {
+                display: block;
+                margin-left: auto;
+                margin-right: auto;
+            }
+
+            .container {
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .container-fluid {
+                padding-right: 15px;
+                padding-left: 15px;
+                margin-right: auto;
+                margin-left: auto;
+            }
+            .nav{
+                padding-left: 0;
+                margin-bottom: 0;
+                list-style: none;
+            }
+            .navbar{
+                position: relative;
+                min-height: 50px;
+                /*border:1px solid transparent;*/
+                background-color: #323232;
+                font:bold 10px/11px 'Lato-Bold',sans-serif;
+                transition: all .5s linear;
+            }
+            .nav>li{
+                position:relative;
+                display:block;
+            }
+            .nav>li>a{
+                position:relative;
+                display:block;
+
+            }
+            .navbar-nav{
+                display:inline-block;
+                margin: 0;
+            }
+            .navbar-nav>li{
+                display:inline-block;
+            }
+            .navbar-nav>li>a{
+                padding:32px 12px 20px;
+            }
+            .navbar-nav>li>a{
+                color:#ffffff;
+            }
+            .navbar-logo{
+                display:none;
+            }
+            .navbar-content{
+                text-align: center;
+                display:none;
+                /*transition: all 3.5s linear;*/
+            }
+            .navbar-toggle{
+                position:relative;
+                float:right;
+                padding:9px 10px;
+                background-color: transparent;
+                border:1px solid transparent;
+                border-radius: 4px;
+                border-color: #fff;
+                margin:8px 15px;
+            }
+            .navbar-toggle .icon-bar{
+                display:block;
+                width:22px;
+                height:2px;
+                border-radius: 1px;
+                background-color: #fff;
+            }
+            .navbar-toggle .icon-bar+.icon-bar{
+                margin-top: 4px;
+            }
+            .navbar-open .navbar-content{
+                display:block;
+
+            }
+            @media (min-width: 1200px){
+                .container {
+                    width: 1170px;
+                }
+            }
+                  
+            @media (min-width: 992px){
+                .container {
+                width: 970px;
+                }
+            }
+
+            @media (min-width: 768px){
+                .container {
+                    width: 750px;
+                }
+                .navbar{
+                    height:63px;
+                }
+/*                .navbar-nav{
+                    float: left;
+                    margin: 0;
+                }
+                .navbar-nav>li{
+                    float:left;
+                }*/
+                .navbar-content{
+                    display:block !important;
+                }
+                .navbar-nav>li>a{
+                    padding:32px 12px 20px;
+                }
+                .navbar-nav.brand-left{
+                    position: absolute;
+                    right: 50%;
+                    margin-right: 58px;
+                }
+                .navbar-nav.brand-right {
+                    position: absolute;
+                    left: 50%;
+                    margin-left: 58px;
+                }
+                .navbar-logo{
+                    position: absolute;
+                    left: 50%;
+                    margin: 11px 0px 0px -32px;
+                    display:block;
+                }
+                .navbar-logo-mid{
+                    margin-top: 11px;
+                }
+                .navbar-bottom{
+                    position:absolute;
+                    left:50%;
+                    top:62px;
+                    border-top: 26px solid #323232;
+                    border-right: 46px solid transparent;
+                    border-left: 46px solid transparent;
+                    border-bottom: 0;
+                    height:0;
+                    width:1px;
+                    margin-left: -46px;
+                }
+                .navbar-toggle{
+                    display:none;
+                }
+            }
+            .hex{
+                width:180px;
+                height:104px;
+                background-image: url(images/hexal-1_07.jpg);
+                background-repeat: no-repeat;
+                background-position: 50% 50%;
+                background-size: auto 206px;
+                position:relative;
+                text-align: center;
+                margin-top: 60px;
+            }
+            .hex .corner-1{
+                z-index: -1;
+                transform:rotate(60deg);
+            }
+            .hex .corner-2{
+                z-index: -1;
+                transform:rotate(-60deg);
+            }
+            .hex .corner-1,.hex .corner-2{
+                position:absolute;
+                top:0;
+                left:0;
+                width:100%;
+                height:100%;
+                background:inherit;
+                overflow:hidden;
+            }
+            .hex .corner-1:before,.hex .corner-2:before{
+                width:180px;
+                height:206px;
+                content:'';
+                position:absolute;
+                top:0;
+                left:0;
+                z-index: 1;
+                background:inherit;
+            }
+            .hex .corner-1:before{
+                transform-origin: 0 0;
+                transform:rotate(-60deg) translate(-90px,0px);
+            }
+            .hex .corner-2:before{
+                transform-origin: 0 0;
+                transform:rotate(60deg) translate(0px,-155px);
+            }
+        </style>    
+    </head>
+    <body>
+        <!-- 导航条 -->
+        <nav class="navbar">
+            <div class="navbar-header">
+                <div class="navbar-logo">
+                    <a href=""><img src="images/hexal-logo_03.png" alt=""></a>
+                </div>
+                <button type="button" class="navbar-toggle">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button> 
+            </div>
+
+            <div class="navbar-content">            
+                <ul class="navbar-nav brand-left nav">
+                    <li><a href="">PORTFOLIO</a></li>
+                    <li><a href="">ABOUT</a></li>
+                </ul>
+                <ul class="navbar-nav brand-right nav">
+                    <li><a href="">BIOG</a></li>
+                    <li><a href="">GET IN TOUCH</a></li>
+                </ul>
+            </div>
+<!--             <div class="navbar-logo-mid">
+                <a href=""><img src="images/hexal-logo_03.png" alt="" class="img-responsive center-block"></a>
+            </div> -->
+            <div class="navbar-bottom">
+            </div>
+        </nav>
+        <div class="hex">
+            <div class="corner-1">
+                
+            </div>
+            <div class="corner-2">
+                
+            </div>
+        </div>
+
+
+
+
+        <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
+        <script>
+        // $(".navbar-toggle").click(function() {
+        //     $(".navbar").toggleClass('navbar-open');
+        // });
+         $(".navbar-toggle").click(function() {
+            if ($(window).width() < 768){
+                $(".navbar-content").toggle(500);
+            } 
+        });
+        </script>
+    </body>
+</html>
