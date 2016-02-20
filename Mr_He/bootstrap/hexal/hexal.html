@@ -7,14 +7,22 @@
                 font-family: 'Lato-Bold';
                 src: url(fonts/Lato-Bold.ttf);
             }
+            @font-face {
+                font-family: 'Lato-Regular';
+                src: url(fonts/Lato-Regular.ttf);
+            }
+            @font-face{
+                font-family: 'MavenProRegular';
+                src:url(fonts/MavenProLight300-Regular.otf);
+            }
             *{
                 box-sizing: border-box;
             }
-            .clearfix:before,.container:before,.nav:before,.navbar:before,.navbar-header:before,.hexlist:before{
+            .clearfix:before,.container:before,.nav:before,.navbar:before,.navbar-header:before,.hexlist:before,.hex-container:before,.row:before{
                 display: table;
                 content: " ";
             }
-            .clearfix:after,.container:after,.nav:after,.navbar:after,.navbar-header:after,.hexlist:after{
+            .clearfix:after,.container:after,.nav:after,.navbar:after,.navbar-header:after,.hexlist:after,.hex-container :after,.row:after{
                 display: table;
                 content: " ";
                 clear:both;
@@ -36,6 +44,20 @@
             }
             ol,ul{
                 list-style: none;
+                margin:0;
+                padding:0;
+            }
+            h1, .h1, h2, .h2, h3, .h3 {
+                margin-top: 20px;
+                margin-bottom: 10px;
+            }
+            p {
+                margin: 0 0 10px;
+            }
+            button, input, select, textarea {
+                font-family: inherit;
+                font-size: inherit;
+                line-height: inherit;
             }
             .img-responsive{
                 max-width: 100%;
@@ -60,6 +82,43 @@
                 margin-right: auto;
                 margin-left: auto;
             }
+            .row{
+                margin-right: -15px;
+                margin-left: -15px;
+                /*position:relative;*/
+            }               
+            .col-sm-3,.col-sm-7,.col-md-3,.col-md-7,.col-sm-4,.col-md-4,.col-sm-8,.col-md-8,.col-sm-9,.col-md-9,.col-sm-10,.col-md-10{
+                position: relative;
+                padding-right: 15px;
+                padding-left:15px;
+                min-height: 1px;
+            }
+            .form-group {
+                margin-bottom: 15px;
+            }
+            .form-control{
+                display:block;
+                width:100%;
+                height:38px;
+                padding:6px 12px;
+                font-size: 12px;
+                line-height: 21.56px;
+                box-shadow: none;
+                border: 1px solid #303030;
+                background-color: #454545;
+                color: #9C9C9C;
+                outline: none;
+                transition: border-color 0.3s;
+            }
+            textarea.form-control{
+                height:auto;
+            }
+            .form-control:hover{
+                border-color: #2EB398;
+            }
+            .form-control:focus{
+                border-color: #2EB398;
+            }
             .nav{
                 padding-left: 0;
                 margin-bottom: 0;
@@ -72,6 +131,7 @@
                 background-color: #323232;
                 font:bold 10px/11px 'Lato-Bold',sans-serif;
                 transition: all .5s linear;
+                /*margin-bottom: 90px;*/
             }
             .nav>li{
                 position:relative;
@@ -131,6 +191,30 @@
                 .container {
                     width: 750px;
                 }
+                .col-sm-3{
+                    width:25%;
+                }
+                .col-sm-4{
+                    width:33.33333333%;
+                }
+                .col-sm-7{
+                    width:58.33333333%;
+                }
+                .col-sm-8{
+                    width:66.66666667%;
+                }
+                .col-sm-9{
+                    width:75%;
+                }
+                .col-sm-10{
+                    width:83.33333333%;
+                }
+                .col-sm-offset-1{
+                    margin-left: 8.33333333%;
+                }
+                .col-sm-3,.col-sm-7,.col-sm-4,.col-sm-8,.col-sm-9,.col-sm-10{
+                    float:left;
+                }
                 .navbar{
                     height:63px;
                 }
@@ -186,10 +270,29 @@
                 .container {
                 width: 970px;
                 }
-            }
-            @media (min-width: 1200px){
-                .container {
-                    width: 1170px;
+                .col-md-3{
+                    width:25%;
+                }
+                .col-md-4{
+                    width:33.33333333%;
+                }
+                .col-md-7{
+                    width:58.33333333%;
+                }
+                .col-md-8{
+                    width:66.66666667%;
+                }
+                .col-md-9{
+                    width:75%;
+                }
+                .col-md-10{
+                    width:83.33333333%;
+                }
+                .col-md-offset-1{
+                    margin-left: 8.33333333%;
+                }
+                .col-md-3,.col-md-4,.col-md-7,.col-md-8,.col-md-9,.col-md-10{
+                    float:left;
                 }
             }
             .hex{
@@ -252,43 +355,11 @@
                 top: 0;
                 left: 0;
             }
-            @media (min-width: 580px) and (max-width:780px){
-                .hexlist{
-                    width:580px;
-                }
-                .hexlist>li:nth-child(5n+1){
-                    margin-left: 100px;
-                }
-                .hexlist>li:nth-child(5n){
-                     margin-right: 0;
-                }
-            }
-            @media (min-width: 780px) and (max-width:991px){
-                .hexlist{
-                    width:780px;
-                }
-                .hexlist>li:nth-child(7n+1){
-                    margin-left: 100px;
-                }
-                .hexlist>li:nth-child(7n){
-                    margin-right: 0;
-                }
-            }
-            @media (min-width: 992px){
-                .hexlist{
-                    width:980px;
-                }
-                .hexlist>li:nth-child(9n+1){
-                    margin-left: 100px;
-                }
-                .hexlist>li:nth-child(9n){
-                 margin-right: 0;
-                }
-            }
-
             .hexlist{
-                margin: 100px auto 0px;
+                margin:0;
                 padding:0;
+                transition: all 0.5s ease-in-out;
+                position: relative;
             }
             .hexlist:after{
                 height:38px;
@@ -300,6 +371,171 @@
                 position:relative;
                 margin-right: 20px;
                 margin-bottom: -38px;
+                transition: all 0.5s ;
+            }
+            .hex-container{
+                padding:90px 0px; 
+                margin: 0px auto ;
+                position: relative;
+            }
+            .hex-bottom{
+                position: absolute;
+                left:0;
+                bottom:11px;
+                width:100%;
+            }
+            .hex-bottom>ul{
+                padding:0px 0px 11px;
+                margin:0;
+                font-size: 0;
+            }
+            .hex-bottom>ul>li{
+                display:inline-block;
+                margin-right: 3px;
+            }
+            .hex-bottom>ul>li>a{
+                display:inline-block;
+                width:6px;
+                height:6px;
+                background-color:#ddd2c5;
+            }
+            .hex-bottom>ul>li>a:hover{
+                background-color: #8b8784;
+            }
+            .hex-bottom>hr{
+                margin:0;
+                border-width: 0;
+                border-top-width: 1px;
+                border-color: #ddd2c5;
+            }
+            @media (min-width: 580px) and (max-width:780px){
+                .hex-container{
+                    width:580px;
+                }
+                .hexlist>li:nth-child(5n+1){
+                    margin-left: 100px;
+                }
+                .hexlist>li:nth-child(5n){
+                     margin-right: 0;
+                }
+            }
+            @media (min-width: 780px) and (max-width:991px){
+                .hex-container{
+                    width:780px;
+                }
+                .hexlist>li:nth-child(7n+1){
+                    margin-left: 100px;
+                }
+                .hexlist>li:nth-child(7n){
+                    margin-right: 0;
+                }
+            }
+            @media (min-width: 992px){
+                .hex-container{
+                    width:980px;
+                }
+                .hexlist>li:nth-child(9n+1){
+                    margin-left: 100px;
+                }
+                .hexlist>li:nth-child(9n){
+                 margin-right: 0;
+                }
+            }
+            .person-intr{
+                font-family: 'MavenProRegular';
+                background-color: #2eb398;
+                color:#d7fcf5;
+                text-align: justify;
+                padding:67px 0px;
+            }
+            .person-intr h1{
+                font-size: 30px;
+                line-height: 4.56px;
+                
+            }
+            .person-intr h2{
+                font-size: 18px;
+                line-height: 21.56px;
+                color:#248e78;
+            }
+            .person-intr p{
+                font-size: 12px;
+                line-height: 21.56px;
+            }
+            .person-intr .social-media{
+                text-align: center;
+                font-size: 0;
+            }
+            .person-intr .social-media>li{
+                display:inline-block;
+            }
+            .person-intr .social-media>li>a{
+                display:inline-block;
+                height:24px;
+            }
+            .person-intr .social-media>li:nth-child(odd) a{
+                width:25px;
+            }
+            .person-intr .social-media>li:nth-child(even) a{
+                width:24px;
+            }
+            .person-intr .social-media>li:nth-child(1) a{
+                background-image: url(images/social-media_03.jpg);
+            }
+            .person-intr .social-media>li:nth-child(2) a{
+                background-image: url(images/social-media_04.jpg);
+            }
+            .person-intr .social-media>li:nth-child(3) a{
+                background-image: url(images/social-media_05.jpg);
+            }
+            .person-intr .social-media>li:nth-child(4) a{
+                background-image: url(images/social-media_06.jpg);
+            }
+            .person-intr .social-media>li:nth-child(5) a{
+                background-image: url(images/social-media_07.jpg);
+            }
+            .person-intr .social-media>li:nth-child(6) a{
+                background-image: url(images/social-media_08.jpg);
+            }
+            @media (min-width: 768px){
+                .person-intr .social-media{
+                    float:right;
+                }
+            }
+            .footer{
+                font-family: 'MavenProRegular';
+                color:#c9c9c9;
+                background-color: #323232;
+            }
+            .footer h1{
+                font-size: 30px;
+                line-height: 4.56px;
+                color:#e0e0e0;
+            }
+            .footer h2{
+                font-size: 18px;
+                line-height: 21.56px;
+            }
+            .footer p{
+                font-size: 13px;
+                line-height: 23.4px;
+                font-family: 'Lato-Regular';
+                text-align: justify;
+            }
+            .footer p>span{
+                color: #ffffff;
+                font-size: 14px;
+            }
+            .footer form button{
+                padding:14px 30px;
+                font-size: 13px;
+                color:#fff;
+                outline:none;
+                cursor:pointer;
+                background-color: #2EB398;
+                font-family: 'Lato-Bold';
+                border:none;
+                float:right;
             }
         </style>    
     </head>
@@ -333,9 +569,12 @@
             <div class="navbar-bottom">
             </div>
         </nav>
-        <div class=" ">
+        <!-- 蜂窝 -->
+        <div class="hex-container">
+            <!-- 蜂窝列表 -->
             <ul class="hexlist">
                 <li>
+                    <!-- 单个蜂窝 -->
                     <div class="hex" style="background-image: url(images/hexal-1_07.jpg);">
                         <a href="#" title=""> </a> 
                         <div class="corner-1"></div>
@@ -427,10 +666,81 @@
                     </div>
                 </li>
             </ul>
+            <!-- 蜂窝底部的滑动块和分割线 -->
+            <div class="hex-bottom">
+                <ul class="hex-btns">
+                    <li><a href="" title=""></a></li>
+                    <li><a href="#" title=""></a></li>
+                    <li><a href="" title=""></a></li>
+                    <li><a href="" title=""></a></li>
+                    <li><a href="" title=""></a></li>
+                    <li><a href="" title=""></a></li>
+                </ul>
+                <hr>
+            </div>
         </div>
-
-
-
+        <!-- 人物介绍 -->
+        <div class="person-intr">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-3 col-md-3 col-sm-offset-1 col-md-offset-1">
+                        <img src="images/hexal_41.png" alt="" class="img-responsive center-block">
+                    </div>
+                    <div class="col-sm-7 col-md-7">
+                        <h1>Smith Anderson</h1>
+                        <h2>Illustrator & Character Designer</h2>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna. Integer gravida, diam congue molestie fringilla, elit odio rhoncus turpis, ac dictum libero elit vel metus. Morbi egestas sit amet velit eget venenatis. Mauris porttitor, nibh at sagittis tristique, enim magna pretium augue, eget consectetur sem dui non urna</p>
+                        <ul class="social-media">
+                            <li><a href="" title=""></a></li>
+                            <li><a href="" title=""></a></li>
+                            <li><a href="" title=""></a></li>
+                            <li><a href="" title=""></a></li>
+                            <li><a href="" title=""></a></li>
+                            <li><a href="" title=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 页脚 -->
+        <div class="footer">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-offset-1 col-md-offset-1 col-sm-10 col-md-10">
+                        <h1>Get In Touch</h1>
+                        <h2>In order to get in touch use the contact form below:</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-offset-1 col-md-offset-1 col-sm-10 col-md-10">
+                        <div class="row">
+                            <div class="col-sm-9 col-md-9">
+                                <form class="clearfix">
+                                    <div class="form-group">
+                                        <input type="text" name="" value="" placeholder="Name (Required)" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <input type="text" name="" value="" placeholder="Email (Required)" class="form-control"accept="">
+                                    </div>
+                                     <div class="form-group">
+                                        <input type="text" name="" value="" placeholder="Subject" class="form-control">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea name="" class="form-control" rows="5" placeholder="Your Message here...."></textarea>
+                                    </div>
+                                    <button type="submit">SEND</button>
+                                </form>
+                            </div>
+                            <div class="col-sm-3 col-md-3">
+                                <p>
+                                    <span>Quisque Hendrerit: </span>purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
