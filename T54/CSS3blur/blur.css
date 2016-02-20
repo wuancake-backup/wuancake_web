@@ -1,0 +1,14 @@
+.container {
+    width:918px;
+    height:612px;
+    background-image: url(blur.jpg);
+    background-repeat: no-repeat;   
+    overflow: hidden;
+}
+.blur {
+    width:918px;
+    height:612px;
+    background:inherit;
+    -webkit-filter: blur(10px);
+    filter:blur(10px);
+}

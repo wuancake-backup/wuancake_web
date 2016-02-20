@@ -1,0 +1,14 @@
+body {
+    background-color: black;
+    color:green;
+}
+.game{
+    border-width: 2px;
+    border-style: solid;
+    width:400px;
+}
+.gameControl {
+    border-width: 2px;
+    border-style: solid;
+    width:180px;
+}

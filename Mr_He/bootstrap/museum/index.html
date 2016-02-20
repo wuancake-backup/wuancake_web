@@ -11,6 +11,7 @@
         <style type="text/css">
             body{
                 padding-top:50px;
+                padding-bottom: 30px;
             }
             .carousel{
                 height:500px;
@@ -33,6 +34,33 @@
             hr.divider{
                 margin:40px 0px;
             }
+<<<<<<< HEAD
+=======
+            .tab-content .row{
+                padding-top:30px;
+            }
+            .tab-content .row h1{
+                margin-top:120px;
+                font-size: 50px;
+                color:#2a6496;
+            }
+            .tab-content .row p{
+                font-size: 21px;
+            }
+
+            @media (max-width: 768px) {
+
+
+            .carousel {
+                height: 300px;
+                margin-bottom: 30px;
+            }
+
+            .carousel .item {
+                height: 300px;
+            }
+        }
+>>>>>>> 6592dba86531d257887b3635e01ab5e8040444a6
         </style>
 
     </head>
@@ -70,11 +98,13 @@
                                 <li><a href="#">Action</a></li>
                             </ul>
                         </li>
-                        <li><a href="#">关于</a></li>
+                        <!-- 触发弹出窗 -->
+                        <li><a href="#" data-toggle="modal" data-target="#about">关于</a></li>
                     </ul>
                 </div>
             </div>
         </nav>
+
     <!-- 轮播广告 -->
     <!-- data-ride="carousel" 属性用于标记轮播在页面加载时就开始动画播放，无需使用初始化的js函数 -->
     <!-- slide样式，使图片与图片切换效果有平滑感 -->
@@ -182,7 +212,162 @@
         <hr class="divider">
     </div>                                          
 
+  
+<div class="container">
+  <!-- 主要内容三列布局 -->
+    <div class="text-center">
+        <div class="row">
+            <div class="col-md-4  ">
+                <img class="img-circle img-responsive center-block" src="images/chrome-logo-small.jpg" alt="chrome">
 
+                <h2>Chrome</h2>
+
+                <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。</p>
+
+                <p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-circle img-responsive center-block" src="images/firefox-logo-small.jpg" alt="firefox">
+
+                <h2>Firefox</h2>
+
+                <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器。</p>
+
+                <p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+            </div>
+            <div class="col-md-4">
+                <img class="img-circle img-responsive center-block" src="images/safari-logo-small.jpg" alt="safari">
+
+                <h2>Safari</h2>
+
+                <p>Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器。</p>
+
+                <p><a class="btn btn-default" href="#" role="button">点我下载</a></p>
+            </div>
+        </div>
+       
+    </div> 
+    <!-- 块与块之间分割线 -->
+    <hr class="divider">
+    <!-- 标签页  -->  
+    <div>   
+    <!-- 标签 -->
+    <!-- 添加data-toggle="tab"来启用标签页 -->
+    <!-- a链接的href与对应的内容id一致 -->
+        <ul class="nav nav-tabs" role="tablist">
+        <li class="active"><a href="#tab-chrome" role="tab" data-toggle="tab">Chrome</a></li>
+        <li><a href="#tab-firefox" role="tab" data-toggle="tab">Firefox</a></li>
+        <li><a href="#tab-safari" role="tab" data-toggle="tab">Safari</a></li>
+        <li><a href="#tab-opera" role="tab" data-toggle="tab">Opera</a></li>
+        <li><a href="#tab-ie" role="tab" data-toggle="tab">IE</a></li>
+        </ul>
+    <!-- 标签内容  -->  
+        <div class="tab-content">
+        <div class="tab-pane active" id="tab-chrome">
+             
+            <div class="row">
+                <div class="col-md-7">
+                        <h1>Google Chrome <small>使用最广的浏览器</small></h1> 
+                        <p>Google Chrome，又称Google浏览器，是一个由Google（谷歌）公司开发的网页浏览器。
+                        该浏览器是基于其他开源软件所撰写，包括WebKit，目标是提升稳定性、速度和安全性，并创造出简单且有效率的使用者界面。</p>
+                </div>
+                <div class="col-md-5">
+                        <img src="images/chrome-logo.jpg" alt="chrome" class="img-responsive">                               
+                </div>                               
+            </div>                                                                          
+        </div>
+        <div class="tab-pane" id="tab-firefox">
+            <div class="row">
+               
+                <div class="col-md-7 col-md-push-5">
+                        
+                    <h1>Mozilla Firefox <small>美丽的狐狸</small></h1> 
+                    <p>Mozilla Firefox，中文名通常称为“火狐”或“火狐浏览器”，是一个开源网页浏览器，
+                        使用Gecko引擎（非ie内核），支持多种操作系统如Windows、Mac和linux。</p>                               
+                </div> 
+                <div class="col-md-5 col-md-pull-7">
+                     <img src="images/firefox-logo.jpg" alt="firefox" class="img-responsive">   
+                </div>                               
+            </div>                                   
+        </div>
+        <div class="tab-pane" id="tab-safari">
+            <div class="row">
+                <div class="col-md-7">
+                        <h1>Safari <small>Mac用户首选</small></h1> 
+                        <p>Safari，是苹果计算机的最新操作系统Mac OS X中的浏览器，使用了KDE的KHTML作为浏览器的运算核心。
+                        Safari在2003年1月7日首度发行测试版，并成为Mac OS X v10.3与之后的默认浏览器，也是iPhone与IPAD和iPod touch的指定浏览器。</p>
+                </div>
+                <div class="col-md-5">
+                        <img src="images/safari-logo.jpg" alt="safari" class="img-responsive">                               
+                </div>                               
+            </div>                                                
+        </div>
+        <div class="tab-pane" id="tab-opera">
+            <div class="row">
+                
+                <div class="col-md-7 col-md-push-5">
+                        <h1>Opera<small>小众但易用</small></h1> 
+                        <p>Opera浏览器，是一款挪威Opera Software ASA公司制作的支持多页面标签式浏览的网络浏览器。
+                        是跨平台浏览器可以在Windows、Mac和Linux三个操作系统平台上运行。</p>
+                </div>
+                <div class="col-md-5 col-md-pull-7">
+                        <img src="images/opera-logo.jpg" alt="chrome" class="img-responsive">                               
+                </div>  
+                                             
+            </div>           
+        </div>
+        <div class="tab-pane" id="tab-ie">
+            <div class="row">
+                <div class="col-md-7">
+                        <h1>IE <small>你懂得</small></h1> 
+                        <p>Internet Explorer，原称Microsoft Internet Explorer(6版本以前)和Windows Internet
+                        Explorer(7，8，9，10版本)，简称IE，是美国微软公司推出的一款网页浏览器。它采用的排版引擎(俗称内核)为Trident。</p>
+                </div>
+                <div class="col-md-5">
+                        <img src="images/ie-logo.jpg" alt="chrome" class="img-responsive">                               
+                </div>                               
+            </div>           
+        </div>                                 
+        </div> 
+    </div> 
+    <!-- 块与块之间分割线 -->
+    <hr class="divider">
+    <!-- 页脚 -->
+    <footer>
+        <p class="pull-right"><a href="#top">回到顶部</a></p>
+        <p>&copy; 2014 慕课网 </p>
+    </footer>
+</div>                                
+
+<!-- 弹出框 -->
+<!-- 务必将模态框的HTML代码放在文档的最高层级内（也就是说，尽量作为body标签的直接子元素），以避免其他组件影响模态框的展现和/或功能。 -->
+<!-- fade为弹出窗添加一个过渡动画效果 -->
+<div class="modal fade" id="about">
+    <div class="modal-dialog">
+    <!-- 弹出窗真正的内容都放在modal-content中 -->
+        <div class="modal-content">
+            <!-- 主要包含三个部分 -->
+            <!-- 弹出窗头部 -->
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">
+                    <span aria-hidden="true">&times;</span>
+                    <span class="sr-only">Close</span>
+                </button>
+                <h4 class="modal-title">关于</h4>
+            </div>
+            <!-- 弹出窗主体 -->
+            <div class="modal-body">
+                 <p>慕课网隶属于北京慕课科技中心(有限合伙)，是一家从事互联网免费教学的网络教育公司。秉承“开拓、创新、公平、分享”的精神，将互联网特性全面的应用在教育领域，致力于为教育机构及求学者打造一站式互动在线教育品牌。</p>
+            </div>
+            <!-- 弹出窗脚部 -->
+            <div class="modal-footer">
+                <!-- data-dimiss 选择要关闭的元素 -->
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary">保存</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 
