@@ -15,6 +15,10 @@
                 font-family: 'MavenProRegular';
                 src:url(fonts/MavenProLight300-Regular.otf);
             }
+            @font-face{
+                font-family: 'Glyphicons Halflings';
+                src:url(fonts/glyphicons-halflings-regular.ttf);
+            }
             *{
                 box-sizing: border-box;
             }
@@ -101,8 +105,7 @@
                 width:100%;
                 height:38px;
                 padding:6px 12px;
-                font-size: 12px;
-                line-height: 21.56px;
+                line-height: 24px;
                 box-shadow: none;
                 border: 1px solid #303030;
                 background-color: #454545;
@@ -503,32 +506,28 @@
                 }
             }
             .footer{
-                font-family: 'MavenProRegular';
                 color:#c9c9c9;
+                font-size: 13px; 
                 background-color: #323232;
+                padding:66px 0px;
             }
-            .footer h1{
-                font-size: 30px;
-                line-height: 4.56px;
-                color:#e0e0e0;
-            }
-            .footer h2{
-                font-size: 18px;
+            .footer .contact-left{
+                font-family: 'MavenProRegular';
+               
                 line-height: 21.56px;
             }
-            .footer p{
-                font-size: 13px;
-                line-height: 23.4px;
-                font-family: 'Lato-Regular';
-                text-align: justify;
+            .footer .contact-left h1{
+                font-size: 30px;
+                line-height: 4.56px;
+                color:#fff;
+                font-weight: 500;
             }
-            .footer p>span{
-                color: #ffffff;
-                font-size: 14px;
-            }
-            .footer form button{
-                padding:14px 30px;
-                font-size: 13px;
+            .footer .contact-left h2{
+                font-size: 18px;
+            }            
+            .footer .contact-left form button{
+                padding:12px 30px;
+                text-align: center;
                 color:#fff;
                 outline:none;
                 cursor:pointer;
@@ -536,6 +535,42 @@
                 font-family: 'Lato-Bold';
                 border:none;
                 float:right;
+                margin-bottom: 15px;
+            }
+            .footer .contact-right{
+                font-family:'Lato-Regular';
+            }
+            .footer .contact-right p{
+                line-height: 23.4px;
+                text-align: justify;
+                margin-bottom: 40px;
+            }
+            .footer .contact-right p>span{
+                color: #ffffff;
+                font-size: 14px;
+            }
+            .footer .contact-right ul{
+                font-family: 'Lato-Bold';
+            }
+            .glyphicon {
+                font-family: 'Glyphicons Halflings'; 
+                display:inline-block;
+                font-weight: 400;
+                position: relative;
+                top:1px;
+            }
+            .glyphicon-envelope:before {
+                content: "\2709";
+            }
+            .glyphicon-earphone:before {
+                content: "\e182";
+            }
+            .glyphicon-map-marker:before {
+                content: "\e062";
+            }
+            .footer .contact-right .glyphicon{
+                margin-right: 11px;
+                color:#2eb398;
             }
         </style>    
     </head>
@@ -706,13 +741,13 @@
         <div class="footer">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-offset-1 col-md-offset-1 col-sm-10 col-md-10">
+                    <div class="col-sm-offset-1 col-md-offset-1 col-sm-10 col-md-10 contact-left">
                         <h1>Get In Touch</h1>
                         <h2>In order to get in touch use the contact form below:</h2>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-sm-offset-1 col-md-offset-1 col-sm-10 col-md-10">
+                    <div class="col-sm-offset-1 col-md-offset-1 col-sm-10 col-md-10 contact-left">
                         <div class="row">
                             <div class="col-sm-9 col-md-9">
                                 <form class="clearfix">
@@ -731,10 +766,15 @@
                                     <button type="submit">SEND</button>
                                 </form>
                             </div>
-                            <div class="col-sm-3 col-md-3">
+                            <div class="col-sm-3 col-md-3 contact-right">
                                 <p>
                                     <span>Quisque Hendrerit: </span>purus dapibus, ornare nibh vitae, viverra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus morbi vitae. 
                                 </p>
+                                <ul class="contact-info">
+                                    <li><span class="glyphicon-map-marker glyphicon "></span>Elm St. 14/05 Lost City </li>
+                                    <li><span class="glyphicon-earphone glyphicon "></span>+ 3528 331 86 35 </li>
+                                    <li><span class="glyphicon-envelope glyphicon accesskey="" "></span>info@hexalcorp.com</li>
+                                </ul>
                             </div>
                         </div>
                     </div>
