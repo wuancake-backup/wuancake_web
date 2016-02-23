@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Main</title>
+        <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <style type="text/css" media="screen">
+            @font-face {
+                font-family: 'Lato-Bold';
+                src: url(fonts/Lato-Bold.ttf);
+            }
+            @font-face {
+                font-family: 'Lato-Regular';
+                src: url(fonts/Lato-Regular.ttf);
+            }
+            body{
+                font-family: 'Lato-Regular';
+            }
+            .shopping-navbar{
+                padding:20px 0px;
+                border-bottom: 1px solid #e5e5e5;              
+            }
+            .icon-bgimg{
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            .shopping-navbar .navbar{
+                margin-bottom: 0;
+                border:none;
+            }
+            .shopping-navbar .navbar-nav>li>a{
+                padding-top: 0;
+                padding-bottom: 0;
+                line-height: 43px;
+                font-size: 14px;
+                color:#303030;
+            }
+            .shopping-navbar .navbar-toggle{
+                padding:18px 14px;
+                background-color: #8d8d8d;
+                margin:0;
+                border:none;
+                border-radius: 0;
+            }
+            .shopping-navbar .navbar-toggle .icon-bar{
+                background-color: #fff;
+                width:32px;
+                height:4px;
+            }
+            .shopping-navbar .navbar-toggle .icon-bar+.icon-bar{
+                margin-top: 6px;
+            }
+            .shopping-navbar .navbar-brand{
+                background-color: #222222;
+                color:#fff;
+                font-size: 25.89px;
+                line-height: 22px;
+                padding-top:19px;
+                padding-bottom: 19px;
+                height:auto;
+            }
+            .navbar-cart{
+                display:block;
+                float:right;
+                margin-right: 25px;
+                width:60px;
+                height:60px;
+                background-image: url(images/home_res_03.png);
+            }
+            .shopping-navbar .user>li>a span{
+                width:36px;
+                height:43px;
+                display:inline-block;
+                vertical-align: bottom;
+            }
+            .shopping-navbar .user>li:nth-child(1)>a span{
+                background-image: url(images/01main_03.png);
+            }
+            .shopping-navbar .user>li:nth-child(2)>a span{
+                background-image: url(images/01main_05.png);
+            }
+
+            .shopping-navbar .user .dropdown>a,.shopping-navbar .user .search button{
+                width:40px;
+                height:43px;
+                margin-left: 15px;
+                background-image: url(images/01main_08.png);
+                border:1px solid #959595;
+            }
+            .shopping-navbar .user .search input{
+                width:auto;
+                display:inline-block;
+            }
+            .shopping-navbar .user .search button{
+                vertical-align:middle;
+            } 
+            .shopping-navbar .user .dropdown-menu{
+                padding:16px 0 16px 9px;
+            }
+            @media (min-width: 768px){
+                .shopping-navbar{
+                    padding:36px 0px;
+                }
+                .shopping-navbar .navbar-brand{
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    line-height: 43px;
+                    font-size: 14px;
+                }
+                .navbar-cart{
+                    display:none;
+                }
+            }
+            .banner{
+                min-height: 535px;
+                text-align: center;
+            }
+            .banner h1{
+                font-size: 72px;
+                line-height: 43px;
+                margin-top: 157px;
+                margin-bottom: 0;
+                color:#303030;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="container">
+        <!-- 导航条 -->
+        <div class="shopping-navbar">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div  class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                            <span class="icon-bar"></span>
+                            <span  class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">SH</a>
+                        <a href="#" class="navbar-cart icon-bgimg"></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Woman</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">Comming Soon</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right user">
+                            <li>
+                                
+                                <a href="#"> <span class="icon-bgimg"></span>Log In</a>
+                            </li>
+                            <li>
+                                
+                                <a href="#"><span class="icon-bgimg"></span> Basket(0)</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-bgimg" data-toggle="dropdown" role="button"></a>
+                                <ul class="dropdown-menu">
+                                    <li style=" white-space: nowrap;" class="search">
+                                        <form class="form-inline">
+
+                                            <input type="text" name="" value="" placeholder="Search" class="form-control">
+                                            <button type="submit" class="icon-bgimg"></button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div>
+        <div class="banner">
+            <h1>Hazy Shade of spring</h1>
+        </div>
+    </div>
+        <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
+        <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    </body>
+</html>
