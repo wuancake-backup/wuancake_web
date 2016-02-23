@@ -114,17 +114,68 @@
                 }
             }
             .banner{
-                min-height: 535px;
                 text-align: center;
             }
+            .banner:before{
+                display: table;
+                content: " ";
+            }
+            .banner:after{
+                display: table;
+                content: " ";
+                clear:both;
+            }
             .banner h1{
-                font-size: 72px;
-                line-height: 43px;
-                margin-top: 157px;
-                margin-bottom: 0;
+                font-size: 70px;
+                line-height: 80px;
+                margin-top: 50px; 
+                margin-bottom: 38px;
                 color:#303030;
                 text-transform: uppercase;
+  
             }
+            .banner h2{
+                font-size: 24px;
+                line-height: 35px;
+                margin-bottom: 78px;
+                margin-top: 0;
+                font-family: 'Georgia Italic';
+                color:#606060;
+            }  
+            .ban-btn{
+                margin-bottom: 153px;
+                display:none;
+            }          
+            .ban-btn a{
+                display:inline-block;
+                padding:20px 35px;
+                font-size: 14px;
+                line-height: 18px;
+                border: 1px solid #959595;
+                color:#303030;
+            }
+            .ban-btn a:hover{
+                text-decoration: none;
+            }
+            @media (min-width: 768px){
+                .banner h1{
+                    font-size: 72px;
+                    line-height: 85px;
+                    margin-top: 135px; 
+                    margin-bottom: 0; 
+                }
+                .banner h2{
+                    font-size: 24px;
+                    line-height: 35px;
+                    margin-bottom: 65px;
+                }
+                .ban-btn{
+                    display:block;
+                }
+            }
+           
+
+
         </style>
     </head>
     <body>
@@ -179,6 +230,11 @@
         </div>
         <div class="banner">
             <h1>Hazy Shade of spring</h1>
+            <h2>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.</h2>
+            <div class="ban-btn">
+                <a href="#" title="">check new arrivals</a>
+            </div>
+            
         </div>
     </div>
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
