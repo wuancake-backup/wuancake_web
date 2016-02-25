@@ -9,7 +9,7 @@
             <mytab msg="hello"></mytab>
         </div>
         <div id="parent">
-            <child></child>
+            <child v-on:child-word="handle"></child>
             <p>message:{{messages}}</p>
         </div>
         <template id="child">
@@ -29,12 +29,12 @@ new Vue({
 })
 Vue.component('child',{
     template: '#child',
-    data:function () {
-        return { word : 'myword' }
-    },
+    // data:function () {
+    //     return { word : 'myword' }
+    // },
     methods: {
         notify: function () {
-            if (this.word.trim()) {
+            if (this.word) {
                 this.$dispatch('child-word',this.word)
                 this.word = ''
             }
@@ -46,11 +46,16 @@ var parent = new Vue({
     data: {
         messages: []
     },
-    events: {
-        'child-word': function (msg) {
+    methods: {
+        handle: function (msg) {
             this.messages.push(msg)
         }
     }
+    // events: {
+    //     'child-word': function (msg) {
+    //         this.messages.push(msg)
+    //     }
+    // }
 })
     </script>
 </html>
