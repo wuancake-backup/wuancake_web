@@ -173,9 +173,116 @@
                     display:block;
                 }
             }
-           
-
-
+            .gallery{
+                color:#fff;
+                letter-spacing: 0.05em;
+                line-height: 27px;
+            }
+            .gallery p{
+                font-family: 'Georgia Italic';
+                margin-bottom: 0;
+                font-size: 18px;
+                text-transform: uppercase;
+            }  
+            .gallery h1{
+                font-family: 'Lato-Bold';
+                font-size: 24px;
+                margin:0;
+                text-transform: uppercase;
+            }   
+            .gallery .one-line{
+                height: 295px;
+            }
+            .one-line>a,.two-line>a{
+                display:block;
+                width:100%;
+                height:100%;
+                color:#fff;
+            }
+            .one-line>a:hover,.two-line>a:hover,.one-line>a:focus,.two-line>a:focus,.one-line>a:visited,.two-line>a:visited{
+                text-decoration: none;
+            }
+            /*两行模块*/
+            .gallery .two-line{
+                height: 590px;
+            }
+            .gallery .two-line h1:first-child{
+                padding-top:268px ;
+            }
+            /*推特模块*/
+            .twit{
+                background-color: #bbbbbb;
+            }
+             .twit p{
+                font-size: 14px;
+                line-height: 19px;
+                text-transform: none;
+                
+            }
+            .twit .brand-id{
+                font-family: 'Lato-Bold';
+                margin-top: 17px;
+            }
+            /*推特图标*/
+            .twit-icon,.arrow-icon{
+                line-height: 32px;
+                font-size: 32px;
+            }
+            .twit-icon{
+                padding: 70px 0px 23px;
+            }
+            .twit-icon>span:first-child,.twit-icon>span:last-child{
+                width:20px;
+                height:2px;
+                background-color: #fff;
+                display:inline-block;
+                vertical-align: middle;
+            }
+            .twit-icon>span:nth-child(2),.arrow-icon span{
+                width:32px;
+                height:32px;
+                display:inline-block;
+                vertical-align: bottom;
+                background-repeat: no-repeat;
+            }
+            .twit-icon>span:nth-child(2){
+                background-image:url(images/twit-icon.png);
+            }
+            /*品牌系列*/
+            .series h1{
+                padding-top: 120px;
+            }
+            /*左箭头模块*/
+            .l-arrow{
+                background-color: #606060;
+            }
+            /*左箭头图标*/
+            .arrow-icon{
+                padding-top: 100px;
+            }
+            .arrow-icon span{
+                background-image: url(images/aarow.png);
+            }
+            /*背景颜色*/
+            .two-line:first-child{
+                background-color: #d2d2d2;
+            }
+            .two-line:last-child{
+                background-color: #d7d7d7;
+            }
+            .series:nth-child(2){
+                background-color: #cacaca;
+            }
+            .series:last-child{
+                background-color: #d0d0d0;
+            }
+            /*空模块*/
+            .em-mo:first-child{
+                background-color: #c2c2c2;
+            }
+            .em-mo:last-child{
+                background-color: #dbdbdb;
+            }
         </style>
     </head>
     <body>
@@ -228,13 +335,103 @@
                 </div>
             </nav> 
         </div>
+        <!-- banner -->
         <div class="banner">
             <h1>Hazy Shade of spring</h1>
             <h2>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.</h2>
             <div class="ban-btn">
                 <a href="#" title="">check new arrivals</a>
             </div>
-            
+        </div>
+        <!-- gallery -->
+        <div class="gallery text-center">
+            <div class="row">
+                <div class="col-sm-6 col-md-3">
+                    <div class="two-line row">
+                        <a href="#" title="">
+                            <h1>HEATHER</h1>
+                            <h1>GREY BASICS</h1>
+                            <p>New Arrival</p>
+                        </a>
+                    </div>
+                    <div class="one-line row em-mo">
+                        <a href="" title=""></a>
+                    </div> 
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="one-line twit row">
+                        <a href="#" title="">
+                            <div class="twit-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <p>Opening Ceremony </p>
+                            <p>@IndonesiaFW tomorrow, </p>
+                            <p>PMers! Are you ready for the</p>
+                            <p>biggest fashion movement in</p>
+                            <p class="brand-id">@PuspitaMarthaID </p>
+                        </a>
+                    </div>
+                    <div class="one-line row series">
+                        <a href="#" title="">
+                            <h1>chuck taylors</h1>
+                            <p>$125.00</p>
+                        </a>
+                    </div>
+                    <div class="one-line row l-arrow">
+                        <a href="#" title="">
+                            <div class="arrow-icon">
+                                <span></span>
+                            </div>
+                            <h1>Jaxon Hat</h1>
+                            <p>Beanie Hat</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="one-line row em-mo">
+                        <a href="#" title=""></a>
+                    </div>
+                    <div class="one-line row twit">
+                        <a href="#" title="">
+                            <div class="twit-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <p>Girls, Girls, Girls: A Look </p>
+                            <p>Back at 50 Years of the  </p>
+                            <p>Pirelli Calendar</p>
+                            <p class="brand-id">@Vogue</p>
+                        </a>
+                    </div>
+                    <div class="one-line row series">
+                        <a href="#" title="">
+                            <h1>basic blazer</h1>
+                            <p>from $199.00</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="one-line row l-arrow">
+                        <a href="#" title="">
+                            <div class="arrow-icon">
+                                <span></span>
+                            </div>
+                            <h1>elegant shoes </h1>
+                            <p>BRAIDED LEATHER</p>
+                        </a>
+                    </div>
+                    <div class="two-line row">
+                        <a href="#" title="">
+                            <h1>jeans for </h1>
+                            <h1>ADVENTURE</h1>
+                            <p>New Arrival</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
