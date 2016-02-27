@@ -18,6 +18,18 @@
             body{
                 font-family: 'Lato-Regular';
             }
+            .shopping-container{
+                width:100%;
+            }
+            .shopping-container:before{
+                content: " ";
+                display: table;
+            }
+            .shopping-container:after{
+                content: " ";
+                display: table;
+                clear:both;
+            }
             .shopping-navbar{
                 padding:20px 0px;
                 border-bottom: 1px solid #e5e5e5;              
@@ -283,12 +295,190 @@
             .em-mo:last-child{
                 background-color: #dbdbdb;
             }
+            /*订阅模块*/
+            .subscription{
+                 letter-spacing: 0.05em;
+                 font-size: 0px;
+                 color:#606060;
+            }
+            .subscription h1{
+                margin:74px auto 23px;
+                font-family: 'Lato-Bold';
+                font-size: 36px;
+                line-height: 42px;
+                text-transform: uppercase;
+                color:#303030;
+            }
+            .subscription p{
+                font-family: 'Georgia Italic';
+                font-size: 18px;
+                line-height: 22px;
+                margin-bottom: 56px;
+            } 
+            .subscription input{
+               outline:none;
+                font-size: 20px;
+                line-height: 24px;
+            }
+            .subscription input[type="text"]{
+                padding:18px 11px;
+                font-style: italic;
+                border-color: #959595;
+                border-right: none;
+                width:75%;
+            }
+            .subscription input[type="submit"]{
+                padding:20px 0px;
+                color:#fff;
+                background-color: #f68236;
+                border:none;
+                width:25%;
+            }
+            .subscription form{
+                margin-bottom: 80px;
+            }
+            @media (min-width: 768px){
+                .subscription h1{
+                    line-height: 35px;
+                    margin:140px auto 9px;
+                }
+                .subscription p{
+                    line-height: 35px;
+                    margin-bottom: 53px;
+                }
+                .subscription input{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                .subscription input[type="text"]{
+                    width:41.66666667%;
+                }
+                .subscription input[type="submit"]{
+                    width:8.33333333%;
+                }
+                .subscription form{
+                    margin-bottom: 132px;
+                }
+            }
+            /*展示窗*/
+            .show{
+                position: relative;
+                background-color: #bbbbbb;
+                height:240px;
+            }
+            @media (min-width: 768px){
+                .show{
+                    height:118px;
+                }
+                .s-btn{
+                    position: absolute;
+                    background-size: cover;
+                    height:100%;
+                    top:0;
+                    width:39px;
+                    cursor:pointer;
+                }
+                .s-btn:first-child{
+                    background-image: url(images/s-btn_03.png);
+                    left:0;
+                }
+                .s-btn:nth-child(2){
+                    background-image: url(images/s-btn_05.png);
+                    right:0;
+                }
+            }
+            /*页脚*/
+            .shopping-footer{
+                letter-spacing: 0.05em;
+               padding:80px 0px 60px;
+               text-align: center;
+            }
+            .fo-col{
+                border-top: 1px solid #e5e5e5;
+            }
+            .fo-col:nth-child(1),.fo-col:nth-child(2),.fo-col:nth-child(3){
+                display:none;
+            }
+            .fo-col h3{
+                text-transform: uppercase;
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                margin:65px 0px 38px;
+            }
+            .fo-col p{
+                margin-bottom: 0;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            .fo-col p:nth-child(3){
+                margin-bottom: 50px;
+            }
+            .fo-col ul{
+                padding:0;
+                list-style: none;
+                margin-bottom: 0;
+            }
+            .fo-col ul a{
+                color:#303030;
+            }
+            .fo-col .social-icon li{
+                margin-right: 14px;
+                display:inline-block;
+                border:1px solid #606060;
+            }
+            .fo-col .social-icon li:last-child{
+                margin-right: 0;
+            }
+            .fo-col .social-icon a{
+                display:inline-block;
+                padding:7.5px 0px;
+                line-height: 15px;
+            }
+            .fo-col .social-icon a:hover{
+                text-decoration: none;
+            }
+            .social-icon a img{
+                vertical-align: bottom;
+            }
+            
+            @media (min-width: 768px){
+                .shopping-footer{
+                    padding-top: 47px;
+                    padding-bottom: 45px;
+                    text-align: left;
+                }
+                .fo-col:nth-child(1),.fo-col:nth-child(2),.fo-col:nth-child(3){
+                    display:block;
+                }
+                .fo-col h3{
+                    
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin:11px auto 14px;
+                }
+                .fo-col ul,.fo-col p{
+                    font-size: 12px;
+                    line-height: 23px;
+                }
+                .fo-col{
+                    border-right: 1px solid #eaeaea;
+                    border-top: none;
+                    min-height: 160px;
+                }
+                .fo-col:nth-child(4){
+                    border-right: none;
+                }
+                .fo-col p:nth-child(3){
+                    margin-bottom: 14px;
+                }
+            }
         </style>
     </head>
     <body>
     <div class="container">
         <!-- 导航条 -->
-        <div class="shopping-navbar">
+        <div class="shopping-navbar shopping-container">
             <nav class="navbar">
                 <div class="container-fluid">
                     <div  class="navbar-header">
@@ -336,7 +526,7 @@
             </nav> 
         </div>
         <!-- banner -->
-        <div class="banner">
+        <div class="banner shopping-container">
             <h1>Hazy Shade of spring</h1>
             <h2>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.</h2>
             <div class="ban-btn">
@@ -344,8 +534,7 @@
             </div>
         </div>
         <!-- gallery -->
-        <div class="gallery text-center">
-            <div class="row">
+        <div class="gallery text-center shopping-container">
                 <div class="col-sm-6 col-md-3">
                     <div class="two-line row">
                         <a href="#" title="">
@@ -431,8 +620,70 @@
                         </a>
                     </div>
                 </div>
+        </div>
+        <!-- 订阅 -->
+        <div class="subscription shopping-container text-center">
+            <h1>sign up to receive our updates</h1>
+            <p>Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.</p>
+            <form>
+                    <input type="text" name="" value="" placeholder="Your e-mail">
+                    <input type="submit" name="" value="add">
+            </form>
+        </div>
+        <!-- 展示窗 -->
+        <div class="show shopping-container">
+            <div class="s-btn">
+                
+            </div>
+            <div class="s-btn">
+                
             </div>
         </div>
+        <!-- footer -->
+        <div class="shopping-footer">
+            <div class="row">
+                <div class="col-sm-3 fo-col">
+                    <h3>Collection</h3>
+                    <ul>
+                        <li><a href="#" title="">Woman (1725)</a></li>
+                        <li><a href="" title="">Men (635)</a></li>
+                        <li><a href="" title="">Kids (2514)</a></li>
+                        <li><a href="" title="">Comming Soon (76)</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>site</h3>
+                    <ul>
+                        <li><a href="" title="">Terms of Service</a></li>
+                        <li><a href="" title="">Privacy Policy </a></li>
+                        <li><a href="" title="">Copyright Policy </a></li>
+                        <li><a href="" title="">Press Kit </a></li>
+                        <li><a href="" title="">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="" title="">About us</a></li>
+                        <li><a href="" title="">Shipping Metods</a></li>
+                        <li><a href="" title="">Career</a></li>
+                        <li><a href="" title="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>Social</h3>
+                    <p>Shoper is made with love in Warsaw,</p>
+                    <p>2014 © All rights reserved. El Passion</p>
+                    <ul class="social-icon">
+                        <li><a href="" title=""><img src="images/soc-icon_03.png" alt=""></a></li>
+                        <li><a href="" title=""><img src="images/soc-icon_05.png"></a></li>
+                        <li><a href="" title=""><img src="images/soc-icon_07.png"></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
     </div>
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
         <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
