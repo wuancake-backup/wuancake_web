@@ -12,6 +12,10 @@
 }
 body{
     font-family: 'Lato-Regular';
+    background-color: #e5e5e5;
+}
+.container{
+    background-color: #fff;
 }
 h1,h2,h3{
     text-transform: uppercase;
