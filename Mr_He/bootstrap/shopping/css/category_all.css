@@ -23,9 +23,12 @@
         text-align: left;
     }
 }
+/*商品展示*/
 .sales-show{
     padding-bottom: 60px;
+    position: relative;
 }
+/*商品名称及商品搜索结果*/
 .sale-show-sort,.sale-result{
     margin-bottom: 11px;
     line-height: 36px;
@@ -50,6 +53,7 @@
     font-size: 12px;
     display:none;
 }
+/*具体商品每一列*/
 .sale-col>a{
     display:block;
     margin-bottom: 24px;
@@ -90,6 +94,7 @@
         margin-bottom: 0;
     }
 }
+/*c-look模块*/
 .c-look{
     padding:48px 0px 60px;
 }
