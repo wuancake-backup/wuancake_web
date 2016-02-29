@@ -30,7 +30,7 @@
 }
 /*商品名称及商品搜索结果*/
 .sale-show-sort,.sale-result{
-    margin-bottom: 11px;
+    margin-bottom: 31px;
     line-height: 36px;
 }
 .sale-show-sort h1,.sale-result h1{
@@ -38,16 +38,22 @@
     color:#303030;
     font-weight: bold;
     font-family: 'Lato-Bold';
+    line-height: 36px;
 }
 .sale-result h1 span{
     font-weight: lighter;
     font-family: 'Lato-Light';
 }
-.sale-show-sort small a,.sale-result small{
+.sale-show-sort small,.sale-result small{
     font-size: 18px;
     color:#606060;
     text-decoration: underline;
     font-family: 'Georgia Italic';
+    line-height: 36px;
+    display:inline-block;
+}
+.sale-show-sort small a{
+    color:#606060;
 }
 .sale-show-sort small span{
     font-size: 12px;
