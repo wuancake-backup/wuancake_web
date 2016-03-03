@@ -21,6 +21,9 @@ h1,h2,h3{
     text-transform: uppercase;
     margin:0;
 }
+h4,h5,p{
+    margin:0;
+}
 
             .shopping-container{
                 width:100%;
