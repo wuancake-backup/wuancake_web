@@ -1,0 +1,115 @@
+#container{
+    width: 1020;
+}
+#header{
+    height: 165px;
+    background: gray url(./bg.jpg);
+}
+#logo{
+    height: 128px;
+}
+#nav li{
+    float: left;
+   
+    width: 90px;
+    margin-right: 1px;
+}
+#nav li a{
+    font-size: 15px;
+    color:gray;
+    display: block;
+    width: 90px;
+    height: 37px;
+    text-align: center;
+    line-height: 37px;
+    font-weight: bold;
+}
+#nav li a:hover{
+    color: white;
+    background: url(./nav_on.jpg);
+}
+#main{
+ 
+}
+#lside{
+    height: 600px;
+    width: 694px;
+    border:1px solid gray;
+   float: left;
+}
+#rside{
+    height: 602px;
+    width: 294px;
+    background: green;
+    float: right;
+}
+
+.subtitle{
+    height: 37px;
+    background: url(./blue.jpg);
+}
+.subtitle img{
+    
+    width: 37px;
+    height: 37px;
+    float: left;
+    padding-right: 10px;
+    margin-right: 6px;
+}
+.subtitle h1{
+    float: left;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 37px;
+}
+.subtitle a{
+    float: right;
+     font-size: 15px;
+    font-weight: bold;
+    line-height: 37px;
+}
+.four{
+    width: 345px;
+    background: url(./fourbackground.jpg);
+    height: 280px;
+    float: left;
+    margin: 1px;
+}
+.four img{
+    float: left;
+    width: 200px;
+    height: 200px;
+}
+.four ul{
+    float: left;
+    line-height: 37px;
+}
+.four li:hover{
+    background: black;
+}
+#art{
+    background: #eee;
+}
+#art  li{
+    height: 30px;
+}
+#art li:hover{
+    background: red;
+}
+#art li a:hover{
+    color: white;
+}
+#contact{
+    margin-top: 8px;
+    height: 100px;
+    background: #eee;
+}
+#footer{
+   background: #66ccff;
+   height: 100px;
+   clear: both;
+   width: 1020px;
+}
+#footer li{
+    float: left;
+}

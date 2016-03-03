@@ -1,0 +1,244 @@
+@font-face {
+    font-family: 'Lato-Bold';
+    src: url(../fonts/Lato-Bold.ttf);
+}
+@font-face {
+    font-family: 'Lato-Light';
+    src: url(../fonts/Lato-Light.ttf);
+}
+@font-face {
+    font-family: 'Lato-Regular';
+    src: url(../fonts/Lato-Regular.ttf);
+}
+body{
+    font-family: 'Lato-Regular';
+    background-color: #e5e5e5;
+}
+.container{
+    background-color: #fff;
+}
+h1,h2,h3{
+    text-transform: uppercase;
+    margin:0;
+}
+
+            .shopping-container{
+                width:100%;
+            }
+            .shopping-container:before{
+                content: " ";
+                display: table;
+            }
+            .shopping-container:after{
+                content: " ";
+                display: table;
+                clear:both;
+            }
+            /*全局导航*/
+            .shopping-navbar{
+                padding:20px 0px;
+                border-bottom: 1px solid #e5e5e5;              
+            }
+            .icon-bgimg{
+                background-position: center center;
+                background-repeat: no-repeat;
+            }
+            .shopping-navbar .navbar{
+                margin-bottom: 0;
+                border:none;
+            }
+            .shopping-navbar .navbar-nav>li>a{
+                padding-top: 0;
+                padding-bottom: 0;
+                line-height: 43px;
+                font-size: 14px;
+                color:#303030;
+            }
+            .shopping-navbar .navbar-toggle{
+                padding:18px 14px;
+                background-color: #8d8d8d;
+                margin:0;
+                border:none;
+                border-radius: 0;
+            }
+            .shopping-navbar .navbar-toggle .icon-bar{
+                background-color: #fff;
+                width:32px;
+                height:4px;
+            }
+            .shopping-navbar .navbar-toggle .icon-bar+.icon-bar{
+                margin-top: 6px;
+            }
+            .shopping-navbar .navbar-brand{
+                background-color: #222222;
+                color:#fff;
+                font-size: 25.89px;
+                line-height: 22px;
+                padding-top:19px;
+                padding-bottom: 19px;
+                height:auto;
+            }
+            .navbar-cart{
+                display:block;
+                float:right;
+                margin-right: 25px;
+                width:60px;
+                height:60px;
+                background-image: url(../images/home_res_03.png);
+            }
+            .shopping-navbar .user>li>a span{
+                width:36px;
+                height:43px;
+                display:inline-block;
+                vertical-align: bottom;
+            }
+            .shopping-navbar .user>li:nth-child(1)>a span{
+                background-image: url(../images/01main_03.png);
+            }
+            .shopping-navbar .user>li:nth-child(2)>a span{
+                background-image: url(../images/01main_05.png);
+            }
+
+            .shopping-navbar .user .dropdown>a,.shopping-navbar .user .search button{
+                width:40px;
+                height:43px;
+                margin-left: 15px;
+                background-image: url(../images/01main_08.png);
+                border:1px solid #959595;
+            }
+            .shopping-navbar .user .search input{
+                width:auto;
+                display:inline-block;
+            }
+            .shopping-navbar .user .search button{
+                vertical-align:middle;
+            } 
+            .shopping-navbar .user .dropdown-menu{
+                padding:16px 0 16px 9px;
+            }
+            @media (min-width: 768px){
+                .shopping-navbar{
+                    padding:36px 0px;
+                }
+                .shopping-navbar .navbar-brand{
+                    padding-top: 0;
+                    padding-bottom: 0;
+                    line-height: 43px;
+                    font-size: 14px;
+                }
+                .navbar-cart{
+                    display:none;
+                }
+            }
+            /*页脚*/
+            .shopping-footer{
+                letter-spacing: 0.05em;
+                padding:80px 0px 60px;
+                text-align: center;
+            }
+            .fo-col{
+                border-top: 1px solid #e5e5e5;
+            }
+            .fo-col:nth-child(1),.fo-col:nth-child(2),.fo-col:nth-child(3){
+                display:none;
+            }
+            .fo-col h3{
+                font-weight: bold;
+                font-size: 30px;
+                line-height: 35px;
+                margin:65px 0px 38px;
+            }
+            .fo-col p{
+                margin-bottom: 0;
+                font-size: 18px;
+                line-height: 30px;
+            }
+            .fo-col p:nth-child(3){
+                margin-bottom: 50px;
+            }
+            .fo-col ul{
+                padding:0;
+                list-style: none;
+                margin-bottom: 0;
+            }
+            .fo-col ul a{
+                color:#303030;
+            }
+            .fo-col .social-icon li{
+                margin-right: 14px;
+                display:inline-block;
+                border:1px solid #606060;
+            }
+            .fo-col .social-icon li:last-child{
+                margin-right: 0;
+            }
+            .fo-col .social-icon a{
+                display:inline-block;
+                padding:7.5px 0px;
+                line-height: 15px;
+            }
+            .fo-col .social-icon a:hover{
+                text-decoration: none;
+            }
+            .social-icon a img{
+                vertical-align: bottom;
+            }
+            
+            @media (min-width: 768px){
+                .shopping-footer{
+                    padding-top: 47px;
+                    padding-bottom: 45px;
+                    text-align: left;
+                }
+                .fo-col:nth-child(1),.fo-col:nth-child(2),.fo-col:nth-child(3){
+                    display:block;
+                }
+                .fo-col h3{
+                    
+                    font-size: 14px;
+                    line-height: 17px;
+                    margin:11px auto 14px;
+                }
+                .fo-col ul,.fo-col p{
+                    font-size: 12px;
+                    line-height: 23px;
+                }
+                .fo-col{
+                    border-right: 1px solid #eaeaea;
+                    border-top: none;
+                    min-height: 160px;
+                }
+                .fo-col:nth-child(4){
+                    border-right: none;
+                }
+                .fo-col p:nth-child(3){
+                    margin-bottom: 14px;
+                }
+            }
+            /*展示窗*/
+            .shopping-show{
+                position: relative;
+                background-color: #bbbbbb;
+                height:240px;
+            }
+            @media (min-width: 768px){
+                .shopping-show{
+                    height:118px;
+                }
+                .s-btn{
+                    position: absolute;
+                    background-size: cover;
+                    height:100%;
+                    top:0;
+                    width:39px;
+                    cursor:pointer;
+                }
+                .s-btn:first-child{
+                    background-image: url(../images/s-btn_03.png);
+                    left:0;
+                }
+                .s-btn:nth-child(2){
+                    background-image: url(../images/s-btn_05.png);
+                    right:0;
+                }
+            }

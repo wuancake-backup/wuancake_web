@@ -1,0 +1,118 @@
+/* 
+* @Author: anchen
+* @Date:   2016-03-03 16:20:19
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-03-03 18:42:59
+*/
+/*购物车标题*/
+.sc-h{
+    margin: 100px 0px 95px;
+}
+.sc-h h1{
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color: #303030;
+}
+.sc-h p{
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 18px;
+    line-height: 36px;
+    color:#606060;
+}
+/*购物车选项*/
+.sc-items{
+    padding-bottom: 10px;
+    border-bottom: 1px solid #909090;
+}
+.sc-items h5{
+    font-size: 12px;
+    line-height: 14px;
+    color:#909090;
+    text-transform: uppercase;
+}
+/*购物车单条商品*/
+.sc-con{
+    border-bottom: 1px solid #909090;
+    padding: 17px 0;
+    display:flex;
+    align-items: stretch;
+}
+/*商品照片*/
+.sc-pic img{
+
+}
+/*商品描述*/
+.sc-des,.sc-col,.sc-size,.sc-qty,.sc-am{
+    line-height: 18px;
+    font-size: 14px;
+    color:#303030;
+}
+.sc-des,.sc-col,.sc-size{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.sc-des h4{
+    font-size: 14px;
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+}
+.sc-des h4 a{
+    color:#303030;
+}
+.sc-des p{
+    font-size: 12px;
+    font-style: italic;
+}
+.sc-des p a{
+    color:#606060;
+}
+/*商品数量*/
+.sc-qty{
+    display:flex;
+    align-items: center;
+}
+.sc-qty p{
+    margin-right: 5px;
+}
+/*数量按钮*/
+.sc-qbtn{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.btn-add,.btn-de{
+    width:11px;
+    height:11px;
+    border:none;
+}
+/*数量加*/
+.btn-add{
+    margin-bottom: 2px;
+    background-image: url(../images/scq-btn_06.png);
+}
+/*数量减*/
+.btn-de{
+    background-image: url(../images/scq-btn_09.png);
+}
+/*商品总计*/
+.sc-am{
+    display:flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+/*商品总计按钮*/
+.sc-am button{
+    padding:0;
+    border:none;
+    background-color:#fff;
+    font-size: 30px;
+    font-family: 'Lato-Light';
+}
+.sc-am button span{
+    transform:rotate(45deg);
+    display:inline-block;
+}
