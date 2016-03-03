@@ -158,3 +158,23 @@
         padding-top: 0;
     }
 }
+/*展示相关产品*/
+.show-more{
+    text-transform: uppercase;
+    background-color: #f1f1f1;
+    text-align: center;
+    margin-top: 35px;
+}
+.show-more a{
+    color:#606060;
+    font-size: 14px;
+    line-height: 16px;
+    display:inline-block;
+    padding:15px 0;
+    vertical-align: bottom;
+}
+@media (max-width: 767px){
+    .show-more{
+        display:none;
+    }
+}
