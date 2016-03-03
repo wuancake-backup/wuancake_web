@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>shopping_cart_cut</title>
+        <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="../lib-flexible-master/build/flexible_css.debug.js"></script>
+        <script type="text/javascript" src="../lib-flexible-master/build/flexible.debug.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/category_all.css">
+        <link rel="stylesheet" type="text/css" href="css/shopping_cart_cut.css">
+    </head>
+    <body>
+    <div class="container">
+            <!-- 导航条 -->
+        <div class="shopping-navbar shopping-container">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div  class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                            <span class="icon-bar"></span>
+                            <span  class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">SH</a>
+                        <a href="#" class="navbar-cart icon-bgimg"></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="#">Woman</a></li>
+                            <li><a href="#">Men</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">Comming Soon</a></li>
+                            <li><a href="#">About</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right user">
+                            <li>
+                                
+                                <a href="#"> <span class="icon-bgimg"></span>Log In</a>
+                            </li>
+                            <li>
+                                
+                                <a href="#"><span class="icon-bgimg"></span> Basket(0)</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-bgimg" data-toggle="dropdown" role="button"></a>
+                                <ul class="dropdown-menu">
+                                    <li style=" white-space: nowrap;" class="search">
+                                        <form class="form-inline">
+
+                                            <input type="text" name="" value="" placeholder="Search" class="form-control">
+                                            <button type="submit" class="icon-bgimg"></button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div>
+        <!-- 主内容 -->
+        <div class="content shopping-container">
+            <!-- 购物车标题 -->
+            <div class="sc-h">
+                <h1>
+                    Your Shopping Bag
+                </h1>
+                <p>Items reserved for limited time only</p>
+            </div>
+            <!-- 购物车 -->
+            <div class="shopping-cart text-left">
+                <!-- 购物车选项 -->
+                <div class="sc-items clearfix">
+                    <div class="col-md-1">
+                        <h5>PRODUCT</h5>
+                    </div>
+                    <div class="col-md-6">
+                        <h5>DESCRIPTION</h5>
+                    </div>
+                    <div class="col-md-2">
+                        <h5>COLOR</h5>
+                    </div>
+                    <div class="col-md-1">
+                        <h5>SIZE</h5>
+                    </div>
+                    <div class="col-md-1">
+                        <h5>QTY</h5>
+                    </div>
+                    <div class="col-md-1">
+                        <h5>AMOUNT</h5>
+                    </div>
+                </div>
+                <!-- 购物车物品 -->
+                <div class="sc-cons">
+                    <!-- 购物车单条物品 -->
+                    <div class="sc-con clearfix">
+                        <!-- 商品照片 -->
+                        <div class="col-md-1 sc-pic">
+                            <a href="" title=""><img src="images/sc-img.jpg" alt="" class="img-responsive"></a> 
+                        </div>
+                        <!-- 商品描述 -->
+                        <div class="col-md-6 sc-des">
+                            <h4><a href="" title="">FLORAL PLIMSOLL</a></h4>
+                            <p><a href="" title="">Ref. 2514/302</a></p>
+                        </div>
+                        <!-- 商品颜色 -->
+                        <div class="col-md-2 sc-col">
+                            <p>One Color</p>
+                        </div>
+                        <!-- 商品尺寸 -->
+                        <div class="col-md-1 sc-size">
+                            <p>39</p>
+                        </div>
+                        <!-- 商品数量 -->
+                        <div class="col-md-1 sc-qty">
+                            <p>1</p>
+                            <!-- 数量按钮 -->
+                            <div class="sc-qbtn">
+                                <!-- 数量加 -->
+                                <button class="btn-add"></button>
+                                <!-- 数量减 -->
+                                <button class="btn-de"></button>
+                            </div>
+                        </div>
+                        <!-- 商品总计 -->
+                        <div class="col-md-1 sc-am">
+                            <p>
+                                €99,95
+                            </p>
+                            <button><span>+</span></button>
+                        </div>
+                    </div>
+                    <!-- 购物车单条物品 -->
+                    <div class="sc-con clearfix">
+                        <!-- 商品照片 -->
+                        <div class="col-md-1 sc-pic">
+                            <a href="" title=""><img src="images/sc-img.jpg" alt="" class="img-responsive"></a> 
+                        </div>
+                        <!-- 商品描述 -->
+                        <div class="col-md-6 sc-des">
+                            <h4><a href="" title="">FLORAL PLIMSOLL</a></h4>
+                            <p><a href="" title="">Ref. 2514/302</a></p>
+                        </div>
+                        <!-- 商品颜色 -->
+                        <div class="col-md-2 sc-col">
+                            <p>One Color</p>
+                        </div>
+                        <!-- 商品尺寸 -->
+                        <div class="col-md-1 sc-size">
+                            <p>39</p>
+                        </div>
+                        <!-- 商品数量 -->
+                        <div class="col-md-1 sc-qty">
+                            <p>1</p>
+                            <!-- 数量按钮 -->
+                            <div class="sc-qbtn">
+                                <!-- 数量加 -->
+                                <button class="btn-add"></button>
+                                <!-- 数量减 -->
+                                <button class="btn-de"></button>
+                            </div>
+                        </div>
+                        <!-- 商品总计 -->
+                        <div class="col-md-1 sc-am">
+                            <p>
+                                €99,95
+                            </p>
+                            <button><span>+</span></button>
+                        </div>
+                    </div>
+                    <!-- 购物车单条物品 -->
+                    <div class="sc-con clearfix">
+                        <!-- 商品照片 -->
+                        <div class="col-md-1 sc-pic">
+                            <a href="" title=""><img src="images/sc-img.jpg" alt="" class="img-responsive"></a> 
+                        </div>
+                        <!-- 商品描述 -->
+                        <div class="col-md-6 sc-des">
+                            <h4><a href="" title="">FLORAL PLIMSOLL</a></h4>
+                            <p><a href="" title="">Ref. 2514/302</a></p>
+                        </div>
+                        <!-- 商品颜色 -->
+                        <div class="col-md-2 sc-col">
+                            <p>One Color</p>
+                        </div>
+                        <!-- 商品尺寸 -->
+                        <div class="col-md-1 sc-size">
+                            <p>39</p>
+                        </div>
+                        <!-- 商品数量 -->
+                        <div class="col-md-1 sc-qty">
+                            <p>1</p>
+                            <!-- 数量按钮 -->
+                            <div class="sc-qbtn">
+                                <!-- 数量加 -->
+                                <button class="btn-add"></button>
+                                <!-- 数量减 -->
+                                <button class="btn-de"></button>
+                            </div>
+                        </div>
+                        <!-- 商品总计 -->
+                        <div class="col-md-1 sc-am">
+                            <p>
+                                €99,95
+                            </p>
+                            <button><span>+</span></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+</html>
