@@ -1,0 +1,138 @@
+/*细节展示*/
+.detail-show{
+    margin-bottom: 60px;
+}
+/*商品细节信息*/
+.detail-info{
+    margin-bottom: 75px;
+}
+/*商品名称*/
+.detail-info h3{
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    color:#303030;
+}
+.detail-info p{
+    font-size: 14px;
+    line-height: 24px;
+    color:#606060;
+}
+.detail-info button{
+    font-size: 14px;
+    line-height: 16px;
+    border:1px solid;
+    outline: none;
+}
+/*art-num*/
+.detail-info p:nth-child(2){
+    font-style: italic;
+    font-size: 14px;
+    line-height: 24px;
+    color:#a3a3a3;
+}
+/*价格*/
+.detail-info p:nth-child(3){
+    font-family: 'Georgia';
+    font-style: italic;
+    font-size: 18px;
+    line-height: 36px;
+    margin-bottom: 30px;
+}
+.detail-info p:nth-child(5){
+    margin-bottom: 30px;
+}
+/*size*/
+.detail-info p:nth-child(6){
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    margin-bottom: 13px;
+}
+/*商品尺码*/
+.sale-size{
+    font-size: 0;
+    margin-bottom: 48px;
+}
+.sale-size li{
+    display:inline-block;
+    margin:0px 7px ;
+}
+.sale-size button{
+    color:#464542;
+    padding:7px;
+    background-color: #fff;
+    vertical-align: bottom;
+}
+/*加入购物车*/
+.detail-info>button{
+    padding:18px 43px;
+    color:#fff;
+    background-color: #f68236;
+    border-color:#f68236 ;
+}
+@media (max-width: 767px){
+    /*细节展示*/
+    .detail-show img{
+        height:13.541667rem;
+        width:9.166667rem;
+    }
+    .detail-show{
+        margin-bottom: 1.5625rem;
+    }
+    /*商品细节信息*/
+    .detail-info{
+    margin-bottom: 1.666667rem;
+    }
+    /*商品名称*/
+    .detail-info h3{
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+    }
+    .detail-info p{
+        font-size: 0.375rem;
+        line-height: 0.5rem;
+    }
+    /*art-num*/
+    .detail-info p:nth-child(2){
+        font-size: 0.291667rem;
+        line-height: 0.666667rem;
+    }
+    /*价格*/
+    .detail-info p:nth-child(3){
+        font-size: 0.625rem;
+        line-height: 0.75rem;
+        margin-bottom: 0.791667rem;
+    }
+    /*第二段描述*/
+    .detail-info p:nth-child(5){
+        margin-bottom: 0.5rem;
+    }
+    /*size*/
+    .detail-info p:nth-child(6){
+        margin-bottom: 0.520833rem;
+        line-height: 0.520833rem;
+    }
+    /*商品尺码*/
+    .sale-size{
+        margin-bottom: 0.8125rem;
+    }
+    .sale-size li{
+        display:inline-block;
+        margin:0px 0.104167rem ;
+    }
+    .sale-size button{
+        padding:0.229167rem;
+        font-size: 0.291667rem;
+        line-height: 0.333333rem;
+        vertical-align: bottom;
+    }
+    /*加入购物车*/
+    .detail-info>button{
+        padding:0.625rem 0;
+        font-size: 0.416667rem;
+        line-height: 0.479167rem;
+        width:100%;
+    }
+
+}
