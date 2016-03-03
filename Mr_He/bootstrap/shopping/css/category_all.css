@@ -178,3 +178,20 @@
         display:none;
     }
 }
+/*无产品商品名称显示*/
+.no-pro .sale-show-sort{
+    margin-bottom: 103px;
+}
+.no-pro p{
+    font-size: 14px;
+    line-height: 24px;
+    color:#606060;
+}
+/*无产品描述*/
+.no-pro .nop-des{
+    margin-bottom: 32px;
+}
+/*推荐搜索*/
+.no-pro .try-find a{
+    color:#f68236;
+}
