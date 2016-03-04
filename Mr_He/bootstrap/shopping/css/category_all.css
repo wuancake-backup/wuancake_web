@@ -30,11 +30,11 @@
     position: relative;
 }
 /*商品名称及商品搜索结果*/
-.sale-show-sort,.sale-result{
+.sale-show-sort,.sale-result,.a-title{
     margin-bottom: 0.645833rem;
     line-height: 0.75rem;
 }
-.sale-show-sort h1,.sale-result h1{
+.sale-show-sort h1,.sale-result h1,.a-title h1{
     font-size: 0.75rem;
     color:#303030;
     font-weight: bold;
@@ -45,7 +45,7 @@
     font-weight: lighter;
     font-family: 'Lato-Light';
 }
-.sale-show-sort small,.sale-result small{
+.sale-show-sort small,.sale-result small,.a-title small{
     font-size: 0.375rem;
     color:#606060;
    /* text-decoration: underline;*/
@@ -99,15 +99,15 @@
     .sales-show{
         padding:50px 0px 111px;
     }
-    .sale-show-sort,.sale-result{
+    .sale-show-sort,.sale-result,.a-title{
         margin-bottom: 65px;  
         line-height: 36px;    
     }
-    .sale-show-sort h1,.sale-result h1{
+    .sale-show-sort h1,.sale-result h1,.a-title h1{
         font-size: 36px;
         line-height: 36px;
     }
-    .sale-show-sort small,.sale-result small{
+    .sale-show-sort small,.sale-result small,.a-title small{
         font-size: 18px;
         line-height: 36px;
     }
