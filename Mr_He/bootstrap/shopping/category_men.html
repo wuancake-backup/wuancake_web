@@ -31,7 +31,7 @@
                     <div class="collapse navbar-collapse" id="main-navbar">
                         <ul class="nav navbar-nav">
                             <li><a href="#">Woman</a></li>
-                            <li><a href="#">Men</a></li>
+                            <li><a href="category_men.html">Men</a></li>
                             <li><a href="#">Kids</a></li>
                             <li><a href="#">Comming Soon</a></li>
                             <li><a href="#">About</a></li>
@@ -89,12 +89,12 @@
                             <div class="col-sm-4">
                                 <!-- 筛选项 -->
                                 <div class="sf-item">
-                                    <span>Price</span>
+                                    <span id="pr-result">Price</span>
                                     <!-- 筛选下拉按钮 -->
                                     <button id="pr-btn" class="btn-dn"></button>
                                     <!-- 筛选下拉菜单 -->
                                     <ul id="pr-lev">
-                                        <li>€20-30</li>
+                                        <li id="ce">€20-30</li>
                                         <li>€30-50</li>
                                         <li>€50-100</li>
                                         <li>€100 and more</li>
@@ -103,7 +103,7 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="sf-item">
-                                    <span>Size</span>
+                                    <span id="si-result">Size</span>
                                     <button id="si-btn" class="btn-dn"></button>
                                     <ul id="si-lev">
                                         <li>€20-30</li>
@@ -115,9 +115,9 @@
                             </div>
                             <div class="col-sm-4">
                                 <div class="sf-item">
-                                    <span>Colour</span>
-                                    <button id="col-btn" class="btn-dn"></button>
-                                    <ul id="col-lev">
+                                    <span id="co-result">Colour</span>
+                                    <button id="co-btn" class="btn-dn"></button>
+                                    <ul id="co-lev">
                                         <li>€20-30</li>
                                         <li>€30-50</li>
                                         <li>€50-100</li>
@@ -297,21 +297,42 @@
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
         <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
         <script type="text/javascript">
-           $(document).ready(function(){
+           $(document).ready(function(event){
             $("#pr-btn").click(function(){
                 $("#pr-lev").slideToggle("slow");
                 $("#pr-btn").toggleClass('btn-up');
                 $("#pr-btn").toggleClass('btn-dn');
             });
-            $("#si-btn").click(function(){
+            $("#pr-lev").find('li').click(function(event) {
+                /* Act on the event */
+                $("#pr-result").text($(event.target).text());
+                $("#pr-lev").slideToggle("slow");
+                $("#pr-btn").toggleClass('btn-up');
+                $("#pr-btn").toggleClass('btn-dn');
+            });
+            $("#si-btn").click(function(event){
                 $("#si-lev").slideToggle("slow");
                 $("#si-btn").toggleClass('btn-up');
                 $("#si-btn").toggleClass('btn-dn');
             });
-            $("#col-btn").click(function(){
-                $("#col-lev").slideToggle("slow");
-                $("#col-btn").toggleClass('btn-up');
-                $("#col-btn").toggleClass('btn-dn');
+            $("#si-lev").find('li').click(function(event) {
+                /* Act on the event */
+                $("#si-result").text($(event.target).text());
+                $("#si-lev").slideToggle("slow");
+                $("#si-btn").toggleClass('btn-up');
+                $("#si-btn").toggleClass('btn-dn');
+            });
+            $("#co-btn").click(function(event){
+                $("#co-lev").slideToggle("slow");
+                $("#co-btn").toggleClass('btn-up');
+                $("#co-btn").toggleClass('btn-dn');
+            });
+            $("#co-lev").find('li').click(function(event) {
+                /* Act on the event */
+                $("#co-result").text($(event.target).text());
+                $("#co-lev").slideToggle("slow");
+                $("#co-btn").toggleClass('btn-up');
+                $("#co-btn").toggleClass('btn-dn');
             });
             
         });
