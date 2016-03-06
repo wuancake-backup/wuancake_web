@@ -263,10 +263,12 @@
                 .subscription input[type="text"]{
                     width:41.66666667%;
                     padding:18px 11px;
+                    height:58px;
                 }
                 .subscription input[type="submit"]{
                     width:8.33333333%;
                     padding:20px 0px;
+                    height:58px;
                 }
                 .subscription form{
                     margin-bottom: 132px;
