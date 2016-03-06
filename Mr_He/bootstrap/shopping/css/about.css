@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-03-04 16:59:41
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-03-04 17:22:13
+* @Last Modified time: 2016-03-06 15:31:20
 */
 .a-content{
     padding:30px 0 90px;
@@ -21,4 +21,9 @@
 }
 .ab-col p{
     margin-bottom: 20px;
+}
+@media (max-width: 767px){
+    .a-content{
+        padding-top: 0;
+    }
 }
