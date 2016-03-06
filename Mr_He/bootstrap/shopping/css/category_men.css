@@ -2,7 +2,7 @@
 * @Author: anchen
 * @Date:   2016-02-29 10:59:51
 * @Last Modified by:   anchen
-* @Last Modified time: 2016-03-02 19:25:12
+* @Last Modified time: 2016-03-06 12:41:34
 */
 /*手机端下拉条*/
 .sf-toggle{
@@ -74,6 +74,9 @@
     left:0;
     margin:0;
     display:none;
+}
+.sf-item li{
+    cursor: pointer;
 }
 @media (max-width: 767px){
     .sf-item {
