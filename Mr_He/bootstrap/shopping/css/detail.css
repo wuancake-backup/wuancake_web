@@ -19,12 +19,9 @@
     line-height: 24px;
     color:#606060;
 }
-.detail-info button{
-    font-size: 14px;
-    line-height: 16px;
-    border:1px solid;
-    outline: none;
-}
+/*.detail-info button{
+    
+}*/
 /*art-num*/
 .detail-info p:nth-child(2){
     font-style: italic;
@@ -63,14 +60,18 @@
     padding:7px;
     background-color: #fff;
     vertical-align: bottom;
+    font-size: 14px;
+    line-height: 16px;
+    border:1px solid;
+    outline: none;
 }
 /*加入购物车*/
-.detail-info>button{
+/*.detail-info>button{
     padding:18px 43px;
     color:#fff;
     background-color: #f68236;
     border-color:#f68236 ;
-}
+}*/
 @media (max-width: 767px){
     /*细节展示*/
     .detail-show img{
@@ -128,11 +129,11 @@
         vertical-align: bottom;
     }
     /*加入购物车*/
-    .detail-info>button{
+    /*.detail-info>button{
         padding:0.625rem 0;
         font-size: 0.416667rem;
         line-height: 0.479167rem;
         width:100%;
-    }
+    }*/
 
 }

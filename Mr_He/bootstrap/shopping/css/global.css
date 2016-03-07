@@ -245,3 +245,22 @@ h4,h5,p{
                     right:0;
                 }
             }
+.sub-btn{
+    font-size: 14px;
+    line-height: 16px;
+    color:#fff;
+    padding:17px 50px;
+    text-align: center;
+    text-transform: uppercase;
+    border:none;
+    outline:none;
+    background-color: #f68236;
+}
+@media (max-width: 767px){
+    .sub-btn{
+        width:100%;
+        font-size: 0.416667rem;
+        line-height: 0.5rem;
+        padding: 0.520833rem 0 0.458333rem;
+    }
+}

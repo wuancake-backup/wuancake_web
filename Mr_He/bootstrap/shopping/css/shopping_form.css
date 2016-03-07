@@ -36,7 +36,7 @@ label.sp-bl{
 .shopping-f .last-fgroup{
     margin-bottom: 30px;
 }
-.shopping-f button[type="submit"]{
+/*.shopping-f button[type="submit"]{
     font-size: 14px;
     line-height: 16px;
     color:#fff;
@@ -45,7 +45,7 @@ label.sp-bl{
     background-color: #f68236;
     border:none;
     outline:none;
-}
+}*/
 /*checkbox*/
 .shopping-ckbox{
     font-size:12px;
@@ -145,10 +145,10 @@ label.sp-bl{
     .shopping-f textarea.form-control{
         height:5.416667rem;
     }
-    .shopping-f button[type="submit"]{
+    /*.shopping-f button[type="submit"]{
         font-size: 0.416667rem;
         line-height: 0.5rem;
         padding:0.5rem 0;
         width:100%;
-    }
+    }*/
 }

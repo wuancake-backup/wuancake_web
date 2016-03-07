@@ -21,8 +21,8 @@
 .sc-items{
     padding-bottom: 10px;
     border-bottom: 1px solid #909090;
-    display:flex;
-    justify-content: space-between;
+    /*display:flex;
+    justify-content: space-between;*/
 }
 .sc-items h5{
     font-size: 12px;
@@ -145,8 +145,7 @@
     color:#303030;
     text-decoration: underline;
 }
-.sc-footer button{
-   /* width:16.66666667%;*/
+/*.sc-footer button{
     font-size: 14px;
     line-height: 16px;
     color:#fff;
@@ -156,7 +155,7 @@
     padding:17px 50px;
     text-align: center;
     text-transform: uppercase;
-}
+}*/
 /*手机端购物车物品*/
  .sc-cons-ph{
     display:none;
@@ -268,11 +267,11 @@
         line-height: 0.583333rem;
         margin-bottom: 1.208333rem;
     }
-    .sc-footer button{
+    /*.sc-footer button{
         width:100%;
         font-size: 0.416667rem;
         line-height: 0.5rem;
         padding:0.520833rem 0 0.458333rem;
-    }
+    }*/
 
 }
