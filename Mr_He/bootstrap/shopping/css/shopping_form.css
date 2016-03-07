@@ -1,14 +1,4 @@
-/* 
-* @Author: anchen
-* @Date:   2016-03-06 14:26:41
-* @Last Modified by:   anchen
-* @Last Modified time: 2016-03-06 21:58:05
-*/
-/*contact内容*/
-.cta-content{
-    padding:30px 0 120px;
 
-}
 .shopping-f{
     color:#606060;
     position: relative;
@@ -28,6 +18,7 @@
 .shopping-f textarea.form-control{
     height:198px;
 }
+/*块级label*/
 label.sp-bl{
     font-size: 12px;
     line-height: 14px;
@@ -55,6 +46,7 @@ label.sp-bl{
     border:none;
     outline:none;
 }
+/*checkbox*/
 .shopping-ckbox{
     font-size:12px;
     line-height: 12px;
@@ -76,6 +68,55 @@ label.sp-bl{
     padding-left: 30px;
     font-weight: normal;
 }
+/*select*/
+.shopping-select{
+    position: relative;
+    text-align: left;
+}
+.shopping-select-selection{
+    padding:11px 12px;
+    width:100%;
+    display:inline-block;
+}
+/*右侧下拉按钮*/
+.shopping-select button{
+    background-image: url(../images/select.png);
+    width:11px;
+    height:6px;
+    border:none;
+    background-color: #fff;
+    outline:none;
+    position: absolute;
+    top:calc(50% - 3px);
+    right:13px;
+}
+/*右侧付款卡标*/
+.shopping-select-img{
+    background: url(../images/pay-img_07.png) no-repeat center;
+    width:69px;
+    height:17px;
+    position: absolute;
+    top:calc(50% - 8.5px);
+    right:43px;
+}
+/*下拉菜单*/
+.shopping-select-menu{
+    margin:-1px 0 0;
+    padding:0;
+    list-style: none;
+    position: absolute;
+    width:100%;
+    background-color: #fff;
+    border:1px solid #c2c2c2;
+    z-index: 1;
+    display:none;
+}
+.shopping-select-menu li{
+    font-size: 12px;
+    line-height: 20px;
+    padding:0 12px;
+    cursor: pointer;
+}
 /*手机移动端*/
 @media (max-width: 767px){
     /*contact内容*/
@@ -85,23 +126,26 @@ label.sp-bl{
     label.sp-bl{
         display:none;
     }
-    .shopping-f .form-control{
+    /*表单控件及下拉菜单*/
+    .shopping-f .form-control,.shopping-select-menu li{
         font-size: 0.416667rem;
         line-height: 0.5rem;
-        height:1.208333rem;
         font-style: italic;
         padding:0.375rem 0.416667rem;
-    }
-    .shopping-f .form-group{
-        margin-bottom: 0.625rem;
     }
     .shopping-f .last-fgroup{
         margin-bottom: 1.666667rem;
     }
+    .shopping-f .form-control{
+        height:1.25rem;
+    }
+    .shopping-f .form-group,.shopping-f .last-fgroup.ph-n{
+        margin-bottom: 0.625rem;
+    }
     .shopping-f textarea.form-control{
         height:5.416667rem;
     }
-    .shopping-f button{
+    .shopping-f button[type="submit"]{
         font-size: 0.416667rem;
         line-height: 0.5rem;
         padding:0.5rem 0;
