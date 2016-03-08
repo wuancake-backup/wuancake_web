@@ -245,6 +245,7 @@ h4,h5,p{
                     right:0;
                 }
             }
+/*橙色提交按钮*/
 .sub-btn{
     font-size: 14px;
     line-height: 16px;
@@ -262,5 +263,22 @@ h4,h5,p{
         font-size: 0.416667rem;
         line-height: 0.5rem;
         padding: 0.520833rem 0 0.458333rem;
+    }
+}   
+/*ban button   */  
+.ban-btn a{
+    display:inline-block;
+    padding:20px 35px;
+    font-size: 14px;
+    line-height: 18px;
+    border: 1px solid #959595;
+    color:#303030;
+}
+.ban-btn a:hover{
+    text-decoration: none;
+}
+@media (max-width: 767px){
+    .ban-btn{
+        display:none;
     }
 }

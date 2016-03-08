@@ -53,7 +53,7 @@ label.sp-bl{
     position: relative;
     margin-bottom: 55px;
 }
-.shopping-ckbox input[type=checkbox]{
+.shopping-ckbox input[type="checkbox"]{
     width:18px;
     height:18px;
     margin:0 ;

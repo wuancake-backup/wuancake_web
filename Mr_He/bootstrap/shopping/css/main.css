@@ -16,7 +16,7 @@
                 font-style: italic;
                 color:#606060;
             }  
-            .ban-btn{
+           /* .ban-btn{
                 margin-bottom: 153px;
                 display:none;
             }          
@@ -27,7 +27,7 @@
                 line-height: 18px;
                 border: 1px solid #959595;
                 color:#303030;
-            }
+            }*/
             .ban-btn a:hover{
                 text-decoration: none;
             }
@@ -43,8 +43,8 @@
                     line-height: 35px;
                     margin-bottom: 65px;
                 }
-                .ban-btn{
-                    display:block;
+                .banner .ban-btn{
+                    margin-bottom: 153px;
                 }
             }
             .gallery{
