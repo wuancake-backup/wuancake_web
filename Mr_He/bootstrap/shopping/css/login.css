@@ -1,9 +1,4 @@
-/* 
-* @Author: anchen
-* @Date:   2016-03-06 21:33:12
-* @Last Modified by:   anchen
-* @Last Modified time: 2016-03-06 22:22:33
-*/
+
 .shopping-login{
     width:500px;
     background-color: #fff;
@@ -33,12 +28,15 @@
 .fo-pa{
     position: absolute;
     right:0;
-    top:0;
+    top:-24px;
     line-height: 14px;
+}
+.pass-group{
+    position: relative;
 }
 /*密码可见性按钮*/
 .pass-visible{
-    height:36px;
+    height:16px;
     width:24px;
     background-image: url(../images/login-pass_03.png);
     background-position: center center;
@@ -46,6 +44,16 @@
     background-color: #fff;
     border:none;
     position: absolute;
-    bottom:1px;
+    top: calc(50% - 8px);
     right:8px;
+}
+@media (max-width: 767px){
+    .shopping-login{
+        width:100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    } 
+    .fo-pa{
+        top:-20px;
+    }
 }
