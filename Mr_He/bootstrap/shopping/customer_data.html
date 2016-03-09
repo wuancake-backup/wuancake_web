@@ -124,8 +124,8 @@
                             <label for="cus-ctry" class="sp-bl">country</label>
                             <div class="shopping-select" id="cus-ctry">
                                 <span class="shopping-select-selection form-control">Poland</span>
-                                <button id="ce"></button>
-                                <ul class="shopping-select-menu" id="ce1">
+                                <button type="button" id="ce"></button>
+                                <ul class="shopping-select-menu">
                                     <li>Poland</li>
                                     <li>Poland</li>
                                     <li>Poland</li>
@@ -203,11 +203,16 @@
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
         <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
        <script type="text/javascript">
+            (function($){
+                $.fn.select_op = function(){
+                    $(this).parent().children('.shopping-select-menu').slideToggle("slow");
+                };
+            })(jQuery);
            $(document).ready(function() {
+
                $("#ce").click(function(){
-                    alert("message");
-                    alert($("#ce1").height());
-                    $('#ce1').slideToggle("slow");
+                    
+                   $("#ce").select_op();
                });
 
            });
