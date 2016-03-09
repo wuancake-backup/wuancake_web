@@ -42,6 +42,7 @@
 .order-pro{
     display:flex;
     padding:0;
+    align-items: flex-start;
 }
 /*产品描述*/
 .order-des{
