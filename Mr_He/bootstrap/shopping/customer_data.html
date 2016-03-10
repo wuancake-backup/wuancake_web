@@ -124,11 +124,11 @@
                             <label for="cus-ctry" class="sp-bl">country</label>
                             <div class="shopping-select" id="cus-ctry">
                                 <span class="shopping-select-selection form-control">Poland</span>
-                                <button type="button" id="ce"></button>
+                                <button type="button"></button>
                                 <ul class="shopping-select-menu">
-                                    <li>Poland</li>
-                                    <li>Poland</li>
-                                    <li>Poland</li>
+                                    <li>Poland1</li>
+                                    <li>Poland2</li>
+                                    <li>Poland3</li>
                                 </ul>
                             </div>
                         </div>
@@ -205,14 +205,19 @@
        <script type="text/javascript">
             (function($){
                 $.fn.select_op = function(){
-                    $(this).parent().children('.shopping-select-menu').slideToggle("slow");
+                    // $(this).parent().children('.shopping-select-menu').slideToggle("slow");
+                    $(this).siblings('.shopping-select-menu').slideToggle("slow");
+                    $(this).siblings('.shopping-select-menu').find('li').click(function(event){
+                        $(this).parent().siblings('.shopping-select-selection').text($(event.target).text());
+                        $(this).parent().slideUp("fast");
+                    })
                 };
             })(jQuery);
            $(document).ready(function() {
 
-               $("#ce").click(function(){
+               $("#cus-ctry").children('button').click(function(){
                     
-                   $("#ce").select_op();
+                   $("#cus-ctry").children('button').select_op();
                });
 
            });
