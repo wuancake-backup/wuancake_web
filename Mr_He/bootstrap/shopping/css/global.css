@@ -115,6 +115,7 @@ h4,h5,p{
             }
             .shopping-navbar .user .search button{
                 vertical-align:middle;
+                background-color: #fff;
             } 
             .shopping-navbar .user .dropdown-menu{
                 padding:16px 0 16px 9px;
