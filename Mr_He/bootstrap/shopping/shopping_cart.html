@@ -308,14 +308,14 @@
                 <div class="row">
                     <form class="shopping-f col-md-6 col-md-offset-3">
                         <div class="form-group">
-                            <label for="" class="sp-bl">Select delivery method</label>
-                            <div class="shopping-select" id="">
+                            <label for="delivery-method" class="sp-bl">Select delivery method</label>
+                            <div class="shopping-select" id="delivery-method">
                                 <span class="shopping-select-selection form-control">DHL International - €15,00</span>
-                                <button></button>
+                                <button type="button"></button>
                                 <ul class="shopping-select-menu">
-                                    <li>DHL International - €15,00</li>
-                                    <li>DHL International - €15,00</li>
-                                    <li>DHL International - €15,00</li>
+                                    <li>DHL International - €16,00</li>
+                                    <li>DHL International - €17,00</li>
+                                    <li>DHL International - €18,00</li>
                                 </ul>
                             </div>
                         </div>
@@ -396,15 +396,14 @@
                 <div class="row">
                     <form class="shopping-f col-md-6 col-md-offset-3">
                         <div class="last-fgroup">
-                            <label for="" class="sp-bl">Select payment method</label>
-                            <div class="shopping-select" id="">
-                                <span class="shopping-select-selection form-control">Credit Card</span>
-                                <span class="shopping-select-img"></span>
-                                <button></button>
+                            <label for="pay-method" class="sp-bl">Select payment method</label>
+                            <div class="shopping-select" id="pay-method">
+                                <span class="shopping-select-selection form-control">Credit Card<span class="shopping-select-img"></span></span>
+                                <button type="button"></button>
                                 <ul class="shopping-select-menu">
-                                    <li>Credit Card</li>
-                                    <li>Credit Card</li>
-                                    <li>Credit Card</li>
+                                    <li>Credit Card1 <span class="shopping-select-img"></span></li>
+                                    <li>Credit Card2 <span class="shopping-select-img"></span></li>
+                                    <li>Credit Card3 <span class="shopping-select-img"></span></li>
                                 </ul>
                             </div>
                         </div>
@@ -458,5 +457,23 @@
             </div>
         </div>
     </div>
+
+        <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
+        <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/select_op.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+               $("#delivery-method").children('button').click(function(event){
+                    
+                   $("#delivery-method").children('button').select_op();
+               });
+               $("#pay-method").children('button').click(function(event){
+                    
+                   $("#pay-method").children('button').select_op();
+               });
+
+           });
+        </script>
     </body>
 </html>

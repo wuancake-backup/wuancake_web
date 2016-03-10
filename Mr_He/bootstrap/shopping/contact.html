@@ -90,11 +90,11 @@
                             <label for="contact-t" class="sp-bl">Topic</label>
                             <div class="shopping-select" id="contact-t">
                                 <span class="shopping-select-selection form-control">Lorem ipsum</span>
-                                <button></button>
+                                <button type="button"></button>
                                 <ul class="shopping-select-menu">
-                                    <li>Lorem ipsum</li>
-                                    <li>Lorem ipsum</li>
-                                    <li>Lorem ipsum</li>
+                                    <li>Lorem ipsum1</li>
+                                    <li>Lorem ipsum2</li>
+                                    <li>Lorem ipsum3</li>
                                 </ul>
                             </div>
                         </div>
@@ -183,5 +183,17 @@
 
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
         <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/select_op.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+               $("#contact-t").children('button').click(function(event){
+                    
+                   $("#contact-t").children('button').select_op();
+               });
+
+           });
+        </script>
+
     </body>
 </html>
