@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>豆瓣API使用</title>
+	<link rel="stylesheet" href="Styles/doubanBook.css">
+
+</head>
+<body>
+	<div id="db-global-nav">
+		<div class="bd">
+
+			<div class="top-nav-info">
+				<a href="https://www.douban.com/accounts/login?source=book">登录</a>
+				<a href="http://www.douban.com/accounts/register?source=book">注册</a>
+			</div>
+
+			<div class="top-nav-doubanapp">
+				<a href="http://www.douban.com/doubanapp/app?channel=top-nav">下载豆瓣客户端</a>
+				<div id="top-nav-appintro" class="more-items">
+		            <p class="appintro-title">豆瓣</p>
+		            <p class="slogan">和有趣的人做有趣的事</p>
+		            <p class="qrcode">扫码直接下载</p>
+		            <div class="download">
+		                <a href="http://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=iOS">iPhone</a>
+		                <span>·</span>
+		                <a href="http://www.douban.com/doubanapp/redirect?channel=top-nav&amp;direct_dl=1&amp;download=Android" class="download-android">Android</a>
+		            </div>
+		        </div>
+			</div>
+
+			<div class="global-nav-items">
+				<ul>
+					<li><a href="http://www.douban.com/">豆瓣</a></li>
+					<li><a href="http://book.douban.com/">读书</a></li>
+					<li><a href="http://movie.douban.com/">电影</a></li>
+					<li><a href="http://music.douban.com/">音乐</a></li>
+					<li><a href="http://www.douban.com/location/">同城</a></li>
+					<li><a href="http://www.douban.com/group/">小组</a></li>
+					<li><a href="http://read.douban.com/?dcs=top-nav&dcm=douban">阅读</a></li>
+					<li><a href="http://douban.fm/">FM</a></li>
+					<li><a href="http://dongxi.douban.com/?dcs=top-nav&dcm=douban">东西</a></li>
+					<li><a href="https://market.douban.com/">市集</a></li>
+					<li><a href="#more" >更多</a>
+						<ul class="more-items">
+							<li><a href="http://moment.douban.com/">一刻</a></li>
+							<li><a href="http://ypy.douban.com/">一拍一</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div id="db-nav-book">
+		<div id="nav-search">
+			<a href="http://book.douban.com/"><img src="images/lg_book_a11_1.png" alt="豆瓣读书"></a>
+			<input type="text" id="searchInput">
+			<button id="searchBtn">搜索</button>
+			<a href="http://book.douban.com/annual2015/?source=navigation" target="_blank"><img src="images/ad_web.png" alt="豆瓣读书2015年度榜单"></a>
+		</div>
+		<div id="nav-sec">
+			<ul>
+				<li><a href="http://book.douban.com/tag/">分类浏览</a></li>
+				<li class="book-cart"><a href="http://book.douban.com/cart">购物单</a></li>
+				<li><a href="http://read.douban.com/ebooks/?dcs=book-nav&dcm=douban" target="_blank">电子图书</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<!-- 网页主体部分 -->
+	<div id="wrapper" >
+		<div id="content" class="clearfix">
+			<div id="article">
+				<!-- 搜索结果 -->
+				<div id="trr"></div>
+				<!-- 图书列表 -->
+				<ul id="bookList">
+		
+				</ul>
+				<!-- 图书页面分页导航 -->
+				<div id="Pagination" >
+					<a class="pagination" href="">1</a>
+					<a class="pagination" href="">2</a>
+					<a class="pagination" href="">3</a>
+					<a class="pagination" href="">4</a>
+					<a class="pagination" href="">5</a>
+					<a class="pagination" href="">6</a>
+					<a class="pagination" href="">7</a>
+					<a class="pagination" href="">8</a>
+					<a class="pagination" href="">9</a>
+					<a class="pagination" href="">10</a>
+				</div>
+			</div>
+
+			<div id="aside">
+				<!-- douban ad begin -->
+				<div id="dale_book_subject_search_top_right">
+					  <a href="http://www.ikea.com/cn/zh/?cid=sm|cn|fy16_winsales_ads_douban|201602041115096504_4"><img src="Images/advertisement.jpg" alt=""></a>
+				</div>
+				  <!-- douban ad end -->
+
+				<div class="mb20">
+				    <div class="hd">
+						  <h2>
+						    <span class="">相关搜索</span>
+						      &nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·&nbsp;·
+						  </h2>
+				    </div>
+				    <div class="bd">
+				          <p class="pl">
+				            <a href="http://movie.douban.com/subject_search?search_text=javascript&amp;cat=1002" rel="nofollow">
+				              &gt;&nbsp;搜索"javascript"的电影
+				            </a>
+				          </p>
+				          <p class="pl">
+				            <a href="http://music.douban.com/subject_search?search_text=javascript&amp;cat=1003" rel="nofollow">
+				              &gt;&nbsp;搜索"javascript"的音乐
+				            </a>
+				          </p>
+					      <p class="pl">
+					        <a href="http://www.douban.com/location/drama/search?q=javascript" rel="nofollow">
+					          &gt;&nbsp;搜索"javascript"的舞台剧
+					        </a>
+					      </p>
+				    </div>
+				</div>
+
+				<p class="indent">
+			      <span class="pl2">
+			        <a href="http://www.douban.com/accounts/register">
+			          注册
+			        </a>
+			        登录以后可以自己添加条目
+			      </span>
+			    </p>
+			    <br><br>
+
+			     <span class="gact">
+				    <a href="/opensearch">
+				      OpenSearch: RSS 2.0
+				    </a>
+				 </span>
+
+			</div> <!--<div id="aside">-->
+		</div>
+
+		<div id="footer">
+			<span id="icp" class="fleft gray-link">
+			    © 2005－2016 douban.com, all rights reserved 北京豆网科技有限公司
+			</span>
+
+			<a href="http://www.douban.com/hnypt/variformcyst.py" style="display: none;"></a>
+
+			<span class="fright">
+			    <a href="http://www.douban.com/about">关于豆瓣</a>
+			    · <a href="http://www.douban.com/jobs">在豆瓣工作</a>
+			    · <a href="http://www.douban.com/about?topic=contactus">联系我们</a>
+			    · <a href="http://www.douban.com/about?policy=disclaimer">免责声明</a>
+			    
+			    · <a href="http://help.douban.com/?app=book" target="_blank">帮助中心</a>
+			    · <a href="http://book.douban.com/library_invitation">图书馆合作</a>
+			    · <a href="http://www.douban.com/doubanapp/">移动应用</a>
+			    · <a href="http://www.douban.com/partner/">豆瓣广告</a>
+			</span>
+		</div>
+	</div>
+
+	<script src="Scripts/jquery-1.6.2.min.js"></script>
+	<script src="Scripts/doubanbook1.js"></script>
+</body>
+</html>
