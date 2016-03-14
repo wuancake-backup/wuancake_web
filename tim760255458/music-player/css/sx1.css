@@ -1,33 +1,29 @@
 body {
 	background-image: url(http://bbs.uc.cn/data/attachment/forum/201302/17/1635562ziq1cpfba0smqqq.jpg);
 }
+div#box1 {width: 700px;top: 50px;left: 280px;position: relative;}
+div#title1 {font-family: "微软雅黑";font-size: 22px;padding-bottom: 10px;color: #FFFFFF;}
+div#width1 {width: 220px;height: 400px;padding: 10px;background-color:gainsboro; float: left;}
+div#width2{width: 320px;height: 400px;padding: 10px;background-color: #000000;opacity: 0.3;float: left;}
+i#heard1{display:inline-block;width:14px;height:11px;background-image: url(../img/note.gif);background-repeat: no-repeat;background-size: 100% 100%;}
+span#heard2{padding-left: 10px;}
+div#hr-style{background-color: #808080;}
+div#time1{font-size: 24px;color: #808080;}
+span#time2{font-size: 18px;}
+div#button1{padding-right: 20px;float: left;}
+div#button2{padding-right: 20px;float: left;}
+div#button3{padding-right: 20px;float: left;}
+div#button4{padding-right: 20px;float: left;}
+div#button5{clear: both;}
 
-.location {
-	float: left;
-	position: relative;
-	top: 110px;
-	left: 280px;
-	height: 400px;
-	
-	padding: 10px;
-	
-}
-
-#width1 {
-	width: 250px;
-	background-color: ghostwhite;}
-
-#width2{
-	width: 320px;
-	background-color: #000000;
-	opacity: 0.3;}
+hr{width: 220px;height: 1px;border-style: solid;border-color: #808080;}
 
 #height1{
 	height: 240px;
 	text-align: center;
 }
 
-img {width: 250px;height: 230px;}
+img {width: 220px;height: 230px;}
 
 a:link {text-decoration: none;}
 a:visited {text-decoration: none;}

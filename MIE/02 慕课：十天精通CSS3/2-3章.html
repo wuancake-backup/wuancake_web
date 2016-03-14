@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>十天精通CSS3</title>
+		<link rel="stylesheet" href="css/style.css" />
+	</head>
+	<body>
+		<hgroup>
+			<h2>第二章 边框</h2>
+			<h3>2.1圆角效果</h3>
+		</hgroup>
+			<div class="square"></div>
+			<br>
+			<div class="square circle01"></div>
+		<p>半径，通过控制四边的大小，来调节方形的角半径</p>
+		<br>
+		<div class="square sq02 circle02"></div>
+			<p>半圆呈现条件是radius的值是方形边框长的一半，需要哪边的半圆就设置对应的值，
+			并将对应多出来的部分的值更改成另一边的一半。（变成长方形）削掉了就是一个半圆。</p>
+		<br>
+			<div class="square circle03"></div>
+		<p>四边半径值都是其边长的一半</p>
+		<br>
+        <br>
+        <br>
+        <br>
+		<h3>2.2阴影 box-shadow</h3>
+		<div class="square shadow01"></div>
+		<p>把每个图形元素都看作是一个盒子，他们有和他们本身一样的一重阴影。通过设置偏移数值，
+			一部分阴影会被图形挡住，一部分会外露出来。这就是shadow。</p>
+		<br>
+			<div class="square shadow02"></div>
+		<br>
+			<div class="square shadow03"></div>
+			<p>可以设置多重阴影</p>
+			
+		<br>
+        <br>
+        <br>
+        <br>
+		<h3>2.3阴影 box-shadow</h3>
+		<cite title="引用来自慕课《十天精通css3》2.3">阴影模糊半径：此参数可选，其值只能是为正值，如果其值为0时，
+		表示阴影不具有模糊效果，其值越大阴影的边缘就越模糊；阴影扩展半
+		径：此参数可选，其值可以是正负值，如果值为正，则整个阴影都延展
+		扩大，反之值为负值时，则缩小；</cite>
+		<p>可见是通过控制属性的正负值，来调节阴影投影方式</p>
+		<br>
+        <br>
+        <br>
+        <br>
+		<h3>2.4为边框应用图片 border-image</h3>
+		<div class="square borderImg01">
+			repeat
+		</div>
+		<div class="square borderImg02">
+			round
+		</div>
+		<div class="square borderImg03">
+			Stretch
+		</div>
+		<p>阴影图片需要在阴影边框的基础上实现。repeat：重复;Round：铺满；Stretch ：拉
+			伸</p>
+		<br>
+        <br>
+        <br>
+        <br>
+        <hgroup>
+        <h2>颜色相关</h2>
+		<h3>2.5颜色RGBA</h3>	</hgroup>
+		<div class="square"><p class="rgba">
+			a：透明度，用0-1之间的数值来控制
+		</p></div>
+		<br>
+        <br>
+        <br>
+        <br>
+        	<h3>2.6渐变</h3>	
+		<div class="square shade"></div>
+		<p>线性渐变
+			<br><img src="img/线性渐变方向.jpg"</p>
+	</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <script src="vue.js"></script>
+    <style>
+.expand-transition{
+    width: 100px;
+    height: 100px;
+    background: #3ce;
+    transition: 1s
+}
+.expand-enter, .expand-leave {
+      height: 0;
+}
+    </style>
+</head>
+<body>
+    <div id="app">
+        <button v-on:click="dosth" v-bind:class="classobj">text</button>
+      {{ full }}
+    <template v-if="true">
+        <h1>Title</h1>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+    </template>
+    <template v-else>no</template>
+    <ul>
+        <template v-for="item in items">
+        <li>{{ item.msg }}</li>
+        </template>
+    </ul>
+    <div>
+        <input type="checkbox" id="jack" value="Jack" v-model="checkedNames">
+        <label for="jack">Jack</label>
+        <input type="checkbox" id="john" value="John" v-model="checkedNames">
+        <label for="john">John</label>
+        <input type="checkbox" id="mike" value="Mike" v-model="checkedNames">
+        <label for="mike">Mike</label>
+        <span>Checked names: {{ checkedNames}}</span>
+    </div>
+    <div v-if="show" transition="expand">{{ text }}</div>
+    <button v-on:click="showdiv">show div</button>
+    </div>
+
+</body>
+<script type="text/javascript">
+var app = new Vue({
+  el: '#app',
+  data: {
+      one: 1,
+      two: 2,
+      classobj: {
+          classA: true,
+          classB: false
+      },
+      items: [
+          {msg: 2},
+          {msg: 4}
+      ],
+      checkedNames :[],
+      show: false,
+  },
+  computed: {
+      full: function () {
+          return this.one + this.two
+      }
+  },
+  methods: {
+      dosth: function () {
+          console.log(this)
+      },
+      showdiv: function () {
+          if (this.show) {
+              this.show = false
+          } else {
+              this.show = true
+          }
+
+      }
+  }
+})
+Vue.transition('expand',{
+    enter: function (el) {
+        el.textContent = 'enter'
+    },
+    afterEnter: function (el) {
+        el.textContent = 'after'
+    }
+})
+</script>
+</html>

@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=no" />
+	
+<script>
+    window.__remInitFunc = function(){
+        // 这里面粘贴上面“HOW TO USE”中第2、3步的代码  
+      ;(function(psdWidth,dividendFontSize,maxRootFontSize){
+        // 为了代码更短
+        var d = document
+        var de = d.documentElement
+        var w = window
+        var on = 'addEventListener'
+        var gbcr = 'getBoundingClientRect'
+        var ps = 'pageshow'
+        var head = d.head || d.getElementsByTagName('HEAD')[0]
+        var style = d.createElement('STYLE') // 采用拼css的形式，而不是直接用document.documentElement.style.fontSize的形式的原因是，拼css可以通过加入!important获得最高优先级，http://jsbin.com/dopupudago/2/edit?html,js,output
+        var resizeEventThrottleTimer
+        // 移除任何text-size-adjust对字体大小的改变效果
+        var textSizeAdjustCSS = 'text-size-adjust:100%;'
+        var textSizeAdjustCSSAll = 
+          '-webkit-'+textSizeAdjustCSS
+          +'-moz-'+textSizeAdjustCSS
+          +'-ms-'+textSizeAdjustCSS
+          +'-o-'+textSizeAdjustCSS
+          +textSizeAdjustCSS
+        
+        var hasGbcr = gbcr in de
+        var lastRootFontSize = null // 上一次设置的html的font-size
+        function setRem(){
+          var rootFontSize = Math.min(
+            (
+              hasGbcr?
+                de[gbcr]().width // document.documentElement.getBoundingClientRect() iOS4.0+ 安卓2.0+  https://developer.mozilla.org/zh-CN/docs/Web/API/Element.getBoundingClientRect
+                :w.innerWidth
+            )
+              /(psdWidth/dividendFontSize)
+            ,maxRootFontSize
+          )
+          // alert('2 iW_'+w.innerWidth+'  sw_'+w.screen.width+'  dpr_'+devicePixelRatio+'  or_'+w.orientation+'  gbcrw_'+d.documentElement.getBoundingClientRect().width)
+          if(rootFontSize != lastRootFontSize){
+            // return
+            style.innerHTML = 
+              'html{'
+              + 'font-size:'+rootFontSize+'px!important;' // 20=320/16 // 取16为默认html的font-size是因为浏览器都默认为16，不会导致抖动
+              + textSizeAdjustCSSAll
+              +'}'
+            lastRootFontSize = rootFontSize
+          }
+        }
+        // 在一定延时内稀释setRem的调用
+        function trySetRem(){
+          clearTimeout(resizeEventThrottleTimer)
+          resizeEventThrottleTimer = setTimeout(setRem,500)
+        }
+        psdWidth = psdWidth || 320
+        dividendFontSize = dividendFontSize || 16
+        maxRootFontSize = maxRootFontSize || 32
+        head.appendChild(style)
+        
+        d[on]('DOMContentLoaded',setRem,false)
+        // 安卓在页面刚载入时w.screen.width不一定正确，特别是从一个未设置viewport meta的页面跳转过来时，需要多调整几次。见图：“show/2.3.6_从一个未设置viewport的页面跳转过来时，起初innerWidth和screen.width都是不对的.png”，于是在pageshow或onload事件触发时再设置一次
+        if('on'+ps in w){
+          w[on](ps,function(e){
+            if(e.persisted){
+              trySetRem()
+            }
+          },false)
+        }else{
+          w[on]('load',trySetRem,false)
+        }
+        w[on]('resize',trySetRem,false)
+        setRem()
+      })(
+        320, // 设置设计稿基准宽度
+        16, // 设置开发时的被除数（见HOW TO USE第4步） 在设计稿基准宽度为320时最好设置为16（在在设计稿基准宽度为其他值时等比放大，如640时设置为32等）。因为浏览器默认的值就是16，这样代码失效或尚未起效时，不会有布局问题
+        32 // 设置最大根元素font-size，请注意这是一个css像素值，而非物理像素值。它的作用是，当用户用非常宽的屏幕（pad、pc）访问页面时，不至于使得根元素的font-size超过这个值，使得布局非常难看。见图“show/wide_max_rem.jpg”
+      )
+    
+    }
+</script>
+<!--[if lt IE 9]>
+<script>
+    window.__remInitFunc = function(){}
+</script>
+<![endif]-->
+<script>
+    window.__remInitFunc()
+    window.__remInitFunc = undefined
+</script>
+  <title>home</title>
+	<link href="style/bootstrap.min.css" rel="stylesheet">
+	<!--[if It IE 9]
+	   <script src="js/html5shiv.js"></script>
+	   <script src="js/respond.min.js"></script>
+	<![endif]-->
+</head>
+     <style type="text/css">
+     *{margin: 0px;padding:0px;}/*还可以直接添加reset.css清除所有的默认样式*/
+     body{background-color: rgb(229,229,229);padding-top:60px;padding-bottom: 80px;}
+     .content_body{max-width:1244px;overflow: hidden;background-color: white;}
+     li{list-style-type: none;}
+     hr{margin-bottom: 0px;margin-top: 0px;border: none;height: 1px;background-color: rgb(229,229,229);}
+
+     /*导航栏的样式*/
+     .navbar>.container-fluid #iconBrand{padding-left: 0px;padding-right: 5px;padding-top: }
+     .navbar-default{;border-width:0px;background-color:white;}
+     #navbar{margin-bottom: 43px;margin-top:0.4rem;}
+     #bs-example-navbar-collapse-1 a {margin-top: 32px;padding-top: 0px;margin-bottom: 15px;padding-bottom: 0px;padding: 0px;margin-left: 51px;}
+     .addition-pic{display:block;background: url(images/sprite.png) -16px -2px no-repeat;width:30px;height: 30px;position: absolute;top:0.64rem;right:4.5rem;}
+     #bs-example-navbar-collapse-1 .log-in,#bs-example-navbar-collapse-1 .basket{padding-left:20px;margin-left:0px;background: url(images/sprite.png) no-repeat;display: block;padding-left:11px;position: relative;left:42px;top:0px;}
+     #bs-example-navbar-collapse-1 .log-in{background-position: -6px -2px;width:11px;height: 17px;}
+     #bs-example-navbar-collapse-1 .basket{background-position: -22px -2px;width:17px;height: 17px;}
+
+     /*巨幕的样式*/
+     .jumbotron{background-color: white;padding-top: 78px;}
+     .jumbotron h1{font-size: 72px;font-family: "Lato";font-weight:bold;margin-bottom: 35px;line-height: 52px;}
+     p.introduce{font-size: 24px;font-family: "Georgia";font-style: italic;margin-bottom: 67px;line-height: 25px;}
+     #btnStyle{height: 58px;width:227px;padding:0px;line-height:58px;font-size:14px;font-family:"Lato";background-color: rgb(96,96,96);color:white;border: 1px solid #959595;border-radius: 0px;vertical-align:center;}
+
+     
+     /*块状区域的样式*/
+
+     .tenBlock{margin-top: 57px;color: white;margin-left: 0px;margin-right: 0px;}
+     .tenBlock a{display:flex;flex-wrap:wrap;position:relative;width:100%;height:100%;top:0;left:0;border:none;color:white;}
+     .tenBlock #text{width:100%;text-align: center;vertical-align:middle!important;}
+     .nestBlock{padding:0px;margin-top: -9.218rem;}
+     .oneBlockColor,.openingEremony,.chuckTaylors,.jaxonHat,.twoBlockColor,.threeGirls,.basicBlazer,.elegantShoes{height:9.218rem;}
+     .heatherGreyBasics,.newArrival{height:18.437rem;}
+     .heatherGreyBasics{background-color:rgb(210,210,210);}
+     .oneBlockColor{background-color:rgb(194,194,194); }
+     .openingEremony{background-color:rgb(187,187,187)}
+     .chuckTaylors{background-color:rgb(202,202,202);}
+     .jaxonHat{background-color: rgb(96,96,96);}
+     .twoBlockColor{background-color:rgb(219,219,219);}
+     .threeGirls{background-color: rgb(187,187,187);}
+     .basicBlazer{background-color:rgb(208,208,208);}
+     .elegantShoes{background-color: rgb(96,96,96);}
+     .newArrival{background-color: rgb(215,215,215);}
+
+
+     /*email处的样式*/
+     .signUp{margin-bottom: 72px;padding-bottom: 60px;}
+     .signUp h1{margin-top: 145px;font-size: 36px;font-family: "Lato";font-weight: bold;line-height: 27px;}
+     .signUp h4{line-height: 18px;font-size: 18px;font-style: italic;font-family: "Georgia";margin-top: 20px;margin-bottom: 54px;}
+     .email_css button:hover{background-color: #F68236;}/*ie6不支持hover*/
+     .email_css .form-control{border: 1px solid #959595;border-radius: 0px;}
+     .email_css button{border: 1px solid #959595;background-color:#717171;margin-left: -1px;border-radius: 0px;}
+     .feedback{position: absolute;top:2rem;left: 5.5rem;color:#ED1C24;}
+
+
+     /*翻页处的样式*/
+     #next_content{height:3.7rem;background-color: rgb(187,187,187);padding-right: 0px;padding-left: 0px;margin-bottom: 47px;}
+     .previous,.next{display: block;width:39px;height:118px;cursor:pointer;background: url(images/next.png);}
+     .previous{background-position: -12px -9px;float: left;}
+     .next{background-position:54px -9px;float: right;}
+
+     /*最下面的列表组*/
+     .bottom-list{margin-bottom: 44px;}
+     .bottom-list h5{font-size: 14px;font-family: "Lato";font-weight: bold;color: #303030;margin-bottom: 20px;line-height: 10px;margin-top: 14px;}
+     .bottom-list ul{margin-bottom: 0px;}
+     .bottom-list li{font-size: 12px;font-family: "Lato";line-height: 11px;height: 23px;}
+     .bottom-list .col-md-3{padding-left: 19px;height: 159px;border-left:1px solid #EAEAEA;}
+     .bottom-list .collection{border-left: none;}
+     .bottom-list .last-li{padding-top: 11px;height: 43px;}
+     .first-icon,.second-icon,.third-icon{background: url(images/sprite.png) no-repeat;display: block;width: 32px;height: 32px;float: left;border: 1px solid #606060;background-origin:content-box;background-clip: content-box;}
+     .first-icon{ background-position:-66px -5px;padding:9px 8px 8px;}
+     .second-icon{background-position:-85px -4px;padding:9px 11px 7px;margin-left: 14px;}
+     .third-icon{background-position: -98px -3px;padding:8px 7px 7px;margin-left: 15px;}
+
+     /*响应式的特别设置*/
+     @media only screen and (min-width:768px){
+       div.content_body.container-fluid{padding-left: 32px;padding-right: 32px;}
+     	.email_css{max-width:570px;height:1.75rem;margin: 0 auto;}
+      .email_css .form-control{width: 476px;height: 1.75rem;}
+      .email_css button{width:95px;height:1.75rem;}
+        .addition-pic{left: -10000px;}
+     }
+     @media only screen and (max-width: 768px){
+     	body{padding-top:0px;padding-bottom: 0px;}
+     	.jumbotron .btn-lg{display: none;}
+      div.content_body.container-fluid{padding-left: 20px;padding-right: 20px;}
+      .navbar>.container-fluid #iconBrand{padding-top: 0.17rem;}
+
+     }
+     </style>
+<body>
+<div class="content_body container-fluid"><!--主体内容-->
+	<!--顶部导航栏开始-->
+ <nav class="navbar navbar-default" id="navbar">
+ <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a><span class="addition-pic hidden-lg"></span></a>
+      <a class="navbar-brand " id="iconBrand" href="#"><img alt="" src="images/icon.png"/></a>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a   href="#">Woman</a></li>
+        <li><a   href="#">Men</a></li>
+        <li><a   href="#">Kids</a></li>
+        <li><a   href="#">Comming Soon</a></li>
+        <li><a   href="#">About</a></li>
+      </ul> 
+      <ul class="nav navbar-nav navbar-right">
+        <li><a  class="log-in"  href="#"></a></li>
+        <li><a href="#">Log in</a></li>
+        <li><a class="basket" href="#"></a></li>
+        <li><a href="#">Basket <span>(0)</span></a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
+ </div><!-- /.container-fluid -->
+ </nav>
+ <hr/>
+
+<!--巨幕部分开始-->
+<div class="row">
+     <div class="col-md-12">
+     	<div class="jumbotron">
+         <h1 class="text-center">HAZY SHADE OF SPRING</h1>
+         <p class="text-center introduce">Quisque lorem tortor fringilla sed,vestibulum id,eleifend justo.</p>
+         <p class="text-center hidden-xs"><a class="btn btn-primary btn-lg" id="btnStyle" href="#" role="button">CHECK NEW ARRIVALS</a></p>
+         </div>
+     </div>
+ </div><!--巨幕部分结束-->
+
+ 
+<div class="container tenBlock">
+ 		<div class="row">
+ 			<div class="col-md-3 heatherGreyBasics">
+           <a href="#" >
+           <h5 id="text">HEATHER</h5>
+           <h5>GREY BASICS </h5>
+           <h6>NEW ARRIVAL</h6>
+           </a>
+      </div>
+ 			<div class="col-md-3 openingEremony">
+            <a href="#">
+            <span></span>
+            <h5>Opening eremony</h5>
+            <p>@IndonesiaFW tomorrow,PMers!Are you ready for the biggest fashion movement in</p>
+            <h5>@PuspitaMathaID</h5>
+            </a>
+      </div>
+      <div class="col-md-3 twoBlockColor">
+      <a href="#"></a>
+      </div>
+      <div class="col-md-3 elegantShoes">
+            <a href="#">
+            <h5>ELEGANT SHOES</h5><h6>BRAIDED LEATHER</h6>
+            </a>
+      </div>
+   	  <div class="col-md-3 chuckTaylors">
+            <a href="#">
+            <h5>CHUCK TAYLORS</h5>
+            <h6>$125.00</h6>
+            </a>            
+      </div>
+   	  <div class="col-md-3 threeGirls">
+            <a href="#">
+            <span></span>
+            <p>Girls,Girls,Girls:A Look Back at 50 years off the Pirelli Calendar</p><br/><span>@Vogue</span>
+            </a>   
+      </div>
+      <div class="col-md-3 newArrival">
+            <a href="#">
+            <h5>JEANS FOR ADVENTURE</h5><h6>NEW ARRIVAL</h6>
+            </a>
+      </div>
+      <div class="col-md-9 nestBlock">	
+   	  <div class="col-md-4  oneBlockColor">
+           <a href="#"></a>   
+      </div>
+      <div class="col-md-4 jaxonHat">
+           <a href="#">
+           <span></span>
+           <h5>JAXON HAT</h5>
+           <h6>BEANIE HAT</h6>
+           </a>   
+      </div>
+   	  <div class="col-md-4 basicBlazer">
+            <a href="#">
+            <h5>BASIC BLAZER</h5>
+            <h6>FROM $199.00</h6>
+            </a>
+      </div>
+      </div>
+   </div>
+   </div>
+<!--中间块状内容部分结束-->
+
+ <div class="signUp"><!--中间email部分开始-->	
+   <h1 class="text-center ">SIGN UP TO RECEIVE OUR UPDATES</h1>
+   <h4 class="text-center">Nulla ipsum dolor lacus,suscipit adipiscing.Cum sociis natoque penatibus et ultrices volutpat.</h4>
+   <div class="input-group email_css">
+      <input type="text" class="form-control" placeholder="Your e-mail">
+      
+      <span class="input-group-btn">
+        <button class="btn" type="button">ADD</button>
+      </span>
+      <em class="feedback">Wrong e-mail,please try again.</em>
+   </div><!-- /input-group -->
+ </div><!--中间email部分结束-->
+ <div>
+      <div class="" id="next_content">
+        <span class="previous hidden-xs" ></span>
+        <span class="next hidden-xs"></span>
+      </div>
+ </div><!--换页部分结束-->
+ <div class="row bottom-list">
+   <div class="col-md-3 hidden-xs collection">
+      <h5>COLLECTION</h5>
+      <ul>
+        <li>Woman<span>(1725)</span></span></li>
+        <li>Men<span>(635)</span></li>
+        <li>Kids<span>(2514)</span></li>
+        <li>Comming Soon<span>(76)</span></li>
+      </ul>
+   </div>
+   <div class="col-md-3 hidden-xs">
+     <h5>SITE</h5>
+      <ul>
+        <li>Terms of Service</li>
+        <li>Privacy Policy</li>
+        <li>Copyright Policy</li>
+        <li>Press Kit</li>
+        <li>Support</li>
+      </ul>
+   </div>
+   <div class="col-md-3 hidden-xs">
+     <h5>SHOP</h5>
+      <ul>
+        <li>About us</li>
+        <li>Shipping Metods</li>
+        <li>Career</li>
+        <li>Contact</li>
+      </ul>
+   </div>
+   <div class="col-md-3 ">
+     <h5>SOCIAL</h5>
+      <ul>
+        <li>Shoper is made with love in Warsaw</li>
+        <li>2014&copy;All rights reserved.EI Passion</li>
+        <li class="last-li"><span class="first-icon"></span><span class="second-icon"></span><span class="third-icon"></span></li>
+      </ul>
+   </div>
+ </div>	
+ </div><!--主体内容结束-->
+</div>
+</body>
+     <script src="js/jquery-1.11.1.min.js"></script>
+     <script src="js/bootstrap.min.js"></script>
+</html>
