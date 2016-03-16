@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>shopping_cart</title>
+        <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
+        <script type="text/javascript" src="../lib-flexible-master/build/flexible_css.debug.js"></script>
+        <script type="text/javascript" src="../lib-flexible-master/build/flexible.debug.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/category_all.css">
+        <link rel="stylesheet" type="text/css" href="css/shopping_cart_cut.css">
+        <link rel="stylesheet" type="text/css" href="css/shopping_form.css">
+        <link rel="stylesheet" type="text/css" href="css/shopping_cart.css">
+    </head>
+    <body>
+    <div class="container">
+        <!-- 导航条 -->
+        <div class="shopping-navbar shopping-container">
+            <nav class="navbar">
+                <div class="container-fluid">
+                    <div  class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar">
+                            <span class="icon-bar"></span>
+                            <span  class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a href="#" class="navbar-brand">SH</a>
+                        <a href="#" class="navbar-cart icon-bgimg"></a>
+                    </div>
+
+                    <div class="collapse navbar-collapse" id="main-navbar">
+                        <ul class="nav navbar-nav">
+                            <li><a href="category_all.html">Woman</a></li>
+                            <li><a href="category_men.html">Men</a></li>
+                            <li><a href="#">Kids</a></li>
+                            <li><a href="#">Comming Soon</a></li>
+                            <li><a href="about.html">About</a></li>
+                        </ul>
+                        <ul class="nav navbar-nav navbar-right user">
+                            <li>
+                                
+                                <a href="login.html"> <span class="icon-bgimg"></span>Log In</a>
+                            </li>
+                            <li>
+                                
+                                <a href="shopping_cart.html"><span class="icon-bgimg"></span> Basket(0)</a>
+                            </li>
+                            <li class="dropdown">
+                                <a href="#" class="dropdown-toggle icon-bgimg" data-toggle="dropdown" role="button"></a>
+                                <ul class="dropdown-menu">
+                                    <li style=" white-space: nowrap;" class="search">
+                                        <form class="form-inline">
+
+                                            <input type="text" name="" value="" placeholder="Search" class="form-control">
+                                            <button type="submit" class="icon-bgimg"></button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav> 
+        </div>
+        <!-- 主内容 -->
+        <div class="content shopping-container">
+            <!-- 购物车 -->
+            <div class=" shopping-container">
+                <!-- 购物车标题 -->
+                <div class="sc-h">
+                    <h1>
+                    Your Shopping Bag
+                    </h1>
+                    <p>Items reserved for limited time only</p>
+                </div>
+                <!-- 购物车主体 -->
+                <div class="shopping-cart text-left">
+                    <!-- 购物车选项 -->
+                    <div class="sc-items clearfix">
+                        <div class="col-md-1 col-sm-2">
+                            <h5>PRODUCT</h5>
+                        </div>
+                        <div class="col-md-6 col-sm-4">
+                            <h5>DESCRIPTION</h5>
+                        </div>
+                        <div class="col-md-2 col-sm-2">
+                            <h5>COLOR</h5>
+                        </div>
+                        <div class="col-md-1 col-sm-1">
+                            <h5>SIZE</h5>
+                        </div>
+                        <div class="col-md-1 col-sm-1">
+                            <h5>QTY</h5>
+                        </div>
+                        <div class="col-md-1 col-sm-2">
+                            <h5>AMOUNT</h5>
+                        </div>
+                    </div>
+                    <!-- 购物车物品 -->
+                    <div class="sc-cons">
+                        <!-- 购物车单条物品 -->
+                        <div class="sc-con clearfix">
+                            <!-- 商品照片 -->
+                            <div class="col-md-1 col-sm-2 sc-pic">
+                                <a href="" title=""><img src="images/sc-img.jpg" alt="" class="img-responsive"></a> 
+                            </div>
+                            <!-- 商品描述 -->
+                            <div class="col-md-6 col-sm-4 sc-des">
+                                <h4><a href="" title="">FLORAL PLIMSOLL</a></h4>
+                                <p><a href="" title="">Ref. 2514/302</a></p>
+                            </div>
+                            <!-- 商品颜色 -->
+                            <div class="col-md-2 col-sm-2 sc-col">
+                                <p>One Color</p>
+                            </div>
+                            <!-- 商品尺寸 -->
+                            <div class="col-md-1 col-sm-1 sc-size">
+                                <p>39</p>
+                            </div>
+                            <!-- 商品数量 -->
+                            <div class="col-md-1 col-sm-1 sc-qty">
+                                <p>1</p>
+                                <!-- 数量按钮 -->
+                                <div class="sc-qbtn">
+                                    <!-- 数量加 -->
+                                    <button class="btn-add"></button>
+                                    <!-- 数量减 -->
+                                    <button class="btn-de"></button>
+                                </div>
+                            </div>
+                            <!-- 商品总计 -->
+                            <div class="col-md-1 col-sm-2 sc-am">
+                                <p>
+                                    €99,95
+                                </p>
+                                <button><span>+</span></button>
+                            </div>
+                        </div>
+                        <!-- 购物车单条物品 -->
+                        <div class="sc-con clearfix">
+                            <!-- 商品照片 -->
+                            <div class="col-md-1 col-sm-2 sc-pic">
+                                <a href="" title=""><img src="images/sc-img.jpg" alt="" class="img-responsive"></a> 
+                            </div>
+                            <!-- 商品描述 -->
+                            <div class="col-md-6 col-sm-4 sc-des">
+                                <h4><a href="" title="">FLORAL PLIMSOLL</a></h4>
+                                <p><a href="" title="">Ref. 2514/302</a></p>
+                            </div>
+                            <!-- 商品颜色 -->
+                            <div class="col-md-2 col-sm-2 sc-col">
+                                <p>One Color</p>
+                            </div>
+                            <!-- 商品尺寸 -->
+                            <div class="col-md-1 col-sm-1 sc-size">
+                                <p>39</p>
+                            </div>
+                            <!-- 商品数量 -->
+                            <div class="col-md-1 col-sm-1 sc-qty">
+                                <p>1</p>
+                                <!-- 数量按钮 -->
+                                <div class="sc-qbtn">
+                                    <!-- 数量加 -->
+                                    <button class="btn-add"></button>
+                                    <!-- 数量减 -->
+                                    <button class="btn-de"></button>
+                                </div>
+                            </div>
+                            <!-- 商品总计 -->
+                            <div class="col-md-1 col-sm-2 sc-am">
+                                <p>
+                                    €99,95
+                                </p>
+                                <button><span>+</span></button>
+                            </div>
+                        </div>
+                        <!-- 购物车单条物品 -->
+                        <div class="sc-con clearfix">
+                            <!-- 商品照片 -->
+                            <div class="col-md-1 col-sm-2 sc-pic">
+                                <a href="" title=""><img src="images/sc-img.jpg" alt="" class="img-responsive"></a> 
+                            </div>
+                            <!-- 商品描述 -->
+                            <div class="col-md-6 col-sm-4 sc-des">
+                                <h4><a href="" title="">COATED 5 POCKET TROUSERS</a></h4>
+                                <p><a href="" title="">Ref. 8246/044</a></p>
+                            </div>
+                            <!-- 商品颜色 -->
+                            <div class="col-md-2 col-sm-2 sc-col">
+                                <p>One Color</p>
+                            </div>
+                            <!-- 商品尺寸 -->
+                            <div class="col-md-1 col-sm-1 sc-size">
+                                <p>M</p>
+                            </div>
+                            <!-- 商品数量 -->
+                            <div class="col-md-1 col-sm-1 sc-qty">
+                                <p>1</p>
+                                <!-- 数量按钮 -->
+                                <div class="sc-qbtn">
+                                    <!-- 数量加 -->
+                                    <button class="btn-add"></button>
+                                    <!-- 数量减 -->
+                                    <button class="btn-de"></button>
+                                </div>
+                            </div>
+                            <!-- 商品总计 -->
+                            <div class="col-md-1 col-sm-2 sc-am">
+                                <p>
+                                    €169.00
+                                </p>
+                                <button><span>+</span></button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 手机移动端购物车物品 -->
+                    <div class="sc-cons-ph">
+                        <!-- 单条物品 -->
+                        <div class="sc-con-ph">
+                            <div class="sc-ph-col">
+                                <!-- 物品图片 -->
+                                <div class="sc-pic">
+                                    <a href="" title=""><img src="images/sc-img.jpg" alt=""></a>
+                                </div> 
+                            </div>
+                            <div class="sc-ph-col">
+                                <!-- 物品名称 -->
+                                <div class="sc-name">
+                                    <p><a href="" title="">Double-Layered Top</a></p>
+                                </div>
+                                <!-- 物品编号 -->
+                                <div class="sc-no">
+                                    <p><a href="" title="">Ref. 2514/302</a></p>
+                                </div>
+                                <!-- 物品颜色 -->
+                                <div class="sc-color">
+                                    <p>Color: <span>Green</span></p>
+                                </div>
+                                <!-- 商品尺寸和总计 -->
+                                <div class="sc-sa">
+                                    <!-- 物品尺寸 -->
+                                    <div class="sc-size">
+                                        <p>Size: <span>L</span></p>
+                                    </div>
+                                    <!-- 物品总计 -->
+                                    <div class="sc-am">
+                                        <p>€ 89,95</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 单条物品 -->
+                        <div class="sc-con-ph">
+                            <div class="sc-ph-col">
+                                <!-- 物品图片 -->
+                                <div class="sc-pic">
+                                    <a href="" title=""><img src="images/sc-img.jpg" alt=""></a>
+                                </div> 
+                            </div>
+                            <div class="sc-ph-col">
+                                <!-- 物品名称 -->
+                                <div class="sc-name">
+                                    <p><a href="" title="">Double-Layered Top</a></p>
+                                </div>
+                                <!-- 物品编号 -->
+                                <div class="sc-no">
+                                    <p><a href="" title="">Ref. 2514/302</a></p>
+                                </div>
+                                <!-- 物品颜色 -->
+                                <div class="sc-color">
+                                    <p>Color: <span>Brown</span></p>
+                                </div>
+                                <!-- 商品尺寸和总计 -->
+                                <div class="sc-sa">
+                                    <!-- 物品尺寸 -->
+                                    <div class="sc-size">
+                                        <p>Size: <span>L</span></p>
+                                    </div>
+                                    <!-- 物品总计 -->
+                                    <div class="sc-am">
+                                        <p>€ 189,95</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 购物车总价 -->
+                    <div class="sc-total sc-overall">
+                        <p>Subtotal:</p>
+                        <p>€567,95</p>
+                    </div>
+                </div>
+            </div>
+            <!-- W分割 -->
+            <div class="w-part">
+                
+            </div>
+            <!-- 购物地址内容 -->
+            <div class="sp-address">
+                <!-- 购物地址标题 -->
+                <div class="a-title">
+                    <h1>Shipping address</h1>
+                    <small>All fields are required</small>
+                </div>
+                <!-- 购物地址表单 -->
+                <div class="row">
+                    <form class="shopping-f col-md-6 col-md-offset-3">
+                        <div class="form-group">
+                            <label for="delivery-method" class="sp-bl">Select delivery method</label>
+                            <div class="shopping-select" id="delivery-method">
+                                <span class="shopping-select-selection form-control">DHL International - €15,00</span>
+                                <button type="button"></button>
+                                <ul class="shopping-select-menu">
+                                    <li>DHL International - €16,00</li>
+                                    <li>DHL International - €17,00</li>
+                                    <li>DHL International - €18,00</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="" class="sp-bl">First name</label>
+                                <input type="text" name="" value="" placeholder="First name" id="" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="" class="sp-bl">last name</label>
+                                <input type="text" name="" value="" placeholder="Last name" id="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="sp-bl">Address(<span>&nbsp;line 1&nbsp;</span>)</label>
+                            <input type="text" name="" value="" placeholder="Address" id="" class="form-control">
+                        </div>
+                        <div class="form-group">
+                            <label for="" class="sp-bl">Address(<span>&nbsp;line 2&nbsp;</span>)</label>
+                            <input type="text" name="" value="" placeholder="Address" id="" class="form-control">
+                        </div> 
+                        <div class="row">
+                            <div class="col-md-6 form-group">
+                                <label for="" class="sp-bl">city</label>
+                                <input type="text" name="" value="" placeholder="city" id="" class="form-control">
+                            </div>
+                            <div class="col-md-6 form-group">
+                                <label for="" class="sp-bl">postal code</label>
+                                <input type="text" name="" value="" placeholder="postal code" id="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 last-fgroup ph-n">
+                                <label for="" class="sp-bl">Phone number</label>
+                                <input type="tel" name="" value="" placeholder="Phone number" id="" class="form-control">
+                            </div>
+                            <div class="col-md-6 last-fgroup">
+                                <label for="" class="sp-bl">E-mail</label>
+                                <input type="email" name="" value="" placeholder="E-mail" id="" class="form-control">
+                            </div>
+                        </div>
+                        <div class="shopping-ckbox">
+                            <input type="checkbox" name="" value="" id="cus-billing">
+                            <label for="cus-billing">
+                                Use this address for Billing
+                            </label>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- W分割 -->
+            <div class="w-part">
+                
+            </div>
+            <!-- 付款选项 -->
+            <div class="pay-option">
+                <!-- 付款选项标题 -->
+                <div class="a-title">
+                    <h1>Payment options</h1>
+                    <small>All fields are required</small>
+                </div>
+                <!-- 商品费用 -->
+                <div class="pay-price">
+                    <div class="row">
+                        <div class="col-xs-6 text-right"><span>Subtotal:</span></div>
+                        <div class="col-xs-6 text-left"><span>€567,95</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 text-right"><span>Shipping:</span></div>
+                        <div class="col-xs-6 text-left"><span>€15,00</span></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 text-right"><span>Total:</span></div>
+                        <div class="col-xs-6 text-left"><span>€582,95</span></div>
+                    </div>
+                </div>
+                <!-- 付款方式 -->
+                <div class="row">
+                    <form class="shopping-f col-md-6 col-md-offset-3">
+                        <div class="last-fgroup">
+                            <label for="pay-method" class="sp-bl">Select payment method</label>
+                            <div class="shopping-select" id="pay-method">
+                                <span class="shopping-select-selection form-control">Credit Card<span class="shopping-select-img"></span></span>
+                                <button type="button"></button>
+                                <ul class="shopping-select-menu">
+                                    <li>Credit Card1 <span class="shopping-select-img"></span></li>
+                                    <li>Credit Card2 <span class="shopping-select-img"></span></li>
+                                    <li>Credit Card3 <span class="shopping-select-img"></span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button type="submit" class="sub-btn">ORDER NOW</button>
+                    </form>
+                </div>  
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="shopping-footer">
+            <div class="row">
+                <div class="col-sm-3 fo-col">
+                    <h3>Collection</h3>
+                    <ul>
+                        <li><a href="category_all.html" title="">Woman (1725)</a></li>
+                        <li><a href="category_men.html" title="">Men (635)</a></li>
+                        <li><a href="" title="">Kids (2514)</a></li>
+                        <li><a href="" title="">Comming Soon (76)</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>site</h3>
+                    <ul>
+                        <li><a href="" title="">Terms of Service</a></li>
+                        <li><a href="" title="">Privacy Policy </a></li>
+                        <li><a href="" title="">Copyright Policy </a></li>
+                        <li><a href="" title="">Press Kit </a></li>
+                        <li><a href="" title="">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="about.html" title="">About us</a></li>
+                        <li><a href="" title="">Shipping Metods</a></li>
+                        <li><a href="" title="">Career</a></li>
+                        <li><a href="contact.html" title="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>Social</h3>
+                    <p>Shoper is made with love in Warsaw,</p>
+                    <p>2014 © All rights reserved. El Passion</p>
+                    <ul class="social-icon">
+                        <li><a href="" title=""><img src="images/soc-icon_03.png" alt=""></a></li>
+                        <li><a href="" title=""><img src="images/soc-icon_05.png"></a></li>
+                        <li><a href="" title=""><img src="images/soc-icon_07.png"></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
+        <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="js/select_op.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function() {
+
+               $("#delivery-method").children('button').click(function(event){
+                    
+                   $("#delivery-method").children('button').select_op();
+               });
+               $("#pay-method").children('button').click(function(event){
+                    
+                   $("#pay-method").children('button').select_op();
+               });
+
+           });
+        </script>
+    </body>
+</html>

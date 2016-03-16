@@ -1,0 +1,81 @@
+<html>
+<head>
+	<meta http-equiv = "Content-Type"
+	content = "texthtml;charset = utf-8" />
+  <title>2016.02.02</title>
+  <style type= "text/css">
+  <!-- 
+  body {background-image:url(./birthday.jpg);
+         background-attachment:scroll;
+         background-position:50% 100%;
+         background-repeat:no-repeat }
+  h2{font-family: 楷体;
+      font-size: 50pt;
+      color :red;
+      text-align: center}  
+  p{  font-family: 楷体
+    position:absolute;
+          text-align: center;
+          font-size: 20pt;
+           }
+  audio{    position:absolute;
+            left:550px;
+           }
+  -->
+  </style>
+</head>
+<body>
+  <h2>祝xx生日快乐</h2>
+  <script type = "text/javascript">  
+    if(!document.all)
+    {
+    	yourLogo = "Happy birthday";
+    	logoFont = "黑体";
+        logoFont = "Arial";
+        logocolor = "#00ffff";
+        yourLogo = yourLogo.split('');
+        L = yourLogo.length;
+        TrigSplit = 360 / L;
+        Sz = new Array();
+        logowidth = 100;
+        logoheight = -30;
+        ypos = 0;
+        xpos = 0;
+        step = 0.03;
+        currstep = 0;
+        document.write('<div id= "outer"style = "position:absolute;top:0px;left:0px"><div style= "position:relative">');
+        for(i = 0;i<L;++i)
+        {
+        	document.write('<div id="ie" style="position:absolute;top:0px;left:0px;'+'width:20px;height:20px;font-family:'+logoFont+';font-size:100px;'+'color:'+logocolor+';text-align:center">'+yourLogo[i]+'</div>');
+        }
+        document.write('</div></div>');
+        function Mouse(){
+        	ypos=event.y;
+        	xpos = event.x - 5;
+        }
+        document.onmousemove = Mouse;
+        function animatelogo(){
+        	outer.style.pixelTop = document.body.scrollTop;
+        	for (i = 0;i<L;++i)
+        	{
+        		ie[i].style.top = ypos +logoheight * Math.sin(currstep + i * TrigSplit * Math.PI / 180);
+        		ie[i].style.left = xpos + logowidth * Math.cos(currstep + i * TrigSplit * Math.PI / 180);
+        		Sz[i] = ie[i].style.pixelTop - ypos;
+                  if(Sz[i] < 5)  sz[i] = 5;
+                  ie[i].style.fontSize = Sz[i] / 0.9;
+        	}
+        	currstep-=step;
+        	setTimeout('animatelogo()',20);
+        }
+        window.onload = animatelogo;
+    }
+   </script>
+   <p >点我！点我！</p>
+ <audio controls="controls"  >
+  <source src="./music.ogg" type="audio/ogg">
+  <source src="./music.mp3" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+
+</body>
+</html>

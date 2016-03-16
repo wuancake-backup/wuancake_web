@@ -7,26 +7,174 @@
         <title>管理系统</title>
         <link href="../bootstrap-3.3.5-dist/css/bootstrap.min.css" rel="stylesheet">
         <style type="text/css">
-            @media (max-width: 768px){
+/*            @media (max-width: 768px){
                 .sidebar-left{
                     display:none;
                 }
-            }
-            @media (min-width: 768px){
+            }*/
+/*            @media (min-width: 768px){
                 .control-sidebar{
                     display:none;
                 }
                 .sidebar-left{
                     display:block;
                 }
+            }*/
+            html,body{
+                min-height:100%;
+            }
+            .main-header>.logo,.sidebar{
+                width: 230px;
+            }
+            .sidebar{   
+                font-size: 18px;
+                background-color: #222d32;
+                min-height: 100%;    
+                position: absolute;       
+            } 
+            .sidebar a{
+                color:#9d9d9d;
+            }
+            .sidebar .nav>li>a:hover,.sidebar .nav>li>a:focus{
+                background-color: transparent;
+                color:#fff;
+            }
+            .main,.main-header>.navbar{
+                margin-left: 230px;
+            }
+            .main,.main-header>.navbar,.main-header>.logo,.sidebar{
+                transition: all .25s linear;
+                -moz-transition: all .25s linear; /* Firefox 4 */
+                -webkit-transition: all .25s linear; /* Safari 和 Chrome */
+                -o-transition: all .25s linear; /* Opera */
+            }
+            @media (min-width: 768px){
+                .sidebar-collaspe .sidebar,.sidebar-collaspe .main-header>.logo{
+                    width: 50px;
+                    position: absolute;
+                } 
+                .sidebar-collaspe .main,.sidebar-collaspe .main-header>.navbar{
+                    margin-left: 50px;
+                } 
+                .sidebar-collaspe .main-header>.logo>.logo-lg{
+                    display:none;
+                }
+                .sidebar-collaspe .main-header>.logo>.logo-mini{
+                    display:inline;
+                }
+                .sidebar-collaspe .sidebar a>.li-item{
+                    position: absolute;
+                    top:0px;
+                    left:50px;
+                    width:150px;
+                    padding:10px 15px;
+                    display:none;
+                    background-color: #333;
+                }
+                .sidebar-collaspe .sidebar a:hover>.li-item{
+                    display:block;
+                    z-index: 1;
+                }
+            }
+            @media (max-width:768px){
+                 .sidebar{
+                    display: none;
+                }
+                .main{
+                    margin-left: 0;
+                }
+                .sidebar-open .sidebar{
+                    display:block;
+                }
+                .sidebar-open .main{
+                    margin-left: 230px;
+                    width:100%;
+                }
+            }
+            .li-icon{
+                margin-right: 20px;
+            }
+            #sidebar-control{
+                background-color: #101010;
+                color:#fff;
+                padding:9px 10px;
+                border-color: #333;
+                outline: none;
+                /*float:left;*/
+            }
+            #sidebar-control .icon-bar{
+                background-color: #fff;
+                display: block;
+                width: 22px;
+                height: 2px;
+                border-radius: 1px;
+                /*float:left;*/
+            }
+            #sidebar-control .icon-bar+.icon-bar {
+                margin-top: 4px;
+            }
+            .sidebar>button{
+                position: absolute;
+                transform-origin：right top;
+                -webkit-transform-origin: right top;
+                -ms-transform-origin: right top;
+                -moz-transform-origin: right top;
+                -o--transform-origin: right top;
+                transform:rotate(270deg);
+                -ms-transform:rotate(270deg);     /* IE 9 */
+                -moz-transform:rotate(270deg);    /* Firefox */
+                -webkit-transform:rotate(270deg); /* Safari 和 Chrome */
+                -o-transform:rotate(270deg);  /* Opera */
+                right:0px;
+                z-index: 1;
+            }
+            .main-header>.navbar{
+               /* margin-left: 230px;*/
+                border:none;
+                border-radius:0;
+            }
+            .main-header>.logo{
+                display:block;
+                float:left;
+                /*width:230px;*/
+                font-size: 18px;
+                line-height: 20px;
+                padding:15px 0px;
+                height:50px;
+                text-align:center;
+                color:#9d9d9d;
+                background-color: #222;
+
+            }
+            .main-header>.logo:hover,.main-header>.logo:focus{
+                text-decoration: none;
+                color:#fff;
+            }
+            .main-header>.logo>.logo-mini{
+                display:none;
             }
         </style>
     </head>
     <body>
-    <nav class="navbar navbar-inverse">
+<div class="main-header">
+    <!-- 导航栏左侧logo -->
+    <a href="#" class="logo" >
+        <span class="logo-lg">Management System</span>
+        <span class="logo-mini">MS</span>
+    </a>
+    <!-- 导航栏主体 -->
+    <nav class="navbar navbar-inverse" style="margin-bottom:0px;">
         <div class="container-fluid">
+           
             <!-- 导航标题及导航折叠按钮 -->
             <div class="navbar-header">
+                <button type="button" class="btn btn-default navbar-btn" id="sidebar-control">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <!-- 导航折叠按钮 -->
                 <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" aria-expanded="false" data-target="#navbar_content"><!-- 默认不展开 -->
                     <!-- .sr-only是 除了屏幕阅读器外，其他设备上隐藏该元素，这个是用于屏幕阅读器的，帮助残障人士更好的访问网站。 -->
                     <span class="sr-only">Toggle navigation</span>
@@ -35,7 +183,8 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="#" class="navbar-brand">管理系统</a>
+                <!-- 导航标题 -->
+                <!-- <a href="#" class="navbar-brand">管理系统</a> -->
             </div>
             <!-- 导航条的导航链接、表单等其他内容，在响应式屏幕变窄时被折叠到折叠按钮中 -->
             <div class="collapse navbar-collapse" id="navbar_content">
@@ -79,32 +228,55 @@
             </div>
         </div>
     </nav>
+</div>
+    <!-- 左侧边栏 -->
+    <div class="sidebar">
 
+                <ul class="nav nav-pills nav-stacked">
+                    <li><a href="#"><span class="glyphicon glyphicon-star li-icon"></span> 
+                    <span class="li-item">首页</span></a></li>
+                    <li><a href="#"><span  class="glyphicon glyphicon-th-large li-icon"></span> 
+                    <span class="li-item">信息建立</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-th li-icon"></span> 
+                    <span class="li-item">信息查询</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-qrcode li-icon"></span> 
+                    <span class="li-item">信息管理</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-bookmark li-icon"></span> 
+                    <span class="li-item">设置</span></a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-tint li-icon"></span> 
+                    <span class="li-item">帮助</span></a></li>
+                </ul>
+                <!-- 控制按钮位于边栏旁边 -->
+                <!-- 显示效果不佳 -->
+                <!-- <button >Sidebar</button> -->
+    </div>
     <!-- 主要内容 -->
-    <div class="container-fluid">
-        <div class="row">
+
+    <div class="container-fluid main">
+<!--         <div class="row">
             <div class="col-md-12 control-sidebar">
                 <button class="btn btn-primary" data-toggle="collapse" data-target="#sidebar">Menu</button>
             </div>
-        </div>
+        </div> -->
         <div class="row">
             <!-- 左侧边栏 -->
-            <div class="col-sm-3 col-md-2 sidebar-left" id="sidebar">
+      <!--       <div class="col-sm-3 col-md-2 sidebar-left" id="sidebar">
                 <ul class="nav nav-pills nav-stacked">
                     <li class="active"><a href="">首页</a></li>
                 </ul>
                 <ul class="nav nav-pills nav-stacked">
-                    <li><a href="#">信息建立</a></li>
-                    <li><a href="#">信息查询</a></li>
-                    <li><a href="#">信息管理</a></li>
+                    <li><a href="#">
+                    <span  class="glyphicon glyphicon-star"></span> 信息建立</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span> 信息查询</a></li>
+                    <li><a href="#"><span class="glyphicon glyphicon-star"></span> 信息管理</a></li>
                 </ul>
                 <ul class="nav nav-pills nav-stacked">
                     <li><a href="#">设置</a></li>
                     <li><a href="#">帮助</a></li>
                 </ul>
-            </div>
+            </div> -->
             <!-- 右侧管理控制台 -->
-            <div class="col-sm-9 col-md-10">
+            <div class="col-sm-12 col-md-12">
                 <h1>管理控制台</h1>
                 <hr>
                 <!-- 一组按钮 -->
@@ -252,5 +424,19 @@
     <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>
+    <script>
+    $("#sidebar-control").click(
+        function(){
+            if ($(window).width() < 768) {
+                $("body").toggleClass('sidebar-open');
+            } else {
+                $("body").toggleClass('sidebar-collaspe');
+            }
+            
+            // $("body").toggleClass('main-sidebar-collaspe');
+        }
+    );
+
+    </script>
     </body>
 </html>
