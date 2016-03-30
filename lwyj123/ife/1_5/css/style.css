@@ -1,0 +1,127 @@
+html, body {
+    height: auto;
+    min-width: 870px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+article p a {
+    color: blue;
+}
+
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+    overflow:hidden;
+}
+
+.banner {
+    min-width: 860px;
+    height: 62px;
+    background-color: slategray;
+}
+
+.logo {
+    width: 200px;
+    height: 50px;
+    margin: 10px 50px 10px 10px;
+}
+
+.menu {
+    float: right;
+}
+.menu ul {
+    margin: 10px 50px 10px 10px;
+    list-style-type: disc;
+    /*float: right;*/
+    position: relative;
+    top: 0;
+    right: 0;
+}
+
+.menu li {
+    float: left;
+    margin: 10px;
+}
+
+
+.content {
+    background-color: silver;
+    width: 100%;
+    height: 95%;
+}
+
+.text {
+    margin-right: 550px;
+}
+article {
+    background-color: white;
+    margin: 50px;
+    padding: 30px;
+    border: 1px solid #cccccc;
+
+}
+article>p {
+    text-indent: 2em;
+}
+
+figure {
+    height:120px;
+    width: 140px;
+    border: 1px solid #aaa;
+    text-align: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    display: inline-block;
+}
+figure img{
+    height: 60px;
+    width: 100px;
+}
+table {
+    width: 100%;
+    margin: 0 auto;
+    border-color: #cccccc;
+    border-collapse: collapse;
+}
+
+thead {
+    color: white;
+    background: #333;
+}
+tfoot {
+    background-color: #ccc;
+}
+
+.sidebar {
+    float: right;
+    background-color: white;
+    margin: 50px;
+    padding: 10px;
+    border: 1px solid #cccccc;
+}
+.sidebar textarea {
+    max-width: 300px;
+}
+#confirm {
+    width: 100%;
+    height: 30px;
+    background: #3355D0;
+    color: #fff;
+    cursor: pointer;
+    border-radius: 8px;
+    border:1px solid #3355D0;
+    font-weight: 800;
+}
+
+.footer {
+    height: 50px;
+    background-color: black;
+}
