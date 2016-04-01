@@ -1,0 +1,4 @@
+用找到的实用小工具balloon装了一下B。
+html链接不显示下划线和颜色固定 a{ text-decoration: none;color: white;}
+段落前面两个字的距离，使用首行缩进text-indent article p {text-indent: 2em;}
+用margin时出现了

@@ -1,0 +1,46 @@
+﻿IconColor:按钮颜色
+FaceColor：背景颜色
+BkColor：按钮区域的背景颜色
+
+
+
+
+var ROLEs = {
+	H3: {
+		'Parent': 'H2',
+		'name': '副总经理(市场)'
+	},
+	H1: {
+		'Parent': 'H0',
+		'name': '公司机构'
+	},
+	H7: {
+		'Parent': 'H6',
+		'name': '副总经理(总务)'
+	},
+	H4: {
+		'Parent': 'H3',
+		'name': '销售经理'
+	},
+	H2: {
+		'Parent': 'H1',
+		'name': '总经理'
+	},
+	H8: {
+		'Parent': 'H0',
+		'name': '财务总监'
+	},
+	H6: {
+		'Parent': 'H4',
+		'name': '仓管总监'
+	},
+	H5: {
+		'Parent': 'H4',
+		'name': '销售代表'
+	},
+	H0: {
+		'Parent': '',
+		'name': 'root'
+	}
+};
+
