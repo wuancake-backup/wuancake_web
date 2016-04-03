@@ -1,0 +1,2 @@
+18:02 2016/4/3 完成任务13
+内容替换部分一开始本来要用innerText,后来百度说虽然innerText仅指内容部分，但是只适用于IE浏览器。而用innerHTML虽然无兼容问题，但是在#aqi-input中输入的内容中含HTML标签时，html标签在#aqi-display中就无法文字化输出。
