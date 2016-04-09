@@ -1,0 +1,15 @@
+选择器可以使用querySelectorAll
+StringObject.match 里面参数可以是正则的那个类型Reg啥的忘记了。
+插入数据最好用push之类的，直接data['woca'] = 'keke' 这样的用法直接将Array当一个对象用，length不会自动增加
+
+对于Array.sort我还是搞不清楚怎么写是升序逆序，艹，到时候直接试试不就好了，反正我现在弄清楚了之后肯定会忘。
+
+var data = new Array();
+	var array = document.querySelectorAll('#source li');
+	
+	//这个循环到后面为什么会多循环一次出现一个item=“item”的奇葩情况？
+	//好吧知道了，array是一个对象，里面有一些其他的属性，比如这个操蛋的array[item]控制台里面的值是item()一个函数
+	//尼玛以后非纯数组就不用for in了，艹。
+	for(var fuck in array) {
+		if(fuck == 'item')
+			break;
