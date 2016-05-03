@@ -1,0 +1,2 @@
+jquery里$('#class')的实现
+	$ = function(el) { return document.querySelector(el); };
