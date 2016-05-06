@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="test.css" />
+		<script type="text/javascript">
+			var mydata=new Date();
+		    var myyear=mydata.getFullYear();
+		    var mymonth=mydata.getMonth();
+		    var myday=mydata.getDate();
+		    var myweek=mydata.getDay();
+		    var week=["星期日","星期一","星期二","星期三","星期四","星期五","星期六",];
+		    //通过javascript的日期对象来得到当前的日期，并输出。
+		  
+		    //成绩是一长窜的字符串不好处理，找规律后分割放到数组里更好操作哦
+		    var scoreStr = "小明:87;小花:81;小红:97;小天:76;小张:74;小小:94;小西:90;小伍:76;小迪:64;小曼:76";
+		    var mystr=scoreStr.split(";");
+		    for(var i=0;i<mystr.length;i++){
+		      mystr[i]=parseInt(mystr[i].substring(3,5));
+		      }
+		
+		    //从数组中将成绩撮出来，然后求和取整，并输出。
+		    var sum=0;
+		    for(var i=0;i<mystr.length;i++){
+		      sum=sum+mystr[i];
+		    }
+		    document.write(myyear+"年"+mymonth+"月"+myday+"日"+" "+week[myweek]+"--"+"班级总分为："+Math.round(sum));
+		</script>
+	</head>
+	<body>
+		
+	</body>
+</html>
