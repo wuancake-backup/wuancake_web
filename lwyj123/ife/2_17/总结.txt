@@ -1,0 +1,2 @@
+返回dataObject中星期几
+	dataObject.getDay();

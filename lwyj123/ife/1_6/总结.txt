@@ -1,0 +1,31 @@
+没什么太值得注意的，单纯练习了HTML和CSS
+
+在写的时候遇到一个情况，如果我html这么写
+<div class=words>
+	<article>
+		<h1>What</h1>
+		<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+	</article>
+	<article>
+		<h1>When</h1>
+		<p></p>
+	</article>
+	<article>
+		<h1>How</h1>
+		<p>前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端前端</p>
+	</article>
+</div>
+如何让What和When和How显示成不同的样式？毕竟我不想每一个article都加一个class
+可用:nth-child() 选择器
+例如
+p:nth-child(2) {
+    background:#ff0000;
+}
+ps：这个可以用odd和even或者其他公式比如
+p:nth-child(3n+0) {
+    background:#ff0000;
+}
+
+学习了个新的属性word-break 用来换行的
+http://www.w3school.com.cn/cssref/pr_word-break.asp
+
