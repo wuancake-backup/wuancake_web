@@ -26,8 +26,9 @@
         .main .delete{background: url(images/btn.gif) no-repeat -180px center;cursor: pointer;}
         .main .pic{position: absolute;bottom: 0;left:0;}
 
-        .main .mRight{width:310px;height:390px;background: rgba(0,0,0,0.5);float: left;padding:20px 20px; color:#fff;overflow: auto;}
-        #note{clear:both;width:600px;margin:0 auto;}
+        .main .box{width:310px;height:390px;padding:20px 20px;background: rgba(0,0,0,0.5);float: left;overflow: hidden;}
+        .main .mRight{width:370px;height:390px; color:#fff;overflow-y: auto;}
+        #note{width:550px;margin:0 auto;}
     </style>
     <script type="text/javascript">
         function a() {
@@ -69,8 +70,9 @@
             </ul>
         <div class="pic"><img src="images/pic.jpg" /></div>
     </div>
-    <div class="mRight">
-        <pre>
+    <div class="box">
+        <div class="mRight">
+          <pre>
 歌曲名:樱花的眼泪
 歌手:阿兰
 专辑:2011年2月新歌速递2
@@ -142,8 +144,10 @@ PAL
 我逃不过你，我离不开你
 我逃不过你，我离不开你
             </pre>
+        </div>
     </div>
 </div>
-<div id="note">只有一个功能，暂停/播放。。。<br/>用js函数切换audio的src，应该可以做到切歌。过几天再试试。。<br/>PS:歌词滚动匀速向上翻，时间就设定为一首歌中有歌词的时间，大致能对上。</div>
+<div id="note">只有一个功能，暂停/播放。。。<br/>用js函数切换audio的src，应该可以做到切歌。过几天再试试。。<br/>PS:歌词滚动匀速向上翻，技艺不精，还得补课。。。</div>
+
 </body>
 </html>
