@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+	<title>size</title>
+	<style type="text/css">
+	#box{height: 100px;width: 300px;}
+	</style>
+	<script type="text/javascript">
+		function doZoom(size) {
+			document.getElementById("box").style.fontSize = size+'px';
+		}
+	</script>
+</head>
+<body>
+<a href="javascript:doZoom(25)">大</a>
+<a href="javascript:doZoom(20)">中</a>
+<a href="javascript:doZoom(15)">小</a>
+<div id="box">
+	<p>hahahaha</p>
+</div>
+
+</body>
+</html>
