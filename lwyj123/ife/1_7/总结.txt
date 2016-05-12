@@ -1,0 +1,29 @@
+写了那么多页面了，是时候总结一波结构了。尽量用html5的来写dom结构，语义化。
+主要现在写的大部分都是单页的，以1_7为例子
+<header>      //头
+    <nav>     //页面导航栏
+    </nav>
+</header>
+<section>     //第一部分
+    <article>       //一般用于文章
+        <header>    //article还能嵌header？学到了
+        </header>
+    </article>
+    <article>
+        <h1>what the fa..膜fa师</h1>
+        <aside>         //aside有两种用法，一种是在article中作为主要元素的附属
+        </aside>
+    </article>
+</section>
+
+<aside>             //aside第二种用法，作为页面的附属信息部分，一般作为侧边栏
+
+</aside>
+
+<figure>        //组合图片和图片描述
+    <img src="img.gif">
+    <figcaption>这是图片描述信息</figcaption>           //描述置于figure第一个或最后一个
+</figure>
+
+<footer>        //
+</footer>

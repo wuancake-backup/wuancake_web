@@ -21,7 +21,14 @@
   获取aqi-input输入的值，并显示在aqi-display中
   */
 	document.getElementById("button").addEventListener("click", function() {
-		document.getElementById("aqi-display").innerHTML = document.getElementById("aqi-input").value;
+		var reg = new RegExp("^(0|[1-9][0-9]*)$");
+		if(reg.test(document.getElementById("aqi-input").value))
+			document.getElementById("aqi-display").innerHTML = document.getElementById("aqi-input").value;
+		else {
+			document.getElementById("aqi-display").innerHTML = '';
+			document.getElementById("aqi-input").value = '';
+			alert('请输入合法数字');
+		}
 	})
 })();
 
