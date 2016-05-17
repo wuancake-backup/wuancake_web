@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="test.css" />
+		<script type="text/javascript">
+			//获取显示秒数的元素，通过定时器来更改秒数。
+		   var s=5;
+		   function time(){
+		       document.getElementById("t").innerHTML=s;
+		       s=s-1;
+		       if(s>=1){
+		           var q=setTimeout("time()",1000);
+		       }
+		       else{
+		           clearTimeout(q);
+		           window.location.assign("http://www.imooc.com/");
+		       }
+		       }
+		       setTimeout("time()",0);
+		   //通过window的location和history对象来控制网页的跳转。
+		   function change(){
+		       window.history.go(-1);
+		   }
+		</script>
+	</head>
+	<body>
+		<!--先编写好网页布局-->
+	  <p>操作成功</p>
+	  <span id="t"></span>秒后回到主页<a href="" id="l" onClick="change()">返回</a>
+	</body>
+</html>
