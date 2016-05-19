@@ -6,182 +6,16 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <title>Main</title>
         <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.5-dist/css/bootstrap.min.css">
-        <style type="text/css" media="screen">
-            @font-face {
-                font-family: 'Lato-Bold';
-                src: url(fonts/Lato-Bold.ttf);
-            }
-            @font-face {
-                font-family: 'Lato-Regular';
-                src: url(fonts/Lato-Regular.ttf);
-            }
-            body{
-                font-family: 'Lato-Regular';
-            }
-            .shopping-navbar{
-                padding:20px 0px;
-                border-bottom: 1px solid #e5e5e5;              
-            }
-            .icon-bgimg{
-                background-position: center center;
-                background-repeat: no-repeat;
-            }
-            .shopping-navbar .navbar{
-                margin-bottom: 0;
-                border:none;
-            }
-            .shopping-navbar .navbar-nav>li>a{
-                padding-top: 0;
-                padding-bottom: 0;
-                line-height: 43px;
-                font-size: 14px;
-                color:#303030;
-            }
-            .shopping-navbar .navbar-toggle{
-                padding:18px 14px;
-                background-color: #8d8d8d;
-                margin:0;
-                border:none;
-                border-radius: 0;
-            }
-            .shopping-navbar .navbar-toggle .icon-bar{
-                background-color: #fff;
-                width:32px;
-                height:4px;
-            }
-            .shopping-navbar .navbar-toggle .icon-bar+.icon-bar{
-                margin-top: 6px;
-            }
-            .shopping-navbar .navbar-brand{
-                background-color: #222222;
-                color:#fff;
-                font-size: 25.89px;
-                line-height: 22px;
-                padding-top:19px;
-                padding-bottom: 19px;
-                height:auto;
-            }
-            .navbar-cart{
-                display:block;
-                float:right;
-                margin-right: 25px;
-                width:60px;
-                height:60px;
-                background-image: url(images/home_res_03.png);
-            }
-            .shopping-navbar .user>li>a span{
-                width:36px;
-                height:43px;
-                display:inline-block;
-                vertical-align: bottom;
-            }
-            .shopping-navbar .user>li:nth-child(1)>a span{
-                background-image: url(images/01main_03.png);
-            }
-            .shopping-navbar .user>li:nth-child(2)>a span{
-                background-image: url(images/01main_05.png);
-            }
-
-            .shopping-navbar .user .dropdown>a,.shopping-navbar .user .search button{
-                width:40px;
-                height:43px;
-                margin-left: 15px;
-                background-image: url(images/01main_08.png);
-                border:1px solid #959595;
-            }
-            .shopping-navbar .user .search input{
-                width:auto;
-                display:inline-block;
-            }
-            .shopping-navbar .user .search button{
-                vertical-align:middle;
-            } 
-            .shopping-navbar .user .dropdown-menu{
-                padding:16px 0 16px 9px;
-            }
-            @media (min-width: 768px){
-                .shopping-navbar{
-                    padding:36px 0px;
-                }
-                .shopping-navbar .navbar-brand{
-                    padding-top: 0;
-                    padding-bottom: 0;
-                    line-height: 43px;
-                    font-size: 14px;
-                }
-                .navbar-cart{
-                    display:none;
-                }
-            }
-            .banner{
-                text-align: center;
-            }
-            .banner:before{
-                display: table;
-                content: " ";
-            }
-            .banner:after{
-                display: table;
-                content: " ";
-                clear:both;
-            }
-            .banner h1{
-                font-size: 70px;
-                line-height: 80px;
-                margin-top: 50px; 
-                margin-bottom: 38px;
-                color:#303030;
-                text-transform: uppercase;
-  
-            }
-            .banner h2{
-                font-size: 24px;
-                line-height: 35px;
-                margin-bottom: 78px;
-                margin-top: 0;
-                font-family: 'Georgia Italic';
-                color:#606060;
-            }  
-            .ban-btn{
-                margin-bottom: 153px;
-                display:none;
-            }          
-            .ban-btn a{
-                display:inline-block;
-                padding:20px 35px;
-                font-size: 14px;
-                line-height: 18px;
-                border: 1px solid #959595;
-                color:#303030;
-            }
-            .ban-btn a:hover{
-                text-decoration: none;
-            }
-            @media (min-width: 768px){
-                .banner h1{
-                    font-size: 72px;
-                    line-height: 85px;
-                    margin-top: 135px; 
-                    margin-bottom: 0; 
-                }
-                .banner h2{
-                    font-size: 24px;
-                    line-height: 35px;
-                    margin-bottom: 65px;
-                }
-                .ban-btn{
-                    display:block;
-                }
-            }
-           
-
-
-        </style>
+       
+        <script type="text/javascript" src="../lib-flexible-master/build/flexible_css.debug.js"></script>
+        <script type="text/javascript" src="../lib-flexible-master/build/flexible.debug.js"></script> 
+        <link rel="stylesheet" type="text/css" href="css/global.css">
+        <link rel="stylesheet" type="text/css" href="css/main.css">
     </head>
     <body>
     <div class="container">
         <!-- 导航条 -->
-        <div class="shopping-navbar">
+        <div class="shopping-navbar shopping-container">
             <nav class="navbar">
                 <div class="container-fluid">
                     <div  class="navbar-header">
@@ -196,20 +30,20 @@
 
                     <div class="collapse navbar-collapse" id="main-navbar">
                         <ul class="nav navbar-nav">
-                            <li><a href="#">Woman</a></li>
-                            <li><a href="#">Men</a></li>
+                            <li><a href="category_all.html">Woman</a></li>
+                            <li><a href="category_men.html">Men</a></li>
                             <li><a href="#">Kids</a></li>
                             <li><a href="#">Comming Soon</a></li>
-                            <li><a href="#">About</a></li>
+                            <li><a href="about.html">About</a></li>
                         </ul>
                         <ul class="nav navbar-nav navbar-right user">
                             <li>
                                 
-                                <a href="#"> <span class="icon-bgimg"></span>Log In</a>
+                                <a href="login.html"> <span class="icon-bgimg"></span>Log In</a>
                             </li>
                             <li>
                                 
-                                <a href="#"><span class="icon-bgimg"></span> Basket(0)</a>
+                                <a href="shopping_cart.html"><span class="icon-bgimg"></span> Basket(0)</a>
                             </li>
                             <li class="dropdown">
                                 <a href="#" class="dropdown-toggle icon-bgimg" data-toggle="dropdown" role="button"></a>
@@ -228,14 +62,165 @@
                 </div>
             </nav> 
         </div>
-        <div class="banner">
+        <!-- banner -->
+        <div class="banner shopping-container">
             <h1>Hazy Shade of spring</h1>
-            <h2>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.</h2>
+            <p>Quisque lorem tortor fringilla sed, vestibulum id, eleifend justo.</p>
             <div class="ban-btn">
                 <a href="#" title="">check new arrivals</a>
             </div>
-            
         </div>
+        <!-- gallery -->
+        <div class="gallery text-center shopping-container">
+                <div class="col-sm-6 col-md-3">
+                    <div class="two-line row">
+                        <a href="#" title="">
+                            <h1>HEATHER</h1>
+                            <h1>GREY BASICS</h1>
+                            <p>New Arrival</p>
+                        </a>
+                    </div>
+                    <div class="one-line row em-mo">
+                        <a href="" title=""></a>
+                    </div> 
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="one-line twit row">
+                        <a href="#" title="">
+                            <div class="twit-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <p>Opening Ceremony </p>
+                            <p>@IndonesiaFW tomorrow, </p>
+                            <p>PMers! Are you ready for the</p>
+                            <p>biggest fashion movement in</p>
+                            <p class="brand-id">@PuspitaMarthaID </p>
+                        </a>
+                    </div>
+                    <div class="one-line row series">
+                        <a href="#" title="">
+                            <h1>chuck taylors</h1>
+                            <p>$125.00</p>
+                        </a>
+                    </div>
+                    <div class="one-line row l-arrow">
+                        <a href="#" title="">
+                            <div class="arrow-icon">
+                                <span></span>
+                            </div>
+                            <h1>Jaxon Hat</h1>
+                            <p>Beanie Hat</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="one-line row em-mo">
+                        <a href="#" title=""></a>
+                    </div>
+                    <div class="one-line row twit">
+                        <a href="#" title="">
+                            <div class="twit-icon">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <p>Girls, Girls, Girls: A Look </p>
+                            <p>Back at 50 Years of the  </p>
+                            <p>Pirelli Calendar</p>
+                            <p class="brand-id">@Vogue</p>
+                        </a>
+                    </div>
+                    <div class="one-line row series">
+                        <a href="#" title="">
+                            <h1>basic blazer</h1>
+                            <p>from $199.00</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-3">
+                    <div class="one-line row l-arrow">
+                        <a href="#" title="">
+                            <div class="arrow-icon">
+                                <span></span>
+                            </div>
+                            <h1>elegant shoes </h1>
+                            <p>BRAIDED LEATHER</p>
+                        </a>
+                    </div>
+                    <div class="two-line row">
+                        <a href="#" title="">
+                            <h1>jeans for </h1>
+                            <h1>ADVENTURE</h1>
+                            <p>New Arrival</p>
+                        </a>
+                    </div>
+                </div>
+        </div>
+        <!-- 订阅 -->
+        <div class="subscription shopping-container text-center">
+            <h1>sign up to receive our updates</h1>
+            <p>Nulla ipsum dolor lacus, suscipit adipiscing. Cum sociis natoque penatibus et ultrices volutpat.</p>
+            <form>
+                    <input type="text" name="" value="" placeholder="Your e-mail">
+                    <input type="submit" name="" value="add">
+            </form>
+        </div>
+        <!-- 展示窗 -->
+        <div class="shopping-show shopping-container">
+            <div class="s-btn">
+                
+            </div>
+            <div class="s-btn">
+                
+            </div>
+        </div>
+        <!-- footer -->
+        <div class="shopping-footer">
+            <div class="row">
+                <div class="col-sm-3 fo-col">
+                    <h3>Collection</h3>
+                    <ul>
+                        <li><a href="category_all.html" title="">Woman (1725)</a></li>
+                        <li><a href="category_men.html" title="">Men (635)</a></li>
+                        <li><a href="" title="">Kids (2514)</a></li>
+                        <li><a href="" title="">Comming Soon (76)</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>site</h3>
+                    <ul>
+                        <li><a href="" title="">Terms of Service</a></li>
+                        <li><a href="" title="">Privacy Policy </a></li>
+                        <li><a href="" title="">Copyright Policy </a></li>
+                        <li><a href="" title="">Press Kit </a></li>
+                        <li><a href="" title="">Support</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>Shop</h3>
+                    <ul>
+                        <li><a href="about.html" title="">About us</a></li>
+                        <li><a href="" title="">Shipping Metods</a></li>
+                        <li><a href="" title="">Career</a></li>
+                        <li><a href="contact.html" title="">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 fo-col">
+                    <h3>Social</h3>
+                    <p>Shoper is made with love in Warsaw,</p>
+                    <p>2014 © All rights reserved. El Passion</p>
+                    <ul class="social-icon">
+                        <li><a href="" title=""><img src="images/soc-icon_03.png" alt=""></a></li>
+                        <li><a href="" title=""><img src="images/soc-icon_05.png"></a></li>
+                        <li><a href="" title=""><img src="images/soc-icon_07.png"></a></li>
+                    </ul>
+
+                </div>
+            </div>
+        </div>
+
     </div>
         <script src="../bootstrap-3.3.5-dist/js/jquery-1.11.1.min.js"></script>
         <script src="../bootstrap-3.3.5-dist/js/bootstrap.min.js"></script>

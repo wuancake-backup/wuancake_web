@@ -1,0 +1,123 @@
+
+.content{
+    text-align: center;
+    border-bottom: 1px solid #e5e5e5;
+}
+.content-nav{
+    padding:40px 0px 37px;
+    font-size: 16px;
+    line-height: 43px;
+    text-transform: uppercase;
+    color:#606060;
+
+}
+.content-nav a{
+    color:#606060;
+}
+@media (min-width: 768px){
+    .content-nav{
+        font-size: 12px;
+        line-height: 12px;
+        padding-top: 29px;
+        padding-bottom: 19px;
+        text-align: left;
+    }
+}
+/*商品展示*/
+.sales-show{
+    padding-bottom: 60px;
+    position: relative;
+}
+/*商品名称及商品搜索结果*/
+.sale-show-sort,.sale-result{
+    margin-bottom: 31px;
+    line-height: 36px;
+}
+.sale-show-sort h1,.sale-result h1{
+    font-size: 36px;
+    color:#303030;
+    font-weight: bold;
+    font-family: 'Lato-Bold';
+    line-height: 36px;
+}
+.sale-result h1 span{
+    font-weight: lighter;
+    font-family: 'Lato-Light';
+}
+.sale-show-sort small,.sale-result small{
+    font-size: 18px;
+    color:#606060;
+    text-decoration: underline;
+    font-family: 'Georgia Italic';
+    line-height: 36px;
+    display:inline-block;
+}
+.sale-show-sort small a{
+    color:#606060;
+}
+.sale-show-sort small span{
+    font-size: 12px;
+    display:none;
+}
+/*具体商品每一列*/
+.sale-col>a{
+    display:block;
+    margin-bottom: 24px;
+}
+.sale-col h4{
+    margin:0;
+    font-size: 14px;
+    line-height: 24px;
+}
+.sale-col h4 a{
+    color:#303030;
+}
+.sale-col h4:nth-child(2){
+    font-weight: bold;
+    font-family: 'Lato-Bold';
+}
+.sale-col h4:nth-child(3){
+    margin-bottom: 24px;
+}
+@media (min-width: 768px){
+    
+    .sales-show{
+        padding:50px 0px 111px;
+    }
+    .sale-show-sort,.sale-result{
+        margin-bottom: 65px;      
+    }
+    .sale-show-sort small a,.sale-result small{
+        text-decoration: none;
+    }
+    .sale-show-sort small span{
+        display:inline;
+    }
+    .sale-col>a{
+        margin-bottom: 35px;
+    }
+    .sale-col h4:nth-child(3){
+        margin-bottom: 0;
+    }
+}
+/*c-look模块*/
+.c-look{
+    padding:48px 0px 60px;
+}
+.c-look h4{
+    font-family: 'Georgia Italic';
+    font-size: 24px;
+    line-height: 27px;
+    color:#606060;
+    text-align: center;
+}
+@media (max-width: 768px){
+    .c-look,.shopping-show{
+        display:none;
+    }
+}
+@media (max-width: 768px){
+    .shopping-footer{
+        padding-top: 0;
+    }
+}

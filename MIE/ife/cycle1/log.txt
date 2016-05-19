@@ -1,0 +1,42 @@
+﻿22:38 2016/3/17 初步完成任务一
+
+
+
+13:39 2016/3/18 了解了Git使用，成功推送任务一。任务二进度完成20%。
+
+
+
+21:28 2016/3/20 任务一总结
+查看了组内成员以及百度前端技术学院其他团队提交的代码。得分较高基本就是HTML5标签用的相对较多的。同时组内小匣子和鹤先生的结构最为完整。这一个简单的页面，光是通过review，就认识了15种之前没有接触的标签或属性。同时查看中发现有的团队还预留了后续写JS的属性等。
+（该任接触到的HTML5新标签：1.<hidden>  2.<header>  3.<nav>  4.<section>  5.<article>  6.<figure>  7.<thead><tbody><tfoot>  8.<footer>  9.<caption>  10.<aside> ；属性：1.<label for="male">Male</label>  2.<button type="sumbit">确认提交</button>； 3.<input type="password" placeholder="这是一个文本输入框" pattern="[A-Za-z]{6,16}">  4.<form  method="post" action="save.php"> 提交方式，与后台连台）
+
+
+
+
+1:41  2016/3/22 初步完成任务二
+
+10:48 2016/3/23 初步完成任务三
+
+23:13 2016/3/30 初步完成任务四
+
+11:29 2016/3/31 任务二总结
+clear: both; 在左右两侧均不允许浮动元素。
+
+content: ".";在写HTML代码的时候，发现在Firefox等符合W3C标准的浏览器中，如果有一个DIV作为外部容器，内部的DIV如果设置了float样式，则外部的容器DIV因为内部没有clear，导致不能被撑开。
+这个clearfix的CSS使用了after这个伪对象，它将在应用clearfix的元素的结尾添加content中的内容。在这里添加了一个句号"."，并且把它的display设置成block；高度设为0；clear设为both；visibility设为隐藏。这样就达到了撑开容器的目的啦。
+
+zoom: 1;Zoom属是IE浏览器的专有属性，火狐和老版本的webkit核心的浏览器都不支持这个属性。能够比较神奇地解决ie下比较奇葩的bug。譬如外边距（margin）的重叠，譬如浮动的清除，譬如触发ie的 haslayout属性等等。
+
+23:10 2016/4/1 任务三总结
+box-sizing 属性允许以特定的方式定义匹配某个区域的特定元素。
+box-sizing: content-box|border-box|inherit;
+
+vertical-align 属性设置元素的垂直对齐方式。
+
+23:31 2016/4/1 任务四总结
+用自己table的方法终于实现了垂直居中。table的100%高度需要基于外面一层的元素的大小来撑起。另外关于border-radius的使用更加熟了。关于匣子
+position:absolute;  的用法，让我对绝对定位又有了新的认识。
+top:0;
+left:0;
+right:0;
+bottom:0;

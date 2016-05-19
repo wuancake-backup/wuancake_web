@@ -1,0 +1,12 @@
+自适应块的位置要在最下方，不然成员块会被挤一部分下去，蛋疼这里弄了好久。
+
+还有清除浮动，这个用在父元素
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+    overflow:hidden;
+}

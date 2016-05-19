@@ -1,0 +1,24 @@
+#list{
+	
+	width: 210px;
+	/*border: solid 1px red;*/
+	/*position: relative;*/
+}
+#place{
+	width: 210px;
+	height: 20px;
+	/*border: solid 1px black;*/
+	position: relative;
+}
+
+.pic{
+	width: 20px;
+	height: 20px;
+	position: absolute;
+	left: 2px;
+	bottom: 2px;
+}
+
+#down{
+	display: none;
+}

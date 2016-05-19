@@ -1,0 +1,276 @@
+            .banner{
+                text-align: center;
+            }
+            .banner h1{
+                font-size: 1.458333rem;
+                line-height: 1.666667rem;
+                margin-top: 1.041667rem; 
+                margin-bottom: 0.791667rem;
+                color:#303030;  
+            }
+            .banner p{
+                font-size: 0.5rem;
+                line-height: 0.729167rem;
+                margin-bottom: 1.625rem;
+                font-family: 'Georgia';
+                font-style: italic;
+                color:#606060;
+            }  
+           /* .ban-btn{
+                margin-bottom: 153px;
+                display:none;
+            }          
+            .ban-btn a{
+                display:inline-block;
+                padding:20px 35px;
+                font-size: 14px;
+                line-height: 18px;
+                border: 1px solid #959595;
+                color:#303030;
+            }*/
+            .ban-btn a:hover{
+                text-decoration: none;
+            }
+            @media (min-width: 768px){
+                .banner h1{
+                    font-size: 72px;
+                    line-height: 85px;
+                    margin-top: 135px; 
+                    margin-bottom: 0; 
+                }
+                .banner p{
+                    font-size: 24px;
+                    line-height: 35px;
+                    margin-bottom: 65px;
+                }
+                .banner .ban-btn{
+                    margin-bottom: 153px;
+                }
+            }
+            .gallery{
+                color:#fff;
+                letter-spacing: 0.05em;
+                line-height: 27px;
+            }
+            .gallery p{
+                font-family: 'Georgia';
+                font-style: italic;
+                margin-bottom: 0;
+                font-size: 18px;
+                text-transform: uppercase;
+            }  
+            .gallery h1{
+                font-weight: bold;
+                font-family: 'Lato-Bold';
+                font-size: 24px;
+                line-height: 27px;
+                margin:0;
+            }   
+            .one-line{
+                height: 295px;
+            }
+            .one-line>a,.two-line>a{
+                display:flex;
+                width:100%;
+                height:100%;
+                color:#fff;
+                flex-direction: column;
+                justify-content: center;
+            }
+            .one-line>a:hover,.two-line>a:hover,.one-line>a:focus,.two-line>a:focus,.one-line>a:visited,.two-line>a:visited{
+                text-decoration: none;
+            }
+            /*两行模块*/
+            .gallery .two-line{
+                height: 590px;
+            }
+            /*推特模块*/
+            .twit{
+                background-color: #bbbbbb;
+            }
+             .twit p{
+                font-size: 14px;
+                line-height: 19px;
+                text-transform: none;                
+            }
+            .twit .brand-id{
+                font-weight: bold;
+                margin-top: 17px;
+            }
+            /*推特图标*/
+            .twit-icon,.arrow-icon{
+                line-height: 32px;
+                font-size: 32px;
+            }
+            .twit-icon{
+                padding: 0px 0px 23px;
+            }
+            .twit-icon>span:first-child,.twit-icon>span:last-child{
+                width:20px;
+                height:2px;
+                background-color: #fff;
+                display:inline-block;
+                vertical-align: middle;
+            }
+            .twit-icon>span:nth-child(2),.arrow-icon span{
+                width:32px;
+                height:32px;
+                display:inline-block;
+                vertical-align: bottom;
+                background-repeat: no-repeat;
+            }
+            .twit-icon>span:nth-child(2){
+                background-image:url(../images/twit-icon.png);
+            }
+             
+            /*左箭头模块*/
+            .l-arrow{
+                background-color: #606060;
+            }
+            /*左箭头图标*/
+            .arrow-icon span{
+                background-image: url(../images/aarow.png);
+            }
+            /*背景颜色*/
+            .two-line:first-child{
+                background-color: #d2d2d2;
+            }
+            .two-line:last-child{
+                background-color: #d7d7d7;
+            }
+            .series:nth-child(2){
+                background-color: #cacaca;
+            }
+            .series:last-child{
+                background-color: #d0d0d0;
+            }
+            /*空模块*/
+            .em-mo:first-child{
+                background-color: #c2c2c2;
+            }
+            .em-mo:last-child{
+                background-color: #dbdbdb;
+            }
+            @media (max-width: 767px){
+                .gallery{
+                    line-height: 0.541667rem;
+                }
+                .gallery p{
+                    font-family: 'Georgia';
+                    font-style: italic;
+                    margin-bottom: 0;
+                    font-size: 0.458333rem;
+                    text-transform: uppercase;
+                }  
+                .two-line{
+                    display:none;
+                }
+                .twit{
+                    display:none;
+                } 
+                /*品牌系列*/
+                .series{
+                    height:6.041667rem;
+                }
+                .series h1{
+                    font-size: 0.708333rem;
+                    line-height: 0.854167rem;
+                }
+                /*左箭头模块*/
+                .arrow-icon{
+                    margin-bottom: 0.208333rem;
+                }
+                .arrow-icon span{
+                    background-image: url(../images/aarow-up.png);
+                }
+                .l-arrow,.em-mo{
+                    height:4.166667rem;
+                }
+                .l-arrow h1{
+                    font-size: 0.5rem;
+                    line-height: 0.5625rem;
+                    margin-bottom: 0.104167rem;
+                }
+                 .l-arrow p{
+                    line-height: 0.479167rem;
+                 }
+             }
+            /*订阅模块*/
+            .subscription{
+                 letter-spacing: 0.05em;
+                 font-size: 0px;
+                 color:#606060;
+            }
+            .subscription h1{
+                margin:1.541667rem auto 0.479167rem;
+                font-weight: bold;
+                font-size: 0.75rem;
+                line-height: 0.875rem;
+                color:#303030;
+                font-family: 'Lato-Bold';
+            }
+            .subscription p{
+                font-family: 'Georgia';
+                font-style: italic;
+                font-size: 0.375rem;
+                line-height: 0.458333rem;
+                margin-bottom: 1.166667rem;
+            } 
+            .subscription input{
+                outline:none;
+                font-size: 0.416667rem;
+                line-height: 0.5rem;
+            }
+            .subscription input[type="text"]{
+                padding:0.375rem 0.229167rem;
+                font-style: italic;
+                border:2px solid #959595;
+                border-right: none;
+                width:75%;
+                height:1.25rem;
+                vertical-align: bottom;
+
+            }
+            .subscription input[type="submit"]{
+                padding:0.416667rem 0px;
+                color:#fff;
+                background-color: #f68236;
+                border:none;
+                width:25%;
+                height:1.25rem;
+                vertical-align: bottom;
+            }
+            .subscription form{
+                margin-bottom: 1.666667rem;
+            }
+            @media (min-width: 768px){
+                .subscription h1{
+                    line-height: 35px;
+                    margin:140px auto 9px;
+                    font-size: 36px;
+                    line-height: 42px;
+                    margin:74px auto 23px;
+                }
+                .subscription p{
+                    line-height: 35px;
+                    margin-bottom: 53px;
+                    font-size: 18px;
+                }
+                .subscription input{
+                    font-size: 14px;
+                    line-height: 18px;
+                }
+                .subscription input[type="text"]{
+                    width:41.66666667%;
+                    padding:18px 11px;
+                    height:58px;
+                }
+                .subscription input[type="submit"]{
+                    width:8.33333333%;
+                    padding:20px 0px;
+                    height:58px;
+                }
+                .subscription form{
+                    margin-bottom: 132px;
+                }
+            }

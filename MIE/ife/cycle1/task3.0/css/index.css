@@ -1,0 +1,12 @@
+
+ul li{list-style: none;}
+#box,#team,#introduce,#personal{padding: 20px;border: 1px solid #999;}
+#box{background-color: #eee;float: left;}
+#team{width: 160px;float: left;}
+#team img{vertical-align: top;margin-right: 20px;}
+#introduce{margin: 0px 140px 0px 220px;}
+#personal{width: 80px;float: right;text-align: center;}
+#personal img{margin-bottom: 15px;}
+#personal img.a{margin-bottom: 0px;}
+#team ul li{float: left;}
+.Logo{width: 80px; height: 80px; border: 1px solid red;background:url(../img/zbx.jpg) no-repeat;}

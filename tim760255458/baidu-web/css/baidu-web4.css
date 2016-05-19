@@ -1,0 +1,30 @@
+.div0{
+	width: 400px;
+	height: 200px;
+	position: absolute;
+	background-color: #ccc;
+	top: 50%;
+	margin-top: -100px;
+	left: 50%;
+	margin-left: -200px;
+}
+.div1{
+	width: 0px;
+	height: 0px;
+	border: solid 50px #fc0;
+	border-radius: 50px;
+	top: 150px;
+	left: 350px;
+	position: absolute;
+	clip: rect(0px,50px,50px,0px);
+}
+.div2{
+	width: 0px;
+	height: 0px;
+	border: solid 50px #fc0;
+	border-radius: 50px;
+	top: -50px;
+	left: -50px;
+	position: absolute;
+	clip: rect(50px,100px,100px,50px);
+}
