@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>lwinfo</title>
+	<meta charset="utf-8">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+	<header class="header">
+        <div class="header-nav">
+            <a class="" title="首页" href="/">
+                <i id="home" class="fa fa-home fa-2x icon header-icon icon-button" aria-hidden="true"></i>
+            </a>
+        </div>
+		<h1 id="title" class="header-title">
+        详情
+            <span id="barTitleAjax"></span>
+		</h1>
+	</header>
+        <!-- Swiper -->
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide boy">
+                    <div class="slide-header">
+                            <span class="posts-header-user">
+                                <img src="images/usrtest.jpg">
+                                某同学
+                            </span>
+                    </div>
+                    <div class="slide-body">
+                        <p>计算生物学冯甘雨，冯小西，阿西，西西，你笑起来眼睛弯弯的特别萌。
+                            不笑也好看，其实不笑更好看笑起来有点二了就。可惜你对于喜欢你但
+                            你不接受的人连朋友都不会做，虽然我们连朋友都不算，我也只敢匿名
+                            问你愿不愿意接受我，可能给你造成了困扰吧，真是抱歉。今早看你票
+                            圈你还吐槽自己的要求一点都不高...
+                        </p>
+                    </div>
+                    <div class="slide-footer">
+                        <span class="publishTime">
+                            13分钟前
+                        </span>
+                    </div>
+                </div>
+                <div class="swiper-slide girl">Slide 2</div>
+                <div class="swiper-slide boy">Slide 3</div>
+                <div class="swiper-slide boy">Slide 4</div>
+                <div class="swiper-slide boy">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+        </div>
+	<footer>
+	</footer>
+
+    <script src="js/swiper.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            direction: 'vertical',
+            slidesPerView: 1,
+            paginationClickable: true,
+            spaceBetween: 30,
+            mousewheelControl: true
+        });
+    </script>
+</body>
+</html>
