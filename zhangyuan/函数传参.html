@@ -47,13 +47,13 @@
                         n1 = 0;
                     }
                     strong.innerHTML = n1;
-                    span.innerHTML = n1 * n2;
+                    span.innerHTML = parseFloat(n1*n2).toFixed(2);
                     fn2();
                 };
                 btn2.onclick = function () {
                     n1++;
                     strong.innerHTML = n1;
-                    span.innerHTML = n1 * n2;
+                    span.innerHTML =parseFloat(n1*n2).toFixed(2);
                     fn2();
                 };
 
