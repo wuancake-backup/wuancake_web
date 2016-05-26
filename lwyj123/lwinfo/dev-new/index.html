@@ -4,6 +4,7 @@
 	<title>lwinfo</title>
 	<meta charset="utf-8">
     <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="css/swiper.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -46,14 +47,12 @@
                 <div class="swiper-slide boy">Slide 3</div>
                 <div class="swiper-slide boy">Slide 4</div>
                 <div class="swiper-slide boy">Slide 5</div>
-                <div class="swiper-slide">Slide 6</div>
-                <div class="swiper-slide">Slide 7</div>
-                <div class="swiper-slide">Slide 8</div>
-                <div class="swiper-slide">Slide 9</div>
-                <div class="swiper-slide">Slide 10</div>
+                <div class="swiper-slide girl">Slide 6</div>
+                <div class="swiper-slide girl">Slide 7</div>
+                <div class="swiper-slide girl">Slide 8</div>
+                <div class="swiper-slide girl">Slide 9</div>
+                <div class="swiper-slide girl">Slide 10</div>
             </div>
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
         </div>
 	<footer>
 	</footer>
@@ -61,13 +60,38 @@
     <script src="js/swiper.js"></script>
     <script>
         var swiper = new Swiper('.swiper-container', {
-            pagination: '.swiper-pagination',
             direction: 'vertical',
             slidesPerView: 1,
-            paginationClickable: true,
+            centeredSlides: true,
             spaceBetween: 30,
-            mousewheelControl: true
+            onTouchEnd: function(swiper) {
+
+                if(swiper.translate>70){ //判断下拉刷新
+                    loadNewData();//加载更多数据
+                }
+                else if(swiper.translate<-70){ //判断上拉加载新数据
+
+                    if(swiper.isEnd){
+                        //mySwiper.isEnd这个函数用来判断时候滑动到底部，但是不能单独的用这个来写，还需要在外层写一个swiper.translate<-40，是为了需要先判断是手势是上拉还是下拉，否则可能造成了点击页面，还没设计到上下拉就执行里面的函数了，这里的40也不                  是固定的，只是为了先判断手势方向，再判断是否到底
+                        loadHistoryData();
+                    }
+                }
+            },
+            //待续，点击事件
+            onTap: function(swiper) {
+
+            }
         });
+        function loadNewData() {
+            swiper.prependSlide([
+                '<div class="swiper-slide girl">Slide  0 </div>',
+                '<div class="swiper-slide girl">Slide -1 </div>'
+            ]);
+        }
+        function loadHistoryData() {
+            swiper.appendSlide('<div class="swiper-slide boy">Slide  fuck</div>');
+        }
     </script>
+    -->
 </body>
 </html>

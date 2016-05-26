@@ -21,6 +21,7 @@ a {
     min-width: 36px;
     text-align: center;
 }
+
 .header .header-nav > a {
     background-color: rgba(247, 247, 247, 1.0);
     color: rgba(0, 0, 0, 0.8);
@@ -147,4 +148,14 @@ a {
     font-size: 2rem;
     height: 100%;
     text-align: start;
+}
+
+
+
+
+
+
+
+.invisible {
+    display: none;
 }
