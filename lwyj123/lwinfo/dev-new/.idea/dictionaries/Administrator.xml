@@ -2,6 +2,7 @@
   <dictionary name="Administrator">
     <words>
       <w>scrollbar</w>
+      <w>swiper</w>
     </words>
   </dictionary>
 </component>
