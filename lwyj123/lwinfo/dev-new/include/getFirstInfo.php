@@ -1,6 +1,5 @@
 <?php
 require_once('./medoo.php');
-$id = $_POST['lastId'];
 $database = new medoo([
     'database_type'=>'mysql',
     'database_name'=>'lwinfo',
@@ -12,10 +11,14 @@ $database = new medoo([
     'port'=>3306,
 ]);
 
+$maxid = $database->max(
+    'Info',
+    "InfoId"
+);
 $data = $database->select(
     'Info',
     "*",
-    ["InfoId" => $id - 1]
+    ["InfoId" => $maxid]
 );
 
 

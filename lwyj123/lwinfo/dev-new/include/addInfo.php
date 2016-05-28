@@ -1,6 +1,6 @@
 <?php
 require_once('./medoo.php');
-$id = $_POST['lastId'];
+$content = $_POST['content'];
 $database = new medoo([
     'database_type'=>'mysql',
     'database_name'=>'lwinfo',
@@ -12,10 +12,12 @@ $database = new medoo([
     'port'=>3306,
 ]);
 
-$data = $database->select(
+$data = $database->insert(
     'Info',
-    "*",
-    ["InfoId" => $id - 1]
+    [
+        "InfoContent" => $content,
+        "InfoTime" => date('y-m-d h:i:s',time())
+    ]
 );
 
 

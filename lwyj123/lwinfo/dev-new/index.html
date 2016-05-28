@@ -6,13 +6,25 @@
     <link href="public/css/font-awesome.css" rel="stylesheet">
     <link href="public/css/swiper.css" rel="stylesheet">
     <link href="public/css/style.css" rel="stylesheet">
+    <style type="text/css">
+
+    </style>
 </head>
 <body>
+    <div id="fog"></div>
 	<header class="header">
         <div class="header-nav">
             <a class="" title="首页" href="/">
                 <i id="home" class="fa fa-home fa-2x icon header-icon icon-button" aria-hidden="true"></i>
             </a>
+            <button class="addInfo">写新info</button>
+            <div id="divPop">
+                <div class="addBox">
+                    <textarea class="add-content"></textarea>
+                    <button class="add-submit">提交</button>
+                    <button class="add-cancel">撤销</button>
+                </div>
+            </div>
         </div>
 		<h1 id="title" class="header-title">
         详情
@@ -22,7 +34,8 @@
         <!-- Swiper -->
         <div class="swiper-container">
             <div class="swiper-wrapper">
-                <div class="swiper-slide boy">
+                <!--这是原来的模板
+                <div id="3" class="swiper-slide boy">
                     <div class="slide-header">
                             <span class="posts-header-user">
                                 <img src="public/images/usrtest.jpg">
@@ -43,8 +56,7 @@
                         </span>
                     </div>
                 </div>
-                <div class="swiper-slide girl">Slide 2</div>
-                <div class="swiper-slide boy">Slide 3</div>
+                -->
             </div>
         </div>
 	<footer>
@@ -53,6 +65,54 @@
     <script src="public/js/swiper.js"></script>
     <script src="public/js/jquery-2.2.3.js"></script>
     <script>
+
+        var quyu1 = $("#divPop");
+        var wrap1 = $("#fog");
+        close1();
+
+
+        $(".addInfo").click(function() {
+            quyu1.prependTo(".header-nav");
+            wrap1.prependTo("body");
+            wrap1.click(function() {
+                close1();
+            });
+            $(".add-cancel").click(function() {
+                $(".add-content").val('');
+            });
+            $(".add-submit").click(function() {
+                var content = $(".add-content");
+                if(content.val() != null) {
+                    $.post(document.URL+"include/addInfo.php",
+                            {
+                                "content": content.val()
+                            },
+                            function(data,status){
+                                switch(status) {
+                                    case "success" :
+                                        $(".add-content").val('');
+                                            alert("添加成功");
+                                        break;
+                                    case "fault":
+                                        //TODO
+                                        break;
+                                }
+                            },
+                            "json"
+                    );
+                }
+            });
+        });
+        function close1() {
+            $("#divPop").remove();
+            $("#fog").remove();
+        }
+
+
+
+
+
+
         var swiper = new Swiper('.swiper-container', {
             direction: 'vertical',
             slidesPerView: 1,
@@ -76,17 +136,43 @@
 
             }
         });
-        function loadHistoryData() {
-            $.post("/include/getHistoryItem.php",
+        loadFirstInfo();
+        function loadFirstInfo() {
+            $.post(document.URL+"include/getFirstInfo.php",
                     {
-                        "lastId": 100
+                        "fuck":"fuck"
                     },
                     function(data,status){
                         switch(status) {
                             case "success" :
                                 swiper.appendSlide(
-                                    '<div class="swiper-slide girl">'+ data['content']+ '</div>'
+                                        '<div id="'+data['InfoId']+'" class="swiper-slide boy"><div class="slide-header"><span class="posts-header-user"><img src="public/images/usrtest.jpg">某同学</span></div><div class="slide-body"><p>'+ data['InfoContent']+ '</p></div><div class="slide-footer"><span class="publishTime">'+ data['InfoTime']+ '</span></div></div>'
                                 );
+                                break;
+                            case "fault":
+                                //TODO
+                                break;
+                        }
+                    },
+                    "json"
+            );
+        }
+        function loadHistoryData() {
+            var lastId = swiper.slides[swiper.slides.length - 1].id;
+            $.post(document.URL+"include/getHistoryItem.php",
+                    {
+                        "lastId": lastId
+                    },
+                    function(data,status){
+                        switch(status) {
+                            case "success" :
+                                swiper.appendSlide(
+                                        '<div id="'+data['InfoId']+'" class="swiper-slide boy"><div class="slide-header"><span class="posts-header-user"><img src="public/images/usrtest.jpg">某同学</span></div><div class="slide-body"><p>'+ data['InfoContent']+ '</p></div><div class="slide-footer"><span class="publishTime">'+ data['InfoTime']+ '</span></div></div>'
+                                );
+                                break;
+                            case "fault":
+                                //TODO
+                                break;
                         }
                     },
                     "json"
