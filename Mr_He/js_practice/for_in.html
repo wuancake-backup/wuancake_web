@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script>
+        var o = {
+            name: "jack",
+            age: 20,
+            city: "Beijing"
+        };
+        //for...in 可以把一个对象的所有属性依次循环出来
+        for(var key in o)
+        {
+            alert(key);
+        }
+        //要过滤掉对象继承的属性，用hasOwnProperty()来实现
+        for(var key in o){
+            if(o.hasOwnProperty(key)){
+                alert(key);
+            }
+        }
+
+        //由于Array也是对象，而它的每个元素的索引被视为对象的属性，因此，for ... in循环可以直接循环出Array的索引：
+        var a = [10,"a",true];
+        for(var i in a){
+            alert(i);
+            alert(a[i]);
+        }
+    </script>
+</head>
+<body>
+
+</body>
+</html>

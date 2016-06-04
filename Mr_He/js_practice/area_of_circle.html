@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            'use strict';
+
+function area_of_circle(r, pi) {
+
+if(arguments.length>2 || arguments.length<1){
+alert('Arguments Error!') ;
+}else if(typeof r !== "number"){
+alert("Radius not a number!");
+}else if(arguments.length === 2){
+if(typeof pi !== "number"){
+alert("Pi not a number");
+}
+else 
+    return r*r*pi;
+}
+else 
+    return r*r*3.14;
+
+}
+// 测试:
+if (area_of_circle(2) === 12.56 && area_of_circle(2, 3.1416) === 12.5664) {
+    alert('测试通过');
+} else {
+    alert('测试失败');
+}
+alert(area_of_circle("mm"));
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

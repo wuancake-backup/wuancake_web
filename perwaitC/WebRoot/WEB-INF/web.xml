@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="3.0"
+    xmlns="http://java.sun.com/xml/ns/javaee"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertUsersServlet</servlet-name>
+    <servlet-class>com.zsz.servlet.InsertUsersServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>QueryServlet</servlet-name>
+    <servlet-class>com.zsz.servlet.QueryServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>DeleteServlet</servlet-name>
+    <servlet-class>com.zsz.servlet.DeleteServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>UptadeServlet</servlet-name>
+    <servlet-class>com.zsz.servlet.UptadeServlet</servlet-class>
+  </servlet>
+  <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertPostsServlet</servlet-name>
+    <servlet-class>com.zsz.servlet.InsertPostsServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertReplyServlet</servlet-name>
+    <servlet-class>com.zsz.servlet.InsertReplyServlet</servlet-class>
+  </servlet>
+   <servlet>
+    <description>This is the description of my J2EE component</description>
+    <display-name>This is the display name of my J2EE component</display-name>
+    <servlet-name>InsertThemeServlet</servlet-name>
+    <servlet-class>com.zsz.servlet.InsertThemeServlet</servlet-class>
+  </servlet>
+
+
+
+
+  <servlet-mapping>
+    <servlet-name>InsertUsersServlet</servlet-name>
+    <url-pattern>/InsertUsersServlet</url-pattern>
+  </servlet-mapping>
+  
+  <servlet-mapping>
+    <servlet-name>QueryServlet</servlet-name>
+    <url-pattern>/QueryServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>DeleteServlet</servlet-name>
+    <url-pattern>/DeleteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet-mapping>
+    <servlet-name>UptadeServlet</servlet-name>
+    <url-pattern>/UptadeServlet</url-pattern>
+  </servlet-mapping>
+ <servlet-mapping>
+    <servlet-name>InsertPostsServlet</servlet-name>
+    <url-pattern>/InsertPostsServlet</url-pattern>
+  </servlet-mapping>
+   <servlet-mapping>
+    <servlet-name>InsertReplyServlet</servlet-name>
+    <url-pattern>/InsertReplyServlet</url-pattern>
+  </servlet-mapping>
+    <servlet-mapping>
+    <servlet-name>InsertThemeServlet</servlet-name>
+    <url-pattern>/InsertThemeServlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>

@@ -1,0 +1,274 @@
+* {padding: 0;margin: 0;border: 0}
+body{font-family: "Microsoft YaHei";background-color: #f7f7f7;min-width: 350px;text-decoration: none;min-width: 400px;
+}
+a:focus,a:hover {
+    text-decoration: none;
+}
+.modal-content {margin-top:50%}
+textarea{
+	resize:none;
+}
+.bg-499ef3{
+    background-color: #499ef3;
+}
+nav a{
+    color: #ffffff;
+}
+.nav-head>.active{
+    background-color: #4dabff;
+}
+
+nav a:hover{
+    color: #ffffff;
+}
+nav img{width: 45px; height: 45px; }
+nav  a:hover{
+    background-color: #4dabff!important;
+    color: #ffffff!important;
+}
+nav img{
+    margin-top: 2px;
+}
+.nav>a{
+   margin: 10px 10px;
+
+    padding:5px 20px ;
+}
+.bg-59b0ff{
+    background-color: #59b0ff;
+}
+.bg-59b0ff:hover{
+    background-color: #4daaff;
+
+}
+
+.bg-5bbf5a{
+    background-color: #5bbf5a;
+}
+
+.bg-5bbf5a:hover{
+    background-color: #38b836!important;
+}
+.nav-list{
+
+    margin-left: 0;
+    margin-top: 30px;
+    margin-bottom: 0;
+
+}
+
+/* 更改bootstrap部分*/
+.col-sm-12{
+    padding: 0;
+}
+.col-sm-6{
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.h2{
+    padding-left: 10px;
+}
+
+.nav-list li{
+    margin-right: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+
+
+}
+.nav-list .active{
+    background-color: #494a4b;
+
+}
+.nav-list a{
+    line-height: 10px;
+    display: flex;
+    height: 30px;
+    padding: 10px 20px;
+    color: #494a4b;
+}
+
+.nav-list a:hover{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+
+.nav-list li:hover{
+    background-color: #494a4b;
+    transition: 0.5s;
+
+}
+
+.nav-list .active>a{
+    color: #ffffff;
+}
+
+.bg_and_border{
+    background-color: #ffffff;
+    border: 1px solid #eeeeee;
+    border-radius: 5px;
+    margin-top: 30px;
+
+}
+.border-r{
+   border-right: 1px solid #eee;
+}
+.border-bottom{
+    border-bottom:1px solid #e8e8e8 ;
+}
+
+.nav-tabs{
+    position: relative;
+}
+
+
+.nav-tabs ul{
+    position: absolute;
+    bottom: 0;
+    right: 10px;
+    transition: 0.3s;
+}
+.nav-tabs li{
+   float: right;
+   margin-left: 5px;
+    transition: 0.3s;
+}
+.nav-tabs a:hover{
+    background-color: transparent!important;
+    color: #337ab7;
+}
+
+.nav-tabs li:hover{
+    color: transparent;
+    border-bottom: 3px solid #155faa;
+    font-weight: bold;
+
+}
+
+.nav-ul .active{
+    border-bottom: 3px solid #155faa;
+    font-weight: bold;
+}
+
+
+
+.body-list>.col-sm-12{
+    padding: 10px 0;
+
+}
+
+
+.body-list>div>a{
+    float: left;
+    width: 40px;
+    height: 40px;
+}
+.body-list>div>div{
+    float: left;
+    margin-left: 10px;
+}
+.body-list p{
+    margin: 0;
+}
+
+
+.body-list>div>div>h4{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.body-list form>*{
+    margin-bottom: 20px;
+}
+.body-list .last{
+    float: right;
+}
+
+
+
+.list-style a{
+    text-decoration: none;
+    color: #999999;
+    font-size: 1.3rem;
+    background-color: #eeeeee;
+    border-radius: 5px;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+.list-style a:hover{
+    background-color:#499ef3;
+    color: #ffffff;
+
+
+}
+
+.list-style{
+    margin: 20px 0;
+    float: right;
+
+}
+
+.list-style li{
+    float: left;
+    text-decoration: none;
+    display: block;
+    list-style: none;
+    margin: 5px 1px;
+
+}
+.list-style .active a,.list-style .active a:hover{
+    background-color: #499ef3;;
+    border-radius: 5px;
+    color: #ffffff;
+
+}
+
+.r_div_PaddingAndBorder{
+    padding-bottom: 10px!important;
+    border-bottom:1px solid #e8e8e8;
+
+}
+.r_div_PaddingAndBorder>.col-sm-12{
+    margin: 5px 0;
+
+}
+
+.r_div_PaddingAndBorder>.col-sm-12>a{
+    float: right;
+}
+.r_div_PaddingAndBorder label{
+    padding-right: 10px;
+    font-family: "Microsoft YaHei";
+    border-right: 1px solid silver;
+    color: rgba(22, 104, 186, 0.45);
+}
+.foot p{
+    margin: 25px auto 10px auto;
+    color: #666666;
+
+}
+
+label{
+    margin-right: 5px;
+}
+
+label a{
+    border-radius: 5px;
+    background-color: #99cfff;
+    padding:1px 5px ;
+    color: #ffffff;
+    transition: 0.3s;
+}
+label a:hover{
+    background-color:#339dff;
+    color: #ffffff;
+}
+
+.in1:hover .in2{
+    display: none;
+}
+
+
+

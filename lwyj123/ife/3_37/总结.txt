@@ -1,0 +1,50 @@
+﻿发现别人写的源码中有一个var that = this;语句，记录一下。
+	javascript中四种函数调用模式及对this的不同绑定（http://blog.saymoon.com/2009/10/difference-from-this-in-invocation-for-function-by-four-ways/）
+	其中的函数调用模式给了我答案
+	当一个函数并非一个对象的属性时，它被当作一个函数来调用。this绑定：this绑定到全局对象上。例子:
+		var g = 'global';
+		var o = function() {
+			var g = 'self';
+			document.writeln(this.g);       //global
+		}();
+	    执行上面的代码会发现，输出的结果是全局对象中g的值，与我们预期的结果不同，this被错误地绑定到全局对象上，这是JavaScript语言设计上的一个错误。
+
+	    可以在函数中定义一个变量，按照约定为that
+	    var g = 'global';
+	    var o = function() {
+	        var that = this;
+	        var g = 'self';
+	        document.writeln(that.g);       //应该是self，我没测试
+	    }
+
+鼠标事件pageX,pageY以及其与clientX的区别
+    pageX在所支持的浏览器中能返回正确的坐标，为什么这样说．clientX当网页有滚动条的时候，clientX不会计算滚动条所滚动的距离
+
+根据模板动态生成dom元素
+    var text="<div id='overLay' style='width:50px;height:60px;background:url(imgs/back.png) left top no-repeat; position: absolute;'>"
+        + "<img style='margin-left:4px;margin-top: 3px;' src='ima.png' width='43px' height='43px'/>"
+        + "</div>";
+    var element= $(text).get(0) //element就是一个dom对象
+
+拖动的实现，例子用于浮出层的拖动（我已知最好的）
+		onDrag: function(event, that) {
+		    //拖动标识，mousedown的时候置为true
+			if(that.dragFlag){
+				that.model.style.left = (event.pageX - that.startX + that.left) + 'px';
+				that.model.style.top = (event.pageY - that.startY + that.top) + 'px';
+			}
+		}
+
+
+关于有些源码中使用的闭包 (function(w, d, undefined) {...}（window, document） 有点不懂，查了一下
+    (function(win) {// ...})(window);
+        这样做最直观的好处是书写便利：少写几个字。你可以在闭包内任何地方使用 win, 它都会指向 window 对象。另外，它有利于压缩减少最终代码的体积，经过压缩后 (如 Google Closure Complier), 所有的 win 都会被替换成形如 a 这样的简单变量。win 用得越多，减少的字节数也越多。
+        但有些时候会在 IE(尼玛又是你)上，window 总是指向当前窗口对象，这个没有问题，但是在某些场景下，使用闭包内的 win 变量会导致拒绝访问错误 (Access denied). 重现方式大致是这样的：当页面引用其他域名的脚本，并且该脚本调用了闭包内的 window.document, 而且这个闭包代码是来自另一个域名的脚本。在这种情况下，使用 win 会保持对 window 最早的引用，通过另一个域的脚本访问 win 会导致 IE 认为脚本产生了跨越冲突，从而拒绝了对 win.document 的访问。
+        不是很懂，还是先mark了
+    (function(undefined) {// ...})();
+        和上面的讨论一样，你可以在闭包内任何地方使用 undefined, 可以少写几个字（如果把 undefined 换成更短的名字），也可以在减少压缩后体积。
+        另一个的优势是，你可以认为它是个变量，把它当变量来使用，它的值恒等于 (===) 真正的 undefined. 当外部代码意外地定义了 undefined 的时候——不常见，但确实可能会发生——你可以正常地使用真正的 undefined, 而不会被外部的 undefined 意外影响. 这是由 JavaScript 作用域规则决定的。
+    闭包什么的还是不是很懂，找个时间看一下。
+
+看到单例模式回想起了以前学面向对象的一个问题，为什么不用静态方法而是单例？
+    http://blog.csdn.net/johnny901114/article/details/11969015这个非常全面

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <style type="text/css" media="screen">
+        table{
+           /* border:solid red 1px;*/
+            border-collapse: collapse;
+            text-align: center;
+        }
+        td{
+            border:solid green 1px;
+           /* padding:5px;*/
+        }
+
+    </style>
+
+</head>
+<body>
+<table cellpadding="0" border="1" width="200px" height="200px">
+    <caption>table title and/or explanatory text</caption>
+    <tr height="25%"  width="100%">
+        <td colspan="5" >1</td>
+    </tr>
+
+    <tr>
+        <td colspan="3" >2</td>
+        <td colspan="2" rowspan="3"  height="75%"  width="40%" >
+        <table height="100%"  width="100%"  frame="void" >
+            <tr>
+                <td colspan="2"  >3</td>
+            </tr>
+            <tr>
+                <td  >6</td>
+                <td  >7</td>
+            </tr>
+        </table>
+        </td>
+
+    </tr>
+    <tr>
+        <td rowspan="2" >4</td>
+        <td colspan="2" >5</td> 
+        
+    </tr>
+    <tr>
+        <td >8</td>
+        <td >9</td>
+    </tr>
+
+</table>
+
+</body>
+</html>

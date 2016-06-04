@@ -1,0 +1,364 @@
+/* 
+* @Author: anchen
+* @Date:   2015-11-12 14:28:23
+* @Last Modified by:   anchen
+* @Last Modified time: 2015-11-26 17:57:18
+*/
+*{
+    margin:0px;
+    padding:0px;
+    /*border:solid 1px;*/
+}
+html{
+    height: 100%;
+}
+body{
+    background-image: url(image/2013090610542871870.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    /*overflow: hidden;*/
+}
+#music_player{
+    position:absolute;
+    top:5%;
+    left:10%;
+    /*border:solid 1px;*/
+    width:800px;
+}
+.channel{
+    /*border:solid 1px red;*/
+}
+.channel i{
+    display:inline-block;
+    width:14px;
+    height:11px;
+    background-image: url(image/note.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.channel span{
+    display:inline-block;
+    height:35px;
+    line-height: 35px;
+    width:100px;
+    font-size: 24px;
+    color:white;
+}
+.player{
+    background-image: url(image/sea.jpg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    width:350px;
+	margin-top:0px;
+    height:550px;
+    position: relative;
+    float:left;
+    opacity: 0.8;
+}
+
+.album_img{
+    text-align: center;
+}
+.album_img img{
+	margin-top:20px;
+}
+.song_info{
+    font-family: "微软雅黑";   
+}
+.song_info a{
+    display:block;
+    color:black;
+    text-decoration: none;
+}
+.song_info :hover{
+    text-decoration: underline;
+}
+.song_info a:nth-of-type(1){
+    font-size:24px;
+    /*text-decoration: none;*/
+    /*border:solid 1px;*/
+    margin:5px 0px;
+    margin-left: 10px;
+}
+.song_info a:nth-of-type(2){
+    font-size: 18px;
+    margin:5px 0px;
+    margin-left: 5px;
+    /*border:solid 1px;*/
+}
+.song_info a:nth-of-type(3){
+    font-size: 18px;
+    /*border:solid 1px;*/
+    margin:10px 0px;
+    margin-left: 10px;
+}
+/*#song{
+   border:solid 1px red;
+    padding:5px 0px; 
+}*/
+/*#singer{
+    border:solid 1px red;
+    padding:10px 0px;
+}*/
+.play_panel{
+	/*margin:10px 30px 20px 15px;*/
+    position:absolute;
+    bottom:53px;
+    height:60px;
+    /*border:solid 1px red;*/
+   /* border-top: solid 1px red;*/
+    margin-left: 38px;
+    /*padding-bottom: 20px;*/
+
+}
+.play_panel a{
+    display:block;
+    width:40px;
+    height:40px;   
+    float: left;
+    margin-right: 38px;
+}
+
+.play{
+    background:url(image/play.png) no-repeat;
+    background-size: 100% 100%;
+}
+.play:hover{
+    background:url(image/playhover.png) no-repeat;
+    background-size: 100% 100%;
+}
+.pause{
+    background:url(image/zan.png) no-repeat;
+    background-size: 100% 100%;
+}
+.pause:hover{
+    background:url(image/zanhover.png) no-repeat;
+    background-size: 100% 100%;
+}
+/*#play_pause{
+    background:url(image/zan.png) no-repeat;
+    background-size: 100% 100%;
+}*/
+.next{
+    background:url(image/next.png) no-repeat;
+    background-size: 100% 100%;
+}
+.next:hover{
+    background:url(image/nexthover.png) no-repeat;
+    background-size: 100% 100%;
+}
+.like{
+    background:url(image/shou.png) no-repeat;
+    background-size: 100% 100%;
+}
+.like:hover{
+    background:url(image/shouhover.png) no-repeat ;
+    background-size: 100% 100%;
+}
+.remove{
+    background:url(image/shouhover.png) no-repeat;
+    background-size: 100% 100%;
+    margin-right: 0px;
+}
+/*#seekbar{
+    width: 100%;
+    height:5px;
+}*/
+#volume{
+    width:100px;
+    height:10px;
+    /*margin:10px 0px 10px -7px;*/
+}
+
+/*#control2>span{
+    display:inline-block;
+    margin-top:10px;
+    margin-bottom: 10px;
+}*/
+.progress{
+    width:100%;
+    height:3px;
+    position:absolute;
+    bottom:50px;
+    background:url(image/jindu2.gif) no-repeat;
+    background-size: 100% 100%;
+}
+.progress a{
+    display:block;
+    width:75%;
+    height:3px;
+    position:absolute;
+    top:0px;
+    left:0px;
+    background:url(image/jindu1.gif) no-repeat;
+    background-size: 100% 100%;
+    /*background:red;*/
+}
+.operation{
+	width: 100%;
+    height:50px; 
+    position:absolute;
+    bottom:0px;
+    /*border: solid 1px;*/
+} 
+.play_time{
+    width: 100px;
+    height:30px;
+    line-height: 30px;
+    text-align: center;
+    float:left ;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.play_time span{
+    display:inline-block;
+    height:30px;
+    font-family: 微软雅黑;
+    color:#ccc;
+}
+
+#star_time{
+    font-size: 18px;
+
+}
+
+.control_sound{
+   
+   /* border:solid 1px red;*/
+     float:left;
+     margin-top:15px;
+     margin-right: 10px;
+}
+.mute{
+    display:block;
+    width:20px;
+    height:20px;
+    background:url(image/sound.png) no-repeat ;
+    background-size: 100% 100%;
+    float:left;
+    /*margin-top:24px;*/
+}
+.mute:hover{
+    background:url(image/soundhover.png) no-repeat;
+    background-size: 100% 100%;
+}
+.about_sound{
+    
+    float:left;
+    position:relative;
+    /*border:solid 1px;*/
+    width:110px;
+    height:10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    
+}
+.about_sound p{
+    position:absolute;
+    left:0px;
+    top:2.5px;
+    width:100px;
+    height:5px;
+    background:url(image/soundjindu.png) no-repeat ;
+    background-size:100% 100%;
+}
+.volbar{
+    position:absolute;
+    left:0px;
+    top:3.5px;
+    height:3px;
+    width:50px;
+    /*margin:1px 0px 0px 1px;*/
+    /*background:green;*/
+    background:url(image/soundhuan.png) no-repeat ;
+    background-size:100% 100%;
+    /*border:solid 4px ;*/
+}
+.about_sound a{
+    position:absolute;
+    left:50px;
+    height:10px;
+    width:10px;
+    top:0px;
+    background:url(image/scheduleBtn.png) no-repeat ;
+    background-size:100% 100%;
+    /*background:blue;*/
+  
+}
+.about_sound a:hover{
+    background:url(image/scheduleBtnhover.png) no-repeat ;
+    background-size:100% 100%;
+}
+.share_panel{
+    float:left;
+    margin-top: 10px;
+}
+.download{
+    display:block;
+    float:left;
+    width:30px;
+    height:30px;
+    background:red;
+    
+    margin-right: 10px;
+    background:url(image/fen.png) no-repeat ;
+    background-size:100% 100%;
+}
+.download:hover{
+    background:url(image/fenhover.png) no-repeat ;
+    background-size:100% 100%;
+}
+.share{
+    display:block;
+    float:left;
+    width:30px;
+    height:30px;
+    background:red;
+    
+    background:url(image/share.png) no-repeat ;
+    background-size:100% 100%;
+}
+.share:hover{
+    background:url(image/sharehover.png) no-repeat ;
+    background-size:100% 100%; 
+}
+.player_lrc{
+    width:450px;
+    margin-top:0px;
+    height:550px;
+    background:white ;
+    opacity: 0.5;
+    float:left;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+.player_lrc_main{
+    margin:20px;
+}
+.player_lrc_main ul{
+    /*border:1px solid;*/
+    list-style-type: none;
+    font-family: "微软雅黑",Arial,sans-serif; 
+    font-size: 16px;
+}
+
+
+/*#control2>span{
+    display: inline-block;
+    border:red;
+}*/
+
+progress {
+	display:inline-block;
+    background-color:orange;
+    /*全部进度条背景色，Chrome直接设置看不到效果，被progress-bar内部元素覆盖*/
+    color: red; /*IE10*/ /*ie可设置已完成进度的背景色*/
+}
+progress::-moz-progress-bar { background: blue; }
+/*FireFox已完成进度条颜色设置，与Chrome相反*/
+progress::-webkit-progress-bar { background: green; }
+/*Chrome全部进度*/
+progress::-webkit-progress-value  { background: red; }/*Chrome已完成进度*/

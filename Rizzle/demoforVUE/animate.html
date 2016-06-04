@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>animate</title>
+        <style media="screen">
+ul {
+padding-left: 0;
+font-family: Helvetica, Arial, sans-serif;
+}
+.staggered-transition {
+transition: all .5s ease;
+overflow: hidden;
+margin: 0;
+height: 20px;
+}
+.staggered-enter, .staggered-leave {
+opacity: 0;
+height: 0;
+}
+        </style>
+    </head>
+    <body>
+        <div id="demo">
+            <input v-model="query">
+            <ul>
+                <li v-for="item in list | filterBy query"
+                    transition="staggered"
+                    stagger="100">
+                  {{item.msg}}
+                 </li>
+            </ul>
+        </div>
+    </body>
+    <script type="text/javascript" src="vue.js">    </script>
+    <script type="text/javascript">
+new Vue({
+el: '#demo',
+    data: {
+        query: '',
+        list: [
+            { msg: 'Bruce Lee' },
+            { msg: 'Jackie Chan' },
+            { msg: 'Chuck Norris' },
+            { msg: 'Jet Li' },
+            { msg: 'Kung Fury' }
+        ]
+    }
+})
+    </script>
+</html>

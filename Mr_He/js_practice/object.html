@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script>
+            var xiaoming = {
+                name:"小明"
+            };
+            alert(xiaoming.name);
+            alert(xiaoming.age);//访问不存在的属性不报错，而是返回undefined
+
+            var xiaoming2 = {
+                name: '小明',
+                birth: 1990,
+                school: 'No.1 Middle School',
+                height: 1.70,
+                weight: 65,
+                score: null
+            };
+            alert("name" in xiaoming2);//true
+            alert("grade" in xiaoming2);//false
+            alert("toString" in xiaoming2);//true
+            //如果in判断一个属性存在，这个属性不一定是xiaoming的，它可能是xiaoming继承得到的
+            
+            alert(xiaoming2.hasOwnProperty("toString"));
+            //要判断一个属性是否是xiaoming自身拥有的，而不是继承得到的，可以用hasOwnProperty()方法
+
+
+        </script>
+    </head>
+    <body>
+    </body>
+</html>

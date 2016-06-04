@@ -1,0 +1,730 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+            font-family: "微软雅黑";
+        }
+        header {
+            position:fixed;
+            width:100%;
+            height:100px;
+            z-index:999;
+            background-color:#fff;
+        }
+            header div {
+                margin-left:50px;
+                width:200px;
+                float:left;
+                line-height:51px;
+                margin-top:31px;
+            }
+                header div img {
+                    width:32px;
+                    height:32px;
+                }
+                header div span {
+                        font-size: 21px;
+                        color: #393a3a;
+                        font-weight:bold;
+                }
+            header nav {
+                float:right;
+                margin-right:100px;
+                margin-top:31px;
+            }
+                header nav li {
+                    float:left;
+                    display:block;
+                    margin-left:25px;
+                    line-height:51px;
+                    color: #787b83;
+                    font-size: 14px;
+                }
+                    header nav li:hover {
+                        color: #ec0000;
+                        border-bottom: 5px solid #ec0000;
+                        line-height: 63px;
+                    }
+                    header nav li span {
+                        color: #ec0000;
+                        font-size:21px;
+                    }
+        article {
+            position:relative;
+            top:82px;
+            width:100%;
+            overflow:auto;
+            min-width:1388px;
+        }
+        .logo1 {
+            background:url(img01.jpg) no-repeat center;
+            background-size:100%;
+            width:100%;
+            height:790px;
+        }
+            .logo1 div {
+                position:absolute;
+                top:300px;
+                left:100px;
+                color: #fff;
+            }
+                .logo1 div h1 {
+                    font-size:50px;
+                }
+                .logo1 div h2 {
+                    font-size: 20px;
+                    font-weight: 100;
+                }
+                .logo1 div p {
+                    width: 340px;
+                    height: 60px;
+                    background-color:#de3f3f;
+                    margin-top:50px;
+                    padding-top:10px;
+                }
+                .logo1 div p span {
+                    font-size:35px;
+                    margin-left:101px;
+                }
+        .logo2 {
+            width: 100%;
+            height: 252px;
+            background: #fff;
+            margin-top:100px;
+        }
+            .logo2 div {
+                float:left;
+                /*margin-left:25px;*/
+                width:24%;
+                text-align:center;
+                color: #999;
+                }
+                .logo2 div img {
+                    display:block;
+                    margin :0 auto;
+                    margin-bottom:25px;
+                    text-align:center;
+                }
+                .logo2 div p {
+                        font-size: 14px;
+                }
+        .span {
+            border-right: 2px solid #999;
+        }
+        .logo3 {
+            width:100%;
+            height:520px;
+            background-color:#EDEDEC;
+            text-align:center;
+        }
+            .logo3 img {
+                display:block;
+                margin :0 auto;
+                padding-top:220px;
+            }
+                .logo3  p {
+                    font-size: 50px;
+                    color: #777;
+                }
+        .logo4 {
+            background:url(map.jpg) no-repeat center;
+            height:431px;
+            background-size:100%;
+            color:#fff;
+            text-align:center;
+        }
+            .logo4 h3 {
+                font-size:30px;
+                padding-top:120px;
+            }
+            .logo4p {
+                width: 40px;
+                height: 4px;
+                margin: 10px auto;
+                background: #fff;
+                margin-bottom:30px;
+            }
+        .select {
+            margin-left:20%;
+        }
+        .select div {
+            float:left;
+            display:block;
+            margin-left:25px;
+            margin-top:50px;
+            width:230px;
+            height:35px;
+            background-color:#fff;
+            line-height: 32px;
+            color: #aaa;
+            text-align:left;
+            padding-left:10px;
+        }
+            .select div img {
+                float:right;
+                margin-right:15px;
+                margin-top:7px;
+            }
+        #lastdiv {
+            background-color:#ec0000;
+            line-height: 32px;
+            text-align:center;
+            color:#fff;
+        }
+        #selectitem {
+            position: relative;
+            left: -12px;
+            margin:0;
+            width: 230px;
+            height: auto;
+            border: 1px solid #CF5F59;
+            background-color: #E3E3E4;
+        }
+            #selectitem ul li {
+                list-style: none;
+                padding-left:25px;
+            }
+        .logo5 {
+            height:600px;
+            background: #F7F7F7;
+            width:100%;
+        }
+            .logo5 div {
+                float:left;
+                display:block;
+                width: 24%;
+                line-height: 30px;
+                text-align:center;
+                margin-top:90px;
+            }
+                .logo5 div img {
+                    padding: 10px;
+                    border: 1px solid #ddd;
+                }
+                .logo5 div h4 {
+                    text-indent: 30px;
+                    letter-spacing: 30px;
+                    font-size: 20px;
+                }
+                .logo5 div p {
+                    font-size: 14px;
+                    color: #999;
+                    font-weight: 100;
+                }
+        .logo6 {
+            width:100%;
+            height:566px;
+        }
+        .logo6-left {
+            width:75%;
+            height:566px;
+            float:left;
+            background:url(newworld_1.png) no-repeat left;
+            background-size:100%;
+        }
+            .logo6-left div {
+                position:relative;
+                top:25%;
+                color:#fff;
+                text-align:center;
+            }
+            .logo6-left div h1 {
+                font-size:48px;
+            }
+            .logo6-left div h2 {
+                font-size:128px;
+                line-height:100px;
+                margin-bottom:50px;
+            }
+                .logo6-left div p {
+                    margin-top: 30px;
+                    line-height: 42px;
+                    font-size: 24px;
+                }
+        .logo6-right {
+            width:25%;
+            height:566px;
+            float:right;
+        }
+            .logo6-right h1 {
+                display: block;
+                font-size: 24px;
+                margin-left:45%;
+                margin-top:20%;
+            }
+                .logo6-right h1 span {
+                    color:#ec0000;
+                    margin-right:35%;
+                }
+            .logo6-rightspan {
+                float:left;
+                margin-left:25%;
+                width: 64%;
+                text-align: justify;
+                line-height: 36px;
+                color: #ccc;
+                font-size: 12px;
+                margin-top:25px;
+            }
+        .button {
+            border: 2px solid #c00;
+            float:left;
+            margin-left:45%;
+            margin-top:40px;
+            font-size: 14px;
+            padding: 7px 23px;
+            color: #c00;
+            cursor: pointer;
+            background: white;
+            transition: all ease .3s;
+        }
+            .button:hover {
+                background-color:#ec0000;
+                color:#fff;
+            }
+        .buttontab {
+            margin-left:45%;
+            margin-top:350px;
+        }
+            .buttontab div {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                margin: 0 10px;
+                border-radius: 12px;
+                border: 2px solid #aaa;
+                background: #fff;
+            }
+        .logo7 {
+            width:100%;
+            height:600px;
+        }
+            .logo7div1 {
+                width:75%;
+                height:600px;
+                float:left;
+            }
+        .red {
+            background: #f55;
+            color: white;
+            width:50%;
+        }
+        .write {
+            background: #fff;
+            color: #f55;
+            width:50%;
+        }
+        .logo7div2 {
+                width:25%;
+                height:600px;
+                float:right;
+                background:url(img03.jpg) right center no-repeat;
+                -webkit-filter: brightness(0.7);
+            }
+        .logo7div4 {
+            position:relative;
+            top:200px;
+            text-align:center;
+            font-size:20px;
+        }
+        .logo7p {
+            width: 40px;
+            height: 4px;
+            margin: 10px auto;
+            background: #fff;
+            margin-bottom:30px;
+            margin-top:30px;
+        }
+            .logo7p:hover {
+                width: 80px;
+                height: 4px;
+                margin: 10px auto;
+                background: #fff;
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+        .logo7button {
+            border: 2px solid #fff;
+            position:relative;
+            /*margin-left:203px;
+            margin-top:40px;*/
+            margin:40px 38%;
+            font-size: 14px;
+            padding: 7px 23px;
+            color: #f55;
+            cursor: pointer;
+            background: #fff;
+            transition: all ease .3s;
+        }
+            .logo7button:hover {
+                background-color:#f55;
+                color:#fff;
+            }
+        .logo7w {
+            border: 2px solid #f55;
+        }
+            .blackba:hover {
+                width: 80px;
+                height: 4px;
+                margin: 10px auto;
+                background: #000;
+                margin-bottom: 30px;
+                margin-top: 30px;
+            }
+        .black {
+            color:#000;
+        }
+        .blackba {
+            background-color:#000;
+        }
+        .logo8 {
+            width:100%;
+            height:400px;
+            text-align:center;
+            margin-top:180px;
+            font-size: 24px;
+        }
+            .logo8 p {
+                width: 60px;
+            height: 4px;
+            margin: 10px auto;
+            background: #f55;
+            margin-bottom:30px;
+            margin-top:30px;
+            }
+            .logo8 span {
+                display:block;
+            width: 900px;
+            text-align: center;
+            color: #aaa;
+            margin:0 auto;
+            }
+        .logo9 {
+            width:100%;
+        }
+            .logo9 div h1 {
+                font-size: 20px;
+                line-height: 60px;
+            }
+            .logo9 div h2 {
+                color: #aaa;
+                font-family: serif;
+                width:400px;
+
+                font-size: 20px;
+            }
+            .logo9 div div {
+                text-align:right;
+                margin-bottom:20px;
+            }
+        .logo9-left {
+            float:left;
+			margin-left:10%;
+        }
+        .logo9-right {
+            float:left;
+            margin-left:-100px;
+        }
+            .logo9-right div {
+                margin-left:200px;
+                margin-top:15px;
+                background-color:#aaa;
+            }
+                .logo9-right div span {
+                    display:block;
+                    width: 295px;
+                    height: 40px;
+                    float:right;
+                    background-color:#eee;
+                    margin-left:20px;
+                    text-align:left;
+                    margin-bottom:20px;
+                    color:#aaa;
+                    font-size:13px;
+                    padding-left:10px;
+                    padding-top:5px;
+                }
+        #logo9div {
+            width:610px;
+            height:195px;
+            margin-top:140px;
+            background-color:#eee;
+            text-align:left;
+            margin-left:220px;
+            color:#aaa;
+            font-size:13px;
+            padding-left:10px;
+            padding-top:5px;
+        }
+        #logo9div1 {
+            width:610px;
+            height:40px;
+            background-color:#eee;
+            text-align:center;
+            margin-left:220px;
+        }
+        footer {
+            width:100%;
+            height:400px;
+            text-align:center;
+            background-color: #33363F;
+            margin-top:100px;
+            min-width: 1388px;
+            color:#fff;
+            padding-top:150px;
+            min-width:1388px;
+        }
+            footer h2 {
+                width:660px;
+                margin:0 auto;
+            }
+            footer input {
+                border: none;
+            }
+        .footerimput {
+           width: 400px;
+           height: 40px;
+           margin-top:20px;
+           font-size:20px;
+        }
+        .footerbuttom {
+            width: 80px;
+            height: 40px;
+            background: #696266;
+            color: #fff;
+            cursor: pointer;
+            margin-top:20px;
+            font-size:20px;
+        }
+        footer div {
+            /*width:100%;*/
+            height:50px;
+            padding-left:30%
+        }
+        footer img {
+            width:24px;
+            height:25px;
+            display:block;
+            float:left;
+            margin-top:50px;
+            padding-left:15%;
+        }
+        footer div:last-child {
+            position:relative;
+            background: #223;
+            margin-top:100px;
+            margin-left:-400px;
+        }
+            footer div:last-child h1 {
+                float:left;
+                font-size:16px;
+            }aaa
+             .footerspan{
+                float:right;
+                font-size:16px;
+            }
+    </style>
+</head>
+<body>
+    <header>
+        <div>
+        <img src="h-icon.png" />
+        <span>新世界</span>
+            </div>
+        <nav>
+            <ul>
+                <li>首页</li>
+                <li>最新项目</li>
+                <li>项目介绍</li>
+                <li>爱心社区</li>
+                <li>关于我们</li>
+                <li>
+                    <img src="login.png" /><span>登陆</span></li>
+            </ul>
+        </nav>
+    </header>
+    <article>
+        <div class="logo1">
+            <div>
+                <h1>Time of new life</h1>
+                <br />
+                <br />
+                <h2>新时代，年轻的人们让我们一起</h2>
+                <h2>体验新生活，享受新生活</h2>
+                <p><span>开始体验</span></p>
+            </div>
+        </div>
+        <div class="logo2">
+            <div>
+                <img src="icon_1.png" />
+                <p class="span">打造全新世界观，让你更</p>
+                <p class="span">爱你的生活</p>
+            </div>
+            <div>
+                <img src="icon_2.png" />
+                <p class="span">丰富多彩的公益活动，发</p>
+                <p class="span">挥新世界的主人公意识</p>
+            </div>
+            <div>
+                <img src="icon_3.png" />
+                <p class="span">时尚的新理念，超前体验</p>
+                <p class="span">未知的生活</p>
+            </div>
+            <div>
+                <img src="icon_4.png" />
+                <p>完善的培养机制，培养你</p>
+                <p>全新的世界观</p>
+            </div>
+        </div>
+        <div class="logo3">
+            <img src="logo.png" />
+            <p>关于新世界，你不知道的还有什么？</p>
+        </div>
+        <div class="logo4">
+            <h3>查找新世界城市活动信息</h3>
+            <p class="logo4p"></p>
+            <p>每个城市有不同的活动信息，请自主查询你所需要了解的城市</p>
+            <div class="select">
+                <div>国家<img src="down.jpg" /></div>
+                <div>省份<img src="down.jpg" />
+                    <div id="selectitem">
+                        <ul>
+                            <li>省份</li>
+                            <li>省份</li>
+                            <li>省份</li>
+                        </ul>
+                    </div>
+                </div>
+                <div>城市<img src="down.jpg" /></div>
+                <div id="lastdiv">搜索</div>
+            </div>
+        </div>
+        <div class="logo5">
+            <div>
+                <img src="activity_1.png" />
+                <h3>北京活动</h3>
+                <p>新社区大联盟</p>
+            </div>
+            <div>
+                <h4>上海活动</h4>
+                <p>夜上海新景观探索</p>
+                <img src="activity_2.jpg" />
+            </div>
+            <div>
+                <img src="activity_3.jpg" />
+                <h3>深圳活动</h3>
+                <p>全新海安县观点站</p>
+            </div>
+            <div>
+                <img src="activity_4.png" />
+                <h3>香港活动</h3>
+                <p>奢靡消费大派送</p>
+            </div>
+        </div>
+        <div class="logo6">
+            <div class="logo6-left">
+                <div>
+                <h1>新世界</h1>
+                    <h2>TIME</h2>
+                    <p>@新世界-北京</p>
+                    <p>2016.04.01</p>
+                    </div>
+            </div>
+            <div class="logo6-right">
+                <h1>新世界/<span>01</span></h1>
+                <span class="logo6-rightspan">
+                    新世界是个新世界新世界是个新世界新世界是个新世界
+                    <br/>
+                    新世界是个新世界新世界是个新世界新世界是个新世界
+                    <br />
+                    新世界是个新世界新世界是个新世界新世界是个新世界
+                    <br />
+                </span>
+                <div class="button">更多详情</div>
+                <div class="buttontab">
+                    <div>
+                    </div>
+                    <div></div>
+                    <div></div>
+                </div>
+            </div>
+        </div>
+        <div class="logo7">
+                <div class="logo7div1">
+                    <div class="logo7div1 red">
+                        <div class="logo7div4">
+                        <h1>新时代</h1>
+                        <h1>关于爱生活的我们</h1>
+                            <p class="logo7p"></p>
+                            <div class="logo7button">更多详情</div>
+                            </div>
+                    </div>
+                    <div class="logo7div1 write">
+                        <div class="logo7div4 black">
+                        <h1>新时代</h1>
+                        <h1>关于爱生活的我们</h1>
+                            <p class="logo7p blackba"></p>
+                            <div class="logo7button logo7w">更多详情</div>
+                            </div>
+                    </div>
+                </div>
+                <div class="logo7div2"></div>
+            </div>
+        <div class="logo8">
+            <h1>成为我们的志愿者</h1>
+            <p></p>
+            <span>新世界的大家庭需要每一个爱生活的人加入,如果你够年轻,有梦想,有激情
+那就不要犹豫,快来加入我们,成为改变所有人生活的人</span>
+        </div>
+        <div class="logo9">
+            <div class="logo9-left">
+            <h1>新世界志愿者协议</h1>
+            <h2>加入新世界志愿者的人员必须遵守中华人民共共和国的
+相关法律法规，并且本着</h2>
+                <div>
+            <img src="more.png" /><span>more</span></div>
+            <h1>新世界志愿者权利</h1>
+            <h2>加入新世界志愿者的人员必须遵守中华人民共共和国的
+相关法律法规，并且本</h2>
+                <div>
+            <img src="more.png" /><span>more</span></div>
+            <h1>更多条理</h1>
+                <div>
+            <img src="more.png" /><span>more</span></div>
+        </div>
+            <div class="logo9-right">
+                <div>
+                    <span>姓名：</span>
+                    <span>年龄：</span>
+                </div>
+                <div>
+                    <span>联系方式：</span>
+                    <span>联系地址：</span>
+                </div>
+                <div id="logo9div">请简单描述一下你梦想的生活</div>
+                <div id="logo9div1">提交申请</div>
+            </div>
+            </div>
+    </article>
+    <footer>
+        <h1>联系我们</h1>
+        <h2>为了更好的获取我们最新的产品资讯，您可以留下您的电子邮箱快速订阅我们的产品资讯也可以通过以下任何方式关注我们动态</h2>
+        <input class="footerimput" type="text" placeholder="someone@email.com" /><input class="footerbuttom"  type="button" value="提交" />
+        <div>
+        <img src="qq.png" />
+        <img src="s2.png" />
+        <img src="s3.png" />
+        <img src="weibo.png" />
+            </div>
+        <div>
+            <h1>@2016新世界</h1>
+            <span class="footerspan">Back to top</span>
+        </div>
+    </footer>
+</body>
+</html>

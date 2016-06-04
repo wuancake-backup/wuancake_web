@@ -1,0 +1,36 @@
+/* 
+* @Author: anchen
+* @Date:   2016-03-07 15:25:47
+* @Last Modified by:   anchen
+* @Last Modified time: 2016-03-07 18:00:21
+*/
+/*购物车总价*/
+.sc-overall.sc-total{
+    margin-bottom: 0;
+}
+/*W模块*/
+.w-part{
+    height:170px;
+    background:url(../images/W_03.png) no-repeat center ;
+    border-top: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+}
+/*购物地址*/
+.sp-address{
+    padding-top: 92px;
+}
+/*付款选项*/
+.pay-option{
+    padding:95px 0 100px;
+}
+/*商品费用*/
+.pay-price{
+    font-family: Georgia;
+    font-size: 18px;
+    line-height: 36px;
+    color:#606060;
+    margin-bottom: 100px;
+}
+.pay-price .row:last-child{
+    color:#f68236;
+}

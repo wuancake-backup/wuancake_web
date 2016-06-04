@@ -1,0 +1,53 @@
+html, body {
+    padding: 0;
+    margin: 0;
+}
+body {
+    width: 100%;
+    min-width: 1280px;
+    background-color: #fff;
+}
+ul li {
+    list-style: none;
+}
+textarea {
+    resize: none;
+}
+a {
+    text-decoration: none;
+    color: #999;
+}
+header {
+    padding: 0 50px;
+    height: 60px;
+    width: 100%;
+}
+
+.active,
+nav ul li a:hover:not(.login) {
+    border-bottom: 5px #E74F4D solid;
+    color: #E74F4D;
+}
+nav .logo {
+    display: inline-block;
+    height: 100%;
+    font-size: 21px;
+    color: #000;
+    font-weight: 200;
+}
+    nav .logo img,
+    nav .login img {
+        vertical-align: middle;
+    }
+
+nav ul {
+    float: right;
+    font-size: 14px;
+}
+nav ul:after {
+
+}
+    nav ul li {
+        float: left;
+        text-align: center;
+    }
