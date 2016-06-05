@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin: 0px; padding: 0px;}
+.clear{ clear:both;}
+#container{ width: 1200px; height: 2400px; margin: 0 auto; background-color:#FFF; }
+a{ text-decoration: none;}
+/*header*/
+.header{ height: 520px; background: url(../images/bg-header.png) no-repeat;}
+.nav{ width: 1200px; height: 120px;}
+.nav ul{ width: 1200px; height: 120px;}
+.nav ul li{ width: 168px; height: 120px; line-height: 120px; text-align: center; font-family:[308 CAI978]; font-size: 24px; color:#fff; float: left; list-style-type: none;}
+.nav ul li a{ color: #fff;}
+.nav ul li a:hover{ color:#fffc00;}
+/*banner*/
+.banner{ width: 1200px; height: 400px;}
+.banner .b_left{ width:460px; height: 400px;float:left;}
+.title_1{ width: 460px; height: 90px; background:url(../images/h-project.png) 120px 50px no-repeat;}
+.p_1{width: 460px; height: 190px; background:url(../images/p1.png) 120px 10px no-repeat;}
+.readmore_1 {width: 100px; height: 32px; margin-left: 120px; margin-top: 25px;}
+.banner .b_right{ width:740px; height: 400px; background:url(../images/img1.png) 0px 50px no-repeat; float:left;}
+/*services*/
+.services{ height: 450px; background-color: #fcfcfc;}
+.title_2{ width: 1200px; height: 90px; background:url(../images/h-services.png) 120px 30px no-repeat;}
+.sign_1{ width: 420px; height: 350px; background:url(../images/sign_01.png) 120px 0px no-repeat; float:left;}
+.sign_2{ width: 300px; height: 350px; background:url(../images/sign_02.png) 25px 0px no-repeat; float:left;}
+.sign_3{ width: 480px; height: 350px; background:url(../images/sign_03.png) 25px 0px no-repeat; float:left;}
+/*portfolio*/
+.portfolio{ height: 590px; background:url(../images/bg-portfolio.png) no-repeat;}
+.title_3{ width: 1200px; height: 90px; background: url(../images/h-portfolio.png) 120px 30px no-repeat; float:left; }
+
+.por_left{ width: 510px; height: 500px; float: left;}
+.box_01{ width: 390px; height: 500px; margin-left: 120px;}
+.box_01 .img_1{ width: 190px; height: 140px; margin-left:5px; margin-bottom: 10px; float:left;}
+
+.por_center{ width: 380px; height: 500px; float:left;}
+.box_02{ width: 371px; height: 439px; margin-left: 5px;}
+
+.por_right{ width: 310px; height: 500px; float: left;}
+.box_03{ width:190; height: 500px; margin-right: 120px;}
+.box_03 .img_2{ width: 190px; height:140px; margin: 0px 5px 10px 5px; float: left;}
+/*blog*/
+.blog{ height: 330px; background:url(../images/bg-blog.png) no-repeat;}
+.title_4{ width: 1200px; height: 95px; background: url(../images/h-blog.png) 120px 40px no-repeat;}
+.blg_left{ width: 600px; height: 235px; float: left;}
+.img_3{ width:180px; height: 140px; margin-left: 120px; float:left;}
+.img_4{ width:281px; height: 152px; margin-left: 10px; float:left;}
+.img_5{ width: 101px; height: 32px; float:right; margin-top:10px; margin-right:2px;}
+.blg_right{ width: 600px; height: 235px; float: left;}
+.img_6{ width:180px; height: 140px; margin-left: 20px; float:left;}
+.img_7{ width:390px; height: 151px; margin-left: 10px; float:left;}
+.img_8{ width: 600px; height: 84px; }
+.img_8 img{ width: 101px; height: 32px; margin-top: 10px; margin-left: 400px;}
+/*friendlink*/
+.friendlink{ height:430px; background:url(../images/bg-friendlink.png) no-repeat;}
+.fri_left{ width: 430px; height: 430px; float: left;}
+.title_5{ width: 430px; height: 80px; background:url(../images/h-aboutme.png) 120px 40px no-repeat;}
+.img_9{ width: 430px; height: 195px; background:url(../images/p2.png) 120px 15px no-repeat;}
+.img_10{ width: 100px; height: 32px; margin-left: 120px; margin-top: 20px;}
+.fri_center{ width: 330px; height: 430px; float: left; }
+.title_6{ width: 330px; height: 80px; background: url(../images/h-followme.png) 25px 40px no-repeat;}
+.img_11{ width: 330px; height: 195px; background:url(../images/p2.png) 25px 15px no-repeat;}
+.img_12{ width: 101px; height: 32px; margin-left: 25px; margin-top: 20px;}
+.fri_right{ width: 440px; height: 430px; float: left;}
+.title_7{ width: 440px; height: 80px; background: url(../images/h-contact.png) 25px 40px no-repeat;}
+.img_13{ width: 101px; height: 32px; margin-left: 30px; margin-top: 10px;}
+/*footer*/
+.footer{ height: 80px; background:url(../images/bg-footer.png) no-repeat;}
+.footer p{ font-size: 14px; color:#9aa0a4; line-height: 80px; text-align:center;}
