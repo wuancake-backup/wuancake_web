@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0 auto; padding:0;}
+.header{ width:1200px; height:520px; background:url(image/bg.png);}
+.header .dhl ul{ margin:0 auto; padding:0;}
+.header .dhl ul li{height:120px;float:left; text-align:right;list-style:none;line-height:120px; font-size:20px; font-family:微软雅黑; color:#FFF;}
+.header .zuo{ width:475px; float:left;}
+.header .zuo .one{ width:120px; float:left;}
+.header .zuo .two{ width:355px; float:left;}
+.header .zuo .two .shang{ height:40px; font-family:微软雅黑; font-size:20px; color:#FFF; padding-top:50px;}
+.header .you .one{ width:620px; float:left; margin-top:50px;}
+.header .you .two{ width:105px; float:left;}
+.nav1{ width:1200px; height:450px; background-color:#fcfcfc;}
+.nav1 .shang{ font-family:微软雅黑; font-size:20px; height:90px; line-height:90px; padding-left:120px; color:#5f686d;}
+.nav1 .xia .shang{ width:335px; float:left; padding-right:0px;}
+.nav1 .xia .zhong{ width:335px; float:left; padding-right:0px;}
+.nav1 .xia .xia{ width:335px; float:left; padding-right:0px;}
+.nav2{ width:1200px; height:590px; background-color:#ebebeb;}
+.nav2 .up{ font-family:微软雅黑; font-size:20px; height:90px; line-height:90px; padding-left:120px; color:#5f686d;}
+.nav2 .down .one{ float:left; width:190px; margin-left:120px;}
+.nav2 .down .two{ float:left; width:190px; margin-left:10px;}
+.nav2 .down .three{ float:left; width:375px; margin-left:10px;}
+.nav2 .down .four{ float:left; width:180px; margin-left:10px;}
+.nav3{ width:1200px; height:330px; background-color:#f7f6ff;}
+.nav3 .shang{font-size:20px; font-family:微软雅黑; padding-left:120px; height:95px; line-height:95px; color:#5f686d;}
+.nav3 .xia .zuo{ width:475px; float:left; padding-left:120px;}
+.nav3 .xia .you{ width:475px; float:left;}
+.nav4{ width:1200px; height:430px; background-color:#4b5055;}
+.nav4 .zuo{ float:left; width:330px;padding-left:120px;}
+.nav4 .zuo .shang{ width:330px;font-size:20px; font-family:微软雅黑; height:90px; line-height:90px; color:#ffffff}
+.nav4 .zhong{ float:left; width:320px;}
+.nav4 .zhong .shang{width:330px;font-size:20px; font-family:微软雅黑; height:90px; line-height:90px; color:#ffffff}
+.nav4 .you{ float:left; width:320px;}
+.nav4 .you .shang{ width:330px;font-size:20px; font-family:微软雅黑; height:90px; line-height:90px; color:#ffffff}
+.footer{ width:1200px; height:80px; background-color:#414546; font-size:20px; font-family:微软雅黑; text-align:center; line-height:80px; color:#9aa0a4;}
