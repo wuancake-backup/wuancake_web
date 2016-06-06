@@ -1,0 +1,74 @@
+@CHARSET "UTF-8";
+
+input {
+	word-break: normal;
+}
+
+div, ul, li body {
+	margin: 0;
+	padding: 0;
+	position: relative;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	word-break: break-all;
+	overflow: auto;
+}
+
+input{
+	vertical-align: middle;
+}
+
+.tree{
+	position:relative;
+	margin:10px 0;
+	display:inline-block;
+	overflow:hidden;
+	padding:1em;
+}
+
+.tree ul{
+	display:none;
+	cursor:pointer;
+}
+
+.tree li,.tree ul{
+	list-style:none;
+	overflow:visible;
+}
+.tree li>input[type='checkbox']{
+	-webkit-appearance:none;
+	outline:none;
+}
+
+
+.tree li>input[type=checkbox] >* {
+	vertical-align:top;
+	outline:none;
+}
+/*  获取文字 */
+.tree li>input[type=checkbox]:after {
+	content:attr(value);
+	float:right;
+}
+
+/* 添加前面的箭头，和文件夹图标 */
+.tree li>input[type=checkbox]:nth-last-child(2):before {
+	content:url("../images/arrow_collapsed.gif") url("../images/folder_closed.gif");
+}
+.tree li>input[type=checkbox]:nth-last-child(1):before {
+	content:url("../images/arrow_collapsed.gif") url("../images/tree_node.gif");
+}
+
+/* 点击之后的箭头和文件夹图标 */
+.tree li>input[type=checkbox]:nth-last-child(2):checked:before {
+	content:url("../images/arrow_expanded.gif") url("../images/folder_open.gif");
+}
+
+.tree li>input[type=checkbox]:nth-last-child(1):checked:before {
+	content:url("../images/arrow_expanded.gif") url("../images/tree_node.gif");
+}
+
+.tree li>input[type=checkbox]:checked ~ ul {
+	display:block;
+	margin-left:1em;
+}

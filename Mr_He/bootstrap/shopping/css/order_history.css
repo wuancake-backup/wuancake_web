@@ -1,0 +1,70 @@
+
+@media (min-width: 768px){
+   .order-h .a-title{
+        margin-bottom: 36px;
+    } 
+}
+.order-h .ban-btn{
+    margin-bottom: 110px;
+    text-transform: uppercase;
+}
+.order-h .sc-items>div{
+    padding-left: 0;
+    padding-right: 0;
+}
+/*单笔订单*/
+.order-con{
+    border-bottom: 1px solid #e5e5e5;
+    padding-top: 27px;
+}
+.order-con:last-child{
+    border-bottom: none;
+}
+/*订单行*/
+.order-row{
+    display:flex;
+    align-items: center;
+    margin-bottom: 22px;
+
+}
+/*订单列*/
+.order-col{
+    font-size: 14px;
+    line-height: 18px;
+    color:#303030;
+    text-transform: uppercase;
+    padding:0;
+}
+.order-col:last-child{
+    text-align: right;
+}
+/*订购产品*/
+.order-pro{
+    display:flex;
+    padding:0;
+    align-items: flex-start;
+}
+/*产品描述*/
+.order-des{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5px;
+}
+.order-des h4{
+    font-size: 14px;
+    line-height: 18px;
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+}
+.order-des h4 a{
+    color:#303030;
+}
+.order-des p{
+    font-size: 12px;
+    line-height: 18px;
+    font-style: italic;
+}
+.order-des p a{
+    color:#606060;
+}

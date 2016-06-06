@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>demo</title>
+
+    </head>
+    <body>
+<div id="app" v-my-directive="message">
+
+</div>
+    </body>
+    <script type="text/javascript" src="vue.js">    </script>
+    <script type="text/javascript">
+
+Vue.directive('my-directive',{
+    bind: function () {
+        console.log('bind')
+    },
+    update: function (message) {
+        this.el.innerHTML = message
+    }
+})
+new Vue({
+    el: '#app',
+    data: {
+        message: 'hello'
+    }
+})
+
+
+    </script>
+</html>

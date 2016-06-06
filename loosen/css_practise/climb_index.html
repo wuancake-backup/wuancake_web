@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>climb_index</title>
+	<link rel="stylesheet" href="css/climb.css">
+</head>
+<body>
+	<div id="page">
+		<div id="branding">
+			<h1>Climb the mountains</h1>
+			<h2>Reach new heights by creating, sharing and recording your hiking routes with others.</h2>
+
+			<ul id="nav_head">
+				<li class="nav_home"><a href="#">Home</a></li>
+	            <li class="nav_routes"><a href="#">Routes</a></li>
+	            <li class="nav_about"><a href="#">About</a></li>
+	            <li class="nav_shop"><a href="#">Shop</a></li>
+			</ul>
+
+			<blockquote id="johnmuir">
+	            <p>&ldquo;Climb the mountains and get their good tidings. Nature's peace will flow into you as sunshine flows into trees. The winds will blow their own freshness into you, and the storms their energy, while cares will drop away from you like the leaves of Autumn.&rdquo;</p>
+	            <p><cite>John Muir, 1903</cite></p>
+	        </blockquote>
+
+	        <div id="account">
+	        	<p>Logged in as <a href="">collylogic<img src="images/content/avatar_colly.jpg" alt="collylogic's avatar" class="avatar"></a></p>
+	        	<p class="action"><a href="">ACCOUNT</a>|<a href="">LOG OUT</a></p>
+	        </div>
+
+	        <form action="" id="route_search">
+				<h5>FIND A ROUTE:</h5>
+				<filedset>
+					<input id="search_keywords" type="text" title="Keywords" value="Keywords">
+					<select id="Select_region">
+						<option selected="selected">Select region</option>
+	                    <option value="Peak District">Peak District</option>
+	                    <option value="Lake District">Lake District</option>
+	                    <option value="Snowdonia">Snowdonia</option>
+	                    <option value="Dartmoor">Dartmoor</option>
+	                    <option value="Pembrokeshire Coast">Pembrokeshire Coast</option>
+	                    <option value="North York Moors">North York Moors</option>
+	                    <option value="Yorkshire Dales">Yorkshire Dales</option>
+	                    <option value="Exmoor">Exmoor</option>
+	                    <option value="Northumberland">Northumberland</option>
+	                    <option value="Brecon Beacons">Brecon Beacons</option>
+	                    <option value="The Broads">The Broads</option>
+	                    <option value="New Forest">New Forest</option>
+	                    <option value="South Downs">South Downs</option>
+					</select>
+					<input type="submit" value="Go">
+				</filedset>
+			</form>
+			
+		</div>
+
+		<div id="content_wrapper">
+			<div id="content_pri">
+				<h2>Your latest route: <span>Scafell Pike via Corridor Route, 12th May 2009</span></h2>
+				<div id="route_stats">
+
+					<ul id="route_nav">
+						<li><a href="">Map</a></li>
+						<li><a href="">Elevation</a></li>
+						<li><a href="">Download GPS</a></li>
+						<li><a href="">Full routesheet</a></li>
+					</ul>
+					
+					<ul id="route_action">
+						<li class="share"><a href="">Share</a></li>
+						<li class="print"><a href="">Print</a></li>
+						<li class="edit"><a href="">Edit</a></li>
+					</ul>
+
+					<div id="route_elevation">
+						<ul>
+                        <li class="marker_01">
+                            <a href="">
+                                <strong>1,442 ft</strong>
+                                <img src="images/content/elevation_photo_1.jpg" alt="At 1,442 ft: Photo of the village" />
+                            </a>
+                        </li>
+                        <li class="marker_02">
+                            <a href="">
+								<strong>3,133 ft</strong>
+                                <img src="images/content/elevation_photo_3.jpg" alt="At 3,133 ft: Cup of tea" />
+                            </a>
+                        </li>
+                        <li class="marker_03">
+                            <a href="">
+                                <strong>2,398 ft</strong>
+                                <img src="images/content/elevation_photo_2.jpg" alt="At 2,398 ft: Pennine Way" />
+                            </a>
+                        </li>
+                        <li class="marker_04">
+                            <a href="">
+                                <strong>1,286 ft</strong>
+                                <img src="images/content/elevation_photo_4.jpg" alt="At 1,286 ft: Wool packs" />
+                            </a>
+                        </li>
+                    </ul>
+					</div>
+
+				</div>
+
+				<div id="captioned_image">
+	                <img src="images/content/campsite.jpg" alt="From the campsite" />
+	                <p class="caption">From the campsite bridge towards the village, Great Gable and Lingmell.</p>
+            	</div>
+			</div><!-- // #content_pri -->
+
+			<div id="content_sec">
+				<div id="your_routes">
+	                <h2>Your other routes <a href="" class="more">(view all)</a></h2>
+	                <ul>
+	                    <li>
+	                        <h3><a href=""><img src="images/content/route_thumbnail_1.jpg" alt="Photo of Kinderscout circuit" /> Kinderscout circuit</a></h3>
+	                        <p class="dist_elev">13.6 miles | Elevation 2,400ft</p>
+	                    </li>
+	                    <li>
+	                        <h3><a href=""><img src="images/content/route_thumbnail_2.jpg" alt="Photo of Great Gable" /> Great Gable</a></h3>
+	                        <p class="dist_elev">8.9 miles | Elevation 3,900ft</p>
+	                    </li>
+	                    <li>
+	                        <h3><a href=""><img src="images/content/route_thumbnail_3.jpg" alt="Photo of Snowdon Horseshoe" /> Snowdon Horseshoe</a></h3>
+	                        <p class="dist_elev">11.6 miles | Elevation 4,235ft</p>
+	                    </li>
+	                    <li>
+	                        <h3><a href=""><img src="images/content/route_thumbnail_1.jpg" alt="Photo of Kinderscout circuit" /> Kinderscout circuit</a></h3>
+	                        <p class="dist_elev">13.6 miles | Elevation 2,400ft</p>
+	                    </li>
+	                </ul>
+	                <p class="route_new"><a href="">Create new route</a></p>
+	            </div>
+
+	            <div id="your_recommended">
+	                <h2>Recommended for you <a href="" class="more">(view all)</a></h2>
+	                <h3><a href="">Win Hill and Ladybower</a></h3>
+	                <img src="images/content/route_recommended_map.jpg" alt="Map of your recommended route - Win Hill and Ladybower" />
+	                <p>Classic route over the popular Peak summit and along the banks of Ladybower reservoir. Classic route over the popular Peak summit and along the banks of Ladybower reservoir</p>
+	                <p class="dist_elev">7.8 miles | Elevation 5,030ft</p>
+	            </div>
+
+	            <div id="others_routes">
+	                <h2>Members' routes <a href="" class="more">(view all)</a></h2>
+	                <ul>
+	                    <li>
+	                        <h3><a href="">Kinderscout ridgewalk circuit</a></h3>
+	                        <p class="dist_elev">13.6 miles | Elevation 2,400ft</p>
+	                        <p class="username"><a href="">from Glen Swinfield <img src="images/content/avatar_swinfield.jpg" class="avatar" alt="Glen Swinfield's avatar" /></a></p>
+	                    </li>
+	                    <li>
+	                        <h3><a href="">Castleton Ridges Walk</a></h3>
+	                        <p class="dist_elev">12.2 miles | elevation 1,343ft</p>
+	                        <p class="username"><a href="">from Phil Swan <img src="images/content/avatar_swan.jpg" class="avatar" alt="Phil Swan's avatar" /></a></p>
+	                    </li>
+	                    <li>
+	                        <h3><a href="">Branston and Eaton villages</a></h3>
+	                        <p class="dist_elev">5.7 miles | elevation 1,213ft</p>
+	                        <p class="username"><a href="">from Gregory Wood <img src="images/content/avatar_wood.jpg" class="avatar" alt="Gregory Wood's avatar" /></a></p>
+	                    </li>
+	                    <li>
+	                        <h3><a href="">Ilkley Moor and Otley</a></h3>
+	                        <p class="dist_elev">24.7 miles | elevation 2,473ft</p>
+	                        <p class="username"><a href="">from Jamie Pittock <img src="images/content/avatar_pittock.jpg" class="avatar" alt="Jamie Pittock's avatar" /></a></p>
+	                    </li>
+	                </ul>
+	            </div>
+
+			</div><!-- // #content_sec -->
+
+			<div id="content_ter">
+				<fieldset>
+					<legend>Community</legend>
+					 <div id="community_forums">
+		                <h4><a href="">From the forums</a></h4>
+		                <table summary="List of recent forum topics" cellpadding="0" cellspacing="0">
+		                    <tbody>
+		                        <tr>
+		                            <td><a href="">Help! I am lost</a></td>
+		                            <td class="user"><a href="">Denis Willfeng</a></td>
+		                            <td class="date">13/05/09</td>
+		                        </tr>
+		                        <tr class="alt">
+		                            <td><a href="">Best boots for under £100</a></td>
+		                            <td class="user"><a href="">Sapil Linewph</a></td>
+		                            <td class="date">29/04/09</td>
+		                        </tr>
+		                        <tr>
+		                            <td><a href="">Scrambling in Wales</a></td>
+		                            <td class="user"><a href="">Rory O&rsquo;Deggow</a></td>
+		                            <td class="date">25/04/09</td>
+		                        </tr>
+		                        <tr class="alt">
+		                            <td><a href="">Do you take your dog walking?</a></td>
+		                            <td class="user"><a href="">Mike J Pacitto</a></td>
+		                            <td class="date">09/03/09</td>
+		                        </tr>
+		                        <tr>
+		                            <td><a href="">I’m too old for this!</a></td>
+		                            <td class="user"><a href="">Bell Canpismmo</a></td>
+		                            <td class="date">29/02/09</td>
+		                        </tr>
+		                    </tbody>
+		                </table>
+		            </div>
+		            
+		            <div id="community_flickr">
+		                <h4><a href="">Flick<span class="flickr">r</span></a></h4>
+		                <ul>
+		                    <li><a href=""><img src="images/content/flickr_1.jpg" alt="Flickr image #1" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_2.jpg" alt="Flickr image #2" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_3.jpg" alt="Flickr image #3" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_4.jpg" alt="Flickr image #4" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_5.jpg" alt="Flickr image #5" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_6.jpg" alt="Flickr image #6" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_7.jpg" alt="Flickr image #7" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_8.jpg" alt="Flickr image #8" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_9.jpg" alt="Flickr image #9" /></a></li>
+		                    <li><a href=""><img src="images/content/flickr_10.jpg" alt="Flickr image #10" /></a></li>
+		                </ul>
+		            </div>
+				</fieldset>
+			</div><!-- // #content_ter -->
+			
+			<div id="siteinfo">
+		        <ul id="navigation_foot">
+		            <li><a href="">Climb the mountains</a></li>
+		            <li><a href="">About</a></li>
+		            <li><a href="">Contact</a></li>
+		            <li><a href="">Help</a></li>
+		            <li><a href="">Privacy</a></li>
+		            <li><a href="">Terms</a></li>
+		            <li><a href="">FAQ</a></li>
+		            <li><a href="">API</a></li>
+		        </ul>
+		        
+		        <p id="siteinfo_disclaimer">This is a fictitious website created strictly for educational purposes<a href="http://erskinedesign.com" class="erskine"> by Erskine Design</a>. It may not be reproduced without permission. <a href="http://www.amazon.co.uk/s/ref=nb_ss_w_h_?url=search-alias%3Daps&amp;field-keywords=css+mastery&amp;x=0&amp;y=0">Buy CSS Mastery at Amazon</a>.</p>
+
+		        <p id="siteinfo_copyright">Copyright &copy; 2009 <a href="http://colly.com">Simon Collison</a>. All rights reserved</p>
+		    </div><!-- // #siteinfo -->
+
+		</div>
+
+	</div>
+</body>
+</html>

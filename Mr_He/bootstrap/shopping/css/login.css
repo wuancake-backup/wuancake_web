@@ -1,0 +1,59 @@
+
+.shopping-login{
+    width:500px;
+    background-color: #fff;
+    text-align: center;
+    padding:55px 55px 30px 60px;
+    margin:0 auto;
+}
+.shopping-login h1{
+    font-family: 'Lato-Bold';
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 47px;
+}
+/*无用户及忘记密码*/
+.no-account,.fo-pa{
+    font-size: 12px;
+    font-style: italic;
+}
+
+.no-account a,.fo-pa a{
+    color:#f68236;
+}
+.no-account{
+    line-height: 47px;
+}
+.fo-pa{
+    position: absolute;
+    right:0;
+    top:-24px;
+    line-height: 14px;
+}
+.pass-group{
+    position: relative;
+}
+/*密码可见性按钮*/
+.pass-visible{
+    height:16px;
+    width:24px;
+    background-image: url(../images/login-pass_03.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-color: #fff;
+    border:none;
+    position: absolute;
+    top: calc(50% - 8px);
+    right:8px;
+}
+@media (max-width: 767px){
+    .shopping-login{
+        width:100%;
+        padding-left: 5px;
+        padding-right: 5px;
+    } 
+    .fo-pa{
+        top:-20px;
+    }
+}

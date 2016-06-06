@@ -1,5 +1,0 @@
-C:\Users\YA\Desktop\微商城网站模板\items\bin\items.dll
-C:\Users\YA\Desktop\微商城网站模板\items\bin\items.pdb
-C:\Users\YA\Desktop\微商城网站模板\items\obj\Debug\items.csprojResolveAssemblyReference.cache
-C:\Users\YA\Desktop\微商城网站模板\items\obj\Debug\items.dll
-C:\Users\YA\Desktop\微商城网站模板\items\obj\Debug\items.pdb

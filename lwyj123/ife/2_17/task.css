@@ -1,0 +1,6 @@
+.aqi-chart-wrap {
+	width: 100%;
+	height: 520px;
+	background-color: white;
+	display: flex;
+}
