@@ -1,0 +1,27 @@
+﻿.box {
+            position:absolute;
+            /*border:1px solid #000;*/
+            width:400px;
+            height:200px;
+            background-color:#ccc;
+            top:0;
+            left:0;
+            right:0;
+            bottom:0;
+            margin:auto;
+        }
+        .left {
+            width:50px;
+            height:50px;
+            background-color:#fc0;
+            border-radius: 0 0 100% 0;
+        }
+        .right {
+            width:50px;
+            height:50px;
+            background-color:#fc0;
+            border-radius: 100% 0 0 0;
+            position:absolute;
+            bottom:0;
+            right:0;
+        }

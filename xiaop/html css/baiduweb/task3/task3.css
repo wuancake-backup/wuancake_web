@@ -1,0 +1,46 @@
+﻿.box {
+            padding: 20px 20px 20px 20px;
+            background-color:#eee;
+            border:solid #999;
+            overflow:auto;
+        }
+        .box-left {
+            background-color:#fff;
+            width:200px;
+            height:150px;
+            float:left;
+            border: 1px solid #999;
+        }
+        .logo {
+            position:relative;
+            top:25px;
+            left:25px;
+            height:80px;
+        }
+            .logo img {
+                /*width:80px;*/
+                height:80px;
+            }
+            .logo span {
+                vertical-align: top;
+            }
+        .box-right {
+            width:120px;
+            right:20px;
+            background-color:#fff;
+            float:right;
+            border:1px solid #999;
+        }
+            .box-right img {
+                width:80px;
+                height:80px;
+                margin:20px 20px;
+                display:block;
+            }
+        .box-center {
+            padding:20px;
+            border:1px solid #999;
+            margin:20px 20px;
+            margin-left:220px;
+            margin-right:140px;
+        }
