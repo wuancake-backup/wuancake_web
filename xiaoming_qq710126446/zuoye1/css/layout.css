@@ -1,0 +1,35 @@
+/*public*/
+.container {
+    width: 960px;
+}
+/*font-color*/
+.fc-9aa0a4 {
+    color: #9aa0a4;
+}
+.fc-5f686d {
+    color: #5f686d;
+}
+/*font-size*/
+.fs-38 {
+    font-size: 38px;
+}
+/*background-color*/
+.bc-414546 {
+    background-color: #414546;
+}
+.bc-fcfcfc {
+    background-color: #fcfcfc;
+}
+.bc-blog {
+    background: url("../images/bbg.png");
+}
+.bc-portfolio {
+    background: url("../images/pbg.png");
+}
+/*head*/
+/*content*/
+/*foot*/
+.copyright {
+    padding: 34px 0;
+    font-size: 14px;
+}

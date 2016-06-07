@@ -1,0 +1,623 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <style type="text/css">
+        * {
+            margin:0;
+            padding:0;
+        }
+        @font-face { 
+          font-family: SketchRockwell; 
+          src: url(308-CAI978/308-CAI978.ttf); 
+        } 
+        .htmlindex {
+            margin: 0 auto;
+            width:1200px;
+            height:2400px;
+            /*background-image:url(images/灰调网页UI.jpg);*/
+        }
+        .header {
+            width:1200px;
+            height:520px;
+            background-image:url(images/header.png);
+        }
+            .headerul1 {
+                margin-left:54px;
+            }
+            .headerul2 {
+                margin-right:120px;
+            }
+                .headerul1 li {
+                    display:block;
+                    float:left;
+                    margin-left:74px;
+                    font-size:24px;
+                    font-family:"SketchRockwell";
+                    color:#fff;
+                    margin-top:49px;
+                }
+                .headerul2 li {
+                    display:block;
+                    float:right;
+                    margin-left:69px;
+                    font-size:24px;
+                    font-family:"SketchRockwell";
+                    color:#fff;
+                    margin-top:49px;
+                }
+        .spsli {
+            margin-left:90px;
+            margin-top: 10px;
+        }
+            .spsli input {
+                width:100px;
+                height:31px;
+                background-color:#313234;
+                font-size:24px;
+                font-family:"SketchRockwell";
+                color:#fff;
+                margin-left:-15px;
+                border-style:solid;
+                border-color:#313234;
+                box-shadow:0 -1px 1px #fff;
+                border-radius:4px;
+            }
+            .buttomleft {
+            float:left;
+            margin-top:139px;
+            margin-left:54px;
+        }
+        .bottomright {
+            float:right;
+            margin-top:139px;
+            margin-right:46px;
+        }
+        .headertext {
+            float:left;
+            margin-left:38px;
+            height:375px;
+            width:320px;
+        }
+            .headertext div {
+                height:0;
+                border-bottom:#fff 1px dashed;
+                margin-top:10px;
+            }
+            .headertext p:first-child {
+                font-size:30px;
+                font-family:"SketchRockwell";
+                color:#fff;
+                margin-top:38px;
+            }
+            .headertextlastp {
+                font-size:18px;
+                font-family:"SketchRockwell";
+                color:#fff;
+                margin-top:15px;
+                line-height:20px;
+            }
+        .readmode {
+            width:103px;
+            height:32px;
+            background-color:#979da2;
+            font-size:20px;
+            font-family:"SketchRockwell";
+            color:#fff;
+            border-style:solid;
+            border-color:#979da2;
+            margin-top:23px;
+            border-radius:4px;
+        }
+        .headerlamge {
+            width:618px;
+            height:301px;
+            float:right;
+            margin-right:120px;
+            margin-top:-189px;
+        }
+            .headerlamge ul {
+                margin-left:82px;
+                margin-top:9px;
+            }
+                .headerlamge ul li {
+                    width:12px;
+                    height:12px;
+                    float:left;
+                    display:block;
+                    border-radius:50%;
+                    background-color:#4d5256;
+                    margin-left:7px;
+                }
+                .headerlamge ul li:first-child {
+                    width:10px;
+                    height:10px;
+                    float:left;
+                    display:block;
+                    border-radius:50%;
+                    background-color:#a9adaf;
+                    border:2px solid #4d5256;
+                    margin-left:6px;
+                }
+        .content-1 {
+            width:1200px;
+            height:419px;
+            /*background-color:#ff6a00;*/
+            position:static;
+        }
+        .content-1h1 {
+            margin-left:121px;
+            margin-top:31px;
+        }
+            .content-1h1 p {
+                font-size:38px;
+                font-family:"SketchRockwell";
+                color:#5f686d;
+            }
+        .content-1lage {
+            margin-top:15px;
+            margin-left:98px;
+        }
+            .content-1lage div {
+                width:300px;
+                height:310px;
+                /*background-color:#f00;*/
+                float:left;
+                margin-left:25px;
+                border: #5f686d 1px dashed;
+            }
+                .content-1lage div div {
+                    height: 0;
+                    border-bottom: #5f686d 1px dashed;
+                    margin-top: 9px;
+                    margin-left:16px;
+                    width:270px;
+                    margin-bottom:16px;
+                }
+        .content-1lagep {
+            font-size:26px;
+            font-family:"SketchRockwell";
+            color:#5f686d;
+            margin-left:91px;
+            margin-top:10px;
+        }
+        .content-1lagep2 {
+            font-size:16px;
+            font-family:"SketchRockwell";
+            color:#5f686d;
+            margin-left:19px;
+            margin-top:5px;
+            line-height:20px;
+        }
+        .content-1read {
+            width:110px;
+            height:36px;
+            background-color:#5f686d;
+            font-size:20px;
+            font-family:"SketchRockwell";
+            color:#fff;
+            border-style:solid;
+            border-color:#979da2;
+            border-radius: 4px;
+            margin-left:93px;
+            margin-top:5px;
+        }
+        .content-2 {
+            width:1200px;
+            height:585px;
+            background-image:url(images/contect2.png);
+        }
+        .content-2title {
+            font-size:38px;
+            font-family:"SketchRockwell";
+            color:#5f686d;
+            padding-top:35px;
+            margin-left:120px;
+        }
+        .contect-2iamge {
+            width:1080px;
+            padding-left:111px;
+        }
+                .contect-2iamge div  {
+                    float:left;
+                    width:191px;
+                    height:412px;
+                    margin-left:7px;
+                    /*background-color:#ff6a00;*/
+                }
+                    .contect-2iamge div div {
+                        float:left;
+                        margin-left:0px;
+                        margin-top:15px;
+                    }
+                        .contect-2iamge div div img {
+                            margin-bottom:5px;
+                        }
+        #contect-2iamge1 {
+            width:375px;
+            height:440px;
+            background-image:url(images/contect2-12.png);
+            margin-top:15px;
+        }
+            #contect-2iamge1 img:first-child {
+                float:right;
+            }
+            .contect-2iamge2{
+                margin-top:17px;
+                margin-left:13px;
+            }
+        .contect-2text {
+            font-size:32px;
+            font-family:"SketchRockwell";
+            color:#f0f0f1;
+            margin-left:22px;
+            margin-top:10px;
+        }
+        .contect-2textleft {
+            margin-top:0px;
+        }
+        .contect-2textp {
+            font-family:"SketchRockwell";
+            color:#cfd0d1;
+            margin-left:23px;
+            margin-top:2px;
+            line-height:22px;
+        }
+        .contect-2input {
+            width:101px;
+            height:36px;
+            background-color:#888e93;
+            font-size:20px;
+            font-family:"SketchRockwell";
+            color:#fff;
+            border-style:solid;
+            border-color:#979da2;
+            border-radius: 4px;
+            margin-left:22px;
+            margin-top:10px;
+        }
+        .contect-3 {
+            width:1080px;
+            height:329px;
+            padding-left:120px;
+            padding-right:0px;
+            background-image:url(images/contect3back.png);
+        }
+            .contect-3 div {
+                float:left;
+                /*width:200px;*/
+            }
+            .contect-3 p:first-child {
+                font-size: 38px;
+                font-family: "SketchRockwell";
+                color: #5f686d;
+                padding-top: 35px;
+                padding-bottom:22px;
+                /*margin-left: 120px;*/
+            }
+            .contect-3 img:first-child {
+                float:left;
+                /*margin-top:22px;*/
+                margin-right:11px;
+                margin-left:-1px;
+            }
+        .contect-3h1 {
+             font-size: 28px;
+             font-family: "SketchRockwell";
+             color: #5f686d;
+             margin-top:-2px;
+             margin-left:11px;
+        }
+        .contect-3h2 {
+            font-size:8px;
+            width:500px;
+            margin-top:1px;
+            line-height:24px;
+            color: #5f686d;
+        }
+        .contect-3input {
+            width: 110px;
+            height: 36px;
+            background-color: #aab0b5;
+            font-size: 20px;
+            font-family: "SketchRockwell";
+            color: #fff;
+            border-style: solid;
+            border-color: #979da2;
+            border-radius: 4px;
+            float:right;
+            margin-right:20px;
+            margin-top:11px;
+        }
+        .contect-4 {
+            width:1080px;
+            height:423px;
+            padding-left:120px;
+            padding-right:0px;
+            background-image:url(images/contect4.png);
+        }
+            .contect-4 div{
+                float:left;
+                width:300px;
+                height:341px;
+                /*background-color:#00ff90;*/
+                margin-right:33px;
+            }
+                .contect-4 div p:first-child {
+                    font-size: 38px;
+                    font-family: "SketchRockwell";
+                    color: #fff;
+                    padding-top: 38px;
+                }
+        .contect-4 div div {
+            height: 0;
+            width:300px;
+            margin-top:10px;
+            border-bottom: #fff 1px dashed;
+            margin-right:-26px;
+        }
+            .contect-4p {
+                color: #dbdcdd;
+                margin-top:21px;
+                margin-left:4px;
+                line-height:21px;
+            }
+        .contect-4input {
+                width: 103px;
+                height: 36px;
+                background-color: #aab0b5;
+                font-size: 20px;
+                font-family: "SketchRockwell";
+                color: #fff;
+                border-style: solid;
+                border-color: #979da2;
+                border-radius: 4px;
+                margin-top:36px;
+        }
+        .contect-4text {
+            width:215px;
+            height:30px;
+            margin-top:13px;
+            margin-left:-3px;
+            background-color:#f0f0f0;
+            border:none;
+            padding-left:20px;
+            border-radius: 4px;
+        }
+        .contect-4text2 {
+            width:303px;
+            height:125px;
+            margin-top:20px;
+            margin-left:-3px;
+            background-color:#f0f0f0;
+            border:none;
+            padding-left:20px;
+            padding-top:0px;
+            border-radius: 4px;
+        }
+        .contect-4input2 {
+            width: 103px;
+            height: 36px;
+            background-color: #aab0b5;
+            font-size: 20px;
+            font-family: "SketchRockwell";
+            color: #fff;
+            border-style: solid;
+            border-color: #979da2;
+            border-radius: 4px;
+            margin-top:10px;
+            margin-left:-5px;
+        }
+        .bottom {
+            width:1200px;
+            height:81px;
+            background-image:url(images/bottom.png)
+        }
+            .bottom p {
+                font-size:16px;
+                color:#82888b;
+                margin-left:525px;
+                padding-top:40px;
+            }
+    </style>
+</head>
+<body>
+    <div class="htmlindex">
+        <div class="header">
+            <ul class="headerul1">
+                <li>HOME</li>
+                <li>ABOUT</li>
+                <li class="spsli"><input type="button" value="SERVICES"/></li>
+            </ul>
+                    
+            <ul class="headerul2">
+                <li>CONTACT</li>
+                <li>PORTFOLIO</li>
+                <li>BLOG</li>
+            </ul>
+            <img class="spsli" src="images/headerlogo.png" />
+            <div>
+                <div class="buttomleft">
+                    <img src="images/buttomleft.png" />
+                </div>
+                
+                <div class="bottomright">
+                    <img src="images/bottomright.png" />
+                </div>
+                <div>
+                    <div class="headertext">
+                        <p>PROJRCT NAME</p>
+                        <div></div>
+                        <p class="headertextlastp">Use the Type Tool(T) to add a block of text undermeath the 
+                            horizontal line Use the font Helvetica with the color white and
+                            the size 13pt Go to Character panel(Window>Character)
+                            and set the leading (the distanse between lines of type) to 24 pt
+                            to make the text more readable Go to the Character panel
+                            (Window > Character) and set the leading (the distance
+                            between lines of type) to 24 pt to make the text more readable
+                        </p>
+                        <input type="button" value="READ MORE" class="readmode"/>
+                    </div>
+                    <div>
+                        <div class="headerlamge">
+                            <img src="images/flower.png" />
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content-1">
+            <div class="content-1h1">
+                <p>SERVICES</p>
+            </div>
+            <div class="content-1lage">
+                <div>
+                    <img src="images/content-1.png" />
+                    <p class="content-1lagep">WEB DESIGN</p>
+                    <div></div>
+                    <p class="content-1lagep2">
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white and
+                        the size 13pt Go to Character panel(Window>Character)
+                        and set the leading (the distanse between lines of type) to 24 pt
+                    </p>
+                    <input type="button" value="READ MORE" class="content-1read" />
+                </div>
+                <div>
+                    <img src="images/content-1.png" />
+                    <p class="content-1lagep">WEB DESIGN</p>
+                    <div></div>
+                    <p class="content-1lagep2">
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white and
+                        the size 13pt Go to Character panel(Window>Character)
+                        and set the leading (the distanse between lines of type) to 24 pt
+                    </p>
+                    <input type="button" value="READ MORE" class="content-1read" />
+                </div>
+                <div>
+                    <img src="images/content-1.png" />
+                    <p class="content-1lagep">WEB DESIGN</p>
+                    <div></div>
+                    <p class="content-1lagep2">
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white and
+                        the size 13pt Go to Character panel(Window>Character)
+                        and set the leading (the distanse between lines of type) to 24 pt
+                    </p>
+                    <input type="button" value="READ MORE" class="content-1read" />
+                </div>
+            </div>
+        </div>
+        <div class="content-2">
+            <div class="content-2title">PORTFOLIO</div>
+            <div class="contect-2iamge">
+                <div>
+                    <div>
+                        <img src="images/contect2-1.png" />
+                        <img src="images/contect2-3.png" />
+                        <img src="images/contect2-5.png" />
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <img src="images/contect2-2.png" />
+                        <img src="images/contect2-4.png" />
+                        <img src="images/contect2-6.png" />
+                    </div>
+                </div>
+                <div id="contect-2iamge1">
+                    <img src="images/contect2-11.png" />
+                    <img src="images/contect2-7.png" class="contect-2iamge2" />
+                    <p class="contect-2text">THE MAKING OF RAPTURE-PAS</p>
+                    <p class="contect-2text contect-2textleft">PREMIUM TUTORIAL</p>
+                    <p class="contect-2textp">
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white and
+                        the size 13pt Go to Character panel
+                    </p>
+                    <input type="button" value="READ MORE" class="contect-2input" />
+                </div>
+                <div>
+                    <div>
+                        <img src="images/contect2-8.png" />
+                        <img src="images/contect2-9.png" />
+                        <img src="images/contect2-10.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="contect-3">
+            <p>BLOG</p>
+            <div>
+                <div>
+                    <img src="images/contect3-1.png" />
+                    <p class="contect-3h1">THEE HOUSE IN PHOTOSHOP</p>
+                    <p class="contect-3h2">
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white 
+                        and the size 13pt Go to Character panel(Window>Character)
+                        and set the leading (the distanse between lines of type) to 
+                    </p>
+                    <input type="button" value="READ MORE" class="contect-3input" />
+                </div>
+                <div>
+                    <img src="images/contect3-2.png" />
+                    <p class="contect-3h1">MATE PAINTING</p>
+                    <p class="contect-3h2"> 
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white 
+                        and the size 13pt Go to Character panel(Window>Character)
+                        and set the leading (the distanse between lines of type) to
+                    </p>
+                    <input type="button" value="READ MORE" class="contect-3input" />
+                </div>
+            </div>
+        </div>
+        <div class="contect-4">
+                <div>
+                    <p>ABOUT ME</p>
+                    <div></div>
+                    <p class="contect-4p">
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white 
+                        and the size 13pt Go to Character panel(Window>Character)
+                        and set the leading (the distanse between lines of type) to 
+                    </p>
+                    <input class="contect-4input" type="button" value="READ MORE" />
+                </div>
+                <div>
+                    <p>FOLLOW ME</p>
+                    <div></div>
+                    <p class="contect-4p">
+                        Use the Type Tool(T) to add a block of text undermeath the 
+                        horizontal line Use the font Helvetica with the color white 
+                        and the size 13pt Go to Character panel(Window>Character)
+                        and set the leading (the distanse between lines of type) to 
+                    </p>
+                    <input class="contect-4input" type="button" value="READ MORE" />
+                </div>
+                <div>
+                    <p>CONTACT</p>
+                    <div></div>
+                    <input class="contect-4text" type="text" value="Name" />
+                    <input class="contect-4text" type="text" value="E-mail" />
+                    <input class="contect-4text" type="text" value="Subject" />
+                    <input class="contect-4text2" type="text" value="Message" />
+                    <input class="contect-4input2"  type="button" value="READ MORE" />
+                </div>
+            </div>
+        <div class="bottom">
+            <p>Copyright@2012 Envato</p>
+        </div>
+    </div>
+</body>
+</html>

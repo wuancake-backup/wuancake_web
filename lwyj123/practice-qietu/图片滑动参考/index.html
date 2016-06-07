@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>wap网页手机触屏js图片滑动</title>
+<script type="text/javascript" src="js/scroll.js"></script>
+<style type="text/css">
+*{margin:0;padding:0;list-style-type:none;}
+a,img{border:0;}
+body{font:12px/180% Arial, Helvetica, sans-serif, "新宋体";}
+
+.scroll{width:480px;height:181px;margin:20px auto 0 auto; position:relative;overflow:hidden;}
+.mod_01{float:left;width:480px;}
+.mod_01 img{display:block;width:480px;height:181px;}
+.dotModule_new{padding:0 5px;height:11px;line-height:6px;-webkit-border-radius:11px;background:rgba(45,45,45,0.5);position:absolute;bottom:5px;right:10px;z-index:11;}
+#slide_01_dot{text-align:center;margin:3px 0 0 0;}
+#slide_01_dot span{display:inline-block;margin:0 3px;width:5px;height:5px;vertical-align:middle;background:#f7f7f7;-webkit-border-radius:5px;}
+#slide_01_dot .selected{background:#66ff33;}
+</style>
+
+</head>
+<body>
+
+<div class="scroll">
+	<div class="slide_01" id="slide_01">
+		<div class="mod_01"><a href="#"><img src="images/51352100.jpg" alt="腾讯视频"></a></div>
+		<div class="mod_01"><a href="#"><img src="images/50849300.jpg" alt="神雕侠侣【金庸正版】"></a></div>
+		<div class="mod_01"><a href="#"><img src="images/54330800.jpg" alt="装机必备"></a></div>
+		<div class="mod_01"><a href="#"><img src="images/21651800.jpg" alt="优酷视频播放器"></a></div>
+		<div class="mod_01"><a href="#"><img src="images/52208700.jpg" alt="天翼精品"></a></div>
+		<div class="mod_01"><a href="#"><img src="images/02856300.jpg" alt="梦想海贼王(送路飞)"></a></div>
+		<div class="mod_01"><a href="#"><img src="images/92191400.jpg" alt="折800"></a></div>
+		<div class="mod_01"><a href="#"><img src="images/44452000.jpg" alt="安全管家"></a></div>
+	</div>
+	<div class="dotModule_new">
+		<div id="slide_01_dot"></div>
+	</div>
+</div>
+
+<script type="text/javascript">
+if(document.getElementById("slide_01")){
+	var slide_01 = new ScrollPic();
+	slide_01.scrollContId   = "slide_01"; //内容容器ID
+	slide_01.dotListId      = "slide_01_dot";//点列表ID
+	slide_01.dotOnClassName = "selected";
+	slide_01.arrLeftId      = "sl_left"; //左箭头ID
+	slide_01.arrRightId     = "sl_right";//右箭头ID
+	slide_01.frameWidth     = 480;
+	slide_01.pageWidth      = 480;
+	slide_01.upright        = false;
+	slide_01.speed          = 10;
+	slide_01.space          = 30; 
+	slide_01.initialize(); //初始化
+}
+</script>
+
+<div style="text-align:center;clear:both">
+<p>适用浏览器：IE8、360、FireFox、Chrome、Safari、Opera、傲游、搜狗、世界之窗.</p>
+</div>
+</body>
+</html>

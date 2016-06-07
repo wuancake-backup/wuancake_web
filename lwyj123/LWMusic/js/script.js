@@ -3,7 +3,7 @@
 	var repeat = localStorage.repeat || 0,
 		shuffle = localStorage.shuffle || 'false',
 		continous = true,
-		autoplay = true,
+		autoplay = false,
 		playlist = [
 			{
 				title: '德国第一装甲师进行曲',
@@ -50,14 +50,14 @@ ogg: ''
 		$('.playback').addClass('playing');
 		timeout = setInterval(updateProgress, 500);
 		isPlaying = true;
-	}
+	};
 
 	var pause = function(){
 		audio.pause();
 		$('.playback').removeClass('playing');
 		clearInterval(updateProgress);
 		isPlaying = false;
-	}
+	};
 
 	// Update progress
 	var setProgress = function(value){
@@ -67,11 +67,11 @@ ogg: ''
 		$('.timer').html(parseInt(value/60)+':'+currentSec);
 		$('.progress .pace').css('width', ratio + '%');
 		$('.progress .slider a').css('left', ratio + '%');
-	}
+	};
 
 	var updateProgress = function(){
 		setProgress(audio.currentTime);
-	}
+	};
 
 	// Progress slider
 	$('.progress .slider').slider({step: 0.1, slide: function(event, ui){
@@ -89,16 +89,20 @@ ogg: ''
 		audio.volume = localStorage.volume = value;
 		$('.volume .pace').css('width', value * 100 + '%');
 		$('.volume .slider a').css('left', value * 100 + '%');
-	}
+	};
 
 	var volume = localStorage.volume || 0.5;
-	$('.volume .slider').slider({max: 1, min: 0, step: 0.01, value: volume, slide: function(event, ui){
-		setVolume(ui.value);
-		$(this).addClass('enable');
-		$('.mute').removeClass('enable');
-	}, stop: function(){
-		$(this).removeClass('enable');
-	}}).children('.pace').css('width', volume * 100 + '%');
+	$('.volume .slider').slider({
+        max: 1, min: 0, step: 0.01, value: volume,
+        slide: function(event, ui) {
+            setVolume(ui.value);
+            $(this).addClass('enable');
+            $('.mute').removeClass('enable');
+	    },
+        stop: function() {
+		    $(this).removeClass('enable');
+	    }
+    }).children('.pace').css('width', volume * 100 + '%');
 
 	$('.mute').click(function(){
 		if ($(this).hasClass('enable')){
