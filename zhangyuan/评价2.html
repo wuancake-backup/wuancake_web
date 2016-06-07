@@ -1,0 +1,78 @@
+﻿<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        b{width:19px;height:19px ;}
+        .star{background: url("http://static.wenku.bdimg.com/static/wkview/widget/userEvaluation/big-stars_29169e9.png") no-repeat -39px 0;display: inline-block;}
+        .star-on{background-position:-2px 0;}/*通过改变背景图位置实现星星点亮*/
+        .star-noon{background-position:-21px 0;}/*半颗星*/
+    </style>
+    <script>
+window.onload = function(){
+    var aImg = document.getElementsByTagName("b");
+    var pingyu = document.getElementById("pingyu");
+    var imgLen = aImg.length;
+    var arr = ['很差','还行','不错','很好','完美'];
+    var str="star";
+    var sign = -1;  //记录点击的星星的编号
+    function showFn(oIndex,n){
+        //点亮n+1个星星，根据oIndex的大小判断是半星还是一颗星
+        //函数传参
+        pingyu.innerHTML = arr[oIndex];
+        if(oIndex>1){
+            aImg[n].className= str+" star-on";
+            //添加star 和 star-on 两个className
+        }else{
+            aImg[n].className= str+" star-noon";
+        }
+    }
+    for(var i=0;i<imgLen;i++){
+        aImg[i].index = i;
+        aImg[i].onmouseover= function(){
+            //  先清空被点击的样式
+            for(var j=0;j<imgLen;j++){
+                aImg[j].className= str;
+            }
+            //然后对现在选取滑过的星星给予样式
+            for(var k=0;k<=this.index;k++){
+                showFn(this.index,k);
+            //鼠标移出，清空所有的样式
+                aImg[k].onmouseout = function(){
+                    pingyu.innerHTML = "";
+                    for(var j=0;j<this.index+1;j++){
+                        aImg[j].className= str;
+                    }
+                //记录之前选中的星星的位置再赋予样式
+                    if(sign!=-1){
+                        for(var s = 0;s<sign+1;s++){
+                            showFn(sign,s);
+                        }
+                    }
+                };
+            }
+        };
+        aImg[i].onclick = function(){
+            sign = this.index;//记录每次点击的位置，用于后面mouseout时的恢复
+            for(var k=0;k<=this.index;k++){
+                //通过循环，点亮点击处及前面的所有星星
+                showFn(this.index,k);
+            }
+        };
+    }
+        }
+    </script>
+</head>
+<body>
+    <span>总体评价</span>
+    <span>
+        <b class="star star-off"></b>
+        <b class="star star-off"></b>
+        <b class="star star-off"></b>
+        <b class="star star-off"></b>
+        <b class="star star-off"></b>
+    </span>
+    <span id="pingyu"></span>
+</body>
+</html>
