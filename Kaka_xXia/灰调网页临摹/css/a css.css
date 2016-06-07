@@ -1,0 +1,199 @@
+@charset "utf-8";
+*{
+	margin:0;
+	padding:0;
+	vertical-align: middle;
+	font-family: "微软雅黑";
+}
+#wrap{
+	width: 1200px;
+	height: 2350px;
+	margin:0 auto;
+	border-top: 1px solid ghostwhites;
+}
+
+.mid{
+	margin: 0 auto;
+}
+/*---------*/
+.title{
+	height: 120px;
+	background-color: #44474A;
+}
+.lineh_120{
+	line-height: 120px;
+}
+.t{
+	display: inline-block;
+	height: inherit;
+}
+.t1{
+	width: 90px;
+}
+.t2{
+	width: 110px;
+}
+.t3{
+	width: 120px;
+}
+
+/*---------*/
+
+.navi{
+	height:400px;
+	background-color:darkolivegreen ;
+}
+.area{
+	height: 300px;
+}
+.imgblank{
+	height: 50px;
+}
+.i1{
+	width: 330px;
+}
+.img{
+	width: 620px;
+	margin-left: 10px;
+}
+.imgbutton{
+	color: #A9A9A9;
+}
+.imgstatus{
+	height: inherit;
+}
+
+/*---------*/
+
+.service{
+	height: 450px;
+	background-color: aquamarine;
+}
+.ser_head{
+	height: 89px;
+}
+.ser_middle{
+	width: 960px;
+	height: 314px;
+}
+.webdesign{
+	margin-left: 30px;
+	width: 300px;
+}
+.webdesign:first-child{
+	margin: 0;
+}
+
+/*--------*/
+
+.portfolio{
+	height: 590px;
+	background-color: greenyellow;
+}
+.por_head{
+	width: 960px;
+	height: 97px;
+	margin: 0 auto;
+}
+.por_area{
+	width: 960px;
+	height: 440px;
+	margin: 0 auto;
+}
+.por_img{
+	height: inherit;
+	display: inline-block;
+	margin-left: 5px;
+}
+.por_img:first-child{
+	margin-left: 0;
+}
+.por_1{
+	width: 190px;
+}
+.por_2{
+	width: 376px;
+}
+.por_3{
+	width: 180px;
+}
+
+/*------*/
+.blog{
+	height: 330px;
+	background-color: whitesmoke;
+}
+.blo_area{
+	width: 960px;
+	height: inherit;
+}
+.blo_head{
+	height: 97px;
+}
+.blo_desc{
+	width: 475px;
+	height: 200px;
+	background-color: black;
+}
+.blo_desc,.blo_desc *{
+	display: inline-block;
+}
+.blo_desc:last-child{
+	margin-left: 10px;
+}
+.blo_img{
+	height: 140px;
+	width: 180px;
+	background-color: blue;
+}
+.blo_text{
+	height: 140px;
+	width: 280px;
+	margin-left: 15px;
+	background-color: red;
+}
+/*--------*/
+
+.about{
+	height: 430px;
+	background-color: blanchedalmond;
+}
+.abo_area{
+	display: inline-block;
+	width: 300px;
+	height: 366px;
+	margin-top: 40px;
+	margin-left: 30px;
+}
+.abo_area:first-child{
+	margin-left: 120px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

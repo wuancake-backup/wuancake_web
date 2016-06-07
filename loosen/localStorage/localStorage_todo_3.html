@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>localStorage_todo_2</title>
+	<link type="text/css" rel="stylesheet" href="style_1.css">
+</head>
+<body>
+	<div id="list"></div>
+	<!-- <image src="images/up.jpg" class="pic" id="up"></image>
+	<image src="images/down.jpg" class="pic" id="down"></image> -->
+	<div id="place">
+		<image src="images/up.jpg" class="pic" id="up"></image>
+		<image src="images/down.jpg" class="pic" id="down"></image>
+	</div>
+	<input type="text" id="input">
+	<input type="submit" id="submit">
+	<script>
+
+	window.onload=function(){
+	// 相比较localStorage_todo_1，localStorage_todo_2做的事将提交的数据保存在loaclStorage中，重构代码
+	// 相比较之前单纯的提交、删除和显示外
+	// 此时的思路是，先进行数组中数据的删减，再提交到本地保存，每次操作后进行渲染
+		if(window.localStorage.getItem("todo")){
+	// 本地存储localStorage只能存字符串，
+	// 所以需要将字符串转化成对应的对象（可能是JSON对象，可能是数组等）
+			var todo=JSON.parse(localStorage.todo)
+		}
+		else{
+			var todo=[];
+		}
+
+		var place=document.getElementById("place");
+		var upBtn=document.getElementById("up");
+		var downBtn=document.getElementById("down");
+
+		upBtn.onclick=function(){
+				list.style.display="none";
+				upBtn.style.display="none";
+				downBtn.style.display="block";
+		}
+
+		downBtn.onclick=function(){
+			list.style.display="block";
+			upBtn.style.display="block";
+			downBtn.style.display="none";
+		}
+
+		display(todo);
+
+		var list=document.getElementById("list");
+		var addToList=document.getElementById("submit");
+		// var text=document.getElementById("input");
+		
+		addToList.onclick=function(){
+			var submitValue=document.getElementById('input').value;
+			// 将提交数据存放到todo数组中
+			todo.push(submitValue);
+			localStorage.setItem('todo',JSON.stringify(todo));
+			display(todo);
+			// list.innerHTML+='<li><span>'+submitValue+'</span><button>删除</button></li>';
+			document.getElementById("input").value='';
+
+		}
+
+		function display(array){
+			var list=document.getElementById("list");
+			list.innerHTML='';
+			for(i=0;i<array.length;i++){
+				list.innerHTML+='<li><span>'+array[i]+'</span><button>删除</button></li>';
+			}
+
+			if(array.length){
+				place.style.display="block";
+				upBtn.style.display="block";
+			}
+			else{
+				place.style.display="none";
+				upBtn.style.display="none";
+			}
+
+			var deleteList=document.getElementsByTagName("button");
+			for(var i=0;i<deleteList.length;i++){
+				(function(i,todo){
+						deleteList[i].onclick=function(){
+						array.splice(i,1);
+						display(todo);
+						localStorage.setItem('todo',JSON.stringify(todo));
+						// list.removeChild(this.parentNode);
+					}
+				}(i,array));
+			}
+			 
+		}
+
+
+	}
+
+	
+	</script>
+</body>
+</html>

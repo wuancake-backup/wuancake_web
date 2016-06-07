@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Html Learning~</title>
+		<style type="text/css">
+			div#WidthLimit{width:1000px}
+			div#header{width:1010px;background-color:#8FBC8F;height:210px}
+			div#Empty{width:10px;height:15px;background-color:#8FBC8F;float:left}
+			div#Contain{width:240px;height:150px;background-color:#FFFFFF;float:left}
+			div#Title{margin:10px 0;width:1010px;background-color: #A9A9A9;}
+			div#Contents{margin:0 0 10px 0;width:1010px;background-color: #DCDCDC;border:groove;}
+			div#box{position: absolute;left: 250px;}
+			span#Start{font-weight: bold;font-size: 25px;}
+			hr {margin:0px 0px 10px 0px}
+			h1 {margin:0}
+			h2 {margin:0}
+			h4 {margin:0}
+			a:link{font-size:10;font-weight:bolder;color:#008B8B}
+			a:visited{color:#A9A9A9}
+			a:hover{color:#00008B}
+			a:active{color:#556B6F}
+		</style>
+	</head>
+	<body >
+		<div id="box">
+			<div id="header">
+				<h1 align="middle">导航</h1>
+			<hr>
+	
+			
+			<div id="Empty"><p>&nbsp;</p></div>
+			
+			<div id="Contain">
+				<h2>格式化</h2>
+				<ul>
+					<li>
+						<a href="#Word">Word</a>
+					</li>
+					<li>
+						<a href="#Line">Line</a>
+					</li>
+					<li>
+						<a href="#Passage">Passage</a>
+					</li>
+				</ul>
+			</div>
+
+			<div id="Empty"><p>&nbsp;</p></div>
+			
+			<div id="Contain">
+				<h2>表</h2>
+				<ul>
+					<li>
+						<a href="#Table">Table</a>
+					</li>
+					<li>
+						<a href="#List">List</a>
+					</li>
+					<li>
+						<a href="#Form">Form</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="Empty"><p>&nbsp;</p></div>
+			
+			<div id="Contain">
+				<h2>插入</h2>
+				<ul>
+					<li>
+						<a href="#Picture">Picture</a>
+					</li>
+				</ul>
+			</div>
+			
+			<div id="Empty"><p>&nbsp;</p></div>
+			
+			<div id="Contain">
+				<h2>框架</h2>
+				<ul>
+					<li>
+						<a href="#Outreach">Outreach</a>
+					</li>
+					<li>
+						<a href="#Inline">Inline</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div id="Title">
+			<h1 align="middle">格式化</h1>
+		</div>
+		
+		<div id="Contents">
+			<h1><a name="Word">Word</a></h1>
+			<p><span id="Start">&loz; &lt;em&gt;</span><em>This line will be emphasized.</em></p>
+			<p><span id="Start">&loz; &lt;strong&gt;</span><strong>This line will be strenthen.</strong></p>
+			<p><span id="Start">&loz; And there are more tags for words.</p>
+				<p>&nbsp;&nbsp;&nbsp;&nbsp;<b>&lt;b&gt粗体</b>&minus;&minus;<big>&lt;big&gt大号字</big>&minus;&minus;<small>&lt;small&gt小号字</small>
+					&minus;&minus;<i>&lt;i&gt;斜体</i>&minus;&minus;&lt;sub&gt;<sub>下标字</sub>&minus;&minus;&lt;sub&gt;<sup>上标字</sup> 
+					&minus;&minus;<ins>&lt;ins&gt;插入字</ins>&minus;&minus;<del>&lt;del&gt;删除字</del>
+				</p>
+		</div>
+		
+		<div id="Contents">
+			<h1><a name="Line">Line</a></h1>
+			<p><span id="Start">&loz; &lt;hr&gt;水平线</span><span><hr style="display:inline-block;width:20px; height: 2px;border: ridge 2px #185598;"></span></p>
+			<p><span id="Start">&loz; &lt;abbr&gt;缩写</span>&nbsp;&nbsp;&nbsp;<b><abbr title="abbreviation">abbr</abbr>	</b></p>
+			<p><span id="Start">&loz; &lt;address&gt;关于作者</span>
+				<address>
+					&nbsp;&nbsp;&nbsp;Written by <a href="mailto:webmaster@example.com">Kaka_xXia</a>.<br> 
+					&nbsp;&nbsp;&nbsp;Visit us at:<br>
+					&nbsp;&nbsp;&nbsp;wuan.in<br>
+					&nbsp;&nbsp;&nbsp;China
+				</address>
+			<p><span id="Start">&loz; &lt;bdo&gt;文字方向</span>&nbsp;&nbsp;&nbsp;<bdo dir="ltr">Reverse</bdo> <b>| </b><bdo dir="rtl">Reverse</bdo>
+			<p><span id="Start">&loz; &lt;bloquote&gt;长引用</span>
+				<blockquote>
+					<p>春眠不觉晓</p>
+					<p>处处闻啼鸟</p>
+				</blockquote>
+			<p><span id="Start">&loz; &lt;q&gt;短引用</span><br>
+				<q>夜来风雨声</q>
+		</div>
+		
+		<div id="Contents">
+			<h1><a name="Passage">Passage</a></h1>
+			<p><span id="Start">&loz; &lt;pre&gt;</span></p>
+				<pre style="font-size:large">
+ pre中的空格不会被跳过
+ 可用来显示代码
+				</pre>
+		</div>
+		
+		<div id="Title">
+			<h1 align="middle">表</h1>
+		</div>
+		
+		<div id="Contents" >
+			<h1><a name="Table">Table</a></h1>
+			<p><span id="Start">&loz; &lt;Table&gt;表格</span></p>
+				<table border="0" cellspacing="0">
+					<caption>题目</caption>
+					<thead>
+						<tr bgcolor="#FFFFFF">
+							<td width="70">编号</td>
+							<td width="200">名称</td>
+							<td width="70">等级</td>
+							<td width="70">题数</td>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td width="70">60</td>
+							<td width="200">基础练习</td>
+							<td width="70">0</td>
+							<td width="70">81</td>
+						</tr>
+						<tr bgcolor="#FFFFFF">
+							<td width="70">73</td>
+							<td width="200">拓展练习</td>
+							<td width="70">0</td>
+							<td width="70">108</td>
+						</tr>
+						<tr>
+							<td width="70">448</td>
+							<td width="200">实验一 开发环境</td>
+							<td width="70">0</td>
+							<td width="70">4</td>
+						</tr>
+						<tr bgcolor="#FFFFFF">
+							<td width="70">449</td>
+							<td width="200">实验二 语言基本元素</td>
+							<td width="70">0</td>
+							<td width="70">8</td>
+						</tr>
+						<tr>
+							<td width="70">450</td>
+							<td width="200">实验三 分支结构基础</td>
+							<td width="70">0</td>
+							<td width="70">4</td>
+						</tr>
+						<tr bgcolor="#FFFFFF">
+							<td width="70">451</td>
+							<td width="200">实验四 循环结构基础</td>
+							<td width="70">0</td>
+							<td width="70">4</td>
+						</tr>
+					</tbody>
+				</table>
+		</div>
+				
+		<div id="Contents">
+				<h1><a name="List">List</a></h1>
+				<p><span id="Start">&loz; &lt;dl&gt;自定义列表</span></p>
+					<dl>
+						<dt>Coffee</dt>
+						<dd style="font-size:small;">Black Drink</dd>
+						<dt>Milk</dt>
+						<dd style="font-size:small;">White Drink</dd>
+					</dl>
+		</div>
+		
+		<div id="Contents">
+				<h1><a name="Form">Form</a></h1>
+				<p><span id="Start">&loz; &lt;form&gt;表单</span></p>
+					<form>
+						<h3>该文档满意程度反馈表</h3>
+						<fieldset>
+							<legend align="center">Your</legend>
+								First name:<input type="text" value="First name">
+								Last  name:<input type="text" readonly="readonly" value="readonly">
+						</fieldset>
+						<fieldset>
+							<legend align="center">Score!!</legend>
+							给100分：
+							<input type="checkbox" value="100"/>
+							
+							<label for="x1">满分</label>
+							<input type="radio"  name="asd" value="100" id="x1"/>
+						
+							<label for="x2">	100分</label>
+							<input type="radio" name="asd" value="100" id="x2" />
+						</fieldset>
+						<fieldset>
+							<legend align="center">More</legend>
+							<select>
+								<optgroup label="100分">
+									<option value="100" selected>100分</option>						
+									<option value="100" >满分</option>
+								</optgroup>
+								<option value="100" >点赞</option>
+							</select>
+							&emsp;&emsp;
+							<input type="button" value="加分！"/>
+							<button type="button">加分！</button>
+						</fieldset>
+						<textarea rows="1" cols="30" readonly="readonly">给满分</textarea><br/>	
+						<input type="submit" />
+						<input type="reset"/>
+					</form>
+					<h3>这个表单会发送给w3school</h3>
+					<form action="MAILTO:some@w3school.com.cn" method="post" enctype="text/plain">
+						姓名:<input type="text" size="20"/><br/>
+						邮箱:<input type="email" size="30" /><br/>
+						内容:<input type="text" size="50"/>
+						<input type="submit" value="Send"/>
+						<input type="reset" value="Reset"/>
+						<input type="image" src="img/grey.jpg" alt="Submit"    height="20px" width="20px"/> 
+						<input type="password" >
+						<input type="file" accept="image/jpeg"/>
+					</form>
+		</div>
+				
+		<div id="Title">
+			<h1 align="middle">插入</h1>
+		</div>		
+			<div id="Contents">
+					<h1><a name="Picture">Picture</a></h1>
+				<p><span id="Start">&loz; &lt;map&gt;图像映射</span></p>
+					<h2>(确定图像映射坐标)</h2>
+					<a href="/js/Html-Basic.html"> <img src="img/grey.jpg" ismap /> </a>
+					<h2 style="color: #556B6F;">找糖</h2>
+					<img src="img/grey.jpg" usemap="#Candy" alt="Choose a candy" />
+						<map name="Candy" id="Candy">
+							<area shape="rect" coords="65,4,95,29" href="/Test/img/Here's your candy.jpg" 
+								  target="_blank" alt="candy1" />
+							<area shape="rect" coords="125,125,152,152" href="/Test/img/sweet.jpg"
+								  target="_blank" alt="candy2" />
+							<area shape="rect" coords="40,154,65,180" href="/Test/img/sweetw.jpg" 
+								  target="_blank" alt="candy3" />
+						</map>
+			</div>
+			<div id="Contents">
+				<h1><a name="Outreach">Outreach</a></h1>
+				<p><span id="Start">&loz; &lt;frame&gt;外部框架</span></p>
+					<p align="middle"><a href="/Test/Outreach.html" >Here!</a></p>
+			</div>
+			<div id="Contents">
+				<h1><a name="Inline">Inline</a></h1>
+				<p><span id="Start">&loz; &lt;iframe&gt;内联框架</span></p>
+					<iframe width="1000" height="300" name="inline1">
+						<p>您的浏览器不支持内联框架</p>
+					</iframe>
+					<p align="middle"><a href="http://www.w3school.com.cn" target="inline1">W3school</a></p>
+			</div>
+		</div>	
+		
+	</body>
+</html>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+</html>

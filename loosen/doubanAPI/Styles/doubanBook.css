@@ -1,0 +1,413 @@
+/*reset*/
+/*必须对浏览器默认样式进行重置，这边p的默认margin值使得网页上面留白*/
+html,body,h1,h2,h3,h4,h5,h6,div,dl,dt,dd,input,button,textarea,menu,p,a,span{margin:0;padding:0;}
+ul{list-style:none;}
+
+body{
+	/*width: 1000px;*/
+	margin: 0;
+	padding: 0;
+	line-height:18px;
+	background:#fff; 
+	color:#000; 
+	font-family:Georgia,serif; 
+	/*font-size:0;*/
+	font-size:12px;
+}
+
+/*LINKS*/
+a { color:#d5d5d5; text-decoration:none; }
+a:hover,
+a:focus { color:white; }
+
+div#db-global-nav{
+	background: #545652;
+	/*padding: 0px;*/
+}
+
+/*清除浮动，将类选择器加在浮动元素的父元素上*/
+.clearfix:after{
+	content:".";
+	clear: both;
+	visibility: hidden;
+	overflow:hidden;
+	display: block;
+	height: 0; 
+}
+
+div.top-nav-info{
+	float: right;
+	padding: 2px 0;
+}
+
+div.top-nav-info a{
+	margin-right: 16px;
+	font-size: 12px;
+}
+
+div.top-nav-doubanapp{
+	float: right;
+	padding-top: 3px;
+	text-align: center;
+}
+
+div.top-nav-doubanapp:hover div#top-nav-appintro,
+div.top-nav-doubanapp:focus div#top-nav-appintro{
+	visibility: visible;
+}
+
+div.top-nav-doubanapp div#top-nav-appintro{
+	width: 250px;
+	height: 500px;
+	background-color: white;
+	margin-top: 5px;
+	background-image: url(../Images/nav_doubanapp_6.png);
+	background-repeat: no-repeat;
+	background-position: center 16%;
+	border:1px solid #fff;
+	box-shadow: 1px 1px 5px #999;
+	visibility: hidden;
+	/*display: none;*/
+	/*position: relative;*/
+}
+
+div.top-nav-doubanapp div#top-nav-appintro p.appintro-title{
+	/*position: relative;
+	top:185px;*/
+	/*使用padding 来下移，可以使文档流中，自身以后的元素跟着一起下移*/
+	padding-top: 185px; 
+	font-size:24px;font-weight:400;
+}
+
+div.top-nav-doubanapp div#top-nav-appintro p.slogan{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	font-size:13px;
+	letter-spacing:3px;
+	font-weight:400;
+
+}
+
+div.top-nav-doubanapp div#top-nav-appintro p.qrcode{
+	background-image: url(../Images/nav_doubanapp_6_qrcode.png);
+	background-repeat: no-repeat;
+	background-size: 160px 160px;
+	width: 160px;
+	height: 160px;
+	position: relative;
+	left: 48px;
+	/*top: 15px;*/
+	/*padding-left: 100px;*/
+}
+
+div.top-nav-doubanapp div.download{
+	padding-top: 10px;
+}
+
+div.global-nav-items{
+	/*float: left;*/
+	font-size: 0;
+	padding: 2px 0;
+}
+
+div.global-nav-items ul{
+	text-align: left;
+	padding-left: 10px;
+}
+
+div.global-nav-items>ul>li{
+	display:inline-block;
+	/*line-height: 28px;*/
+	margin-right: 20px;
+	
+}
+
+div.global-nav-items a{
+	display:inline-block;
+	font-size:14px;
+}
+
+div.global-nav-items li:hover ul.more-items,
+div.global-nav-items li:focus ul.more-items {
+	/*display: block;*/
+	left: auto;
+}
+
+div.global-nav-items li ul.more-items{
+	/*display: none;*/
+	/*position: relative;*/
+	background: white;
+	position: absolute;
+	left: -999px;
+}
+
+
+div#db-nav-book{
+	background-color: #f6f6f1;
+	margin-bottom: 40px;
+	width: 100%;
+	min-width: 950px;
+	height: 120px;
+}
+
+div#nav-search{
+	/*margin-top: 15px;*/
+	width: 950px;
+	margin: 0 auto;
+	padding-top: 25px;
+	padding-left: 0;
+	position: relative;
+	border-bottom:1px solid #e5ebe4;
+}
+
+div#nav-search a:first-child{
+	display: inline-block;
+	height: 56px;
+	width: 145px;
+}
+
+div#nav-search a img[alt=豆瓣读书]{
+	position: relative;
+	top:6px;
+	left: 10px;
+}
+
+div#nav-search a:last-child{
+	/*display: inline-block;*/
+	width: 186px;
+	height: 96px;
+	position: absolute;
+	top: 0px;
+	right: 50px;
+}
+
+div#nav-search a img[alt=豆瓣读书2015年度榜单]{
+	width: 186px;
+	height: 96px;
+}
+
+div#nav-sec{
+	width: 950px;
+	margin: 0 auto;
+	/*overflow: hidden;*/
+	/*text-align: left;*/
+	/*padding-left: 270px;*/
+}
+
+div#nav-sec ul{
+	padding-left: 0;
+}
+
+div#nav-sec li{
+	/*float: left;*/
+	display: inline-block;
+	/*padding-left: 25px;*/
+	margin-right: 25px;
+}
+
+div#nav-sec li a{
+	color: #614e3c;
+	font-size: 13px;
+}
+
+div#nav-sec li a:hover,
+div#nav-sec li a:focus{
+	color: white;
+	background-color: brown;
+}
+
+div#nav-sec li.book-cart{
+	background-image: url(../Images/icon-cart.png);
+	background-repeat: no-repeat;
+	background-position: left center; 
+}
+
+div#nav-sec li.book-cart a{
+	display: inline-block;
+	margin-left: 25px;
+}
+
+/*主体内容部分*/
+div#wrapper{
+	width: 950px;
+	margin: 0 auto;
+	line-height: 18px;
+	position: relative;
+	/*background-color: pink;*/
+}
+
+/*边栏样式*/
+div#aside{
+	float: right;
+	width: 310px;
+}
+
+div.mb20 div.hd{
+	margin: 10px 0;
+}
+
+div.mb20 div.bd p{
+	margin-bottom: 10px;
+}
+
+div#aside div.mb20 a{
+	color: #3377aa;
+	font: 12px Arial, Helvetica, sans-serif;
+	line-height: 150%;
+}
+
+div#aside div.mb20 a:hover,
+div#aside div.mb20 a:focus{
+	background-color: #3377aa;
+	color: white;
+}
+
+p.indent{
+	margin-top:15px;
+}
+
+span.pl2{
+	font: 14px Arial, Helvetica, sans-serif;
+	line-height: 150%;
+}
+
+span.pl2 a{
+	color: #3377aa;
+}
+
+span.pl2 a:hover,
+span.pl2 a:focus{
+	background-color: #3377aa;
+	color: white; 
+}
+
+span.gact a{
+	font-size: 12px;
+	color: #BBBBBB;
+	text-align:center
+}
+
+span.gact a:hover,
+span.gact a:focus{
+	color:#FFFFFF;
+	font-size:12px;
+	border-left:1px solid #FF9999;
+	border-top:1px solid #FF9999;
+	border-right:1px solid #FF3333;
+	border-bottom:1px solid #FF3333;
+	background-color:#773333;
+	text-align:center
+}
+
+/*图书列表样式部分*/
+div#article{
+	float: left;
+	width: 590px;
+}
+
+/*div#article div.content{
+	margin: 0px;
+	padding: 0px;
+}
+*/
+
+ul#bookList{
+	/*margin: 0px;*/
+	padding: 0px;
+}
+
+div#article div#trr{
+	text-align: right;
+	/*background-color: green;*/
+}
+
+div#article li.subject-item{
+	/*将overflow去掉后，因为前面浮动元素的影响，出现了神奇的阶梯状效果*/
+	overflow: hidden;
+	border-top: 1px dashed #ddd;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+div#article li.subject-item div.pic{
+	float: left;
+	margin-right: 20px;
+}
+
+div#article li.subject-item div.info{
+	/*float: left;*/
+	overflow: hidden;
+}
+
+div#article li.subject-item div.info h2{
+	font-size: 1.5em;
+}
+
+div#article li.subject-item div.info a{
+	font-size: 14px;
+	color: #3377aa;
+}
+
+div#article li.subject-item div.info a:hover,
+div#article li.subject-item div.info a:focus{
+	background-color: #3377aa;
+	color: white;
+}
+
+div.star span.rating{
+	color: #e09015;
+	font-size: 12px;
+	padding: 0 3px;
+}
+
+/*史上最烂的pagination在此*/
+div#Pagination{
+	/*display: none;*/
+	line-height: 150%;
+	font:14px Arial, Helvetica, sans-serif;
+	color: #aaa;
+	text-align: center;
+}
+
+div#Pagination a{
+	color: #3377aa;
+	padding: 0 4px;
+}
+
+div#Pagination a:hover,
+div#Pagination a:focus{
+	color: white;
+	background-color:#3377aa; 
+}
+/*被点击后的样式*/
+a.selected{
+	color: white;
+	background-color: #83BF73;
+}
+
+/*页面底部样式*/
+div#footer{
+	padding-bottom: 10px;
+	margin-top: 40px;
+	color: #999;
+	padding: 6px 0;
+	border-top: 1px dashed #ddd;
+	font: 12px Helvetica,Arial,sans-serif;
+	line-height: 1.62;
+}
+
+input#searchInput{
+	width: 470px;
+	height: 30px;
+	border: 1px solid #f90;
+	
+	/*padding: 5px;*/
+}
+
+button#searchBtn{
+	font-size: 10px;
+	width: 30px;
+	height: 30px;
+
+}
+

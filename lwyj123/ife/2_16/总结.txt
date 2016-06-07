@@ -1,0 +1,34 @@
+﻿js如何判断中英文
+		var airQulityReg = new RegExp('^[A-Za-z]+[\u4e00-\u9fa5]');
+		
+js如何裁剪前后空格（也是用的正则）
+	function trimStr(str){return str.replace(/(^\s*)|(\s*$)/g,"");}
+	或者有的浏览器实现了trim()，但好像有些浏览器没有。
+
+要注意绑定事件的时间，如果在html元素未加载之前就绑定事件的话会报错说找不到元素。
+	一开始使用onload，但百度后发现onload要等页面的全部DOM树还有外部资源全部加载之后才会执行(如果用了被墙的图片岂不是事件要过很久才能加进来？)
+	最后用了DOMContentLoaded（尼玛劳资就是不兼容IE）
+
+动态生成内容的事件绑定问题(用于删除按钮的绑定)
+	尼玛还要用到神马“事件冒泡”？先mark先(https://www.hitoy.org/event-binding-problem-of-dynamically-generated-content.html)
+	算了好像是jquery的东西，我还是用土方法吧
+	一开始的init()里监听aqi-table 用回调值来确定删除事件
+	document.getElementById("aqi-table").addEventListener("click", function(event){
+        if(event.target.nodeName.toLowerCase() === 'button') delBtnHandle.call(null, event.target.dataset.city);
+    })
+	其中event.target.dataset是DOMStringMap类型——HTML5新特性dataset的类型哦,之前插入按钮的时候加了一个data-city
+	
+	
+	
+又遇到一个问题：
+	能不能获取一个元素监听者列表？如果能怎么搞?
+	
+js怎么获取列表的行列数
+var tab = document.getElementById("test") ;
+//表格行数
+var rows = tab.rows.length ;
+//表格列数
+var cells = tab.rows.item(0).cells.length ;
+
+删除一个对象的属性
+	delete aqiData[city]

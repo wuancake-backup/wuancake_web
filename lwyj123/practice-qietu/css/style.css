@@ -1,0 +1,227 @@
+* {
+	margin: 0px;
+	padding: 0px;
+}
+a {
+	text-decoration: none;
+	color: white;
+}
+
+
+html body {
+    width: 1200px;
+}
+
+header {
+    width: 100%;
+    height: 520px;
+    background:url(../images/header_bg.png);
+}
+nav {
+	width: 100%;
+    height: 120px;
+    position: relative;
+
+}
+nav ul {
+    list-style: none;
+    display: inline-block;
+    width: 500px;
+    position: absolute;
+    top: 55px;
+}
+
+nav .left {
+	left: 50px;
+}
+nav .right {
+	right: 20px;
+}
+
+nav ul li {
+	text-align: center;
+	width: 140px;
+	float: left; 
+}
+
+
+
+.header-content {
+    width: 100%;
+    height: 400px;
+}
+
+.words {
+    position: relative;
+    top: 52px;
+    left: 120px;
+
+    width: 300px;
+    height: 300px;
+    margin-right: 20px;
+    float: left;
+
+    word-break: break-all;
+}
+.words h1 {
+    color: rgba(242,242,242,1.0);
+    margin-bottom: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px dashed rgba(242,242,242,1.0);
+}
+.words p {
+    color: rgba(205,205,205,1.0);
+    height: 170px;
+    overflow: hidden;
+}
+.words button {
+    margin-top: 20px;
+}
+
+.slides-pic {
+    position: relative;
+    top: 52px;
+    left: 120px;
+    width:  618px;
+    height: 301px;
+    float: left;
+    box-shadow: 
+}
+
+.content {
+    width: 100%;
+    height: 1337px;
+}
+
+.services {
+    position: relative;
+    width: 100%;
+    height: 449px;
+}
+    .services .content-header {
+        position: relative;
+        top: 36px;
+        left: 120px;
+    }
+    .services .content-content {
+        position: relative;
+        display: inline-block;
+        width: 300px;
+        height: 312px;
+        top: 52px;
+        left: 120px;
+        margin-right: 27px;
+    }
+        .window img {
+            display:block;
+        }
+        .window-content {
+            background-image: url(../images/window_content.png);
+            background-repeat:no-repeat;
+            border: 1px solid rgba(233,233,233,1.0);
+            overflow: hidden;
+            height: 213px;
+        }
+        .window-content h2 {
+            position: relative;
+            top: 35px;
+            text-align: center;
+            padding-bottom: 12px;
+            margin: 0 20px;
+            border-bottom: 1px dashed rgba(210,210,210,1.0);
+        }
+        .window-content p {
+            position: relative;
+            top: 35px;
+            height: 120px;
+            padding-top: 18px;
+            margin: 0 22px 0 22px;
+
+            font-size: 12px;
+        }
+        .window button {
+            position: absolute;
+            left: 50%;
+            bottom: -5%;
+            margin: 0 -15%;
+
+        }        
+.portfolio {
+    width: 100%;
+    height: 591px;
+    background-image: url(../images/portfolio_bg.png);
+}
+    .portfolio .content-header {
+        position: relative;
+        top: 40px;
+        left: 120px;
+    }
+    .portfolio h1 {
+        color: rgba(95,95,95,1.0);
+    }
+    .portfolio .content-content {
+        position: relative;
+        top: 65px;
+        height: 440px;
+    }
+    .portfolio .left-pic {
+        position: relative;
+        float: left;
+        width: 390px;
+        height: 100%;
+        left: 120px;
+        margin-right: 8px;
+    }
+        .portfolio .left-pic img {
+            margin-bottom: 1px;
+            margin-left: 2px; 
+        }
+    .portfolio .mid-mix {
+        position: relative;
+        float: left;
+        width: 375px;
+        height: 430px;
+        left: 120px;
+        margin-right: 8px;
+        background-color: rgba(89,94,97,1.0);
+        word-break: break-all;
+    }
+        .portfolio .mid-mix img{
+            position: relative;
+            top: 16px;
+            left: 14px;
+        }
+        .portfolio .mid-mix h2{
+            position: relative;
+            top: 26px;
+            margin: 0 18px;
+            font-size: 20px;
+            color: rgba(243,243,243,1.0);
+        }
+        .portfolio .mid-mix p{
+            position: relative;
+            top: 26px;
+            margin: 6px 20px 0px 20px;
+            color: rgba(202,202,202,1.0);
+        }
+        .portfolio .mid-mix button{
+            position: absolute;
+            bottom: 26px;
+            left: 26px;
+        }             
+    .portfolio .right-pic {
+        position: relative;
+        float: left;
+        width: 180px;
+        height: 100%;
+        left: 120px;
+    }
+        .portfolio .right-pic img {
+            margin-bottom: 1px;
+        }
+
+
+.blog {
+    width: 100%;
+    height: 328px;
+}

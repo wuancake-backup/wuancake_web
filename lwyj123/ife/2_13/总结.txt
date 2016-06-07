@@ -1,0 +1,7 @@
+为元素添加事件，用addEventListener 不要用另一个
+document.getElementById("button").addEventListener("click", function() {
+	document.getElementById("aqi-display").innerHTML = document.getElementById("aqi-input").value;
+})
+
+纯数字的正则实现 一直在纠结前面的0怎么处理
+var reg = new RegExp("^(0|[1-9][0-9]*)$");

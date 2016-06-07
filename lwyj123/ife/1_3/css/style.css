@@ -1,0 +1,65 @@
+
+div {
+    border: solid #999;
+}
+
+a {
+    white-space:nowrap;
+}
+
+
+
+.team {
+    padding: 20px;
+    background-color: #eee;
+    min-width:600px;
+}
+
+.team_name {
+    padding: 20px;
+    background-color: #fff;
+    width: 160px;
+    float: left;
+}
+.team_name-name {
+    font-size: 15px;
+    font-weight: 700;
+}
+
+.team-logo {
+    height: 80px;
+    width: 80px;
+    float: left;
+}
+
+.team_introduction {
+    background-color: #fff;
+    margin-left: 220px;
+    margin-right: 140px;
+}
+.center-introduce p{
+    line-height:30px;
+    padding-left:10px;
+}
+
+.team_member {
+    background-color: #fff;
+    width: 120px;
+    float: right;
+}
+.member-logo {
+    height: 80px;
+    width: 80px;
+    margin: 10px 20px;
+    float: left;
+}
+
+/* 清除浮动 */
+.clearfix:before,.clearfix:after {
+    content:"";
+    display:table;
+}
+.clearfix:after {
+    clear:both;
+    overflow:hidden;
+}

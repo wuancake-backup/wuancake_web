@@ -1,0 +1,45 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>practice</title>
+</head>
+<body>
+<form  name="form1" action="" method="get" accept-charset="utf-8">
+    <table width="221" border="1" cellspacing="0" cellpadding="0" boredercolor="#FFFFFF">
+    <tr>
+        <td height="30" colspan="2" bgcolor="#eeeeee" align="center">用户登录</td>
+    </tr>
+    <tr>
+        <td width="59" height="30">用户名:</td>
+        <td width="162"><input name="user" type="text" id="user"></td>
+    </tr>
+    <tr>
+        <td height="30">密&nbsp;&nbsp;码:</td>
+        <td><input name="pwd" type="password" id="pwd"></td>
+    </tr>
+    <tr>
+        <td height="30" colspan="2" align="center"><input name="Button" type="button" class="bth_grey" value="登录" onclick="check()">
+            &nbsp;
+        <input name="Submit2" type="reset" class="bth_grey"value="重置"></td>
+    </tr>
+    </table>
+</form>
+<script language="javascript">
+    function check(){
+        var name = form1.user.value;
+        var pwd = form1.pwd.value;
+        if ((name=="")||(name==null)) {
+            alert("请输入用户名");
+            form1.user.focus();
+            return;
+        }else if ((pwd=="")||(pwd==null)) {
+            alert("请输入密码");
+            form1.pwd.focus();
+            return;
+        }else{
+            form1.submit();
+        }
+    }
+</script>
+</body>
+</html>

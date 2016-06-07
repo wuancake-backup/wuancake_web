@@ -1,0 +1,137 @@
+@font-face {
+    font-family: 'font-awesome';
+    src: url(font-awesome/fontawesome-webfont.eot) format('eot'),
+         url(font-awesome/fontawesome-webfont.svg) format('svg'),
+         url(font-awesome/fontawesome-webfont.ttf) format('truetype'),
+         url(font-awesome/fontawesome-webfont.woff) format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    font-size: 12px;
+    font-family: cursive;
+}
+#player{
+    width: 760px;
+    height: 505px;
+    margin: 0 auto;
+    padding-left: 45px;
+    background: url(images/images/background.jpg)no-repeat ;
+}
+#top{
+    width: 713px;
+    height: 33px;
+    padding-bottom: 5px;
+}
+#top img{
+    float: left;
+    padding-right: 10px;
+    height: 24px;
+}
+#top h1{
+    height: 24px;
+    float: left;
+    font-size: 16px;
+}
+#content{
+    width: 611px;
+    height: 433px;
+}
+#left{
+    width: 261px;
+    height: 433px;
+    background-color: #ffffff;
+    float: left;
+}
+#cover{
+    width: 176px;
+    height: 240px;
+    padding-left: 44px;
+    padding-right: 42px;
+    padding-top: 11px;
+}
+#cover img{
+    width: 176px;
+    height: 240px;
+}
+#intro{
+    width: 251px;
+    height: 87px;
+    padding-left: 10px;
+}
+.musicname{
+    font-size: 20px;
+}
+#intro p{
+    padding-bottom: 5px;
+}
+.fr{
+    float: right;
+}
+.irc{
+    width: 340px;
+    height: 412px;
+    text-align: center;
+    padding-top: 20px;
+    font-size: 14px;
+    overflow: hidden;
+}
+#content:after {
+    content:"\200B";
+    display:block;
+    height:0;
+    clear:both;
+}
+.icon{
+    font-family: 'font-awesome' !important;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing:grayscale;
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 5px;
+}
+#control span{
+    font-size: 1.6em;
+    padding: 0 22px;
+}
+#player-buttom span{
+    font-size: 1.4em;
+}
+.timeline{
+    width: 263px;
+    height: 2px;
+    margin-top: 8px;
+    background-color: #c3c3c3;
+}
+.inside{
+    height: 100%;
+    background-color: #2985f2;
+}
+.sound{
+    display: inline-block;
+    height: 3px;
+    margin-bottom: 3px;
+    margin-right: 5px;
+    background-color: #c3c3c3;
+}
+#player-buttom{
+    margin-top: 5px;
+}
+#player-buttom span{
+    padding-left: 5px;
+}
+#currentPosition{
+    display: block;
+    width: 100%;
+}
+#sound{
+    width: 50px;
+}
+.ran{
+    width: 600px;
+    height: 10px;
+    background: rgba(60, 114, 230, .8);
+    border-radius: 5px;
+    
+}

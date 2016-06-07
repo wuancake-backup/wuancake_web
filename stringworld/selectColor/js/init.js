@@ -1,6 +1,6 @@
 var canvas=document.getElementById('cas');
-var canvasW=canvas.width=600;
-var canvasH=canvas.height=600;
+var canvasW=600;
+var canvasH=600;
 var scoredDom=document.getElementById('scored');
 var stage=new createjs.Stage('cas');
 createjs.Ticker.setFPS(30);
