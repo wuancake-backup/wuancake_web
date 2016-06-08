@@ -1,0 +1,64 @@
+body{font-family: "微软雅黑";background-color:cornsilk;}
+cite{background-color: aliceblue;}
+.square{
+	width: 100px;
+	height: 100px;
+	background-color:deepskyblue;
+	border: 3px solid pink;
+}
+
+.circle01{
+	border-radius:20px 20px 20px 20px;
+}
+
+.circle02{
+	border-radius:50px 50px 0px 0px;
+}
+
+.sq02{
+	height:50px;
+}
+
+.circle03{
+	border-radius:50px;
+}
+
+.shadow01{
+	/*box-shadow: X轴偏移量 Y轴偏移量 [阴影模糊半径] [阴影扩展半径] [阴影颜色] [投影方式];
+注意：inset 可以写在参数的第一个或最后一个，其它位置是无效的。*/
+	
+	box-shadow: 30px -80px 10px gray;
+}
+
+.shadow02{
+	/*左边 上边 模糊程度  阴影颜色  样式值*/
+	box-shadow: 60px 20px 6px gray inset; 
+}
+
+.shadow03{
+	box-shadow: 60px 20px 6px gray,60px 20px 6px blue,80px 60px yellow,20px 40px 10px green inset;
+}
+
+.borderImg01{
+	border: 20px solid #FFC0CB;
+	border-image: url(../img/border-image.jpg) 30 repeat;
+}
+
+.borderImg02{
+	border: 20px solid #FFC0CB;
+	border-image: url(../img/border-image.jpg) 30 round;
+}
+
+.borderImg03{
+	border: 20px solid #FFC0CB;
+	border-image: url(../img/border-image.jpg) 30 stretch;
+}
+
+.rgba{
+	background-color: rgba(255,255,255,0.5);
+	}
+	
+.shade{
+	background-image: linear-gradient(to top left,#fff,red,yellow,black,green);
+}
+

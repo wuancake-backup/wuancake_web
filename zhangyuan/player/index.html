@@ -1,0 +1,153 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html>
+<head>
+    <title>web music player</title>
+    <style type="text/css">
+        body{margin:0;background: url(images/bg.jpg) no-repeat;background-size: 1980px 1020px;;}
+        a{text-decoration: none;}
+        ul,h2,li,img,pre{list-style: none;margin: 0;padding:0;}
+        .wrap{margin:0 auto;width:960px;}
+        .header{height:60px;margin-bottom: 20px;}
+        .header img{width:120px;height: 40px;float:left;line-height: 60px;position: relative;top:10px;left:10px;}
+        .header ul{padding-left: 690px;}
+        .header li{float:left;color:#000;height: 60px;width:90px;line-height: 60px;text-align: center;}
+        .header a{color:#000;font-weight: bold;}
+        .main{margin: 0 auto;width:610px;}
+        .main h2{color:#fff;padding-bottom: 10px;}
+        .main .mLeft{width:240px;position:relative;height:410px;padding: 10px 10px;background: #fff;float: left;}
+        .main .about{padding-top:20px;}
+        .main #cdname,#singer{font-size: 12px;color:#666666;line-height:20px; }
+        .main #con{height:23px;width:240px;position: relative;left:-20px;top:15px;}
+        .main #con li{width:20px;height: 20px;position:relative;margin-left:40px;float: left;}
+        .main .pause{background: url(images/btn.gif) no-repeat 0 center;cursor: pointer;}
+        .main .next{background: url(images/btn.gif) no-repeat -60px center;cursor: pointer;}
+        .main .favor{background: url(images/btn.gif) no-repeat -120px center;cursor: pointer;}
+        .main .delete{background: url(images/btn.gif) no-repeat -180px center;cursor: pointer;}
+        .main .pic{position: absolute;bottom: 0;left:0;}
+
+        .main .box{width:310px;height:390px;padding:20px 20px;background: rgba(0,0,0,0.5);float: left;overflow: hidden;}
+        .main .mRight{width:370px;height:390px; color:#fff;overflow-y: auto;}
+        #note{width:550px;margin:0 auto;}
+    </style>
+    <script type="text/javascript">
+        function a() {
+            var audio=document.getElementById("music");
+            if(audio.paused){
+                audio.play();
+            }
+            else{
+                audio.pause();
+            }
+        }
+    </script>
+</head>
+<body>
+<audio src="song.mp3" controls="controls" preload id="music" hidden></audio>
+
+<div class="header wrap">
+    <a href="#"><img alt="logo" src="images/logo.gif"/></a>
+    <ul>
+        <li id="name"><a href="#">张不不源</a></li>
+        <li id="mQua"><a href="#">普通音质</a></li>
+        <li id="bg"><a href="#">默认背景</a></li>
+    </ul>
+</div>
+<div class="main">
+    <h2>私人频道</h2>
+    <div class="mLeft">
+        <img src="images/cd.jpg" alt="cd"/>
+            <ul class="about">
+                <li id="music">樱花的眼泪</li>
+                <li id="cdname">《樱花的眼泪》</li>
+                <li id="singer">阿兰</li>
+            </ul>
+            <ul id="con">
+                <li class="pause"><button id="a" onclick="a();" style="background-color:transparent;border:none;cursor:pointer;width:20px;height: 20px;"></button></li>
+                <li class="next"></li>
+                <li class="favor"></li>
+                <li class="delete"></li>
+            </ul>
+        <div class="pic"><img src="images/pic.jpg" /></div>
+    </div>
+    <div class="box">
+        <div class="mRight">
+          <pre>
+歌曲名:樱花的眼泪
+歌手:阿兰
+专辑:2011年2月新歌速递2
+樱花的眼泪
+PAL
+那一年那个月那一日那个樱花树下
+他吻她直到声音都沙哑
+美好记忆来去匆匆静止不喧哗
+她失去了生命将他无言的留下
+刻骨铭心的爱不用事实证明
+有感觉心就可以完全的体会
+刻骨铭心的痛不用语言表达
+他她 她和她的他总会有落差
+花在风中飘落
+一片一片拼凑不成花朵
+心在风中飘落
+零零碎碎到下个世纪末
+花，花在风中飘落
+一片一片拼凑不成花朵
+心，心在风中飘落
+零零碎碎到下个世纪末
+花，花在风中飘落
+一片一片拼凑不成花朵
+心，心在风中飘落
+零零碎碎到下个世纪末
+初春的阳光在他的身上慢慢的爬
+仿佛又看到那张脸如此纯情卡哇
+没了她他的世界无情的倒塌
+她是否在另一个世界想着他
+那一年那个月那一日那个樱花树下
+如果他不曾认识她她不曾爱过他
+这场悲剧是不是就不会萌芽
+想着想着他又想起女孩可爱的发卡
+他如果是牛郎，她如果是织女
+每年会有那么一个七月七
+可以诉说可以抽泣可以让他看到她的心
+极淡的空气里流动着一种无处可置的心情
+樱花飘落暖暖的温馨今天却冷的像冰
+你知道我的心
+花在风中飘落
+一片一片拼凑不成花朵
+心在风中飘落
+零零碎碎到下个世纪末
+花，花在风中飘落
+一片一片拼凑不成花朵
+心，心在风中飘落
+零零碎碎到下个世纪末
+花，花在风中飘落
+一片一片拼凑不成花朵
+心，心在风中飘落
+零零碎碎到下个世纪末
+在很久很久以前
+留在你身边的人是我
+留在我心底的人是你
+留在我们周围的是回忆
+留在这个城市是我们过去的足迹
+我们过去的甜蜜
+过去那样爱着我的你
+无论我们怎么努力
+仍有些是我们做不到的
+想一个人不难
+难的是如此想你却不能贴近你
+我会的
+我会在另一个世界
+看到你的笑脸
+听到你的思念
+闻到你的呼吸
+这是我爱的宿命
+我逃不过你，我离不开你
+我逃不过你，我离不开你
+            </pre>
+        </div>
+    </div>
+</div>
+<div id="note">只有一个功能，暂停/播放。。。<br/>用js函数切换audio的src，应该可以做到切歌。过几天再试试。。<br/>PS:歌词滚动匀速向上翻，技艺不精，还得补课。。。</div>
+
+</body>
+</html>
