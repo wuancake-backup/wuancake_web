@@ -11,9 +11,9 @@
 	float: right;
 }
 
-body{
+/*body{
 	width:1400px;
-}
+}*/
 
 li{
 	list-style: none;
@@ -40,24 +40,30 @@ a{
 }
 
 
-.banner{
+.top{
+	border-bottom: 2px solid #515659;
+	box-shadow: 5px 0px 10px #bfc3c4;
+}
+
+.banner,.webdesign li:last-child,.pro_02,.blog{
 	font: 100 13px "302-CAI978";
 	color: #f1f5f6;
 	line-height: 24px;
 }
 
-.banner h1{
+.banner h1,.pro_02 h1,.blog h1
+{
 	font-family:"308-CAI978";
 	line-height: 34px;
 	padding-bottom: 10px;
 	margin-bottom: 10px;
 	border-bottom: 1px dashed #bbc0c3;
-	letter-spacing: 2px;
+	letter-spacing: 1px;
 }
 
 .wrap{/*外套*/
 	width: 100%;
-	height: 1200px;
+	/*height: 1200px;*/
 	/*border: 1px dashed antiquewhite;*/
     overflow: hidden;
    /* background-color: yellow;*/
@@ -100,8 +106,6 @@ a{
 .nav .a_hover{
 	border-top:1px solid rgb(111,112,114);
 	background-image:linear-gradient(to bottom,#494a4e,#2d2e30);
-	
-	
 }
 
 .nav div{/*logo*/
@@ -127,6 +131,7 @@ a{
 	background-size: 100% 100%;
 	padding-top: 49px;
 	padding-bottom: 49px;
+	border-bottom: 1px solid #8e9396;
 /*	border: 1px solid red;*/
 }
 
@@ -150,7 +155,7 @@ a{
 	margin-right:0px;
 	margin-left:46px;
 	background-position:right;
-	clear: right;
+	/*clear: right;*/
 }
 
 .banner div ul{
@@ -202,4 +207,148 @@ a{
 	background-color: #afb4b7;
 }
 
+.services{
+	order-bottom: #cfd0d2;
+	box-shadow:3px 0px 5px #cfd0d2;
+}
 
+.services div{
+	margin: auto;
+	/*border: 1px solid royalblue;*/
+	width: 960px;
+	clear: both;
+	padding: 30px 0px 10px 0px;
+}
+
+.services div>h1,.phrtfolio div>h1,.blog div>h1{
+	font:100 27px "308-CAI978";
+	color: #61686e;
+	margin-bottom: 20px;
+
+}
+
+
+
+.webdesign {
+	width: 300px;
+	margin: auto;
+}
+
+.webdesign_cen{
+	margin-left: 26px;
+	margin-right: 29px;
+}
+
+.webdesign li:first-child{
+	width:100%;
+	height: 116px;
+	background: url(../img/webdesign.jpg) no-repeat;
+}
+
+.webdesign li:last-child{
+	color: #777b7e;
+	width:267px;
+	height: 174px;
+	border: 1px solid #eeeeee;
+	border-top:none;
+	padding: 20px 13px 0px 18px;
+}
+
+.webdesign li:last-child h1{
+	font: 100 26.25px "308-CAI978";
+	color: #5d666b;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: 1px dashed #d1d1d1;
+	line-height: 34px;
+	text-align: center;
+}
+
+.btn_more{
+	margin: auto;
+	margin-top: 10px;
+}
+
+.phrtfolio{
+	background: url(../img/pro_background.jpg) no-repeat;
+    background-size: 100% 100%;
+    height: 494px;
+    padding: 43px 0px 52px 0px;
+}
+
+.phrtfolio div{
+	margin: auto;
+	/*border: 1px solid royalblue;*/
+	width: 960px;
+	/*clear: both;*/
+	padding: 0px 0px 52px 0px;
+}
+
+.pro_01{
+	margin-right: 5px;
+}
+
+.pro_01 img{
+	border: 1px solid #e6e6e8;
+}
+
+ .pro_02 {
+ 	    margin-right: 5px;
+        background-color:#595e61;
+        width:341px;
+        height:409px;
+        border:1px solid #85898b;
+        border-right:none;
+        padding:16px 18px 13px 15px;
+        position: relative;
+        }
+        
+ .pro_02>img{
+ 	position: absolute;
+ 	right: 0px;
+ 	top: 0px;
+ }
+
+ .pro_02 h1{
+ 	border: none;
+ 	padding-bottom: 0px;
+	margin-bottom: 0px;
+ }
+
+.blog{
+	background: url(../img/blog_background.jpg) no-repeat;
+    background-size: 100% 100%;
+    height: 327px;
+    border-bottom: 1px solid #cdcdcd;
+}
+
+.blog div{
+	margin: auto;
+	/*border: 1px solid royalblue;*/
+	width: 960px;
+	/*clear: both;*/
+	padding: 40px 0px 36px 0px;
+}
+
+.blog dl{
+	width: 473px;
+	height: 179px;
+	overflow: hidden;
+}
+
+.blog dl dd,.blog dl dt{float: left;}
+
+
+
+.about{
+	background: url(../img/about_background.jpg) no-repeat;
+    background-size: 100% 100%;
+    height: 429px;
+}
+
+.copyright{
+	text-align: center;
+	background-color: #414546;
+	height: 83px;
+	line-height: 83px;
+}
