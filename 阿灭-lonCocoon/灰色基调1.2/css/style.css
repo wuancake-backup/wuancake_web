@@ -11,10 +11,6 @@
 	float: right;
 }
 
-/*body{
-	width:1400px;
-}*/
-
 li{
 	list-style: none;
 }
@@ -45,20 +41,25 @@ a{
 	box-shadow: 5px 0px 10px #bfc3c4;
 }
 
-.banner,.webdesign li:last-child,.pro_02,.blog{
+.banner,.webdesign li:last-child,.pro_02,.blog,.me{
 	font: 100 13px "302-CAI978";
 	color: #f1f5f6;
 	line-height: 24px;
 }
 
+
+
 .banner h1,.pro_02 h1,.blog h1
 {
 	font-family:"308-CAI978";
 	line-height: 34px;
-	padding-bottom: 10px;
-	margin-bottom: 10px;
-	border-bottom: 1px dashed #bbc0c3;
 	letter-spacing: 1px;
+}
+
+.dashedTitle h1{
+padding-bottom: 10px;
+margin-bottom: 10px;
+border-bottom: 1px dashed #bbc0c3;
 }
 
 .wrap{/*外套*/
@@ -193,22 +194,26 @@ a{
 }
 
 .banner ol li{
+	float: left;
+	margin: 0px 5px;
+}
+
+.banner ol li a{
+	display: block;
 	height: 8px;
 	width: 8px;
 	border: 2px solid #51565a;
 	background-color: #51565a;
 	border-radius: 8px;
-	float: left;
-	margin: 0px 5px;
 }
 
-.banner ol li.round{
+.banner ol li a.round{
 	border: 2px solid #51565a;
 	background-color: #afb4b7;
 }
 
 .services{
-	order-bottom: #cfd0d2;
+	border-bottom: #cfd0d2;
 	box-shadow:3px 0px 5px #cfd0d2;
 }
 
@@ -278,9 +283,10 @@ a{
 
 .phrtfolio div{
 	margin: auto;
-	/*border: 1px solid royalblue;*/
+/*	border: 1px solid royalblue;*/
 	width: 960px;
-	/*clear: both;*/
+	height: 100%;
+	clear: both;
 	padding: 0px 0px 52px 0px;
 }
 
@@ -310,9 +316,9 @@ a{
  }
 
  .pro_02 h1{
- 	border: none;
- 	padding-bottom: 0px;
-	margin-bottom: 0px;
+ 	/*border: none;*/
+ 	/*padding-bottom: 0px;
+	margin-bottom: 0px;*/
  }
 
 .blog{
@@ -320,30 +326,102 @@ a{
     background-size: 100% 100%;
     height: 327px;
     border-bottom: 1px solid #cdcdcd;
+    color: #8d969b;
 }
 
 .blog div{
 	margin: auto;
-	/*border: 1px solid royalblue;*/
 	width: 960px;
-	/*clear: both;*/
 	padding: 40px 0px 36px 0px;
 }
 
 .blog dl{
 	width: 473px;
-	height: 179px;
-	overflow: hidden;
+	/*height: 179px;*/
+/*	border: 1px solid wheat;*/
+	/*overflow: hidden;*/
 }
 
-.blog dl dd,.blog dl dt{float: left;}
+.blog dl dt,.blog dl dd{
+	float: left;
+/*	border: 1px solid salmon ;*/
+	}
+	
+.blog dl dt{
+	width: 180px;
+	height: 100%;
+	margin-right: 10px;
+}
 
+.blog h1{
+		line-height: 20px;
+}
+	
+.blog dl dd{
+		display: inline;
+		width: 272px;
+}
 
+.blog dl dd a {
+	float: right;
+	margin-top: 35px;
+}
 
 .about{
 	background: url(../img/about_background.jpg) no-repeat;
     background-size: 100% 100%;
-    height: 429px;
+    height: 428px;
+    border-top: 1px solid #8c9497;
+}
+
+
+.about>div{
+	margin: auto;
+/*	border: 1px solid royalblue;*/
+	width: 960px;
+	padding: 41px 0px 24px 0px;
+	clear: both;
+}
+
+
+.about h1{
+	font:100 28px "308-CAI978";
+	color: #fbfbfb;
+}
+
+
+.me{
+/*	border: 1px solid wheat;*/
+	width: 300px;
+/*	height: 279px;*/
+}
+
+.me .sub
+{
+	border: none;
+}
+
+.text{
+	font:100 14px Arial;
+	color:#646464 ;
+	padding: 11px 20px;
+	width:176px;
+	height: 11px;
+	border-right: 1px solid #a6a7a9;
+	background-color: #f0f0f0;
+}
+
+.me:first-child{
+	margin-right: 30px;
+}
+
+.me form p{
+	margin-bottom: 10px;
+}
+
+.me textarea{
+	width: 263px;
+	height: 104px;
 }
 
 .copyright{
@@ -351,4 +429,8 @@ a{
 	background-color: #414546;
 	height: 83px;
 	line-height: 83px;
+	color: #919699;
 }
+
+
+
