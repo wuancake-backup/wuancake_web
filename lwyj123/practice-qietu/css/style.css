@@ -224,4 +224,44 @@ nav ul li {
 .blog {
     width: 100%;
     height: 328px;
+    word-break: break-all;
+}  
+    .blog .content-header {
+        padding: 38px 0 28px 120px;
+    }
+        .blog .content-header h1 {
+            color: rgba(95,95,95,1.0);
+        }
+    .blog .blog-part {
+        height: 200px;
+        width: 475px;
+        position: relative;
+        display: inline-block;
+        float: left;
+    }
+    .blog .part1 {
+        margin-left: 119px;
+    }
+    .blog .part2 {
+        margin-left: 27px;
+    }
+    .blog-words{
+        width: 280px;
+        float: right;
+
+    }
+        .blog-words h2{
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        .blog-words p{
+            line-height: 25px;
+        }
+    .blog-part button {
+        position: relative;
+        left: 370px;
+    }
+
+.contact {
+    height: 430px;
 }

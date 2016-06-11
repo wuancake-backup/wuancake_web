@@ -1,0 +1,39 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<script>
+window.onload = function (){
+	var aInp = document.getElementsByTagName('input');
+    aInp[0].onclick=function(){
+        for(var i=1;i<aInp.length;i++){
+            aInp[i].checked=!aInp[i].checked;
+        }
+    };
+	//checkbox 里有checkd 则aInp[1].checked的值就是true，反之则是false
+    //通过aInp[i].checked=!aInp[i].checked;可以实现复选框反选的效果
+			/*
+			if( aInp[i].checked ) {
+				aInp[i].checked = false;
+			} else {
+				aInp[i].checked = true;
+			}
+			*/
+};
+</script>
+</head>
+
+<body>
+
+<input type="button" value="反选" />
+<ul>
+	<li><input type="checkbox" checked /></li>
+	<li><input type="checkbox" /></li>
+	<li><input type="checkbox" checked /></li>
+	<li><input type="checkbox" /></li>
+	<li><input type="checkbox" /></li>
+</ul>
+
+</body>
+</html>

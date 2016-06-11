@@ -1,0 +1,71 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>无标题文档</title>
+<style>
+.t1 { width:400px; }
+</style>
+<script>
+/*
+var t =  Math.floor( new Date().getTime()/1000 );//秒
+alert( Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+t%60+'秒' );.
+*/
+
+window.onload = function () {
+    var box1= document.getElementById("box1");
+    var box2= document.getElementById("box2");
+    function left(oDiv){
+        var aInp = oDiv.getElementsByTagName('input');
+        var iNow = null;
+        var iNew = null;
+        var t = 0;
+        var str = '';
+        var timer = null;
+        aInp[2].onclick = function () {
+            iNew = new Date(aInp[0].value);
+            //获取以及修改input输入框里面的文字只能用value，not innerhtml
+            clearInterval( timer );
+            timer = setInterval (function (){
+                iNow = new Date();
+                t = Math.floor( ( iNew - iNow ) / 1000 );
+                if ( t >= 0 ) {
+                    str = Math.floor(t/86400)+'天'+Math.floor(t%86400/3600)+'时'+Math.floor(t%86400%3600/60)+'分'+t%60+'秒';
+                    aInp[1].value = str;
+                } else {
+                    clearInterval( timer );
+                    oDiv.innerHTML="<p>game over,see u!</p>";
+                    //t开始为负数时，倒计时结束。可以弹出其它页面
+                }
+            }, 1000);
+        };
+    }
+    var btn1=document.getElementById("btn1");
+    var btn2=document.getElementById("btn2");
+    btn1.onclick=function(){
+        left(box1);
+    };
+    btn2.onclick=function(){
+        left(box2);
+    };
+    left(box1);
+    left(box2);
+};
+</script>
+</head>
+
+<body>
+<div id="box1">
+    距离：<input class="t1" type="text" value="November 27,2017 22:3:0" /><br />
+    还剩：<input class="t1" type="text" /><br />
+    <input id="btn1" type="button" value="开始倒计时吧" />
+</div>
+<div id="box2">
+    距离：<input class="t1" type="text" value="May 28,2018 12:22:00" /><br />
+    还剩：<input class="t1" type="text" /><br />
+    <input id="btn2" type="button" value="开始倒计时吧" />
+</div>
+
+</body>
+</html>
+
