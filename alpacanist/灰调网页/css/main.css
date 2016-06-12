@@ -1,0 +1,33 @@
+nav {
+    background: #414546;
+    background-image: url('src/navigation_bg.png')；
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 139px;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+}
+nav ul li {
+    display: inline-block;
+    line-height: 139px;
+}
+nav ul li a {
+    display: inline-block;
+    line-height: inherit;
+    text-decoration:none;
+    color: #fff;
+}
+#banner {
+    background-color: #535457;
+    background-image: url('src/header_bg.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 519px;
+}
+
+#banner .carousel {
+    position: absolute;
+    transition: all 0.5s ease-in 0s;
+}
