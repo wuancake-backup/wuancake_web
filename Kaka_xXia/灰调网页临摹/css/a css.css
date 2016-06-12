@@ -4,17 +4,22 @@
 	padding:0;
 	vertical-align: middle;
 	color: whitesmoke;
+	font-weight: 100;
 }
 	
 @font-face {
-font-family: h_font;
-src: url(../source/308-cai978.ttf);
-src: url(../source/308-cai978.woff);
+font-family: 'h_font';
+src: url('../source/308-cai978.eot') format('embedded-opentype'),
+	url('../source/308-cai978.ttf') format('Truetype');
+
 }
 
 h1,h2,h3{
-	font-family: h_font;
+	font-family: 'h_font'; 
+
+
 }
+
 h1{
 	font-size: 38px;
 	color: #5F686D;
@@ -63,11 +68,13 @@ h3{
 	background: -moz-linear-gradient(top,#979CA0,#64696C);
 	background: -webkit-linear-gradient(top,#979CA0,#64696C);
 	background: linear-gradient(top,#979CA0,#64696C);
+	background: linear-gradient(to bottom, #979CA0, #64696C);
 }
 .more-t{
 	background: -moz-linear-gradient(top,#616263,#313233);
 	background: -webkit-linear-gradient(top,#616263,#313233);
 	background: linear-gradient(top,#616263,#313233);
+	background: linear-gradient(to bottom, #616263, #313233);
 }
 
 .mid{
@@ -355,8 +362,6 @@ h3{
 	text-align: center;
 	color: #99A0A4;
 }
-
-
 
 
 
