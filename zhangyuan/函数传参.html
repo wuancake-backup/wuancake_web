@@ -1,0 +1,101 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>函数传参</title>
+    <style>
+
+    </style>
+    <script>
+        window.onload=function(){
+            var oUl = document.getElementById("list");
+            var aLi = oUl.getElementsByTagName("li");
+
+            var p = document.getElementsByTagName("p");
+            var num = document.getElementsByTagName("strong")[4];
+            var cost = document.getElementsByTagName("span")[4];
+
+            for( var i=0;i<aLi.length;i++){
+                fn1(aLi[i]);
+            }
+            function fn2(){
+                var n=0;
+                var m=0;
+                var aStrong=document.getElementsByTagName("strong");
+                var aSpan = document.getElementsByTagName("span");
+                for(var j=0;j<aLi.length;j++){
+                    n+=parseFloat(aSpan[j].innerHTML);
+                    m+=parseFloat(aStrong[j].innerHTML);
+                    cost.innerHTML=n;
+                    num.innerHTML =m;
+                }
+            }
+
+            function fn1(oLi) {
+
+                var btn1 = oLi.getElementsByTagName("input")[0];
+                var btn2 = oLi.getElementsByTagName("input")[1];
+                var em = oLi.getElementsByTagName("em")[0];
+                var strong = oLi.getElementsByTagName("strong")[0];
+                var span = oLi.getElementsByTagName("span")[0];
+                var n1 = Number(strong.innerHTML);
+                var n2 = parseFloat(em.innerHTML);
+
+                btn1.onclick = function () {
+                    n1--;
+                    if (n1 < 0) {
+                        n1 = 0;
+                    }
+                    strong.innerHTML = n1;
+                    span.innerHTML = parseFloat(n1*n2).toFixed(2);
+                    fn2();
+                };
+                btn2.onclick = function () {
+                    n1++;
+                    strong.innerHTML = n1;
+                    span.innerHTML =parseFloat(n1*n2).toFixed(2);
+                    fn2();
+                };
+
+            }
+        };
+    </script>
+</head>
+
+<body>
+<ul id="list">
+    <li>
+        <input type="button" value="-" />
+        <strong>0</strong>
+        <input type="button" value="+" />
+        单价：<em>12.5元</em>
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" />
+        <strong>0</strong>
+        <input type="button" value="+" />
+        单价：<em>12.5</em>元
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" />
+        <strong>0</strong>
+        <input type="button" value="+" />
+        单价：<em>5.8元</em>
+        小计：<span>0元</span>
+    </li>
+    <li>
+        <input type="button" value="-" />
+        <strong>0</strong>
+        <input type="button" value="+" />
+        单价：<em>22.5元</em>
+        小计：<span>0元</span>
+    </li>
+</ul>
+<p>
+    商品合计：<strong>0</strong>件<br />
+    共花费了：<span>0</span>元<br />
+</p>
+</body>
+</html>
