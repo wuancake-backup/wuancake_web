@@ -62,3 +62,23 @@ cite{background-color: aliceblue;}
 	background-image: linear-gradient(to top left,#fff,red,yellow,black,green);
 }
 
+.txt{
+	border: 1px solid #FFC0CB;
+	width: 300px;
+}
+
+.text-overflow{
+/*	text-overflow:ellipsis;*/
+	text-overflow: clip:inherit;
+	overflow:hidden;
+	white-space:nowrap;
+}
+
+.overflowHover{
+	text-overflow:ellipsis;
+
+.overflowHover:hover{
+	white-space:pre-wrap;
+	overflow: visible;
+}
+

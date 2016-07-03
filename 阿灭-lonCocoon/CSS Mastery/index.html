@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>CSS精通  练习</title>
+		<link rel="stylesheet" href="css/new_file.css" />
+	</head>
+	<body>
+		
+		<h2>1.1   盒模型  外边距叠加</h1>
+			<br>
+		<p>1.1.1 两个div，con_01_1下外边距与con_01_2上外边距叠加,取较大值的margin值</p>
+		<br>
+		<div class="container_01_1"></div>
+		<div class="container_01_2"></div>
+		<br>
+		<br>
+			<p>1.1.2两个div，在父级与子级外边距重叠</p>
+		<div class="container_02">
+			<div>12222222</div>
+		</div>
+		<br>
+		<br>
+			<p>1.1.3 一个空的div，它外边距的上下边距相重叠</p>
+			<div  class="container_03">
+				<div></div>
+			</div>
+			<br>
+		<br>
+		<h2>1.2   定位  外边距叠加</h1>
+			<br>
+		<p>1.2.1 定位三种机制: 普通流,浮动和绝对定位</p>
+		<br>
+		<br>
+			<p>1.2.2 display:inline-block  可使块级元素像行内元素一样水平依次排列开来.但需考虑兼容性</p>
+		<div class=container_04>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+		<br>
+		<br>
+		<p>1.2.3 相对定位与绝对定位的配合使用在IE6中有一个bug,即如果要相对于相对定位的框的右边或底边设置绝对
+			定位的框的位置,那么需要确保相对定位的框已经设置了尺寸.如果没有,会错误的,那么IE会错误的相对于画布
+		定位这个框.</p>
+		<br>
+		<br>
+			<p>1.2.4 浮动与 清除浮动,clear与其说是浮动,不如说是清除浮动造成的影响.此外也可让父级div浮动,达到
+			需要的效果.overflow:hidden有清理包含元素任何浮动的效果，但有时会造成滚动条,所以不适合所有情况</p>
+			<div class="container_05">
+				<img src="img/u=4277622840,534518208&fm=21&gp=0.jpg" />
+				<p>浮动浮动浮动</p> 
+				<br class="clear">
+			</div>
+			<br>
+			<br>
+			<div class="container_05 container_06">
+				<img src="img/u=4277622840,534518208&fm=21&gp=0.jpg" alt="my"/>
+				<p>浮动浮动浮动</p> 
+			</div>
+			<br>
+			<br>
+				<div class="container_07"></div>
+	</body>
+</html>
