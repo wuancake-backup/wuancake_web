@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <script src="Scripts/jquery-1.8.2.js"></script>
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <style>
+
+        #body_02 {
+            background:lightgray;
+            color:blue;
+           
+        }
+            #body_02 div, #body_02 ul li {
+                background: white;
+                font-size: 14px;
+                list-style: none;
+            }
+        #body_02 .mClass {
+            background: red;
+            color: yellow;
+            font-size: 24px;
+        }
+            #body_02 .mClass_1 {
+                display:block;
+            }
+
+
+            #c_0, #c_1, #c_2 {
+                display: none;
+            }
+
+        #body_03 {
+        background-color:lightgray;
+        color:blue;
+        }
+
+            #body_03 #i1 {
+            width:300px;
+            height:225px;
+            }
+
+            #body_03 #i2 {
+            height:225px;
+            }
+
+            #body_03 h2 {
+            background:white;
+            color:#0000ff;
+            font-size:18px;
+            }
+    </style>
+
+    <!-------1------->
+    <script>
+        $(document).ready(function () {
+            $("#a_01").click(function () {
+                $("#output").html("Boring:-(");
+            });
+            $("#b_01").click(function () {
+                $("#output").html("A nice game :-)");
+            });
+            $("#c_01").click(function () {
+                $("#output").html("A strange game." +
+                "The only winning move" + "is not to play.");
+            });
+        });
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            //方法1，设置添加与移除css的事件
+            //$("#a_02").click(function () {
+            //    $("#c_02").addClass("mClass");
+            //});
+            //$("#b_02").click(function () {
+            //    $("#c_02").removeClass("mClass");
+            //});
+
+            //方法二，设置或移除被选元素的一个或多个类进行切换的事件
+            //$("#a_02").click(function () {
+            //    $("#c_02").toggleClass("mClass");
+            //});
+        });
+    </script>
+
+    <!--<script>
+        $(document).ready(function () {
+            $("#toggle1").click(function (event) {
+                $("#i1").slideToggle('slow');
+            });
+            $("#toggle2").click(function (event) {
+                $("#i2").slideToggle('slow');
+            });
+            $("#toggle3").click(function (event) {
+                $("#h2").slideToggle('slow');
+            });
+        });
+    </script>-->
+
+    <script>
+        $(document).ready(function () {
+            $("#toggle1").click(function(){
+                $("img").attr({
+                    src: "img/蓝桥春雪君归日.jpg"
+                });
+            });
+            $("#toggle2").click(function(){
+            $("img").attr("src","img/溪花与禅意 相对亦忘言.jpg");
+            });
+        });
+    </script>
+
+
+</head>
+<body>
+    <!--<h1>Welcome to WOPR</h1>
+    <h3>Shall we play a game</h3>
+    <button id="a_01">Tic Tac Toe</button>
+    <button id="b_01">Chess</button>
+    <button id="c_01">
+        Worldwide Thermonuclear War
+    </button>
+    <div id="output"></div>
+    <br />
+    <br />
+    <br />-->
+
+    <!--<div id="body_02">
+        <br />
+        <br />
+        <br />
+        <h1>Editing Style Sheets with jQuery</h1>
+        <button id="a_02">Add CSS Class</button>
+        <button id="b_02">Remove CSS Class</button><hr />
+        <div id="c_02">
+            He who knows all the answers has not been asked all the  questions.
+        </div><hr />
+        <div id="c_02">Be not afraid of going slowly,be afraid only of standing still.</div>
+        <br />
+        <br />
+        <br />
+    </div>-->
+
+    <!--<nav id="body_02">
+        <br />
+        <br />
+        <br />
+        <h1>Editing Style Sheets with jQuery</h1>
+        <ul>
+            <li>n1</li>
+            <li>n2</li>
+            <li>n3</li>
+        </ul>
+        
+        <div id="c_0" class="mClass_1">He1</div><hr />
+        <div id="c_1">He2</div><hr />
+        <div id="c_2">He3</div>
+        <br />
+        <br />
+        <br />
+    </nav>-->
+
+    <div id="body_03">
+        <br />
+        <br />
+        <br />
+        <h1>Animated showing and hiding of an image and text with jQuery</h1>
+        <button id="toggle1">Toggle Image 1</button>
+        <button id="toggle2">Toggle Image 2</button>
+        <button id="toggle3">Toggle Text</button><hr />
+        <img src="img/蓝桥春雪君归日.jpg" id="i1" />
+        <img src="img/溪花与禅意 相对亦忘言.jpg" id="i2" /><hr />
+        <h2 id="h2">A ski jump</h2>
+        <br />
+        <br />
+        <br />
+    </div>
+</body>
+</html>

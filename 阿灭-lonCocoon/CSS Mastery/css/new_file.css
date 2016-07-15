@@ -1,0 +1,98 @@
+*{
+	margin:0px;
+	padding: 0px;
+}
+
+
+/*-------------------1.1.1 ↓↓↓↓↓----------------------------*/
+.container_01_1{
+	background-color:chartreuse;
+	margin-bottom: 50px;
+	width: 50px;
+	height:50px;
+}
+
+.container_01_2{
+	background-color: lightseagreen;
+	margin-top: 50px;
+	/*padding-top:1px;*/
+	width: 50px;
+	height:50px;
+}
+
+
+
+/*-------------------1.1.2 ↓↓↓↓↓----------------------------*/
+.container_02{
+	background-color:lightgoldenrodyellow;
+	margin-top:50px;
+	/*width: 50px;
+	height:50px;*/
+	/*width: 0px;
+	height:0px;*/
+}
+
+.container_02 div{
+	width: 50px;
+	height:50px;
+	background-color:coral;
+	margin-top:10px;
+}
+
+
+/*-------------------1.1.3 ↓↓↓↓↓----------------------------*/
+
+.container_03{
+	border: 1px solid red;
+}
+.container_03 div{
+	margin-top:10px;
+	margin-bottom:50px;
+}
+
+
+/*-------------------1.1.4 ↓↓↓↓↓----------------------------*/
+.container_04 div{
+	width: 50px;
+	height:50px;
+	background-color:blueviolet;
+	display: inline-block;
+	
+}
+
+/*-------------------1.1.5 ↓↓↓↓↓----------------------------*/
+.container_05{
+	border: 1px solid black;
+	background-color: gray;
+	/*overflow: hidden;*/
+}
+
+.container_05 img{
+	float: left;
+}
+
+.container_05 p{
+	float: right;
+}
+
+.clear{
+	clear: both;
+}
+
+/*-------------------1.1.6 ↓↓↓↓↓----------------------------*/
+.container_06:after{
+	content: ".";
+	height:0;
+	visibility: hidden;
+	display: block;
+	clear: both;
+}
+
+
+
+.container_07{
+	width: 700px;
+	height: 200px;
+	background-image: url(../img/u=4277622840,534518208&fm=21&gp=0.jpg);
+	background-repeat: no-repeat;
+}
