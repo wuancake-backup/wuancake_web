@@ -1,0 +1,10 @@
+{
+	"index.html": {
+		"resources": [
+			"draft/google.png",
+			"css/handheld.css",
+			"iconfont/iconfont.ttf",
+			"iconfont/iconfont.css"
+		]
+	}
+}
