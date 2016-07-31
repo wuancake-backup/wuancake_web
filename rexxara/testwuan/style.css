@@ -1,0 +1,258 @@
+/* 清除内外边距 */
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, /* structural elements 结构元素 */
+dl, dt, dd, ul, ol, li, /* list elements 列表元素 */
+pre, /* text formatting elements 文本格式元素 */
+fieldset, lengend, button, input, textarea, /* form elements 表单元素 */
+th, td { /* table elements 表格元素 */
+    margin: 0;
+    padding: 0;
+}
+
+/* 设置默认字体 */
+body,button, input, select, textarea { /* for ie */
+    /*font: 12px/1 Tahoma, Helvetica, Arial, "宋体", sans-serif;*/
+    font: 12px/1 Tahoma, Helvetica, Arial, "\5b8b\4f53", sans-serif; /* 用 ascii 字符表示，使得在任何编码下都无问题 */
+}
+
+h1 { font-size: 18px; /* 18px / 12px = 1.5 */ }
+h2 { font-size: 16px; }
+h3 { font-size: 14px; }
+h4, h5, h6 { font-size: 100%; }
+
+address, cite, dfn, em, var { font-style: normal; } /* 将斜体扶正 */
+code, kbd, pre, samp, tt { font-family: "Courier New", Courier, monospace; } /* 统一等宽字体 */
+small { font-size: 12px; } /* 小于 12px 的中文很难阅读，让 small 正常化 */
+
+/* 重置列表元素 */
+ul, ol { list-style: none; }
+
+/* 重置文本格式元素 */
+a { text-decoration: none; }
+a:hover { text-decoration: none; }
+a:visited{color: black;}
+abbr[title], acronym[title] { /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+border-bottom: 1px dotted;
+cursor: help;
+}
+
+q:before, q:after { content: ''; }
+
+/* 重置表单元素 */
+legend { color: #000; } /* for ie6 */
+fieldset, img { border: none; } /* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button, input, select, textarea {
+    font-size: 100%; /* 使得表单元素在 ie 下能继承字体大小 */
+}
+
+/* 重置表格元素 */
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* 重置 hr */
+hr {
+    border: none;
+    height: 1px;
+}
+
+
+.con>div{
+    width: 100%;
+    font-size: 4em;
+}
+.con>div>p{
+    padding-left: 100px;
+   color: #969ba1;
+}
+.con{
+    min-width:1200px;
+
+    margin: auto;
+}
+.header{
+    height: 650px;
+    background: url(./images/headerBg.png);
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+.nav{
+height: 150px;
+}
+.navLeft>a{
+    float: left;
+}
+.navRight>a{
+    float: right;
+}
+.clicked{
+    background: url(./images/UI_10.png);
+}
+.nav a{
+    width: 110px;
+    height: 40px;
+    display: block;
+    font-size: 24px;
+    line-height: 40px;
+    margin-right: 3%;
+    margin-left: 3%;
+    margin-top: 4%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+.nav a:visited{
+    color: white;
+}
+.services{
+    height: 550px;
+    background: #fcfdfc;
+}
+.services>span{
+    display: inline;
+}
+.servicesCon{
+    width: 1200px;
+    height: 100%;
+    margin: auto;
+}
+.webdesign{
+    width: 383px;
+    height: 400px;
+    background: #66ccff;
+    float:left;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.webdesign:last-child{
+    margin-right: 0px;
+}
+.portfolio{
+    height: 740px;
+    background: url(./images/UI_15.png);
+}
+.portfolio li{
+    display:block;
+    float: left;
+    width: 200px;
+    height: 200px;
+    background: #66ccff;
+    margin: 4px;
+}
+.portfolioCon{
+    width: 1200px;
+    height: 620px;
+    margin: auto;
+    background: red;
+}
+.portfolioLeft{
+    width: 420px;
+    height: 600px;
+    background: #11ccaa;
+}
+.portfolioMiddle{
+    width: 570px;
+    height: 620px;
+    background: blue;
+}
+.portfolioRight{
+    width: 200px;
+    height: 600px;
+}
+.portfolioCon>ul,.portfolioCon>div{
+    float: left;
+}
+
+.blog{
+    height: 410px;
+    background: #fcfdfc;
+}
+.blog>div{
+    width: 1000px;
+    height: 350px;
+    margin: auto;
+}
+.blog>div>div{
+    width: 48%;
+    height: 90%;
+    background: #66ccff;
+    margin: 5px;
+    display: inline-block;
+}
+.info{
+    height:540px;
+    background: url(./images/UI_54.png);
+}
+.info>div{
+    width: 1400px;
+    margin: auto;
+
+}
+.info>div>div{
+    width: 400px;
+    height: 500px;
+    background: #66ccff;
+    float: left;
+    margin-left: 20px;
+}
+.info>div>div>input{
+    width: 200px;
+    display: inline-block;
+}
+.footer{
+    font-size: 2em !important;
+    color: #a0a4a8;
+    text-align: center;
+    line-height: 100px;
+    height: 100px;
+    background: url(./images/UI_57.png);
+}
+
+
+.top_slider{width:790px;overflow:hidden;*position:relative;margin:100px auto 0 auto;}
+.top_slider .ts_inner{margin-right:-3px;}
+.top_slider .slider_list{position:relative;height:266px;overflow:hidden;z-index:2;}
+.top_slider .slider_list ul{-webkit-transition:margin .5s ease-out 0s;-moz-transition:margin .5s ease-out 0s;transition:margin .5s ease-out 0s;}
+.top_slider .ts_column{float:left;}.top_slider .slider_box{position:relative;margin:0 3px 3px 0;width:195px;height:120px;overflow:hidden;}
+.top_slider .slider_box .app_link{display:block;overflow:hidden;}.top_slider .slider_box .app_link img{width:195px;height:120px;}
+.top_slider .slider_intro{position:absolute;display:inline-block; repeat;background:rgba(0,0,0,.5);font-size:14px;color:#fff;left:0;top:72px;padding:7px 10px 0;height:22px;width:inherit;overflow:hidden;}
+.top_slider .slider_intro em{display:block;margin-bottom:5px;cursor:pointer;white-space:nowrap;}.top_slider .more_apps a .goback{margin-top:44px;}
+.top_slider .slider_intro .more{font-size:12px;display:none;white-space:nowrap;}.top_slider .slider_intro .allstar{vertical-align:top;margin-right:5px;}
+.top_slider .app_link:hover{text-decoration:none;zoom:1;}
+.top_slider .app_link:hover .slider_intro{width:175px;height:41px;padding:7px 10px 0;-webkit-transition:all .3s ease-out 0s;-moz-transition:all .3s ease-out 0s;transition:all .3s ease-out 0s;}
+.top_slider .app_link:hover .slider_intro .more{display:block;}
+.top_slider .more_apps a{display:block;background:#d4eefb;width:195px;height:120px;font-family:"Microsoft Yahei","微软雅黑";font-size:20px;overflow:hidden;text-shadow:0 1px 0 #fff;}
+.top_slider .more_apps .txt_con{display:block;margin:32px 0 0 44px;}.top_slider .more_apps a em{display:block;margin-bottom:8px;}
+.top_slider .ts_inner{position:relative;width:786px;overflow:hidden;}.top_slider .slider_list{width:2358px;height:266px;}
+.top_slider .slider_item{float:left;width:786px;}
+.top_slider .middle_column{margin:0 3px;}
+.top_slider .slider_btn_left,.top_slider .slider_btn_right{background:url(./images/TB2Zv02mVXXXXa3XXXXXXXXXXXX-1922566416.png) no-repeat;_background:url(./images/TB2UA4mmVXXXXcTXpXXXXXXXXXX-1922566416.gif) no-repeat;display:block;width:29px;height:56px;position:absolute;top:102px;z-index:5;opacity:.7;filter:alpha(opacity=70);}
+.top_slider .slider_btn_left{background-position:0 0;left:0;}
+.top_slider .slider_btn_right{background-position:0 -61px;right:0;}
+.top_slider .slider_btn_left:hover,.top_slider .slider_btn_right:hover{opacity:1;filter:alpha(opacity=100);}
+.top_slider .column_large{float:left;width:390px;}
+.top_slider .column_large_one{position:relative;width:390px;height:260px;overflow:hidden;}
+.top_slider .column_large .column_img_container{width:390px;height:260px;overflow:hidden;}
+.top_slider .column_large_img{width:390px;height:260px;}.top_slider .column_small{float:left;width:195px;}
+.top_slider .column_small_first,.top_slider .column_small_second{position:relative;width:195px;margin-bottom:3px;overflow:hidden;}
+.top_slider .column_small_first{height:128px;}.top_slider .column_small_second{height:129px;}
+.top_slider .column_small .column_img_container{width:195px;overflow:hidden;}
+.top_slider .column_small_first .column_img_container{height:128px;}
+.top_slider .column_small_second .column_img_container{height:129px;}
+.top_slider .column_small_img{width:195px;height:130px;}
+.top_slider .column_select_layer{position:absolute;overflow:hidden;left:0;z-index:5;}
+.top_slider .column_select_layer{-webkit-transition:all .2s ease;-moz-transition:all .2s ease;-o-transition:all .2s ease;transition:all .2s ease;}
+.top_slider .column_title{padding:7px 0 0 0;color:#fff;font-size:14px;font-weight:bold;}.top_slider .column_info{height:14px;padding:5px 0 0 0;}
+.top_slider .column_info .allstar{float:left;}.top_slider .column_play_count{float:left;margin-left:5px;color:#ccc;}
+.top_slider .column_large .column_select_layer{width:390px;height:48px;bottom:-48px;}
+.top_slider .column_small .column_select_layer{width:195px;height:48px;bottom:-48px;}
+.top_slider .column_small .layer_content{width:185px;}
+.top_slider .column_selected .layer_content{display:block;}
+.top_slider .column_selected .column_select_layer{bottom:0;}
+.top_slider .tab_awards{width:16px;height:16px;background-position:0 0;}
+.top_slider .tab_processing{width:39px;height:16px;background-position:0 -20px;}
+.top_slider .column_item_link{position:absolute;background:#fafafa;opacity:0;filter:alpha(opacity=0);top:0;left:0;z-index:10;}
+.top_slider .column_large_one .column_item_link{width:390px;height:260px;}
+.top_slider .column_small_first .column_item_link{width:195px;height:128px;}
+.top_slider .column_small_second .column_item_link{width:195px;height:129px;}

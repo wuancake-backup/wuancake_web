@@ -1,0 +1,83 @@
+*{margin: 0;
+  padding: 0;}
+body{margin: 0 50px;
+     width: 1120px;}  
+  
+.one{width: 1040px;
+     height: 130px;
+     padding:0 0 0 80px;
+     background-color:dimgrey; 
+	   }
+.one td{width: 140px;
+        text-align: left;
+        color: white;
+        font-size: small;
+        font-family: "微软雅黑";
+        margin: 0 auto;}  
+ 
+.two{width:1040px;
+     height: 310px; 
+     background-color: gray;
+     padding: 30px 0 20px 80px;
+     position: relative;} 
+.two .left{width: 30%;
+           display: inline-block;
+           font: small "微软雅黑";
+           color: white;
+           position: absolute;
+           top: 30px;
+            }
+.two .left img{margin-top: 10px;}            
+.two .right{display: inline-block;
+            position: absolute;
+            right: 80px; }
+
+.three{width: 1040px;
+       height: 320px;   
+     background-color:white;
+     padding: 40px 0 40px 80px  ;
+    } 
+.three .a{width: 30%;
+          height: 320px; 
+          display: inline-block;
+          position: relative;}
+.three .a h2{ 
+             position: absolute;
+             left: 90px;
+             }          
+.three .a p{position: absolute;
+            top: 130px;}          
+.four{width: 1040px; 
+     background-color: lightgrey;
+     padding:20px 0 20px 80px; 
+      } 
+.four .a{width: 400px;
+         float: left;
+         display: inline-block;}
+.four .b{display: inline-block;}    
+.four .c{width: 180px;
+	       display: inline-block; 
+         }   
+         
+.five{width: 1040px; 
+     background-color:white;
+     padding: 40px 0 40px 80px; }             
+.five .a{width: 300px;
+         display: inline-block;}
+         
+.six{width: 1040px; 
+     background-color: gray;
+     padding: 20px 0 20px 80px;}          
+.six .a{width: 300px;
+        display: inline-block;
+        color: white;}
+.six .a input{margin-bottom: 5px;}
+
+.seven{width: 1080px;
+     height: 40px;
+     background-color:dimgrey;  
+     text-align: center;
+     color: white;
+     padding:20px;
+        }
+ 
