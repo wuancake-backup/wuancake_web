@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.0/jquery.js"/></script>
+<title>带有分散效果的瀑布流</title>
+<style type="text/css">
+    *{padding: 0;margin:0;}
+    #main{
+        position: relative;
+		margin:0 auto;
+    }
+    .pin{
+        padding: 15px 0 0 15px;
+        float:left;
+    }
+    .box{
+        padding: 10px;
+        border:1px solid #ccc;
+        box-shadow: 0 0 6px #ccc;
+        border-radius: 5px;
+    }
+    .box img{
+        width:200px;
+        height:auto;
+    }
+</style>
+<script>
+$( window ).on( "load", function(){
+   waterfall();// 调用waterfall函数
+    var dataInt={'data':[{'src':'22.jpg'},{'src':'23.jpg'},{'src':'24.jpg'},{'src':'25.jpg'}]};
+    window.onscroll=function(){
+       // 拖动滚动条时加载后续图片，待处理
+     }
+});
+function waterfall(){
+     // 计算及定位数据块显示分散效果
+	var odiv=$('#main>div');
+	var imageh=[];
+	var windoww=$(window).width();
+	var odivw=odiv.eq(0).outerWidth();
+	var cols=Math.floor(windoww/odivw);
+	odiv.each(function(index, element) {
+        $(this).css({
+			'position':'absolute',
+			'left':100*Math.floor(Math.random()*10),
+			'top':100*Math.floor(Math.random()*10)
+			})
+    });
+	for(i=0;i<odiv.length;i++){
+		if(i<cols){
+			imageh.push(odiv.eq(i).outerHeight());
+			odiv.eq(i).animate({
+				'left':i*odivw,
+				'top':'0px',
+				},5000);
+			
+			}
+		else{
+			var minh=Math.min.apply(null,imageh);
+			
+			for(j=0;j<cols;j++){
+				if(imageh[j]==minh){
+					var minindex=j;
+					}
+				}
+			odiv.eq(i).animate({
+				'position':'absolute',
+				'left':odivw*minindex,
+				'top':imageh[minindex],
+				        },5000);
+			
+			imageh[minindex]+=odiv.eq(i).outerHeight();
+			}
+		}
+	
+}
+
+function checkscrollside(){
+  // 检测是否具备了加载数据块的条件，待处理
+}
+
+</script>
+</head>
+<body>
+<div id="main">
+    <div class="pin">
+        <div class="box">
+            <img src="images/1.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/2.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/3.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/4.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/5.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/6.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/7.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/8.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/9.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/10.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/11.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/12.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/13.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/14.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/15.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/16.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/17.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/18.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/19.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/20.jpg"/>
+        </div>
+    </div>
+    <div class="pin">
+        <div class="box">
+            <img src="images/21.jpg"/>
+        </div>
+    </div>
+</div>
+</body>
+</html>
