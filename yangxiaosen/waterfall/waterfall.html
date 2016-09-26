@@ -1,0 +1,137 @@
+<!Doctype>
+<html>
+ <head>
+   <title>瀑布流布局</title>
+   <meta charset="utf-8" />
+   <style>
+      .box{
+		  padding-left:10px;
+		  padding-top:10px;
+		  float:left;}
+	  .pic{
+		  padding:10px;
+		  border:2px blue solid ;
+		  border-radius:20px;
+		  box-shadow: 3px 3px grey;
+		  }
+	  .pic img{
+		  width:220px;}
+   </style>
+   <script>
+ window.onload=function(){
+     waterfall('main','box');
+	 
+}
+function waterfall(parent,box){
+  var oBoxs=getByClass(box,parent);
+  var imagesh=[];
+  var imagew=oBoxs[0].offsetWidth;
+  var cols=Math.floor(document.documentElement.clientWidth/imagew);
+  for(var i=0;i<oBoxs.length;i++){
+    if(i<cols){
+       imagesh.push(oBoxs[i].offsetHeight);// 将图片的高度值添加到数组中
+    }
+	else{
+			  var minh=Math.min.apply(null,imagesh);// 求最小值和最小值的索引
+			  var index='';
+			  for(var j in imagesh){
+										if(imagesh[j] == minh)
+										{index=j;}
+									 }
+// 计算及定义图片出现的位置
+      oBoxs[i].style.position='absolute';
+      oBoxs[i].style.left=imagew*index+'px';
+	  oBoxs[i].style.top=imagesh[index];
+	  imagesh[index]+=oBoxs[i].offsetHeight;
+      
+      // 改变数组值
+     
+    }
+  }
+}
+function getByClass(clsName,parent){
+ //定义函数getByClass()实现获取document或指定父元素下所有class为on的元素  
+	 if(parent){
+	 var oparent=document.getElementById(parent);
+     var childs=oparent.getElementsByTagName('*');
+	 var result=[];
+	 for(i=0;i<childs.length;i++){
+		 if(childs[i].className==clsName){
+			 result.push(childs[i]);}
+		 }
+		 return result;
+		 
+	 }
+	 else{
+	 var oparent=document;
+     var childs=oparent.getElementsByTagName('*');
+	 var result=[];
+	 for(i=0;i<childs.length;i++){
+		 if(childs[i].className==clsName){
+			 result.push(childs[i]);}
+		 }
+		 return result;
+		 }
+}
+</script>
+ </head>
+ <body>
+     <div id="main">
+ 		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/0.jpg" />
+ 			</div>
+ 		</div>
+ 		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/1.jpg" />
+ 			</div>
+ 		</div>
+ 		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/2.jpg" />
+ 			</div>
+ 		</div>
+ 		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/3.jpg" />
+ 			</div>
+ 		</div>
+  		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/4.jpg" />
+ 			</div>
+ 		</div>
+  		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/5.jpg" />
+ 			</div>
+ 		</div>
+  		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/6.jpg" />
+ 			</div>
+ 		</div>
+ 		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/7.jpg" />
+ 			</div>
+ 		</div>
+ 		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/8.jpg" />
+ 			</div>
+ 		</div>
+ 		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/9.jpg" />
+ 			</div>
+ 		</div>
+  		<div class="box">
+ 			<div class="pic">
+ 				<img src="images/10.jpg" />
+ 			</div>
+ 		</div>
+	</div>
+ </body>
+</html>
