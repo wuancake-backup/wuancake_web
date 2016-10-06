@@ -119,7 +119,7 @@ var timelinectl=function(player){
 		var x=event.clientX;
 		var n=this.offsetLeft;
 		//console.log(x-n)
-		player.currentTime=((x-n)/350)*player.duration;
+		player.currentTime=Math.round(((x-n)/350)*player.duration);
 		}
 	}
 //声音控制调节
