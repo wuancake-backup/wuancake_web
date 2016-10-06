@@ -167,7 +167,7 @@ var setlyric=function(text,player){
 	var lrcpart=document.getElementById("lrcpart");
 	var ul=document.getElementById('lrc-ul');
 	
-	lyric = text.split('\r\n'); //先按行分割
+	var lyric = text.split('\r\n'); //先按行分割
     var _l = lyric.length; //获取歌词行数
     lrc = new Array(); //新建一个数组存放最后结果
     for(i=0;i<_l;i++) {
