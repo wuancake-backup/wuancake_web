@@ -140,7 +140,7 @@ var lrcshow=function(player){
 	str=str.replace('index.html','');
 	var songname=player.src.replace(str+'songs/','').replace('.mp3','');
 	//console.log(songname);
-	var lyric1;
+	var lyric1="justtext";
 	var xhr=new XMLHttpRequest();
 	xhr.open('GET', 'lrcs/'+songname+'.lrc', true);
     xhr.send();
@@ -169,7 +169,7 @@ var setlyric=function(text,player){
 	
 	var lyric = text.split('\r\n'); //先按行分割
     var _l = lyric.length; //获取歌词行数
-    lrc = new Array(); //新建一个数组存放最后结果
+    var lrc = new Array(); //新建一个数组存放最后结果
     for(i=0;i<_l;i++) {
        var d = lyric[i].match(/\[\d{2}:\d{2}((\.|\:)\d{2})\]/g);  //正则匹配播放时间
        var t = lyric[i].split(d); //以时间为分割点分割每行歌词，数组最后一个为歌词正文
