@@ -187,8 +187,11 @@ var setlyric=function(text,player){
 		li.setAttribute('class','t'+lrc[j][0])
 		ul.appendChild(li);
 		}
-	//定义歌词滚动函数
-	var lrcscroll=function(ul,lrc,player){
+	
+	lrcscroll(ul,lrc,player);
+	}
+//定义歌词滚动函数
+var lrcscroll=function(ul,lrc,player){
 		for(i=0;i<lrc.length;i++){
 			if(player.currentTime==lrc[i][0]){
 				var nowli=ul.getElementsByClassName('t'+lrc[i][0]);
@@ -197,8 +200,6 @@ var setlyric=function(text,player){
 			}
 		var t=setTimeout('lrcscroll(ul,lrc,player)',1000);
 		}
-	lrcscroll(ul,lrc,player);
-	}
 //定义歌曲封面变化函数
 var changeimage=function(player){
 	var str= window.location.href;
