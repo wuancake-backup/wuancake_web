@@ -141,7 +141,7 @@ var lrcshow=function(player){
 	str=str.replace('index.html','');
 	var songname=player.src.replace(str+'songs/','').replace('.mp3','');
 	//console.log(songname);
-	var lyric1="justtext";
+	//var lyric1="justtext";
 	var xhr=new XMLHttpRequest();
 	xhr.open('GET', 'lrcs/'+songname+'.lrc', true);
     xhr.send();
@@ -149,11 +149,11 @@ var lrcshow=function(player){
 	//alert(xhr.status)
     xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status ==200) {
-                lyric1=xhr.responseText;
+                var lyric1=xhr.responseText;
                 //lrcpart.innerHTML=xhr.responseText;
             }
 			if (xhr.readyState == 4 && xhr.status ==404) {
-                lyric1=xhr.responseText;
+                var lyric1=xhr.responseText;
                 //lrcpart.innerHTML=xhr.responseText;
             }
         }
