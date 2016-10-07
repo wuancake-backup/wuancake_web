@@ -150,10 +150,12 @@ var lrcshow=function(player){
     xhr.onreadystatechange = function () {
             if (xhr.readyState == 4 && xhr.status ==200) {
                 var lyric1=xhr.responseText;
+		    setlyric(lyric1,player);
                 //lrcpart.innerHTML=xhr.responseText;
             }
-			if (xhr.readyState == 4 && xhr.status ==404) {
-                var lyric1=xhr.responseText;
+	    if (xhr.readyState == 4 && xhr.status ==404) {
+                     var lyric1=xhr.responseText;
+		     setlyric(lyric1,player);
                 //lrcpart.innerHTML=xhr.responseText;
             }
         }
@@ -161,7 +163,7 @@ var lrcshow=function(player){
 	//alert(xhr.responseText)
 	//var lyric=xhr.responseText;
 	//lrcpart.innerHTML=xhr.responseText;
-	setlyric(lyric1,player);
+	//setlyric(lyric1,player);
 	//var n=setTimeout("lrcshow(player)",1000);
 	}
 //处理歌词函数
