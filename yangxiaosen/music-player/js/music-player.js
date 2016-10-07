@@ -162,7 +162,7 @@ var lrcshow=function(player){
 	//var lyric=xhr.responseText;
 	//lrcpart.innerHTML=xhr.responseText;
 	setlyric(lyric1,player);
-	var n=setTimeout("lrcshow(player)",1000);
+	//var n=setTimeout("lrcshow(player)",1000);
 	}
 //处理歌词函数
 var setlyric=function(lyric1,player){
