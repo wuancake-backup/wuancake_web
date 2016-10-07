@@ -161,13 +161,14 @@ var lrcshow=function(player){
 	//var lyric=xhr.responseText;
 	//lrcpart.innerHTML=xhr.responseText;
 	setlyric(lyric1,player);
+	var n=setTimeout("lrcshow(player)",1000);
 	}
 //处理歌词函数
-var setlyric=function(text,player){
+var setlyric=function(lyric1,player){
 	var lrcpart=document.getElementById("lrcpart");
 	var ul=document.getElementById('lrc-ul');
 	
-	var lyric = text.split('\r\n'); //先按行分割
+	var lyric = lyric1.split('\r\n'); //先按行分割
     var _l = lyric.length; //获取歌词行数
     var lrc = new Array(); //新建一个数组存放最后结果
     for(i=0;i<_l;i++) {
@@ -186,18 +187,20 @@ var setlyric=function(text,player){
 		li.setAttribute('class','t'+lrc[j][0])
 		ul.appendChild(li);
 		}
-	//定义歌词滚动函数
-	var lrcscroll=function(ul,lrc,player){
-		for(i=0;i<lrc.length;i++){
+	
+	for(i=0;i<lrc.length;i++){
 			if(player.currentTime==lrc[i][0]){
 				var nowli=ul.getElementsByClassName('t'+lrc[i][0]);
 				nowli.className+='nowli';
 				}
 			}
-		var t=setTimeout('lrcscroll(ul,lrc,player)',1000);
-		}
-	lrcscroll(ul,lrc,player);
+	//var t=setTimeout("setlyric(lyric1,player)",1000);
 	}
+	
+	
+//定义歌词滚动函数
+	
+		
 //定义歌曲封面变化函数
 var changeimage=function(player){
 	var str= window.location.href;
