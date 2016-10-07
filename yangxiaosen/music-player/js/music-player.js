@@ -192,8 +192,8 @@ var setlyric=function(lyric1,player){
 		li.setAttribute('class','t'+lrc[j][0])
 		ul.appendChild(li);
 		}
-	
-	var myScroll = setInterval("scrolllrc(lrc,player)",500);
+	var textlrc=lrc;
+	var myScroll = setInterval("scrolllrc(textlrc,player)",500);
 	//var t=setTimeout("setlyric(lyric1,player)",1000);
 	}
 	
