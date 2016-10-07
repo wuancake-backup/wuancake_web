@@ -2,7 +2,7 @@
 window.onload=function(){
 	var songs=["Eagles-TheLastResort.mp3","GunsN'Roses-Don'tCry(Original).mp3","JohnLennon-Imagine.mp3"];
 	var player=document.getElementById("player");
-
+        var textlrc;
 	controlplay(player,songs);
 	changesong(player,songs);
 	timeshow(player);
@@ -192,7 +192,7 @@ var setlyric=function(lyric1,player){
 		li.setAttribute('class','t'+lrc[j][0])
 		ul.appendChild(li);
 		}
-	var textlrc=lrc;
+	textlrc=lrc;
 	var myScroll = setInterval("scrolllrc(textlrc,player)",500);
 	//var t=setTimeout("setlyric(lyric1,player)",1000);
 	}
