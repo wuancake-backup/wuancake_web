@@ -32,7 +32,7 @@ var controlplay=function(player,songs){
 			img.src="images/1.JPG";}
 		changename(player);
 		//console.log(settime(player.duration));
-		//lrcshow(player);
+		lrcshow(player);
 		}
 	}
 //控制切换歌曲
@@ -63,7 +63,7 @@ var changesong=function(player,songs){
 	img.src="images/8.JPG";
 	changename(player);
 	changeimage(player);
-	//lrcshow(player);
+	lrcshow(player);
 	
 		}
 	}
