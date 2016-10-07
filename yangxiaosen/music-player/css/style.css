@@ -71,7 +71,8 @@ body{
 	height:500px;
 	float:left;
 	background-color:gray;
-	opacity:0.4;}
+	opacity:0.4;
+	overflow: hidden;}
 #lrcpart ul{
 	list-style-type:none;}
 #lrcpart ul li{
