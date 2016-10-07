@@ -1,8 +1,9 @@
 // JavaScript Document
+var textlrc;
 window.onload=function(){
 	var songs=["Eagles-TheLastResort.mp3","GunsN'Roses-Don'tCry(Original).mp3","JohnLennon-Imagine.mp3"];
 	var player=document.getElementById("player");
-        var textlrc;
+        
 	controlplay(player,songs);
 	changesong(player,songs);
 	timeshow(player);
