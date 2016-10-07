@@ -170,13 +170,9 @@ var lrcshow=function(player){
 var setlyric=function(lyric1,player){
 	var lrcpart=document.getElementById("lrcpart");
 	var ul=document.getElementById('lrc-ul');
-<<<<<<< HEAD
 	for(y=0;y<ul.childNodes.length;y++){
 		ul.removeChild(ul.childNodes[0]);
 		}
-=======
-	
->>>>>>> 367dea6a0ba63faafd5f1f49c63e539ae37635e3
 	var lyric = lyric1.split('\n'); //先按行分割
     var _l = lyric.length; //获取歌词行数
     var lrc = new Array(); //新建一个数组存放最后结果
