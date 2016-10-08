@@ -70,15 +70,13 @@ body{
 	width:350px;
 	height:500px;
 	float:left;
-	background-color:gray;
-	opacity:0.4;
+	background-color:rgba(192,192,192,0.4);
 	overflow: hidden;}
 #lrcpart ul{
 	list-style-type:none;}
 #lrcpart ul li{
 	padding:5px;
 	color:white;
-	opacity:0.9;
 	}
 
 
