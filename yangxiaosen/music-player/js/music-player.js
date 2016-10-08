@@ -149,15 +149,15 @@ var lrcshow=function(player){
 	//alert(xhr.readyState)
 	//alert(xhr.status)
     xhr.onreadystatechange = function () {
-            if (xhr.readyState == 4 && xhr.status ==200) {
-                var lyric1=xhr.responseText;
+        if (xhr.readyState == 4 && xhr.status ==200) {
+            var lyric1=xhr.responseText;
 		    setlyric(lyric1,player);
                 //lrcpart.innerHTML=xhr.responseText;
             }
 	    if (xhr.readyState == 4 && xhr.status ==404) {
-                     var lyric1=xhr.responseText;
+             var lyric1=xhr.responseText;
 		     setlyric(lyric1,player);
-                //lrcpart.innerHTML=xhr.responseText;
+             //lrcpart.innerHTML=xhr.responseText;
             }
         }
 	//console.log(xhr.responseText)
@@ -205,8 +205,12 @@ var scrolllrc=function(lrc,player){
 	for(i=0;i<lrc.length;i++){
 			if(player.currentTime==lrc[i][0]){
 				var nowli=ul.getElementsByClassName('t'+lrc[i][0])[0];
-				nowli.className+='nowli';
-				ul.scrollTop+=5;
+				nowli.style.color='#00FFFF';
+				ul.scrollTop+=10;
+				}
+			else{
+				var oldli=ul.getElementsByClassName('t'+lrc[i][0])[0];
+				oldli.style.color='white';
 				}
 			}
 	}
