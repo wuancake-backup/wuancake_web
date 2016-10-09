@@ -24,16 +24,18 @@ var controlplay=function(player,songs){
 			if(player.src){
 					player.play();}
 		    else{
-			        player.src='songs/'+songs[0];}
+			        player.src='songs/'+songs[0];
+					lrcshow(player);}
 			        img.src="images/8.JPG";
 					player.play();
+					
 			}
 		else{
 			player.pause();
 			img.src="images/1.JPG";}
 		changename(player);
 		//console.log(settime(player.duration));
-		lrcshow(player);
+		
 		}
 	}
 //控制切换歌曲
@@ -171,7 +173,8 @@ var lrcshow=function(player){
 var setlyric=function(lyric1,player){
 	var lrcpart=document.getElementById("lrcpart");
 	var ul=document.getElementById('lrc-ul');
-	for(y=0;y<ul.childNodes.length;y++){
+	var childnum=ul.childNodes.length;
+	for(y=0;y<childnum;y++){
 		ul.removeChild(ul.childNodes[0]);
 		}
 	var lyric = lyric1.split('\n'); //先按行分割
@@ -185,6 +188,8 @@ var setlyric=function(lyric1,player){
           var dt = String(d).split(':'); 
           var _t = Math.round(parseInt(dt[0].split('[')[1])*60+parseFloat(dt[1].split(']')[0])); 
           lrc.push([_t, t[1]]);
+		  //console.log(_t)
+		  //console.log(player.currentTime)
                       }
       }
 	for(j=0;j<lrc.length;j++){
@@ -194,7 +199,8 @@ var setlyric=function(lyric1,player){
 		ul.appendChild(li);
 		}
 	textlrc=lrc;
-	var myScroll = setInterval("scrolllrc(textlrc,player)",500);
+	console.log(lrc)
+	var myScroll = setInterval("scrolllrc(textlrc,player)",1000);
 	//var t=setTimeout("setlyric(lyric1,player)",1000);
 	}
 	
@@ -202,16 +208,23 @@ var setlyric=function(lyric1,player){
 //定义歌词滚动函数
 var scrolllrc=function(lrc,player){
 	var ul=document.getElementById('lrc-ul');
+	var lrcpart1=document.getElementById("lrcpart");
+	//console.log(ul)
 	for(i=0;i<lrc.length;i++){
-			if(player.currentTime==lrc[i][0]){
+		    var currenttime=Math.round(player.currentTime);
+			if(currenttime==lrc[i][0]){
 				var nowli=ul.getElementsByClassName('t'+lrc[i][0])[0];
 				nowli.style.color='#00FFFF';
-				ul.scrollTop+=10;
+				lrcpart1.scrollTop+=25;
+				console.log(lrcpart1.scrollTop);
+				for(y=0;y<lrc.length;y++){
+					if(currenttime!=lrc[y][0]){
+						var oldli=ul.getElementsByClassName('t'+lrc[y][0])[0];
+				        oldli.style.color='white';
+						}
+					}
 				}
-			else{
-				var oldli=ul.getElementsByClassName('t'+lrc[i][0])[0];
-				oldli.style.color='white';
-				}
+			
 			}
 	}
 		

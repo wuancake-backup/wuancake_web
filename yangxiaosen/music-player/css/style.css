@@ -71,11 +71,14 @@ body{
 	height:500px;
 	float:left;
 	background-color:rgba(192,192,192,0.4);
-	overflow: hidden;}
+	overflow: hidden;
+	}
 #lrcpart ul{
-	list-style-type:none;}
+	list-style-type:none;
+	}
 #lrcpart ul li{
 	padding:5px;
+	height:24px;
 	color:white;
 	}
 
