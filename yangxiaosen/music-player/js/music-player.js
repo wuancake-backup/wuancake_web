@@ -199,7 +199,7 @@ var setlyric=function(lyric1,player){
 		ul.appendChild(li);
 		}
 	textlrc=lrc;
-	console.log(lrc)
+	//console.log(lrc)
 	var myScroll = setInterval("scrolllrc(textlrc,player)",1000);
 	//var t=setTimeout("setlyric(lyric1,player)",1000);
 	}
@@ -215,8 +215,8 @@ var scrolllrc=function(lrc,player){
 			if(currenttime==lrc[i][0]){
 				var nowli=ul.getElementsByClassName('t'+lrc[i][0])[0];
 				nowli.style.color='#00FFFF';
-				lrcpart1.scrollTop+=25;
-				console.log(lrcpart1.scrollTop);
+				lrcpart1.scrollTop=35*i-250;
+				//console.log(lrcpart1.scrollTop);
 				for(y=0;y<lrc.length;y++){
 					if(currenttime!=lrc[y][0]){
 						var oldli=ul.getElementsByClassName('t'+lrc[y][0])[0];
