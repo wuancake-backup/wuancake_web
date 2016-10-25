@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+#player{
+    width: 800px;
+    height: 500px;
+    margin-left:auto;
+	margin-right:auto;
+	margin-top: 20px;
+    padding-left: 35px;
+    background: url(image/background.jpg)
+}
+#top{
+    width: 700px;
+    height: 50px;
+    padding-bottom: 0px;
+}
+#top img{
+    float: left;
+    padding-right: 10px;
+    height: 20px;
+	padding-top:10px;
+}
+#top h1{
+    height: 20px;
+    float: left;
+    font-size: 20px;
+	position:relative;
+	bottom:5px;
+}
+#left{
+    width: 350px;
+    height: 400px;
+    background-color: #ffffff;
+    float: left;
+	padding-left:20px;
+	padding-top:20px;
+	
+}
+#right{
+    float:left;
+	background-color: #CCC;
+	width: 400px;
+	height: 420px;
+	text-align: left;
+	filter:alpha(opacity=60);
+    opacity:0.6;
+}
+.describe{
+	font-size:16px;
+	margin-top: -10px;
+	text-align:left;	
+}
+.name{
+	font-size:24px;
+}
+.album{
+	margin-top:-20px;	
+}
+#buttons2{
+	padding-left:20px;	
+}
+.volume{
+	padding-top:5px;
+	position:relative;
+	top: 5px;
+}
+.volumeline{
+	position:relative;
+	bottom: 2px;	
+}
+.next{
+	position:relative;
+	left:22px;
+}
+.mark{
+	position:relative;
+	left:44px;
+}
+.delete{
+	position:relative;
+	left:65px;
+}
+.download,.share{
+	position:relative;
+	top: 5px;	
+}
+
