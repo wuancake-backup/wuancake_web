@@ -1,0 +1,266 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title></title>
+    <style type="text/css">
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            list-style-type: none;
+            height: 20px;
+        }
+
+        .body {
+            /*margin: 0 auto;*/
+            height: 100%;
+            width: 95%;
+            border: 1px solid #ccc;
+            /*background-color: #808080;*/
+            min-width: 1336px;
+            min-height: 963px;
+            background-image: url(image/backgroud.png);
+        }
+
+        .music {
+            position: absolute;
+            top: 20%;
+            left: 20%;
+            height: 70%;
+            width: 800px;
+            background-color: rgba(255,255,255,0.6);
+        }
+
+            .music > div {
+                float: left;
+            }
+
+                .music > div:first-child {
+                    width: 300px;
+                    height: 100%;
+                    border-right: 1px solid #ccc;
+                    /*background-color: #ff006e;*/
+                }
+
+                .music > div:last-child {
+                    position: relative;
+                    padding-left: 20px;
+                    width: 479px;
+                    height: 100%;
+                    /*background-color: #00ff21;*/
+                    overflow: hidden;
+                }
+        .time {
+            margin-left:50px;
+        }
+        #ul {
+            position: absolute;
+        }
+
+        .music-img {
+            margin: 10% 90px;
+            width: 120px;
+            height: 170px;
+        }
+
+        .buttom-img {
+            margin: 10% 65px;
+        }
+
+        .pastime {
+            margin: 0 auto;
+            width: 200px;
+            height: 10px;
+            border: 5px solid #ccc;
+            -moz-border-radius: 15px; /* Gecko browsers */
+            -webkit-border-radius: 15px; /* Webkit browsers */
+            border-radius: 15px;
+        }
+
+            .pastime > div:last-child {
+                /*width:10%;*/
+                height: 10px;
+                -moz-border-radius: 15px; /* Gecko browsers */
+                -webkit-border-radius: 15px; /* Webkit browsers */
+                border-radius: 15px;
+                background-color: #ff6a00;
+            }
+
+        .sound {
+            float: right;
+            margin-top: -20px;
+        }
+    </style>
+    <script src="Js/jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div class="body">
+        <div class="music">
+            <div>
+                <h3>歌名:星辰变</h3>
+                <img src="/image/img472480886.jpg" class="music-img" alt="" />
+                <div class="buttom-img">
+                    <img src="/image/left.png" alt="" />
+                    <img src="/image/begin.png" id="begin" alt="" onclick="changebuttom(this.id)" />
+                    <img src="/image/right.png" alt="" onclick="text()" />
+                </div>
+                <div class="sound">
+                    <img src="/image/sound.png" alt="" />
+                </div>
+                <div class="time">时间：<span id="time">00:00</span><span id="alltime"></span></div>
+                <div class="pastime">
+                    <div id="past"></div>
+                </div>
+            </div>
+            <div>
+                <ul id="ul">
+                    <li></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <audio src="Video/music.mp3" id="audio" controls="controls" style="display: none" />
+</body>
+<script>
+    $(document).ready(function () {
+        reallygo();
+    });
+    function changebuttom(id) {
+        var src = id;
+        var audio = $("#audio")[0];
+        if (src == "stop") {
+            $("#stop").attr("src", "/image/begin.png");
+            $("#stop").attr("id", "begin");
+            audio.pause();
+        }
+        else if (src == "begin") {
+            $("#begin").attr("src", "/image/stop.png");
+            $("#begin").attr("id", "stop");
+            audio.play();
+            text();
+        }
+    }
+    function text() {
+        var lrctext = lrc();
+        var audio = document.getElementById("audio");
+        var p = 1;
+        audio.addEventListener("timeupdate", function () {
+            var onlrc = audio.currentTime;
+            var isonlrc = onlrc.toString().split(".");
+            setTimeout(function () {
+                var widthline = Math.round(audio.currentTime) / Math.round(audio.duration) * 100;
+                $("#past").css("width", widthline + "%");
+                var time = ontime(onlrc);
+                $("#time").html(time);
+            }, 50);
+            for (var i = 0; i < lrctext.length; i++) {
+                if (lrctext[i][0] != "") {
+                    var second = getsecond(lrctext[i][0]);
+                    var number = (-20 * p).toString() + "px";
+                    if (isonlrc[0] == second) {
+                        //var number = (-20 * p).toString() + "px";
+                        var id = "#" + lrctext[i][0];
+                        $("#ul").css("margin-top", number);
+                        lrctext.splice(i, 1);
+                        p++;
+                        return;
+                    }
+                }
+            }
+            if (audio.currentTime == audio.duration) {
+                reallygo();
+                $("#ul").css("margin-top", 0);
+                $("#stop").attr("src", "/image/begin.png");
+                $("#stop").attr("id", "begin");
+            }
+        })
+        //audio.addEventListener('ended', function () {
+        //    reallygo();
+        //    $("#ul").css("margin-top", 0);
+        //    $("#stop").attr("src", "/image/begin.png");
+        //    $("#stop").attr("id", "begin");
+        //}, false);
+
+    }
+    function reallygo() {
+        $("#ul").html("");
+        var lrctext = lrc();
+        for (var i = 0; i < lrctext.length; i++) {
+            if (lrctext[i][0] != "") {
+                var lrc1 = lrctext[i][0];
+                $("#ul").append("<li id=" + lrc1 + ">" + lrctext[i][1] + "</li>");
+            }
+        }
+    }
+    function lrc() {
+        var lrc = "[00:23.39] 风 听我号令指挥[00:25.06] 火 在我笔下功坚[00:26.23] 水 在我手中流转[00:27.34] 玩转人世间[00:28.91] 仙 穿过九九天劫[00:30.94] 魔 因在两界之间[00:32.50] 妖 想变却不能变[00:33.87] 羽无力不飞[00:35.69] 任凭这乱说纷飞[00:38.78] 纷飞这争战的灰[00:41.64] 风声中搁浅了谁的泪[00:47.61] 星辰在变 风云在变 勾勒墨色的容颜[00:54.78] 不管那时间 空间 只是种概念[01:00.04] 不管是人间在变 三界在变 我的真心永不变[01:06.55] 不管是妖魔 人类 光芒中都羽化成神仙[01:18.32] 日 为我斩妖除魔[01:19.78] 月 为我指引路线[01:21.24] 星 留下流星的泪[01:22.72] 坠落也纷飞[01:24.08] 天 静看风起云涌[01:25.65] 地 沉默败给时间[01:27.22] 人 也许太过善变[01:28.83] 但我不会变[01:30.30] 任凭着三界巨变[01:32.62] 变化这心中善念[01:36.41] 不能够忘记你是谁[01:43.82] 星辰在变 风云在变 勾勒墨色的容颜[01:49.03] 不管那时间 空间 只是种概念[01:54.72] 不管是人间在变 三界在变 我的真心永不变[02:00.93] 不管是妖魔 人类 光芒中都羽化成神仙[02:38.59] 星辰在变 风云在变 勾勒墨色的容颜[02:43.85] 不管那时间 空间 只是种概念[02:49.11] 不管是人间在变 三界在变 我的真心永不变[02:55.99] 不管是妖魔 人类 光芒中都羽化成神仙[03:06.04] 为了你我羽化成神仙";
+        //var pattern = "/\[\d{2}:\d{2}.\d{2}\]/g";
+        var arry = lrc.split("[");
+        var lrctext = [];
+        for (var i = 0; i < arry.length; i++) {
+            var text = arry[i].split("]");
+            //lrctext.push("["+arry[i]);
+            //lrctext[i]=(text[0],text[1]);
+            lrctext[i] = text;
+        }
+        return lrctext;
+    }
+
+    function getsecond(str) {
+        var arr = str.split(":");
+        var minute = parseInt(arr[0].substr(1));
+        var second = parseInt(arr[1].split("\.")[0]);
+        return minute * 60 + second;
+    }
+    function ontime(time) {
+        var arr = (time + "").split("\.");
+        var secondSum = parseInt(arr[0]);
+        var minute = appendZero(parseInt(secondSum / 60));
+        var second = appendZero(secondSum % 60);
+        return (minute + ":" + second)
+        //return (minute + ":" + second + "." + arr[1]);
+    }
+    function appendZero(s) {
+        return (s + "").length == 1 ? ("0" + s) : s;
+    }
+</script>
+</html>
+
+<!--[00:23.39] 风 听我号令指挥
+[00:25.06] 火 在我笔下功坚
+[00:26.23] 水 在我手中流转
+[00:27.34] 玩转人世间
+[00:28.91] 仙 穿过九九天劫
+[00:30.94] 魔 因在两界之间
+[00:32.50] 妖 想变却不能变
+[00:33.87] 羽无力不飞
+[00:35.69] 任凭这乱说纷飞
+[00:38.78] 纷飞这争战的灰
+[00:41.64] 风声中搁浅了谁的泪
+[00:47.61] 星辰在变 风云在变 勾勒墨色的容颜
+[00:54.78] 不管那时间 空间 只是种概念
+[01:00.04] 不管是人间在变 三界在变 我的真心永不变
+[01:06.55] 不管是妖魔 人类 光芒中都羽化成神仙
+[01:18.32] 日 为我斩妖除魔
+[01:19.78] 月 为我指引路线
+[01:21.24] 星 留下流星的泪
+[01:22.72] 坠落也纷飞
+[01:24.08] 天 静看风起云涌
+[01:25.65] 地 沉默败给时间
+[01:27.22] 人 也许太过善变
+[01:28.83] 但我不会变
+[01:30.30] 任凭着三界巨变
+[01:32.62] 变化这心中善念
+[01:36.41] 不能够忘记你是谁
+[01:43.82] 星辰在变 风云在变 勾勒墨色的容颜
+[01:49.03] 不管那时间 空间 只是种概念
+[01:54.72] 不管是人间在变 三界在变 我的真心永不变
+[02:00.93] 不管是妖魔 人类 光芒中都羽化成神仙
+[02:38.59] 星辰在变 风云在变 勾勒墨色的容颜
+[02:43.85] 不管那时间 空间 只是种概念
+[02:49.11] 不管是人间在变 三界在变 我的真心永不变
+[02:55.99] 不管是妖魔 人类 光芒中都羽化成神仙
+[03:06.04] 为了你我羽化成神仙-->
