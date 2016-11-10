@@ -1,0 +1,108 @@
+@charset "utf-8";
+
+
+
+*{
+    margin：0 ;
+    padding:0 ;
+}
+.mid{
+    margin:0 auto;
+}
+.navi{
+    margin-top: 0.015rem;
+    height:1.5rem;
+    font-size: 0.25rem;
+    color:black;
+    cursor: pointer;
+}
+.navi *{
+    text-align: center;
+    line-height: 1rem;
+}
+
+.navi_L{
+    width:0.6rem;
+    float:left;
+    margin-left:0.15rem;
+    padding:0.005rem 0.05rem;
+    height:1rem;
+}
+.navi_L:first-child{
+    border-bottom: blue 0.05rem solid;
+    color:blue;
+}
+.navi_L:active,.navi_L:visited{
+    border-bottom: blue 0.05rem solid;
+    color:blue;
+}
+.navi_R{
+    float:right;
+    font-size: 0.5rem;
+    height:0.5rem;
+    vertical-align: bottom;
+    padding:0.005rem 0.05rem;
+}
+.navi_R2{
+    float:right;
+    width:0.8rem;
+    height:0.5rem;
+    border:0.03rem solid grey;
+    background-color: #DDD;
+    border-radius: 0.035rem;
+    margin:0.2rem;
+    line-height: 0.5rem;
+    padding:0.005rem 0.05rem;
+
+}
+
+
+
+
+
+.google{
+    width:3.05rem;
+    height:1.0rem;
+    margin-top:0.75rem;
+    background-image: url(../draft/google.png);
+    background-size: cover;
+}
+
+.search{
+    width:9rem;
+    height:0.7rem;
+    margin-top:0.4rem;
+    border-radius: 0.03rem;
+    border:0.03rem solid #333;
+    overflow: hidden: ;
+}
+.sea_T{
+    font-size: 0.7rem;
+    float:right;
+    color: #44E;
+	position: relative;
+	bottom:0.04rem;
+}
+
+
+.hint{
+    font-size: 0.15rem;
+    width:5rem;
+    height:0.15rem;
+    margin-top:0.5rem;
+    text-align: center;
+}
+
+.bottom{
+    position: fixed;
+    bottom:0;
+    height:1rem;
+    left:0;
+    right:0;
+    background-color: #BBB;
+    text-align: center;
+    line-height: 1rem;
+}
+
+a{text-decoration: none;}
+

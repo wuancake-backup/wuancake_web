@@ -9,15 +9,14 @@
 	
 @font-face {
 font-family: 'h_font';
-src: url('../source/308-cai978.eot') format('embedded-opentype'),
+src: url('../source/308-cai978.eot');
+src: url('../source/308-cai978.eot?#iefix') format('embedded-opentype'),
 	url('../source/308-cai978.ttf') format('Truetype');
 
 }
 
 h1,h2,h3{
 	font-family: 'h_font'; 
-
-
 }
 
 h1{
@@ -36,6 +35,7 @@ h3{
 	margin:0 auto;
 	border-top: 1px solid ghostwhites;
 }
+
 .text{
 	font-family: helvetica;
 	font-size: 12px;
@@ -47,22 +47,22 @@ h3{
 }
 .line{
 	height: 1px;
-	border-bottom: 1px dashed gainsboro;
+	border-bottom: 1px dashed gainsboro !important;
 	width: inherit;
 	margin:13px 0 13px 0;
 }
 .bt_more{
-	height: 32px;
+	background-color: #44494C;
+	height: 30px;
 	width: 100px;
 	display: inline-block;
 	box-shadow: 0 1px 2px 0px black;
 	border-radius: 4px;
-	line-height: 32px;
+	line-height: 30px;
 	text-align: center;
 	font-family: h_font;
 	text-shadow: 0 2px  2px black;
 	font-size: 20px;
-
 }
 .more{
 	background: -moz-linear-gradient(top,#979CA0,#64696C);
@@ -88,9 +88,16 @@ h3{
 .lineh_120{
 	line-height: 120px;
 }
+.a{height:400px;width:400px;}
 .t{
 	display: inline-block;
 	height: inherit;
+
+}
+.inblock{
+	zoom:1;
+	*display:inline !important;
+
 }
 .t1{
 	width: 90px;
@@ -102,10 +109,9 @@ h3{
 	width: 120px;
 }
 .x{
-	height:28px;
-	margin:auto 0;
-	line-height: 32px;
-	text-align: center;
+	height:30px;
+	margin:auto 0px;
+	line-height:30px;
 }
 /*---------*/
 
@@ -123,7 +129,7 @@ h3{
 	width: 330px;
 }
 .img{
-	width: 620px;
+	width: 600px;
 	margin-left: 10px;
 }
 .imgbutton{
@@ -246,10 +252,9 @@ h3{
 	width: 190px;
 }
 .por_2{
-	width: 376px;
+	width: 344px;
 	background-color: #595E61;
 	padding: 0 16px;
-	box-sizing: border-box;
 }
 .por_3{
 	width: 180px;
@@ -300,10 +305,10 @@ h3{
 	height: 140px;
 	width: 280px;
 	margin-left: 15px;
-	color: #5F686D;
+	color: #5F686D ;
 }
 .blo_text *{
-	color: inherit;
+	color: #5F686D ;
 }
 .blog .bt_more{
 	position: absolute;
@@ -333,8 +338,11 @@ h3{
 	color:  #5F686D;
 	padding-left: 15px;
 }
-.abo_area input,.abo_area textarea,.abo_area:last-child .bt_more{
+.abo_area input,.abo_area textarea,.bt_more#last{
 	margin-top: 7px;
+}
+.about *{
+	border:0;
 }
 
 .about input{

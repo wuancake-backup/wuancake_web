@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width, initial-scale=1,user-scalable=no">
+		<meta content="yes" name="apple-mobile-web-app-capable">
+		<meta content="yes" name="apple-touch-fullscreen">
+		<meta content="telephone=no,email=no" name="format-detection">
+		<script src="http://g.tbcdn.cn/mtb/lib-flexible/0.3.4/??flexible_css.js,flexible.js"></script>
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <title>移动端切图测试</title>
+    </head>
+    <body>
+        <!-- 页面结构写在这里 -->
+     <div class="container">
+     <h1>欢迎来到三木音乐播放器</h1>
+     <div class="controlpart">
+        <div class="image">
+          <img id="albumimage" src="images/Eagles-TheLastResort.jpg">
+        </div>
+        <span class="test">歌名</span>
+        <span class="test">专辑名</span>
+        <span class="test">歌手名</span>
+        <div class="control-icon">
+          <span id="start-btu"><img src="images/1.JPG"/></span>
+          <span id="change-btu"><img src="images/2.JPG"/></span>
+          <span><img src="images/3.JPG"/></span>
+          <span><img src="images/4.JPG"/></span>
+        </div>
+        <div id="time-line">
+          <div id="scroll-line"></div>
+        </div>
+        <span class="btu" id="now-time">00:00</span>/
+        <span class="btu" id="all-time">00:00</span>
+        <span id="voice-btu"><img src="images/5.JPG"/></span>
+        <span class="btu">
+          <div id="voice-line">
+             <div id="voice-scroll"></div>
+          </div>
+        </span>
+        <span class="btu"><img src="images/6.JPG"/></span>
+        <span class="btu"><img src="images/7.JPG"/></span>
+     </div>
+     <div id="lrcpart"><ul id="lrc-ul"></ul></div>
+     <div id="play-list">
+        <h2>播放列表</h2>
+        <ul>
+        </ul>
+     </div>
+     <audio id="player" >浏览器不支持该播放器</audio>
+ </div>
+    </body>
+</html>
