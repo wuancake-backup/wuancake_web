@@ -1,0 +1,343 @@
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<html>
+<head>
+	
+<style>
+#header {
+    background-color:black;
+    color:white;
+    text-align:center;
+    padding:5px;	 
+}
+#nav {
+    line-height:30px;
+    background-color:#eeeeee;
+    height:1000px;
+    width:100px;
+    float:left;
+    padding:30px;	      
+}
+#section {
+    width:800px;
+    float:left;
+    padding:10px;	 
+    margin-left: 50px;	 
+}
+ 	 
+}
+</style>
+
+</head>
+
+<body>
+
+<div id="header">
+<h2>Lesson2元素及属性</h2>
+</div>
+
+<div id="nav">
+<p><a href="Lesson1.html">一.初识HTML</a></p>
+<p><a href="Lesson2.html">二.元素与属性</a></p>
+</div>
+
+<div id="section">
+
+
+<p>
+<a href="#tips">查看注意事项</a>	
+</p>	
+
+<div>
+<h2>元素</h2>
+<hr />
+
+<div>
+<h3>1.HTML 元素</h3>
+
+<p>HTML 元素指的是从开始标签（start tag）到结束标签（end tag）的所有代码。</p>
+
+<table class="dataintable">
+<tr>
+<th style="width:200px;">开始标签</th>
+<th style="width:200px;">元素内容</th>
+<th style="width:200px;">结束标签</th>
+</tr>
+
+<tr>
+<td>&lt;p&gt;</td>
+<td>This is a paragraph</td>
+<td>&lt;/p&gt;</td>
+</tr>
+
+<tr>
+<td>&lt;a href=&quot;default.htm&quot; &gt;</td>
+<td>This is a link</td>
+<td>&lt;/a&gt;</td>
+</tr>
+
+<tr>
+<td>&lt;br /&gt;</td>
+<td>(空)</td>
+<td></td>
+</tr>
+</table>
+
+<p class="note"><span>注释：</span>开始标签常被称为开放标签（opening tag），结束标签常称为闭合标签（closing tag）。</p>
+</div>
+
+
+<div>
+<h3>2.HTML 元素语法</h3>
+
+<ul>
+<li>HTML 元素以<b>开始标签</b>起始</li>
+<li>HTML 元素以<b>结束标签</b>终止</li>
+<li><b>元素的内容</b>是开始标签与结束标签之间的内容</li>
+<li>某些 HTML 元素具有<b>空内容（empty content）</b></li>
+<li>空元素<b>在开始标签中进行关闭</b>（以开始标签的结束而结束）</li>
+<li>大多数 HTML 元素可拥有<b>属性</b></li>
+</ul>
+
+<p class="tip"><span>提示：</span>您将在本教程的下一章中学习更多有关属性的内容。</p>
+</div>
+
+
+<div>
+<h3>3.嵌套的 HTML 元素</h3>
+
+<p>大多数 HTML 元素可以嵌套（可以包含其他 HTML 元素）。</p>
+<p>HTML 文档由嵌套的 HTML 元素构成。</p>
+
+
+<h4>HTML 文档实例</h4>
+
+<pre>
+&lt;html&gt;
+
+&lt;body&gt;
+&lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>上面的例子包含三个 HTML 元素。</p>
+</div>
+
+
+<div>
+<h3>4.HTML 实例解释</h3>
+
+<h3>&lt;p&gt; 元素：</h3>
+
+<pre>&lt;p&gt;This is my first paragraph.&lt;/p&gt;</pre>
+
+<p>这个 &lt;p&gt; 元素定义了 HTML 文档中的一个段落。</p>
+
+<p>这个元素拥有一个开始标签 &lt;p&gt;，以及一个结束标签 &lt;/p&gt;。</p>
+
+<p>元素内容是：This is my first paragraph。</p>
+
+
+<h3>&lt;body&gt; 元素：</h3>
+
+<pre>
+&lt;body&gt;
+&lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+</pre>
+
+<p>&lt;body&gt; 元素定义了 HTML 文档的主体。</p>
+
+<p>这个元素拥有一个开始标签 &lt;body&gt;，以及一个结束标签 &lt;/body&gt;。</p>
+
+<p>元素内容是另一个 HTML 元素（p 元素）。</p>
+
+
+<h3>&lt;html&gt; 元素：</h3>
+
+<pre>
+&lt;html&gt;
+
+&lt;body&gt;
+&lt;p&gt;This is my first paragraph.&lt;/p&gt;
+&lt;/body&gt;
+
+&lt;/html&gt;
+</pre>
+
+<p>&lt;html&gt; 元素定义了整个 HTML 文档。</p>
+
+<p>这个元素拥有一个开始标签 &lt;html&gt;，以及一个结束标签 &lt;/html&gt;。</p>
+
+<p>元素内容是另一个 HTML 元素（body 元素）。</p>
+</div>
+
+
+<div>
+<h3><a name="tips">5.注意：不要忘记结束标签</a></h3>
+
+<p>即使您忘记了使用结束标签，大多数浏览器也会正确地显示 HTML：</p>
+
+<pre>
+&lt;p&gt;This is a paragraph
+&lt;p&gt;This is a paragraph
+</pre>
+
+<p>上面的例子在大多数浏览器中都没问题，但不要依赖这种做法。忘记使用结束标签会产生不可预料的结果或错误。</p>
+
+<p class="note"><span>注释：</span>未来的 HTML 版本不允许省略结束标签。</p>
+</div>
+
+
+<div>
+<h3>6.空的 HTML 元素</h3>
+
+<p>没有内容的 HTML 元素被称为空元素。空元素是在开始标签中关闭的。</p>
+
+<p>&lt;br&gt; 就是没有关闭标签的空元素（&lt;br&gt; 标签定义换行）。</p>
+
+<p>在 XHTML、XML 以及未来版本的 HTML 中，所有元素都必须被关闭。</p>
+
+<p>在开始标签中添加斜杠，比如 &lt;br /&gt;，是关闭空元素的正确方法，HTML、XHTML 和 XML 都接受这种方式。</p>
+
+<p>即使 &lt;br&gt; 在所有浏览器中都是有效的，但使用 &lt;br /&gt; 其实是更长远的保障。</p>
+</div>
+
+
+<div>
+<h3>7.HTML 提示：使用小写标签</h3>
+
+<p>HTML 标签对大小写不敏感：&lt;P&gt; 等同于 &lt;p&gt;。许多网站都使用大写的 HTML 标签。</p>
+
+<p>W3School 使用的是小写标签，因为万维网联盟（W3C）在 HTML 4 中<em>推荐</em>使用小写，而在未来 (X)HTML 版本中<em>强制</em>使用小写。</p>
+</div>
+
+</div>
+<!--元素-->
+<div>
+	
+<h2>属性</h2>
+<hr />
+
+
+<div>
+<h3>1.HTML 属性</h3>
+
+<p>HTML 标签可以拥有<b>属性</b>。属性提供了有关 HTML 元素的<b>更多的信息</b>。</p>
+
+<p>属性总是以名称/值对的形式出现，比如：<b>name=&quot;value&quot;</b>。</p>
+
+<p>属性总是在 HTML 元素的<b>开始标签</b>中规定。</p>
+</div>
+
+
+<div>
+<h3>2.属性实例</h3>
+
+<p>HTML 链接由 &lt;a&gt; 标签定义。链接的地址在 href 属性中指定：</p>
+
+<pre>&lt;a href=&quot;http://www.w3school.com.cn&quot;&gt;This is a link&lt;/a&gt;</pre>
+
+</div>
+
+
+<div>
+<h3>3.更多 HTML 属性实例</h3>
+
+<h4>属性例子 1:</h4>
+
+<p>&lt;h1&gt; 定义标题的开始。</p>
+
+<p>&lt;h1 align=&quot;center&quot;&gt; 拥有关于对齐方式的附加信息。</p>
+
+<h4>属性例子 2:</h4>
+
+<p>&lt;body&gt; 定义 HTML 文档的主体。</p>
+
+<p>&lt;body bgcolor=&quot;yellow&quot;&gt; 拥有关于背景颜色的附加信息。</p>
+
+
+<h4>属性例子 3:</h4>
+
+<p>&lt;table&gt; 定义 HTML 表格。（您将在稍后的章节学习到更多有关 HTML 表格的内容）</p>
+
+<p>&lt;table border=&quot;1&quot;&gt; 拥有关于表格边框的附加信息。</p>
+</div>
+
+
+<div>
+<h3>4.HTML 提示：使用小写属性</h3>
+
+<p>属性和属性值对大小写<em>不敏感</em>。</p>
+
+<p>不过，万维网联盟在其 HTML 4 推荐标准中推荐小写的属性/属性值。</p>
+
+<p>而新版本的 (X)HTML 要求使用小写属性。</p>
+</div>
+
+
+<div>
+<h3>5.始终为属性值加引号</h3>
+
+<p>属性值应该始终被包括在引号内。双引号是最常用的，不过使用单引号也没有问题。</p>
+
+<p>在某些个别的情况下，比如属性值本身就含有双引号，那么您必须使用单引号，例如：</p>
+
+<pre>name='Bill &quot;HelloWorld&quot; Gates'</pre>
+</div>
+
+
+<div>
+<h3>6.HTML 属性参考手册</h3>
+
+<p>我们的完整的 HTML 参考手册提供了每个 HTML 元素可使用的合法属性的完整列表：</p>
+
+<p><a href="http://www.w3school.com.cn/tags/index.asp" title="HTML 4.01 / XHTML 1.0 参考手册">完整的 HTML 参考手册</a></p>
+
+<p>下面列出了适用于大多数 HTML 元素的属性：</p>
+
+<table class="dataintable">
+<tr>
+<th>属性</th>
+<th>值</th>
+<th>描述</th>
+</tr>
+
+<tr>
+<td>class</td>
+<td><i>classname</i></td>
+<td>规定元素的类名（classname）</td>
+</tr>
+
+<tr>
+<td>id</td>
+<td><i>id</i></td>
+<td>规定元素的唯一 id</td>
+</tr>
+
+<tr>
+<td>style</td>
+<td><i>style_definition</i></td>
+<td>规定元素的行内样式（inline style）</td>
+</tr>
+
+<tr>
+<td>title</td>
+<td><i>text</i></td>
+<td>规定元素的额外信息（可在工具提示中显示）</td>
+</tr>
+</table>
+
+<p>如需更多关于标准属性的信息，请访问：</p>
+
+<p><a href="http://www.w3school.com.cn/tags/html_ref_standardattributes.asp" title="HTML 标准属性">HTML 标准属性参考手册</a></p>
+</div>
+
+
+</div>
+<!--<属性>-->
+</div>
+
+</body>
+</html>
