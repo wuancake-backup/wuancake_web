@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>MusicPlayerv0.1</title>
+    <meta name="author" content="TSilver">
+    <meta name="revised" content="11/17/2016">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script src="js/music.js"></script>
+</head>
+
+<body class="wholepage">
+    <div class="container">
+        <div class="music-list">
+            <div class="title">Music-list</div>
+            <div class="list">
+                <ul>
+                    <li>告白气球</li>
+                    <li>分手快乐</li>
+                    <li>不醉不会</li>
+                    <li>易燃易爆炸</li>
+                </ul>
+            </div>
+        </div>
+        <audio controls id="audio">
+            <source title="告白气球" data-img="http://p3.music.126.net/tfa811GLreJI_S0h9epqRA==/3394192426154346.jpg?param=177y177"
+            src="http://oc1475jft.bkt.clouddn.com/gaobaiqiqiu.mp3" type="audio/mpeg">
+        </audio>
+        <div class="music">
+            <div class="header">
+                <h1>MusicPlayer<small>v0.1</small></h1>
+            </div>
+            <div class="cover-page">
+                <img src="img/tonghuazhen_chenyifa.jpg" id="music-img" alt="童话镇-陈一发儿">
+            </div>
+            <div id="title">
+                Hello World!
+            </div>
+            <div class="progress-bar">
+                <span id="music-bar">
+                    <span id="load-bar"></span>
+                    <span id="played-bar"></span>
+                </span>
+                <span id="voice-bar">
+                    <span id="voiced-bar"></span>
+                </span>
+                <div id="time">
+                    <span id="current-time">0:00</span>
+                    <!-- 当前时间 -->
+                    <span id="total-time"></span>
+                </div>
+            </div>
+            <div class="controls">
+                <a id="xunhuan" href="javascript:;">循环</a>
+                <!-- 去除a的超链接改为自己的js事件 -->
+                <a id="prev" href="javascript:;"></a>
+                <!-- 上一首 -->
+                <a id="play" href="javascript:;">Play</a>
+                <a id="next" href="javascript:;"></a>
+                <!-- 下一首 -->
+                <a id="mute" href="javascript:;">静音</a>  
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <!--  -->
+    </div>
+    <script src="js/music.js">
+        
+    </script>
+    <script>
+        function jsonpcallback(rs) {
+            var resultHtml = '歌曲：<strong>' + rs.result.songs[0].name + '</strong>' +
+				'歌手：<strong>' + rs.result.songs[0].artists[0].name + '</strong>' +
+				'<a href="javascript:;" id="to-play">立即播放</a>';
+			result.innerHTML = resultHtml;
+			result.setAttribute('data-audio', rs.result.songs[0].audio);
+			result.setAttribute('data-img', rs.result.songs[0].album.picUrl);
+			result.setAttribute('data-music', rs.result.songs[0].name);
+			result.setAttribute('data-singer', rs.result.songs[0].artists[0].name);
+			result.style.opacity = '1';
+        };
+        //回调函数
+    </script>
+    
+</body>
+
+</html>
