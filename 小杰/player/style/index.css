@@ -1,0 +1,250 @@
+html,body{
+	height: 100%;
+	background-color: #ccc;
+}
+body{
+	position: relative;
+}
+.wrap{
+	width: 628px;
+	height: 418px;
+	top: 50%;
+	left: 50%;
+	margin: -209px 0 0 -314px;
+	background-image:url(../images/1.jpg);
+	background-position:center center;
+	background-size:cover;
+	position: absolute;
+}
+.side{
+	position: absolute;
+	top: 40%;
+	bottom: 40%;
+	left: 0;
+	width: 13px;
+	background-color: #D28595;
+}
+.container{
+	margin-left: 42px;
+	margin-right: 82px;
+	margin-bottom: 32px;
+}
+.header{
+	font-size: 0px;
+	margin-bottom: 4px;
+}
+.header h1{
+	color:#fff;
+	font-size: 18px;
+	line-height: 26px;
+}
+.header div{
+	height: 22px;
+	margin-bottom: 4px;
+	position: relative;
+	width: 15px;
+}
+.header div span{
+	display: inline-block;
+	background-color: #fff;
+	width: 2px;
+	transition:all 1s linear;
+	position: absolute;
+	bottom: 0;
+	transform-origin:center bottom;
+}
+.header div span:nth-of-type(1){
+	height: 6px;
+	left: 0;
+	animation: music 0.5s infinite alternate;
+}
+.header div span:nth-of-type(2){
+	height: 9px;
+	left: 3px;
+	animation: music  0.4s   infinite alternate;
+}
+.header div span:nth-of-type(3){
+	height: 13px;
+	left: 6px;
+	animation: music  0.4s   infinite alternate;
+}
+.header div span:nth-of-type(4){
+	height: 12px;
+	left: 9px;
+	animation: music  0.5s   infinite alternate;
+}
+.header div span:nth-of-type(5){
+	height: 5px;
+	left: 12px;
+	animation: music 0.6s    infinite alternate;
+}
+
+@keyframes music{
+	0%{
+		 transform:scaleY(1);
+	}
+	100%{
+		transform: scaleY(1.2);
+	}
+}
+.content{
+	width: 506px;
+	height: 358px;
+}
+.content-right{
+	width: 298px;
+	height: 358px;
+	overflow: hidden;
+	background-color: rgba(25,147,198,.3);
+	font-size: 12px;
+	padding-left: 2em;
+	padding-top: 18px;
+	box-sizing: border-box;
+	color:#fff;
+	line-height: 20px;
+}
+.content-left{	
+	width: 208px;
+	height: 358px;
+	background-color: #fff;
+}
+.content-left img{
+	display: block;
+	margin: auto;
+	padding:8px 0;
+}
+.content-left p{
+	text-indent: 8px;
+	color: #818284;
+}
+.content-left p:first-of-type{
+	font-size: 16px;
+	line-height: 24px;
+	font-weight: bold;
+}
+.content-left p:nth-of-type(2){
+	font-size: 12px;
+	line-height: 20px;
+}
+.content-left p:nth-of-type(3){
+	font-size: 12px;
+	line-height: 28px;
+}
+.state{
+	margin: 4px 10px;
+	font-size: 0px;
+}
+.state span{
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background-position: top left;
+	background-size: cover;
+	background-repeat: no-repeat;
+	margin: 0 15px;
+	cursor: pointer;
+}
+.state .pause{
+	background-image: url(../images/icon1.jpg);
+}
+.state .next{
+	background-image: url(../images/icon2.jpg);
+}
+.state .love{
+	background-image: url(../images/icon3.gif);
+}
+.state .rubbish{
+	background-image: url(../images/icon4.jpg);
+}
+.play-progress{
+	width: 100%;
+	height: 20px;
+	position: relative;
+}
+.play-totalprogress{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background: url(../images/3.jpg) repeat-x;
+	z-index: 1;
+	cursor: pointer;
+}
+.played-progress{
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 20px;
+	width: 0%;
+	background: url(../images/2.jpg) repeat-x;
+	z-index: 99;
+	cursor: pointer;
+}
+.other{
+	font-size: 0px;
+}
+.play-time{
+	padding: 0 9px;
+}
+.play-time .played-time{
+	font-size: 14px;
+	line-height: 26px;
+	color: #C0C0C0;
+}
+.play-time span{
+	font-size: 12px;
+	line-height: 26px;
+	color: #C0C0C0;
+}
+.play-volume{
+	padding: 6px 0;
+	width: 54px;
+	height: 12px;
+	font-size: 0px;
+	position: relative;
+}
+.play-volume .icon{
+	display: inline-block;
+	width: 12px;
+	height: 12px;
+	background: url(../images/icon7.jpg) no-repeat center center;
+	background-size: cover;
+	cursor: pointer;
+}
+.play-totalvolume{
+	display: inline-block;
+	position: absolute;
+	top: 6px;
+	left: 12px;
+	width: 42px;
+	height: 100%;
+	background: url(../images/5.jpg) repeat-x;
+	z-index: 2;
+	cursor: pointer;
+}
+.play-now-volume{
+	display: inline-block;
+	height: 100%;
+	width: 80%;
+	background: url(../images/4.jpg) repeat-x;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	cursor: pointer;
+}
+.download,.share{
+	display: inline-block;
+	margin-top: 2px;
+	margin-left: 10px;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+}
+.download{
+	background: url(../images/icon5.jpg) no-repeat;
+}
+.share{
+	background: url(../images/icon6.jpg) no-repeat;
+}
