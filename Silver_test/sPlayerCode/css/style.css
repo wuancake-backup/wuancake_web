@@ -115,7 +115,7 @@ a {
 }
 
 #load-bar {
-	display: inline-block;
+	/*display: inline-block;*/
 	height: 4px;
 	float: left;
 	border-radius: 4px;
@@ -272,7 +272,7 @@ a {
     }
     #music-bar {
 		width: 70%;
-        height:
+        height: 2px;
 		margin-left: 5%;
 		margin-right: 5%;
 	}
