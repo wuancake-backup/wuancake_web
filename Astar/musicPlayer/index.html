@@ -1,0 +1,96 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>musicplayer</title>
+	<script src="https://cdn.bootcss.com/jquery/3.2.1/jquery.min.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="song.js" charset="UTF-8"></script>
+	<script type="text/javascript" src="search.js" charset="UTF-8"></script>
+	<link rel="stylesheet" type="text/css" href="basic.css">
+</head>
+<body style="margin:0 auto;padding-top:20px;font-family:微软雅黑,Arial,STKaiti,KaiTi,sans-serif;">
+<!--main_head-->
+	<div class="w1000 main_h">
+		<div class="title1"></div>
+		<div class="search"><input type="text" id="search"><button class="button" onclick="getSearch()">搜索</button></div>
+	</div>
+<div class="clear"></div>
+<!--main_center-->
+<div class="w1000 main_c">
+<img src="src\66.jpeg" width="1000px" height="700px">
+
+<div class="cl">
+			<div class="forback fl">
+			</div>
+			<div id="pic">
+			<!-- <img src="特曼.jpg" style="width:350px;height:240px;"> -->
+			</div>
+			
+			<div class="clear"></div>
+			<!-- <div class="forcolor"> -->
+
+
+
+			<div class="forcolor">
+				<div id="intro">
+				<!-- <h3 style="margin-left: 10px;">每天回家都会看到我女儿在装死</h3>
+				<p style="margin-left: 10px;">《【纯男声】满汉全席音乐团队》</p>
+				<p style="margin-left: 10px;">特曼</p> -->
+				</div>
+			
+				<div class="icon">
+				<button id="rightb" onclick="next()" style="width:50px;height:50px;border:none;float:left;margin-left: 30px;background-color: white"><img src="src\right-icon.png" style="width:40px;height:40px;"></button>
+				<button id="pauseb" style="width:50px;height:50px;border:none;float:left;margin-left: 30px;background-color: white"><img src="src\pause-icon.png" style="width:15px;height:15px;"></button>
+				<button id="heartb" style="width:50px;height:50px;border:none;float:left;margin-left: 30px;background-color: white"><img src="src\like-icon.png" style="width:20px;height:20px;"></button>
+				<button id="trashbinb" style="width:50px;height:50px;border:none;float:left;margin-left: 30px;background-color: white"><img src="src\trashbin-icon.png" style="width:25px;height:25px;"></button>
+				</div>
+
+
+				<div id="music">
+					<!-- <audio src="特曼,满汉全席 - 每天回家都会看到我女儿在装死.mp3" id="play" controls="controls"></audio> -->
+				</div>
+				<div id="val">
+				<!--div val1-->
+				</div>
+
+				<div class="last">
+					<div id="currenttime">
+					</div>
+					<div id="duration">
+					</div>
+					<button id="download">
+					 <!-- <a href="src\周玥,徐薇 - 那么骄傲.rar"> --><img src="src\download-icon.png" style="width:25px;height:25px;"><!-- </a> --></button>
+					<!-- </div> -->
+					<div class="volumePic">
+						<img src="src\volume.png" style="width:25px;height:25px;margin-top: 5px;margin-left:10px;">
+					</div>
+					<div id="volAll">
+					<!-- <div id="volCurrent"></div> -->
+					</div>
+					<button id="lyric_button" onclick="changeLyric()">词</button>
+				</div>
+
+				 <div class="bshare-custom" style="margin-left:20px;width:334px;height:63px;">
+							 <a title="分享到QQ空间" class="bshare-qzone"></a>
+							<a title="分享到新浪微博" class="bshare-sinaminiblog"></a>
+							<a title="分享到人人网" class="bshare-renren"></a>
+							<a title="分享到腾讯微博" class="bshare-qqmb"></a>
+							<a title="分享到网易微博" class="bshare-neteasemb"></a>
+							<a title="更多平台" class="bshare-more bshare-more-icon more-style-addthis"></a>
+							<span class="BSHARE_COUNT bshare-share-count">0</span>
+				</div>
+			</div>
+</div>
+<div class="clear"></div>
+
+	
+	<div id="lyric">
+	</div>
+	<div class="clear"></div>
+</div>
+	<script type="text/javascript" src="main.js" charset="UTF-8"></script>
+	<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/buttonLite.js#style=-1&amp;uuid=&amp;pophcol=2&amp;lang=zh"></script>
+			<script type="text/javascript" charset="utf-8" src="http://static.bshare.cn/b/bshareC0.js"></script>
+</body>
+</html>

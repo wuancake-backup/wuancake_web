@@ -1,0 +1,278 @@
+.w1000
+{
+	width: 1000px;
+	margin:0 auto;
+}
+.fl
+{
+	float: left;
+}
+.fr
+{
+	float:right;
+}
+.clear
+{
+	clear: both;
+}
+/*main_head*/
+.main_h
+{
+	height:48px;
+	background-color: black;
+	/*background: url(src/title.png) repeat;*/
+	 filter:alpha(opacity=80);
+     -moz-opacity:0.8;
+     -khtml-opacity: 0.8;
+     opacity: 0.8;
+}
+.title1
+{
+	color: black;
+	line-height: 48px;
+	font-size: 25px;
+	margin-left: 64px;
+	width:150px;
+	height:48px;
+	float:left;
+	/*border:1px solid red;*/
+
+}
+.search
+{
+	float: right;
+	height: 48px;
+	line-height: 48px;
+	margin-right:100px;
+	font-family: 微软雅黑;
+	font-size: 14px;
+}
+#search
+{
+	border-radius: 5px;
+	overflow: hidden;
+	margin-right: 10px;
+	padding-left: 5px;
+}
+/*main_center*/
+.main_c
+{
+	height:700px;
+	/*background-color:#0d9de6; */
+	position: relative;
+}
+.main_c img
+{
+    
+      filter:alpha(opacity=70);
+     -moz-opacity:0.7;
+     -khtml-opacity: 0.7;
+     opacity: 0.7;
+}
+/*left*/
+
+.cl
+{
+	position: absolute;
+	left: 64px;
+	top:24px;
+	width:344px;
+	height:650px;
+	/* border:1px solid red; */
+	}
+#pic
+{
+	width: 300px;
+	height:300px;
+	position: absolute;
+	left:22px;
+	top:22px; 
+	/*  border:1px solid red;  */
+	border-radius:50%; 
+	overflow:hidden;
+	 filter:alpha(opacity=100);
+	 -moz-opacity:1;
+	 -khtml-opacity: 1;
+	 opacity: 1;
+}
+.forback
+{
+	background-color: black;
+	filter:alpha(opacity=100);
+	-moz-opacity:1;
+	-khtml-opacity: 1;
+	 opacity: 1;
+     width:344px;
+     height:344px;
+     border-bottom:1px solid gray;
+     border-radius:50%;
+	 overflow:hidden;
+     /* border:1px solid red; */
+}
+.forcolor
+{
+	/*  border:1px solid red; */
+	width:344px;
+	height:306px;
+	background-color: white;
+	filter:alpha(opacity=70);
+	-moz-opacity:0.7;
+	-khtml-opacity: 0.7;
+	 opacity: 0.7;
+}
+#intro
+{
+	width:344px;
+	height:100px;
+	/* border:1px solid red;  */
+	text-align: center;
+	padding-top:20px;
+	line-height: 35px;
+	word-break:keep-all;/* 不换行 */
+	white-space:nowrap;/* 不换行 */
+	overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+}
+
+.icon
+{
+	 width:344px;
+	 height:50px;
+/* border: 1px solid red;  */
+}
+/* #music
+{
+	width:344px;
+	height:35px;
+	border:1px solid red;
+} */
+#val
+{
+	width:344px;
+	height:4px;
+	background-color:#999;
+	margin-top: 10px;
+}
+.last
+{
+	width:344px;
+	height:40px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	/* border: 1px solid red;   */
+}
+#download
+{
+	border:none;
+	background-color:white;
+	margin-top:5px;float:left;
+	/*25pxwidth*/
+}
+.volumePic
+{
+	width:40px;
+	height:40px;
+	float: left;
+	 filter:alpha(opacity=65);
+     -moz-opacity:0.65;
+     -khtml-opacity: 0.65;
+     opacity: 0.65;
+
+ 	/* border: 1px solid red;  */
+}
+#currenttime
+{
+	width:60px;
+	height:40px;
+	float:right;
+	/*  border:1px solid red; */
+	font-size: 15px;
+	float:left;
+	line-height: 40px;
+	text-align: right;
+}
+#duration
+{
+	float:left;
+	height:40px;
+	width:60px;
+	/* border:1px solid red;  */
+	font-size: 15px;
+	line-height: 40px;
+	text-align: left;
+
+}
+
+#volAll
+{
+	float:left;
+	width:60px;
+	height:6px;
+	background-color:#999;
+	padding:0 0 0 0;
+	margin:17px 0 0 0;
+	border-radius: 10px;
+/* 	border:1px solid red; */
+}
+#lyric_button
+{
+	width:30px;
+	height: 30px;
+	/* border:1px solid red; */
+	margin:5px;
+	margin-left: 20px;
+	font-size:14px;
+	border:none;
+	background-color: #D7D3D3;
+}
+/*right*/
+#lyric
+{
+	position: absolute;
+	top:24px;
+	left:428px;
+	width:550px;
+	height:650px;
+	overflow: hidden;
+	/* border: 1px solid red;  */
+	color:#000000;
+	text-align: center;
+	font-size: 14px;
+	line-height: 40px;
+	background-color: white;
+     filter:alpha(opacity=70);
+     -moz-opacity:0.7;
+     -khtml-opacity: 0.7;
+     opacity: 0.7;
+}
+.song
+{
+	float:left;
+	height:25px;
+	width:274px;
+	/*  border:1px solid red;   */
+	line-height: 25px;
+	text-align: center;
+	font-size: 16px;
+	word-break:keep-all;/* 不换行 */
+	white-space:nowrap;/* 不换行 */
+	overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+	color:black;
+}
+.singer
+{
+	height:25px;
+	width:275px;
+	/* border:1px solid red;  */
+	float:left;
+	line-height: 25px;
+	text-align: center;
+	font-size: 14px;
+	word-break:keep-all;/* 不换行 */
+	white-space:nowrap;/* 不换行 */
+	overflow:hidden;/* 内容超出宽度时隐藏超出部分的内容 */
+	text-overflow:ellipsis;/* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用。*/
+	color: black;
+
+}
