@@ -1,0 +1,185 @@
+/*界定宽度且居中*/
+.public_container
+{
+	position:relative;
+	width:960px;
+	margin:0 auto;
+}
+
+/*header*/
+.public_header
+{
+	height:520px;
+	width:1200px;
+	background:url(../images/header.png) no-repeat center;
+	margin:0 auto;
+}
+.public_nav
+{
+	height:120px;
+	width:1200px;
+}
+.nav_li a
+{
+	color: white;
+	font-size: 24px;
+	float: left;
+	line-height: 120px;
+	font-family: "308-CAI978";
+}
+.index_banner
+{
+	height:400px;
+	width: 1200px;
+}
+.nav_center
+{
+	float:left;
+}
+.banner_left
+{
+	width:120px;
+	height:400px;
+	float:left;
+}
+
+.banner_left a
+{
+	background: url(../images/left.png) no-repeat center;
+	width:24px;
+	height:82px;
+ 	margin:159px auto;
+
+}
+.banner_center
+{
+	height:400px;
+	float:left;
+/* 	border:1px solid red; */
+
+}
+.banner_right
+{
+	height: 400px;
+	width: 110px;
+	float:left;
+}
+.banner_right a
+{
+	background: url(../images/right.png) no-repeat center;
+	width:24px;
+	height:82px;
+ 	margin:159px auto; 
+}
+.info
+{
+	width:320px;
+	height:350px;
+	float:left;
+}
+.info_head
+{
+	width:320px;
+	height:60px;
+	line-height: 60px;
+	font-size: 30px;
+	font-family: "308-CAI978";
+	color:#ffffff;
+	margin-top: 31px;
+	border-bottom: 1px dotted #C5C3C3;
+}
+.info_text
+{
+	font-size:13px;
+	margin-top: 10px;
+	font-family: "302-CAI978";
+	color:#ffffff;
+	line-height: 27px;
+	height:200px;
+	width:320px;
+}
+.info_readmore
+{
+	height:32px;
+	width:320px;
+}
+#flower
+{
+	width: 640px;
+	height:350px;
+	position: relative;
+	float:left;
+}
+#flower img
+{
+	position: absolute;
+	bottom:0;
+	right:0;
+}
+#point
+{
+	height:50px;
+	float:left;
+}
+#point ul
+{
+	margin-left:437px;
+	margin-top: 12px;
+}
+#point li.selected
+{
+	background:url(../images/point_selected.png) no-repeat;
+	/* width:11px;
+	height:11px;
+	border-radius: 11px; */
+
+}
+#point li
+{
+	float: left;
+	width:9px;
+	height:9px;
+	background: url(../images/point.png) no-repeat;
+	border-radius: 9px;
+	overflow: hidden;
+	margin-right: 10px;
+}
+
+
+/*one*/
+.header
+{
+	height:90px;
+	font-size: 38px;
+	line-height:90px;
+	font-family:  "308-CAI978";
+	color: #5f686d;
+}
+.index_center_one
+{
+	height:450px;
+}
+
+/*two*/
+.index_center_two
+{
+	height:592px;
+}
+
+/*three*/
+.index_center_three
+{
+	height: 330px;
+}
+
+
+/*footer*/
+.public_footer
+{
+	height:430px;
+}
+.public_author
+{
+	height:80px;
+	background-color: #414546;
+}
