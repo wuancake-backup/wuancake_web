@@ -111,6 +111,9 @@
 	color:#ffffff;
 	line-height: 27px;
 	width:320px;
+	border:1px solid red;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .info_readmore
 {
@@ -308,6 +311,9 @@
 	height:30px;
 	line-height: 30px;
 	margin-left: 15px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+    white-space: nowrap;
 }
 .three_text
 {
@@ -319,6 +325,8 @@
 	float: left;
 	color: #7c8389;
 	line-height: 22px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .three_readmore
 {
