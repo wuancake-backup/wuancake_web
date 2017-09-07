@@ -19,11 +19,23 @@
 	height:120px;
 	width:1200px;
 }
+.li
+{
+	display:inline-block;
+	width:120px;
+/* 	border:1px solid red;  */
+}
+.special_li
+{
+	display:inline-block;
+	width:100px;
+	text-align: right;
+/* 	border:1px solid red; */
+}
 .nav_li a
 {
 	color: white;
 	font-size: 24px;
-	float: left;
 	line-height: 120px;
 	font-family: "308-CAI978";
 }
@@ -71,11 +83,13 @@
 	height:82px;
  	margin:159px auto; 
 }
-.info
+#info
 {
 	width:320px;
 	height:350px;
 	float:left;
+	padding-right: 640px;
+	background: url(../images/0.png) no-repeat right;
 }
 .info_head
 {
@@ -87,6 +101,7 @@
 	color:#ffffff;
 	margin-top: 31px;
 	border-bottom: 1px dotted #C5C3C3;
+	
 }
 .info_text
 {
