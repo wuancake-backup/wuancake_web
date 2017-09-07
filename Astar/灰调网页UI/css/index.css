@@ -212,6 +212,8 @@
 	margin:10px auto;
 	font-family: "302-CAI978";
 	color:#747d82;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .one_readmore img
 {
@@ -249,13 +251,15 @@
 .two_head
 {
 	width:341px;
-	height:90px;
+	height:80px;
 	margin-left: 14px;
 	font-family: "308-CAI978";
 	font-size: 30px;
 	color: #ffffff;
 	line-height: 40px;
 	padding-top: 10px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .two_text
 {
@@ -267,6 +271,7 @@
 	color:#ffffff;
 	line-height: 24px;
 	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .two_readmore img
 {
@@ -378,6 +383,8 @@
 	width:300px;
 	margin-top: 5px;
 	line-height: 25px;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 .footer_readmore
 {
