@@ -111,7 +111,7 @@
 	color:#ffffff;
 	line-height: 27px;
 	width:320px;
-	border:1px solid red;
+	/* border:1px solid red; */
 	overflow: hidden;
 	text-overflow: ellipsis;
 }
